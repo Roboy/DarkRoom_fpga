@@ -7,11 +7,10 @@ entity lighthouse is
    port( sensor: in std_logic;
  	 timer: in std_logic_vector(31 downto 0);
 	 result: out std_logic;
-	 sweep_duration_A: out integer := 0;
-	 sweep_duration_B: out integer;
-	 rotor: out std_logic;
-	 pulse_duration: out integer;
 	 lighthouse_A: out std_logic;
+	 rotor: out std_logic;
+	 sweep_duration: out integer := 0;
+	 pulse_duration: out integer;
 	 error: out std_logic);
 end lighthouse;
  
@@ -26,7 +25,7 @@ architecture Behavioral of lighthouse is
 	signal skip: std_logic;
 	signal data: std_logic;
 	signal t_cycle_duration: integer;
-	
+	signal lighthouse_switch: std_logic;
 	signal start_valid_sync 	: std_logic_vector(31 downto 0);
 	
 	constant zeros : std_logic_vector(t_0'range) := (others => '0');
@@ -36,6 +35,7 @@ begin   process(sensor)
 	variable duration: std_logic_vector(31 downto 0);
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
+	variable tmp: std_logic;
    begin
 		if rising_edge(sensor) then
 			t_0 <= timer;
@@ -52,11 +52,8 @@ begin   process(sensor)
 				elsif(start_valid_sync /= 0 and stop_valid_sync = 0) then
 					stop_valid_sync := t_0;
 				end if;
-				
-				skip 	<= '0';
 				result <= '0';
 			elsif (duration > (104 - 5)) and (duration < (135 + 5)) then -- this is a sync pulse, skipping
-				skip 	<= '1';
 				result <= '0';
 			end if;
 			
@@ -64,7 +61,10 @@ begin   process(sensor)
 				sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
 				start_valid_sync <= t_0;
 				stop_valid_sync := (others => '0');
-				sweep_duration_A <= to_integer(unsigned(sync_gap_duration));	
+				if( abs( sync_gap_duration - 8333 ) > 100 ) then
+					lighthouse_switch <= not lighthouse_switch;
+					lighthouse_A <= lighthouse_switch;
+				end if;
 			end if;
 			
 			
@@ -97,7 +97,7 @@ begin   process(sensor)
 			skip_prev <= skip;
 			t_0_prev <= timer;
 			pulse_duration <= to_integer(unsigned(duration));		
-			
+			sweep_duration <= to_integer(unsigned(t_sweep_duration));
 		end if;
    end process;
 end Behavioral;

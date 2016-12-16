@@ -69,7 +69,7 @@ BEGIN
 	 variable prev_data:		STD_LOGIC;
 	 begin 
 		if rising_edge(clock) then
-			if newData = '1' then --and prev_data = '0' 
+			if newData = '1' and prev_data = '0' then 
 				spi_tx_data <= std_logic_vector(to_unsigned(data, 32))(15 downto 0);
 				spi_tx_ena <= '1';
 				test <= '1';
