@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity edge_timer is
+   port( sensor: in std_logic;
+ 	 timer: in std_logic_vector(0 to 31);
+	 rising: out std_logic;
+	 rising_edge_time: out std_logic_vector(0 to 31);
+	 falling: out std_logic;
+	 falling_edge_time: out std_logic_vector(0 to 31));
+end edge_timer;
+ 
+architecture Behavioral of edge_timer is
+   signal temp: std_logic_vector(0 to 31);
+	signal rising_true: std_logic;
+begin   process(sensor)
+   begin
+		if rising_edge(sensor) then
+			temp <= timer;
+			rising_true <= '1';
+		elsif falling_edge(sensor) then
+			temp <= timer;
+			rising_true <= '0';
+		end if;
+   end process;
+	if rising_true then
+		rising <= '1';
+		falling <= '0';
+		rising_edge_time <= temp;
+	else
+		rising <= '0';
+		falling <= '1';
+		rising_edge_time <= temp;
+	end if;
+   
+end Behavioral;

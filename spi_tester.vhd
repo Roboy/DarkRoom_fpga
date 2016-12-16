@@ -1,0 +1,87 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity spi_tester is
+generic(
+  sys_clk_frq : INTEGER   := 50_000_000; --system clock speed in Hz
+  spi_cpol    : STD_LOGIC := '0';        --spi clock polarity mode
+  spi_cpha    : STD_LOGIC := '0');       --spi clock phase mode
+port(
+  clock   : IN    STD_LOGIC;  --system clock
+  reset_n : IN    STD_LOGIC;  --active low reset
+  sclk    : IN    STD_LOGIC;  --spi serial clock
+  ss_n    : IN    STD_LOGIC;  --spi slave select
+  mosi    : IN    STD_LOGIC;  --spi master out, slave in
+  data 	 : IN		integer; 	--data to be send via spi
+  newData : IN 	std_logic;
+  miso    : OUT   STD_LOGIC;  --spi master in, slave out
+  trdy_out    : OUT   STD_LOGIC; --spi transmit ready
+  test 		:OUT STD_LOGIC);
+end spi_tester;
+
+ARCHITECTURE logic OF spi_tester IS
+  CONSTANT spi_d_width : INTEGER := 16;  --spi data width in bits
+  SIGNAL   spi_busy    : STD_LOGIC;
+  SIGNAL   spi_tx_ena  : STD_LOGIC;
+  SIGNAL   spi_tx_data : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL   spi_rx_req  : STD_LOGIC;
+  SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL   spi_rrdy    : STD_LOGIC;
+
+  --declare spi slave component
+  COMPONENT spi_slave IS
+    GENERIC(
+      cpol    : STD_LOGIC; --spi clock polarity mode
+      cpha    : STD_LOGIC; --spi clock phase mode
+      d_width : INTEGER);  --data width in bits
+    PORT(
+      sclk         : IN     STD_LOGIC;                            --spi clk from master
+      reset_n      : IN     STD_LOGIC;                            --active low reset
+      ss_n         : IN     STD_LOGIC;                            --active low slave select
+      mosi         : IN     STD_LOGIC;                            --master out, slave in
+      rx_req       : IN     STD_LOGIC;                            --'1' while busy = '0' moves data to the rx_data output
+      st_load_en   : IN     STD_LOGIC;                            --asynchronous load enable
+      st_load_trdy : IN     STD_LOGIC;                            --asynchronous trdy load input
+      st_load_rrdy : IN     STD_LOGIC;                            --asynchronous rrdy load input
+      st_load_roe  : IN     STD_LOGIC;                            --asynchronous roe load input
+      tx_load_en   : IN     STD_LOGIC;                            --asynchronous transmit buffer load enable
+      tx_load_data : IN     STD_LOGIC_VECTOR(d_width-1 DOWNTO 0); --asynchronous tx data to load
+      trdy         : BUFFER STD_LOGIC := '0';                     --transmit ready bit
+      rrdy         : BUFFER STD_LOGIC := '0';                     --receive ready bit
+      roe          : BUFFER STD_LOGIC := '0';                     --receive overrun error bit
+      rx_data      : OUT    STD_LOGIC_VECTOR(d_width-1 DOWNTO 0); --receive register output to logic
+      busy         : OUT    STD_LOGIC := '0';                     --busy signal to logic ('1' during transaction)
+      miso         : OUT    STD_LOGIC := 'Z');                    --master in, slave out
+  END COMPONENT spi_slave;
+
+BEGIN
+
+  --instantiate the spi slave
+  spi_slave_0:  spi_slave
+    GENERIC MAP(cpol => spi_cpol, cpha => spi_cpha, d_width => spi_d_width)
+    PORT MAP(sclk => sclk, reset_n => '1', ss_n => ss_n, mosi => mosi,
+             rx_req => spi_rx_req, st_load_en => '0', st_load_trdy => '0',
+             st_load_rrdy => '0', st_load_roe => '0', tx_load_en => spi_tx_ena,
+             tx_load_data => spi_tx_data, trdy => trdy_out, rrdy => spi_rrdy, roe => open,
+             rx_data => spi_rx_data, busy => spi_busy, miso => miso);
+	 process (clock,newData)
+	 variable prev_data:		STD_LOGIC;
+	 begin 
+		if rising_edge(clock) then
+			if newData = '1' then --and prev_data = '0' 
+				spi_tx_data <= std_logic_vector(to_unsigned(data, 32))(15 downto 0);
+				spi_tx_ena <= '1';
+				test <= '1';
+				prev_data := '1';
+			elsif newData = '0' and prev_data = '1' then
+				test <= '0';
+				spi_tx_ena <= '0';
+				prev_data := '0';
+			else 
+				spi_tx_ena <= '0';
+			end if;
+		end if;
+	end process;
+	
+ END logic;
