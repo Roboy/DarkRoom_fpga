@@ -21,12 +21,12 @@ port(
 end spi_tester;
 
 ARCHITECTURE logic OF spi_tester IS
-  CONSTANT spi_d_width : INTEGER := 16;  --spi data width in bits
+  CONSTANT spi_d_width : INTEGER := 32;  --spi data width in bits
   SIGNAL   spi_busy    : STD_LOGIC;
   SIGNAL   spi_tx_ena  : STD_LOGIC;
-  SIGNAL   spi_tx_data : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL   spi_tx_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL   spi_rx_req  : STD_LOGIC;
-  SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL   spi_rrdy    : STD_LOGIC;
 
   --declare spi slave component
@@ -70,7 +70,7 @@ BEGIN
 	 begin 
 		if rising_edge(clock) then
 			if newData = '1' and prev_data = '0' then 
-				spi_tx_data <= std_logic_vector(to_unsigned(data, 32))(15 downto 0);
+				spi_tx_data <= std_logic_vector(to_unsigned(data, 32));
 				spi_tx_ena <= '1';
 				test <= '1';
 				prev_data := '1';

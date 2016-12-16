@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="darkroom_top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst8|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_pug1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|pll:inst|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
 	</PROJECT>
 </LOG_ROOT>

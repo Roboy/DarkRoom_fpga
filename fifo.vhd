@@ -32,6 +32,7 @@ begin
 		variable Tail : natural range 0 to FIFO_DEPTH - 1;
 		
 		variable Looped : boolean;
+		variable prev_data:		STD_LOGIC;
 	begin
 		if rising_edge(CLK) then
 			if RST = '1' then
@@ -61,7 +62,7 @@ begin
 					end if;
 				end if;
 				
-				if (WriteEn = '1') then
+				if (WriteEn = '1' and prev_data = '0' ) then
 					if ((Looped = false) or (Head /= Tail)) then
 						-- Write Data to Memory
 						Memory(Head) := DataIn;
@@ -75,6 +76,9 @@ begin
 							Head := Head + 1;
 						end if;
 					end if;
+					prev_data := '1';
+				elsif (WriteEn = '0' and prev_data = '1') then
+					prev_data := '0';
 				end if;
 				
 				-- Update Empty and Full flags
