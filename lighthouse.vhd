@@ -4,27 +4,23 @@ use ieee.numeric_std.all;
 USE IEEE.std_logic_signed.all;
 
 entity lighthouse is
-   port( sensor: in std_logic;
- 	 timer: in std_logic_vector(31 downto 0);
-	 result: out std_logic;
-	 lighthouse_A: out std_logic;
-	 rotor: out std_logic;
-	 sweep_duration: out integer := 0;
-	 pulse_duration: out integer;
-	 error: out std_logic);
+	Generic (
+		constant sensorID  : std_logic_vector(8 downto 0) := "000000000"
+	);
+   port( 
+		sensor: in std_logic;
+		timer: in std_logic_vector(31 downto 0);
+		result: out std_logic;
+		sensor_value: out std_logic_vector(23 downto 0);		
+		error: out std_logic);
 end lighthouse;
  
 architecture Behavioral of lighthouse is
    signal t_0: 		std_logic_vector(31 downto 0);
-	signal t_0_prev: 	std_logic_vector(31 downto 0);
-	signal t_A: 		std_logic_vector(31 downto 0);
-	signal t_B: 		std_logic_vector(31 downto 0);
 	signal t_sweep_start: std_logic_vector(31 downto 0);
 	signal t_sweep_duration: std_logic_vector(31 downto 0);
-	signal skip_prev: std_logic;
-	signal skip: std_logic;
 	signal data: std_logic;
-	signal t_cycle_duration: integer;
+	signal rotor: std_logic;
 	signal lighthouse_switch: std_logic;
 	signal start_valid_sync 	: std_logic_vector(31 downto 0);
 	
@@ -35,12 +31,12 @@ begin   process(sensor)
 	variable duration: std_logic_vector(31 downto 0);
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
-	variable tmp: std_logic;
    begin
 		if rising_edge(sensor) then
 			t_0 <= timer;
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
+			error <= '0';
 			if(duration < 50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
 				result <= '1';
@@ -55,6 +51,8 @@ begin   process(sensor)
 				result <= '0';
 			elsif (duration > (104 - 5)) and (duration < (135 + 5)) then -- this is a sync pulse, skipping
 				result <= '0';
+			else
+				error <= '1';
 			end if;
 			
 			if((start_valid_sync > 0) and (stop_valid_sync > 0)) then
@@ -63,10 +61,8 @@ begin   process(sensor)
 				stop_valid_sync := (others => '0');
 				if( abs( sync_gap_duration - 8333 ) > 100 ) then
 					lighthouse_switch <= not lighthouse_switch;
-					lighthouse_A <= lighthouse_switch;
 				end if;
 			end if;
-			
 			
 			if(abs(duration - 63) < 5) then
 				rotor <= '0';
@@ -93,11 +89,11 @@ begin   process(sensor)
 				rotor <= '1';
 				data  <= '1';
 			end if;
-	
-			skip_prev <= skip;
-			t_0_prev <= timer;
-			pulse_duration <= to_integer(unsigned(duration));		
-			sweep_duration <= to_integer(unsigned(t_sweep_duration));
+
+			sensor_value(23 downto 11) <= t_sweep_duration(12 downto 0);
+			sensor_value(10) <= lighthouse_switch;
+			sensor_value(9) <= rotor;
+			sensor_value(8 downto 0) <= sensorID;
 		end if;
    end process;
 end Behavioral;

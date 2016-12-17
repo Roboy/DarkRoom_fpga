@@ -4,15 +4,17 @@ USE IEEE.NUMERIC_STD.ALL;
  
 entity STD_FIFO is
 	Generic (
-		constant DATA_WIDTH  : positive := 32;
-		constant FIFO_DEPTH	: positive := 256
+		constant DATA_WIDTH  : positive := 24;
+		constant FIFO_DEPTH	: positive := 256;
+		constant number_of_sensors: positive := 8;
+		constant sensorID  : integer := 1
 	);
 	Port ( 
 		CLK		: in  STD_LOGIC;
 		RST		: in  STD_LOGIC;
 		WriteEn	: in  STD_LOGIC;
 		DataIn	: in  STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
-		ReadEn	: in  STD_LOGIC;
+		ReadEn	: in  std_logic_vector( number_of_sensors - 1 downto 0 );
 		DataOut	: out STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
 		Empty	: out STD_LOGIC;
 		Full	: out STD_LOGIC
@@ -32,7 +34,7 @@ begin
 		variable Tail : natural range 0 to FIFO_DEPTH - 1;
 		
 		variable Looped : boolean;
-		variable prev_data:		STD_LOGIC;
+		variable prev_data:		std_LOGIC := '0';
 	begin
 		if rising_edge(CLK) then
 			if RST = '1' then
@@ -44,7 +46,7 @@ begin
 				Full  <= '0';
 				Empty <= '1';
 			else
-				if (ReadEn = '1') then
+				if (ReadEn(sensorID) = '1') then
 					if ((Looped = true) or (Head /= Tail)) then
 						-- Update data output
 						DataOut <= Memory(Tail);

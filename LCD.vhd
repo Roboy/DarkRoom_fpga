@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity LCD is port (
-  display_value : in  integer;
+  sensor_value : in  std_logic_vector(23 downto 0);
   sseg0  : out std_logic_vector(7 downto 0);
   sseg1  : out std_logic_vector(7 downto 0);
   sseg2  : out std_logic_vector(7 downto 0);
@@ -11,12 +11,14 @@ entity LCD is port (
 end LCD;
 
 architecture top of LCD is
-begin display : process(display_value) is
+begin display : process(sensor_value) is
+	variable display_value: integer;
 	variable thousand: integer;
 	variable hundred: integer;
 	variable ten: integer;
 	variable one: integer;
   begin
+	display_value := to_integer(unsigned(sensor_value(23 downto 11)));
    thousand := display_value/1000;
 	 case thousand is
       when 0 => sseg3 <= "11000000";

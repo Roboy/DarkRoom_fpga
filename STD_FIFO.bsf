@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 304 160)
+	(rect 16 16 352 160)
 	(text "STD_FIFO" (rect 5 0 51 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -54,34 +54,34 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "ReadEn" (rect 0 0 34 12)(font "Arial" ))
-		(text "ReadEn" (rect 21 91 55 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
+		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 138 12)(font "Arial" ))
+		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 159 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 288 32)
+		(pt 336 32)
 		(output)
 		(text "DataOut[data_width-1..0]" (rect 0 0 95 12)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 172 27 267 39)(font "Arial" ))
-		(line (pt 288 32)(pt 272 32)(line_width 3))
+		(text "DataOut[data_width-1..0]" (rect 220 27 315 39)(font "Arial" ))
+		(line (pt 336 32)(pt 320 32)(line_width 3))
 	)
 	(port
-		(pt 288 48)
+		(pt 336 48)
 		(output)
 		(text "Empty" (rect 0 0 28 12)(font "Arial" ))
-		(text "Empty" (rect 239 43 267 55)(font "Arial" ))
-		(line (pt 288 48)(pt 272 48)(line_width 1))
+		(text "Empty" (rect 287 43 315 55)(font "Arial" ))
+		(line (pt 336 48)(pt 320 48)(line_width 1))
 	)
 	(port
-		(pt 288 64)
+		(pt 336 64)
 		(output)
 		(text "Full" (rect 0 0 12 12)(font "Arial" ))
-		(text "Full" (rect 255 59 267 71)(font "Arial" ))
-		(line (pt 288 64)(pt 272 64)(line_width 1))
+		(text "Full" (rect 303 59 315 71)(font "Arial" ))
+		(line (pt 336 64)(pt 320 64)(line_width 1))
 	)
 	(parameter
 		"DATA_WIDTH"
-		"32"
+		"24"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -89,8 +89,18 @@ applicable agreement for further details.
 		"256"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 272 128)(line_width 1))
+		(rectangle (rect 16 16 320 128)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 304 -64 404 16))
+	(annotation_block (parameter)(rect 352 -64 452 16))
 )
