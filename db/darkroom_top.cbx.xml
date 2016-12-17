@@ -1,22 +1,16 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="darkroom_top">
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3jm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst52|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_lvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_efh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_mult:Mult1" CBX_FILE_NAME="mult_07t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst48|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst53|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_efh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst49|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst50|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst54|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_3vg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst15|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_ifh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst51|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_h6e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_3vg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|pll:inst|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_68e.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst47|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_tug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_tug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_vug1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0" CBX_FILE_NAME="altsyncram_1vg1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -7,14 +7,15 @@ entity STD_FIFO is
 		constant DATA_WIDTH  : positive := 24;
 		constant FIFO_DEPTH	: positive := 256;
 		constant number_of_sensors: positive := 8;
-		constant sensorID  : integer := 1
+		constant sensorID: 	std_logic_vector(2 downto 0) := "000"
 	);
 	Port ( 
 		CLK		: in  STD_LOGIC;
 		RST		: in  STD_LOGIC;
 		WriteEn	: in  STD_LOGIC;
 		DataIn	: in  STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
-		ReadEn	: in  std_logic_vector( number_of_sensors - 1 downto 0 );
+		ReadEn	: in  STD_LOGIC;
+		Sensor	: in 	std_logic_vector(2 downto 0) ;
 		DataOut	: out STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
 		Empty	: out STD_LOGIC;
 		Full	: out STD_LOGIC
@@ -46,7 +47,7 @@ begin
 				Full  <= '0';
 				Empty <= '1';
 			else
-				if (ReadEn(sensorID) = '1') then
+				if (ReadEn = '1') and (sensor = sensorID) then
 					if ((Looped = true) or (Head /= Tail)) then
 						-- Update data output
 						DataOut <= Memory(Tail);

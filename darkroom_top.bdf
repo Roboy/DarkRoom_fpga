@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 528 472 544)
+	(rect 184 528 360 544)
 	(text "INPUT" (rect 133 0 160 7)(font "Arial" (font_size 6)))
 	(text "sensor0" (rect 9 0 45 9)(font "Arial" ))
 	(pt 176 8)
@@ -51,7 +51,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 154 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 528 296 544))
+	(annotation_block (location)(rect 120 528 184 544))
 )
 (pin
 	(input)
@@ -106,7 +106,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 152 320 320 336)
+	(rect 512 488 680 504)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "SW1" (rect 5 0 28 9)(font "Arial" ))
 	(pt 168 8)
@@ -119,7 +119,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 104 320 152 336))
+	(annotation_block (location)(rect 464 488 512 504))
 )
 (pin
 	(input)
@@ -191,7 +191,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 152 264 320 280)
+	(rect 512 640 680 656)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "SW2" (rect 5 0 28 9)(font "Arial" ))
 	(pt 168 8)
@@ -204,11 +204,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 104 264 152 280))
+	(annotation_block (location)(rect 464 640 512 656))
 )
 (pin
 	(input)
-	(rect 304 680 472 696)
+	(rect 192 680 360 696)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor1" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -221,11 +221,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 240 680 304 696))
+	(annotation_block (location)(rect 128 680 192 696))
 )
 (pin
 	(input)
-	(rect 296 832 464 848)
+	(rect 184 832 352 848)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor2" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -238,11 +238,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 832 296 848))
+	(annotation_block (location)(rect 120 832 184 848))
 )
 (pin
 	(input)
-	(rect 296 984 464 1000)
+	(rect 184 984 352 1000)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor3" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -255,11 +255,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 984 296 1000))
+	(annotation_block (location)(rect 120 984 184 1000))
 )
 (pin
 	(input)
-	(rect 296 1136 464 1152)
+	(rect 184 1136 352 1152)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor4" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -272,11 +272,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 1136 296 1152))
+	(annotation_block (location)(rect 120 1136 184 1152))
 )
 (pin
 	(input)
-	(rect 296 1288 464 1304)
+	(rect 184 1288 352 1304)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor5" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -289,11 +289,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 1288 296 1304))
+	(annotation_block (location)(rect 120 1288 184 1304))
 )
 (pin
 	(input)
-	(rect 296 1440 464 1456)
+	(rect 184 1440 352 1456)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor6" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -306,11 +306,11 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 1440 296 1456))
+	(annotation_block (location)(rect 120 1440 184 1456))
 )
 (pin
 	(input)
-	(rect 296 1592 464 1608)
+	(rect 184 1592 352 1608)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "sensor7" (rect 5 0 42 9)(font "Arial" ))
 	(pt 168 8)
@@ -323,7 +323,109 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 232 1592 296 1608))
+	(annotation_block (location)(rect 120 1592 184 1608))
+)
+(pin
+	(input)
+	(rect 504 792 672 808)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW3" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 792 504 808))
+)
+(pin
+	(input)
+	(rect 504 944 672 960)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW4" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 944 504 960))
+)
+(pin
+	(input)
+	(rect 504 1096 672 1112)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW5" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 1096 504 1112))
+)
+(pin
+	(input)
+	(rect 504 1248 672 1264)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW6" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 1248 504 1264))
+)
+(pin
+	(input)
+	(rect 504 1400 672 1416)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW7" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 1400 504 1416))
+)
+(pin
+	(input)
+	(rect 504 1552 672 1568)
+	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
+	(text "SW8" (rect 5 0 29 9)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 146 14)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 456 1552 504 1568))
 )
 (pin
 	(output)
@@ -361,7 +463,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2216 616 2392 632)
+	(rect 2400 672 2576 688)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LCD0[7..0]" (rect 90 0 137 9)(font "Arial" ))
 	(pt 0 8)
@@ -374,11 +476,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2392 616 2448 632))
+	(annotation_block (location)(rect 2576 672 2632 688))
 )
 (pin
 	(output)
-	(rect 2216 632 2392 648)
+	(rect 2400 688 2576 704)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LCD1[7..0]" (rect 90 0 137 9)(font "Arial" ))
 	(pt 0 8)
@@ -391,11 +493,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2392 632 2448 648))
+	(annotation_block (location)(rect 2576 688 2632 704))
 )
 (pin
 	(output)
-	(rect 2216 648 2392 664)
+	(rect 2400 704 2576 720)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LCD2[7..0]" (rect 90 0 137 9)(font "Arial" ))
 	(pt 0 8)
@@ -408,11 +510,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2392 648 2448 664))
+	(annotation_block (location)(rect 2576 704 2632 720))
 )
 (pin
 	(output)
-	(rect 2216 664 2392 680)
+	(rect 2400 720 2576 736)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LCD3[7..0]" (rect 90 0 137 9)(font "Arial" ))
 	(pt 0 8)
@@ -425,7 +527,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2392 664 2448 680))
+	(annotation_block (location)(rect 2576 720 2632 736))
 )
 (pin
 	(output)
@@ -586,7 +688,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 568 504 792 616)
+	(rect 456 504 680 616)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst9" (rect 8 96 30 105)(font "Arial" ))
 	(port
@@ -632,50 +734,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 592 576 768 600))
-)
-(symbol
-	(rect 1872 592 2096 704)
-	(text "LCD" (rect 5 0 25 9)(font "Arial" ))
-	(text "inst15" (rect 8 96 36 105)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "sensor_value[23..0]" (rect 0 0 83 9)(font "Arial" ))
-		(text "sensor_value[23..0]" (rect 21 27 104 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "sseg0[7..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "sseg0[7..0]" (rect 163 27 211 36)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32)(line_width 3))
-	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "sseg1[7..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "sseg1[7..0]" (rect 163 43 211 52)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48)(line_width 3))
-	)
-	(port
-		(pt 224 64)
-		(output)
-		(text "sseg2[7..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "sseg2[7..0]" (rect 163 59 211 68)(font "Arial" ))
-		(line (pt 224 64)(pt 208 64)(line_width 3))
-	)
-	(port
-		(pt 224 80)
-		(output)
-		(text "sseg3[7..0]" (rect 0 0 48 9)(font "Arial" ))
-		(text "sseg3[7..0]" (rect 163 75 211 84)(font "Arial" ))
-		(line (pt 224 80)(pt 208 80)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 208 96))
-	)
+	(annotation_block (parameter)(rect 480 576 656 600))
 )
 (symbol
 	(rect 1968 384 2144 560)
@@ -828,84 +887,7 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 2216 552 2384 576))
 )
 (symbol
-	(rect 1456 840 1680 1016)
-	(text "mergeToBooleanVector" (rect 5 0 106 9)(font "Arial" ))
-	(text "inst38" (rect 8 160 36 169)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "v0" (rect 0 0 12 9)(font "Arial" ))
-		(text "v0" (rect 21 27 33 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "v1" (rect 0 0 12 9)(font "Arial" ))
-		(text "v1" (rect 21 43 33 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "v2" (rect 0 0 12 9)(font "Arial" ))
-		(text "v2" (rect 21 59 33 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "v3" (rect 0 0 12 9)(font "Arial" ))
-		(text "v3" (rect 21 75 33 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "v4" (rect 0 0 12 9)(font "Arial" ))
-		(text "v4" (rect 21 91 33 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "v5" (rect 0 0 12 9)(font "Arial" ))
-		(text "v5" (rect 21 107 33 116)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "v6" (rect 0 0 12 9)(font "Arial" ))
-		(text "v6" (rect 21 123 33 132)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "v7" (rect 0 0 12 9)(font "Arial" ))
-		(text "v7" (rect 21 139 33 148)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "vector[number_entries-1..0]" (rect 0 0 116 9)(font "Arial" ))
-		(text "vector[number_entries-1..0]" (rect 105 27 221 36)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32)(line_width 3))
-	)
-	(parameter
-		"number_entries"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 208 160))
-	)
-	(annotation_block (parameter)(rect 1488 976 1664 1000))
-)
-(symbol
-	(rect 568 656 792 768)
+	(rect 456 656 680 768)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst10" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -951,10 +933,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 592 728 768 748))
+	(annotation_block (parameter)(rect 480 728 656 748))
 )
 (symbol
-	(rect 560 808 784 920)
+	(rect 448 808 672 920)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst11" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1000,10 +982,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 880 760 900))
+	(annotation_block (parameter)(rect 472 880 648 900))
 )
 (symbol
-	(rect 560 960 784 1072)
+	(rect 448 960 672 1072)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst12" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1049,10 +1031,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 1032 760 1052))
+	(annotation_block (parameter)(rect 472 1032 648 1052))
 )
 (symbol
-	(rect 560 1112 784 1224)
+	(rect 448 1112 672 1224)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst13" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1098,10 +1080,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 1184 760 1204))
+	(annotation_block (parameter)(rect 472 1184 648 1204))
 )
 (symbol
-	(rect 560 1264 784 1376)
+	(rect 448 1264 672 1376)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst14" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1147,10 +1129,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 1336 760 1356))
+	(annotation_block (parameter)(rect 472 1336 648 1356))
 )
 (symbol
-	(rect 560 1416 784 1528)
+	(rect 448 1416 672 1528)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst16" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1196,7 +1178,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 1488 760 1508))
+	(annotation_block (parameter)(rect 472 1488 648 1508))
 )
 (symbol
 	(rect 1520 400 1664 576)
@@ -1288,7 +1270,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 560 1568 784 1680)
+	(rect 448 1568 672 1680)
 	(text "lighthouse" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst17" (rect 8 96 36 105)(font "Arial" ))
 	(port
@@ -1334,741 +1316,12 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
-	(annotation_block (parameter)(rect 584 1640 760 1660))
+	(annotation_block (parameter)(rect 472 1640 648 1660))
 )
 (symbol
-	(rect 1848 824 2264 936)
-	(text "sensor_mux" (rect 5 0 58 9)(font "Arial" ))
-	(text "inst45" (rect 8 96 36 105)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clock" (rect 0 0 24 9)(font "Arial" ))
-		(text "clock" (rect 21 27 45 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "sensor_empty[number_of_sensors-1..0]" (rect 0 0 168 9)(font "Arial" ))
-		(text "sensor_empty[number_of_sensors-1..0]" (rect 21 43 189 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 416 32)
-		(output)
-		(text "sensor_selector[2..0]" (rect 0 0 89 9)(font "Arial" ))
-		(text "sensor_selector[2..0]" (rect 320 27 409 36)(font "Arial" ))
-		(line (pt 416 32)(pt 400 32)(line_width 3))
-	)
-	(port
-		(pt 416 48)
-		(output)
-		(text "sensor_read[number_of_sensors-1..0]" (rect 0 0 161 9)(font "Arial" ))
-		(text "sensor_read[number_of_sensors-1..0]" (rect 259 43 420 52)(font "Arial" ))
-		(line (pt 416 48)(pt 400 48)(line_width 3))
-	)
-	(port
-		(pt 416 64)
-		(output)
-		(text "send" (rect 0 0 22 9)(font "Arial" ))
-		(text "send" (rect 377 59 399 68)(font "Arial" ))
-		(line (pt 416 64)(pt 400 64))
-	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 400 96))
-	)
-	(annotation_block (parameter)(rect 1952 888 2140 908))
-)
-(symbol
-	(rect 896 624 1232 768)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst48" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"1"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1024 696 1216 752))
-)
-(symbol
-	(rect 888 1536 1224 1680)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst54" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"7"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 1608 1204 1658))
-)
-(symbol
-	(rect 888 1384 1224 1528)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst53" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"6"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 1456 1204 1506))
-)
-(symbol
-	(rect 888 1232 1224 1376)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst52" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"5"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 1304 1204 1354))
-)
-(symbol
-	(rect 888 1080 1224 1224)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst51" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"4"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 1152 1204 1202))
-)
-(symbol
-	(rect 888 928 1224 1072)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst50" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"3"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 1000 1204 1050))
-)
-(symbol
-	(rect 888 776 1224 920)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst49" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1016 848 1204 898))
-)
-(symbol
-	(rect 896 472 1232 616)
-	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
-	(text "inst47" (rect 8 128 36 137)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RST" (rect 0 0 20 9)(font "Arial" ))
-		(text "RST" (rect 21 43 41 52)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
-		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
-		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "ReadEn[number_of_sensors-1..0]" (rect 0 0 142 9)(font "Arial" ))
-		(text "ReadEn[number_of_sensors-1..0]" (rect 21 91 163 100)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 336 32)
-		(output)
-		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
-		(text "DataOut[data_width-1..0]" (rect 226 27 332 36)(font "Arial" ))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
-	)
-	(port
-		(pt 336 48)
-		(output)
-		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
-		(text "Empty" (rect 292 43 320 52)(font "Arial" ))
-		(line (pt 336 48)(pt 320 48))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Full" (rect 0 0 16 9)(font "Arial" ))
-		(text "Full" (rect 302 59 318 68)(font "Arial" ))
-		(line (pt 336 64)(pt 320 64))
-	)
-	(parameter
-		"DATA_WIDTH"
-		"24"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"FIFO_DEPTH"
-		"256"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"number_of_sensors"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"sensorID"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 320 128))
-	)
-	(annotation_block (parameter)(rect 1024 544 1212 594))
-)
-(symbol
-	(rect 1888 496 1952 544)
+	(rect 728 512 792 560)
 	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
-	(text "inst55" (rect 3 37 31 46)(font "Arial" ))
+	(text "inst57" (rect 3 37 31 46)(font "Arial" ))
 	(port
 		(pt 0 16)
 		(input)
@@ -2097,6 +1350,1205 @@ applicable agreement for further details.
 		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
 	)
 )
+(symbol
+	(rect 728 664 792 712)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst58" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 816 792 864)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst59" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 968 792 1016)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst60" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 1120 792 1168)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst61" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 1272 792 1320)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst62" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 1424 792 1472)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst63" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 728 1576 792 1624)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst64" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 2056 648 2280 760)
+	(text "LCD" (rect 5 0 25 9)(font "Arial" ))
+	(text "inst65" (rect 8 96 36 105)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "display_value[31..0]" (rect 0 0 84 9)(font "Arial" ))
+		(text "display_value[31..0]" (rect 21 27 105 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "sseg0[7..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "sseg0[7..0]" (rect 163 27 211 36)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "sseg1[7..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "sseg1[7..0]" (rect 163 43 211 52)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "sseg2[7..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "sseg2[7..0]" (rect 163 59 211 68)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "sseg3[7..0]" (rect 0 0 48 9)(font "Arial" ))
+		(text "sseg3[7..0]" (rect 163 75 211 84)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 96))
+	)
+)
+(symbol
+	(rect 1736 568 1816 744)
+	(text "sensor_empty_mux" (rect 2 0 127 14)(font "Arial" (font_size 10)))
+	(text "inst68" (rect 8 163 36 172)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "data7" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data7" (rect 4 30 32 40)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 32 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "data6" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data6" (rect 4 46 32 56)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 32 56))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "data5" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data5" (rect 4 62 32 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 32 72))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "data4" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data4" (rect 4 78 32 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 32 88))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "data3" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data3" (rect 4 94 32 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 32 104))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "data2" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data2" (rect 4 110 32 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 32 120))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "data1" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data1" (rect 4 126 32 136)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 32 136))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "data0" (rect 0 0 28 10)(font "Arial" (font_size 8)))
+		(text "data0" (rect 4 142 32 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 32 152))
+	)
+	(port
+		(pt 40 176)
+		(input)
+		(text "sel[2..0]" (rect 0 0 10 37)(font "Arial" (font_size 8))(vertical))
+		(text "sel[2..0]" (rect 35 125 45 162)(font "Arial" (font_size 8))(vertical))
+		(line (pt 40 176)(pt 40 164)(line_width 3))
+	)
+	(port
+		(pt 80 96)
+		(output)
+		(text "result" (rect 0 0 27 10)(font "Arial" (font_size 8)))
+		(text "result" (rect 55 86 82 96)(font "Arial" (font_size 8)))
+		(line (pt 80 96)(pt 48 96))
+	)
+	(drawing
+		(line (pt 32 24)(pt 32 168))
+		(line (pt 32 24)(pt 48 32))
+		(line (pt 32 168)(pt 48 160))
+		(line (pt 48 32)(pt 48 160))
+		(line (pt 0 0)(pt 82 0))
+		(line (pt 82 0)(pt 82 178))
+		(line (pt 0 178)(pt 82 178))
+		(line (pt 0 0)(pt 0 178))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+		(line (pt 0 0)(pt 0 0))
+	)
+)
+(symbol
+	(rect 1888 496 1952 544)
+	(text "AND3" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "inst69" (rect 3 37 31 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 16 16))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "IN2" (rect 2 15 20 24)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 15 20 24)(font "Courier New" (bold))(invisible))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN3" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN3" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 43 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 16 12)(pt 31 12))
+		(line (pt 16 37)(pt 31 37))
+		(line (pt 16 12)(pt 16 37))
+		(arc (pt 31 36)(pt 31 12)(rect 19 12 44 37))
+	)
+)
+(symbol
+	(rect 2056 824 2264 936)
+	(text "sensor_mux" (rect 5 0 58 9)(font "Arial" ))
+	(text "inst71" (rect 8 96 36 105)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 24 9)(font "Arial" ))
+		(text "clock" (rect 21 27 45 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "sensor_selector[2..0]" (rect 0 0 89 9)(font "Arial" ))
+		(text "sensor_selector[2..0]" (rect 112 27 201 36)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "sensor_read" (rect 0 0 54 9)(font "Arial" ))
+		(text "sensor_read" (rect 142 43 196 52)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "send" (rect 0 0 22 9)(font "Arial" ))
+		(text "send" (rect 169 59 191 68)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+	(annotation_block (parameter)(rect 2056 896 2248 920))
+)
+(symbol
+	(rect 1856 592 1888 640)
+	(text "NOT" (rect 0 27 7 47)(font "Arial" (font_size 6))(vertical))
+	(text "inst96" (rect 21 17 30 45)(font "Arial" )(vertical))
+	(port
+		(pt 16 48)
+		(input)
+		(text "IN" (rect 2 7 14 16)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 7 34 16 46)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 16 48)(pt 16 35))
+	)
+	(port
+		(pt 16 0)
+		(output)
+		(text "OUT" (rect 32 7 50 16)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 7 -2 16 16)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 16 9)(pt 16 0))
+	)
+	(drawing
+		(line (pt 25 35)(pt 7 35))
+		(line (pt 7 35)(pt 16 17))
+		(line (pt 25 35)(pt 16 17))
+		(circle (rect 12 9 20 17))
+	)
+	(rotate90)
+)
+(symbol
+	(rect 896 472 1184 616)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst89" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 560 1184 616))
+)
+(symbol
+	(rect 896 624 1184 768)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst90" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 712 1181 762))
+)
+(symbol
+	(rect 896 776 1184 920)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst91" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 864 1181 914))
+)
+(symbol
+	(rect 896 928 1184 1072)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst92" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 1016 1181 1066))
+)
+(symbol
+	(rect 896 1080 1184 1224)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst93" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 1168 1181 1218))
+)
+(symbol
+	(rect 896 1232 1184 1376)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst94" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 1320 1181 1370))
+)
+(symbol
+	(rect 896 1384 1184 1528)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst95" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 1472 1181 1522))
+)
+(symbol
+	(rect 896 1536 1184 1680)
+	(text "STD_FIFO" (rect 5 0 52 9)(font "Arial" ))
+	(text "inst97" (rect 8 128 36 137)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 9)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 20 9)(font "Arial" ))
+		(text "RST" (rect 21 43 41 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WriteEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "WriteEn" (rect 21 59 56 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "DataIn[data_width-1..0]" (rect 0 0 99 9)(font "Arial" ))
+		(text "DataIn[data_width-1..0]" (rect 21 75 120 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ReadEn" (rect 0 0 35 9)(font "Arial" ))
+		(text "ReadEn" (rect 21 91 56 100)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Sensor[2..0]" (rect 0 0 53 9)(font "Arial" ))
+		(text "Sensor[2..0]" (rect 21 107 74 116)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "DataOut[data_width-1..0]" (rect 0 0 106 9)(font "Arial" ))
+		(text "DataOut[data_width-1..0]" (rect 178 27 284 36)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "Empty" (rect 0 0 28 9)(font "Arial" ))
+		(text "Empty" (rect 244 43 272 52)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "Full" (rect 0 0 16 9)(font "Arial" ))
+		(text "Full" (rect 254 59 270 68)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"24"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"FIFO_DEPTH"
+		"256"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"number_of_sensors"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"sensorID"
+		"111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 272 128))
+	)
+	(annotation_block (parameter)(rect 984 1624 1181 1674))
+)
 (connector
 	(pt 712 216)
 	(pt 752 216)
@@ -2120,16 +2572,6 @@ applicable agreement for further details.
 	(text "reset_FIFOs" (rect 770 432 824 441)(font "Arial" ))
 	(pt 760 440)
 	(pt 832 440)
-)
-(connector
-	(pt 472 536)
-	(pt 568 536)
-)
-(connector
-	(text "global_counter[31..0]" (rect 506 544 595 553)(font "Arial" ))
-	(pt 432 552)
-	(pt 568 552)
-	(bus)
 )
 (connector
 	(pt 1904 408)
@@ -2188,30 +2630,6 @@ applicable agreement for further details.
 	(pt 2176 384)
 )
 (connector
-	(text "sseg0[7..0]" (rect 2130 616 2178 625)(font "Arial" ))
-	(pt 2096 624)
-	(pt 2216 624)
-	(bus)
-)
-(connector
-	(text "sseg1[7..0]" (rect 2130 632 2178 641)(font "Arial" ))
-	(pt 2096 640)
-	(pt 2216 640)
-	(bus)
-)
-(connector
-	(text "sseg2[7..0]" (rect 2130 648 2178 657)(font "Arial" ))
-	(pt 2096 656)
-	(pt 2216 656)
-	(bus)
-)
-(connector
-	(text "sseg3[7..0]" (rect 2130 664 2178 673)(font "Arial" ))
-	(pt 2096 672)
-	(pt 2216 672)
-	(bus)
-)
-(connector
 	(pt 1968 416)
 	(pt 1952 416)
 )
@@ -2253,30 +2671,6 @@ applicable agreement for further details.
 	(pt 816 504)
 )
 (connector
-	(pt 792 536)
-	(pt 896 536)
-)
-(connector
-	(pt 792 552)
-	(pt 896 552)
-	(bus)
-)
-(connector
-	(text "sensor0_empty" (rect 1290 520 1356 529)(font "Arial" ))
-	(pt 1232 520)
-	(pt 1288 520)
-)
-(connector
-	(pt 472 688)
-	(pt 568 688)
-)
-(connector
-	(text "global_counter[31..0]" (rect 506 696 595 705)(font "Arial" ))
-	(pt 432 704)
-	(pt 568 704)
-	(bus)
-)
-(connector
 	(text "reset_FIFOs" (rect 826 664 880 673)(font "Arial" ))
 	(pt 896 672)
 	(pt 816 672)
@@ -2287,369 +2681,10 @@ applicable agreement for further details.
 	(pt 816 656)
 )
 (connector
-	(pt 792 688)
-	(pt 896 688)
-)
-(connector
-	(pt 792 704)
-	(pt 896 704)
-	(bus)
-)
-(connector
-	(pt 464 840)
-	(pt 560 840)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 848 587 857)(font "Arial" ))
-	(pt 424 856)
-	(pt 560 856)
-	(bus)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 816 872 825)(font "Arial" ))
-	(pt 888 824)
-	(pt 808 824)
-)
-(connector
-	(text "clock_50" (rect 818 800 858 809)(font "Arial" ))
-	(pt 888 808)
-	(pt 808 808)
-)
-(connector
-	(pt 784 840)
-	(pt 888 840)
-)
-(connector
-	(pt 784 856)
-	(pt 888 856)
-	(bus)
-)
-(connector
-	(pt 464 992)
-	(pt 560 992)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 1000 587 1009)(font "Arial" ))
-	(pt 424 1008)
-	(pt 560 1008)
-	(bus)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 968 872 977)(font "Arial" ))
-	(pt 888 976)
-	(pt 808 976)
-)
-(connector
-	(text "clock_50" (rect 818 952 858 961)(font "Arial" ))
-	(pt 888 960)
-	(pt 808 960)
-)
-(connector
-	(pt 784 992)
-	(pt 888 992)
-)
-(connector
-	(pt 784 1008)
-	(pt 888 1008)
-	(bus)
-)
-(connector
-	(pt 464 1144)
-	(pt 560 1144)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 1120 872 1129)(font "Arial" ))
-	(pt 888 1128)
-	(pt 808 1128)
-)
-(connector
-	(text "clock_50" (rect 818 1104 858 1113)(font "Arial" ))
-	(pt 888 1112)
-	(pt 808 1112)
-)
-(connector
-	(pt 784 1144)
-	(pt 888 1144)
-)
-(connector
-	(pt 784 1160)
-	(pt 888 1160)
-	(bus)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 1152 587 1161)(font "Arial" ))
-	(pt 424 1160)
-	(pt 560 1160)
-	(bus)
-)
-(connector
-	(pt 464 1296)
-	(pt 560 1296)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 1304 587 1313)(font "Arial" ))
-	(pt 424 1312)
-	(pt 560 1312)
-	(bus)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 1272 872 1281)(font "Arial" ))
-	(pt 888 1280)
-	(pt 808 1280)
-)
-(connector
-	(text "clock_50" (rect 818 1256 858 1265)(font "Arial" ))
-	(pt 888 1264)
-	(pt 808 1264)
-)
-(connector
-	(pt 784 1296)
-	(pt 888 1296)
-)
-(connector
-	(pt 784 1312)
-	(pt 888 1312)
-	(bus)
-)
-(connector
-	(pt 1680 872)
-	(pt 1848 872)
-	(bus)
-)
-(connector
-	(text "sensor0_empty" (rect 1370 864 1436 873)(font "Arial" ))
-	(pt 1360 872)
-	(pt 1456 872)
-)
-(connector
-	(text "sensor1_empty" (rect 1370 880 1436 889)(font "Arial" ))
-	(pt 1360 888)
-	(pt 1456 888)
-)
-(connector
-	(text "sensor2_empty" (rect 1370 896 1436 905)(font "Arial" ))
-	(pt 1360 904)
-	(pt 1456 904)
-)
-(connector
-	(text "sensor3_empty" (rect 1370 912 1436 921)(font "Arial" ))
-	(pt 1360 920)
-	(pt 1456 920)
-)
-(connector
-	(text "sensor4_empty" (rect 1370 928 1436 937)(font "Arial" ))
-	(pt 1360 936)
-	(pt 1456 936)
-)
-(connector
-	(text "sensor5_empty" (rect 1370 944 1436 953)(font "Arial" ))
-	(pt 1360 952)
-	(pt 1456 952)
-)
-(connector
-	(text "sensor6_empty" (rect 1370 960 1436 969)(font "Arial" ))
-	(pt 1360 968)
-	(pt 1456 968)
-)
-(connector
-	(text "sensor7_empty" (rect 1370 976 1436 985)(font "Arial" ))
-	(pt 1360 984)
-	(pt 1456 984)
-)
-(connector
 	(text "spi_sent_counter[31..0]" (rect 2410 536 2509 545)(font "Arial" ))
 	(pt 2512 544)
 	(pt 2400 544)
 	(bus)
-)
-(connector
-	(text "sensor0_data[23..0]" (rect 1298 496 1382 505)(font "Arial" ))
-	(pt 1232 504)
-	(pt 1288 504)
-	(bus)
-)
-(connector
-	(text "sensor1_data[23..0]" (rect 1298 648 1382 657)(font "Arial" ))
-	(pt 1232 656)
-	(pt 1288 656)
-	(bus)
-)
-(connector
-	(text "sensor2_data[23..0]" (rect 1290 800 1374 809)(font "Arial" ))
-	(pt 1224 808)
-	(pt 1280 808)
-	(bus)
-)
-(connector
-	(text "sensor3_data[23..0]" (rect 1290 952 1374 961)(font "Arial" ))
-	(pt 1224 960)
-	(pt 1280 960)
-	(bus)
-)
-(connector
-	(text "sensor1_empty" (rect 1290 672 1356 681)(font "Arial" ))
-	(pt 1232 672)
-	(pt 1288 672)
-)
-(connector
-	(text "sensor2_empty" (rect 1282 824 1348 833)(font "Arial" ))
-	(pt 1224 824)
-	(pt 1280 824)
-)
-(connector
-	(text "sensor3_empty" (rect 1282 976 1348 985)(font "Arial" ))
-	(pt 1224 976)
-	(pt 1280 976)
-)
-(connector
-	(text "sensor4_data[23..0]" (rect 1290 1104 1374 1113)(font "Arial" ))
-	(pt 1224 1112)
-	(pt 1280 1112)
-	(bus)
-)
-(connector
-	(text "sensor4_empty" (rect 1282 1128 1348 1137)(font "Arial" ))
-	(pt 1224 1128)
-	(pt 1280 1128)
-)
-(connector
-	(text "sensor5_data[23..0]" (rect 1290 1256 1374 1265)(font "Arial" ))
-	(pt 1224 1264)
-	(pt 1280 1264)
-	(bus)
-)
-(connector
-	(text "sensor5_empty" (rect 1282 1280 1348 1289)(font "Arial" ))
-	(pt 1224 1280)
-	(pt 1280 1280)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 1320 901 1329)(font "Arial" ))
-	(pt 888 1328)
-	(pt 816 1328)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 1168 901 1177)(font "Arial" ))
-	(pt 888 1176)
-	(pt 816 1176)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 1016 901 1025)(font "Arial" ))
-	(pt 888 1024)
-	(pt 816 1024)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 864 901 873)(font "Arial" ))
-	(pt 888 872)
-	(pt 816 872)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 834 712 909 721)(font "Arial" ))
-	(pt 896 720)
-	(pt 824 720)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 834 560 909 569)(font "Arial" ))
-	(pt 896 568)
-	(pt 824 568)
-	(bus)
-)
-(connector
-	(pt 464 1448)
-	(pt 560 1448)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 1424 872 1433)(font "Arial" ))
-	(pt 888 1432)
-	(pt 808 1432)
-)
-(connector
-	(text "clock_50" (rect 818 1408 858 1417)(font "Arial" ))
-	(pt 888 1416)
-	(pt 808 1416)
-)
-(connector
-	(pt 784 1448)
-	(pt 888 1448)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 1472 901 1481)(font "Arial" ))
-	(pt 888 1480)
-	(pt 816 1480)
-	(bus)
-)
-(connector
-	(pt 784 1464)
-	(pt 888 1464)
-	(bus)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 1456 587 1465)(font "Arial" ))
-	(pt 424 1464)
-	(pt 560 1464)
-	(bus)
-)
-(connector
-	(pt 464 1600)
-	(pt 560 1600)
-)
-(connector
-	(text "global_counter[31..0]" (rect 498 1608 587 1617)(font "Arial" ))
-	(pt 424 1616)
-	(pt 560 1616)
-	(bus)
-)
-(connector
-	(text "reset_FIFOs" (rect 818 1576 872 1585)(font "Arial" ))
-	(pt 888 1584)
-	(pt 808 1584)
-)
-(connector
-	(text "clock_50" (rect 818 1560 858 1569)(font "Arial" ))
-	(pt 888 1568)
-	(pt 808 1568)
-)
-(connector
-	(pt 784 1600)
-	(pt 888 1600)
-)
-(connector
-	(pt 784 1616)
-	(pt 888 1616)
-	(bus)
-)
-(connector
-	(text "read_enable[7..0]" (rect 826 1624 901 1633)(font "Arial" ))
-	(pt 888 1632)
-	(pt 816 1632)
-	(bus)
-)
-(connector
-	(text "sensor6_data[23..0]" (rect 1290 1408 1374 1417)(font "Arial" ))
-	(pt 1224 1416)
-	(pt 1280 1416)
-	(bus)
-)
-(connector
-	(text "sensor6_empty" (rect 1282 1432 1348 1441)(font "Arial" ))
-	(pt 1224 1432)
-	(pt 1280 1432)
-)
-(connector
-	(text "sensor7_data[23..0]" (rect 1290 1560 1374 1569)(font "Arial" ))
-	(pt 1224 1568)
-	(pt 1280 1568)
-	(bus)
-)
-(connector
-	(text "sensor7_empty" (rect 1282 1584 1348 1593)(font "Arial" ))
-	(pt 1224 1584)
-	(pt 1280 1584)
 )
 (connector
 	(text "sensor0_data[23..0]" (rect 1394 544 1478 553)(font "Arial" ))
@@ -2719,53 +2754,13 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "read_enable[7..0]" (rect 2274 864 2349 873)(font "Arial" ))
-	(pt 2264 872)
-	(pt 2400 872)
-	(bus)
-)
-(connector
 	(text "send" (rect 2274 880 2296 889)(font "Arial" ))
 	(pt 2400 888)
 	(pt 2264 888)
 )
 (connector
-	(pt 2400 880)
-	(pt 2400 888)
-)
-(connector
-	(pt 1592 792)
-	(pt 2288 792)
-	(bus)
-)
-(connector
 	(pt 2288 792)
 	(pt 2336 792)
-	(bus)
-)
-(connector
-	(text "clock_50" (rect 1738 848 1778 857)(font "Arial" ))
-	(pt 1728 856)
-	(pt 1848 856)
-)
-(connector
-	(pt 1872 624)
-	(pt 1672 624)
-	(bus)
-)
-(connector
-	(pt 1672 496)
-	(pt 1672 624)
-	(bus)
-)
-(connector
-	(pt 1664 496)
-	(pt 1672 496)
-	(bus)
-)
-(connector
-	(pt 1672 496)
-	(pt 1968 496)
 	(bus)
 )
 (connector
@@ -2786,9 +2781,708 @@ applicable agreement for further details.
 	(pt 1952 520)
 )
 (connector
+	(pt 1664 496)
+	(pt 1968 496)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 394 544 483 553)(font "Arial" ))
+	(pt 320 552)
+	(pt 456 552)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 394 696 483 705)(font "Arial" ))
+	(pt 320 704)
+	(pt 456 704)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 848 475 857)(font "Arial" ))
+	(pt 312 856)
+	(pt 448 856)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 1000 475 1009)(font "Arial" ))
+	(pt 312 1008)
+	(pt 448 1008)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 1152 475 1161)(font "Arial" ))
+	(pt 312 1160)
+	(pt 448 1160)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 1304 475 1313)(font "Arial" ))
+	(pt 312 1312)
+	(pt 448 1312)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 1456 475 1465)(font "Arial" ))
+	(pt 312 1464)
+	(pt 448 1464)
+	(bus)
+)
+(connector
+	(text "global_counter[31..0]" (rect 386 1608 475 1617)(font "Arial" ))
+	(pt 312 1616)
+	(pt 448 1616)
+	(bus)
+)
+(connector
+	(pt 680 552)
+	(pt 896 552)
+	(bus)
+)
+(connector
+	(pt 680 704)
+	(pt 896 704)
+	(bus)
+)
+(connector
+	(pt 360 536)
+	(pt 456 536)
+)
+(connector
+	(pt 360 688)
+	(pt 456 688)
+)
+(connector
+	(pt 352 840)
+	(pt 448 840)
+)
+(connector
+	(pt 352 992)
+	(pt 448 992)
+)
+(connector
+	(pt 352 1144)
+	(pt 448 1144)
+)
+(connector
+	(pt 352 1296)
+	(pt 448 1296)
+)
+(connector
+	(pt 352 1448)
+	(pt 448 1448)
+)
+(connector
+	(pt 352 1600)
+	(pt 448 1600)
+)
+(connector
+	(pt 896 536)
+	(pt 792 536)
+)
+(connector
+	(pt 688 536)
+	(pt 688 544)
+)
+(connector
+	(pt 680 536)
+	(pt 688 536)
+)
+(connector
+	(pt 688 544)
+	(pt 728 544)
+)
+(connector
+	(pt 704 496)
+	(pt 704 528)
+)
+(connector
+	(pt 680 496)
+	(pt 704 496)
+)
+(connector
+	(pt 704 528)
+	(pt 728 528)
+)
+(connector
+	(pt 680 688)
+	(pt 688 688)
+)
+(connector
+	(pt 896 688)
+	(pt 792 688)
+)
+(connector
+	(pt 688 688)
+	(pt 688 696)
+)
+(connector
+	(pt 688 696)
+	(pt 728 696)
+)
+(connector
+	(pt 680 648)
+	(pt 704 648)
+)
+(connector
+	(pt 704 648)
+	(pt 704 680)
+)
+(connector
+	(pt 728 680)
+	(pt 704 680)
+)
+(connector
+	(pt 680 840)
+	(pt 680 848)
+)
+(connector
+	(pt 672 840)
+	(pt 680 840)
+)
+(connector
+	(pt 680 848)
+	(pt 728 848)
+)
+(connector
+	(pt 672 800)
+	(pt 704 800)
+)
+(connector
+	(pt 704 800)
+	(pt 704 832)
+)
+(connector
+	(pt 704 832)
+	(pt 728 832)
+)
+(connector
+	(pt 672 1104)
+	(pt 704 1104)
+)
+(connector
+	(pt 704 1136)
+	(pt 704 1104)
+)
+(connector
+	(pt 672 1144)
+	(pt 680 1144)
+)
+(connector
+	(pt 680 1144)
+	(pt 680 1152)
+)
+(connector
+	(pt 680 1152)
+	(pt 728 1152)
+)
+(connector
+	(pt 728 1136)
+	(pt 704 1136)
+)
+(connector
+	(pt 672 952)
+	(pt 704 952)
+)
+(connector
+	(pt 704 952)
+	(pt 704 984)
+)
+(connector
+	(pt 704 984)
+	(pt 728 984)
+)
+(connector
+	(pt 672 992)
+	(pt 680 992)
+)
+(connector
+	(pt 680 992)
+	(pt 680 1000)
+)
+(connector
+	(pt 680 1000)
+	(pt 728 1000)
+)
+(connector
+	(pt 672 1256)
+	(pt 704 1256)
+)
+(connector
+	(pt 704 1256)
+	(pt 704 1288)
+)
+(connector
+	(pt 704 1288)
+	(pt 728 1288)
+)
+(connector
+	(pt 680 1296)
+	(pt 680 1304)
+)
+(connector
+	(pt 672 1296)
+	(pt 680 1296)
+)
+(connector
+	(pt 680 1304)
+	(pt 728 1304)
+)
+(connector
+	(pt 672 1408)
+	(pt 704 1408)
+)
+(connector
+	(pt 704 1408)
+	(pt 704 1440)
+)
+(connector
+	(pt 704 1440)
+	(pt 728 1440)
+)
+(connector
+	(pt 672 1448)
+	(pt 680 1448)
+)
+(connector
+	(pt 680 1448)
+	(pt 680 1456)
+)
+(connector
+	(pt 680 1456)
+	(pt 728 1456)
+)
+(connector
+	(pt 672 1560)
+	(pt 704 1560)
+)
+(connector
+	(pt 704 1560)
+	(pt 704 1592)
+)
+(connector
+	(pt 704 1592)
+	(pt 728 1592)
+)
+(connector
+	(pt 672 1600)
+	(pt 680 1600)
+)
+(connector
+	(pt 680 1600)
+	(pt 680 1608)
+)
+(connector
+	(pt 680 1608)
+	(pt 728 1608)
+)
+(connector
+	(pt 1888 520)
+	(pt 1848 520)
+)
+(connector
+	(pt 1848 520)
+	(pt 1848 528)
+)
+(connector
+	(pt 1848 528)
 	(pt 1840 528)
+)
+(connector
+	(pt 1816 664)
+	(pt 1872 664)
+)
+(connector
+	(pt 1872 528)
 	(pt 1888 528)
+)
+(connector
+	(pt 1776 744)
+	(pt 1776 792)
+	(bus)
+)
+(connector
+	(pt 1592 792)
+	(pt 1776 792)
+	(bus)
+)
+(connector
+	(text "sensor0_empty" (rect 1626 712 1692 721)(font "Arial" ))
+	(pt 1616 720)
+	(pt 1736 720)
+)
+(connector
+	(text "sensor1_empty" (rect 1626 696 1692 705)(font "Arial" ))
+	(pt 1616 704)
+	(pt 1736 704)
+)
+(connector
+	(text "sensor2_empty" (rect 1626 680 1692 689)(font "Arial" ))
+	(pt 1616 688)
+	(pt 1736 688)
+)
+(connector
+	(text "sensor3_empty" (rect 1626 664 1692 673)(font "Arial" ))
+	(pt 1616 672)
+	(pt 1736 672)
+)
+(connector
+	(text "sensor5_empty" (rect 1626 632 1692 641)(font "Arial" ))
+	(pt 1616 640)
+	(pt 1736 640)
+)
+(connector
+	(text "sensor6_empty" (rect 1626 616 1692 625)(font "Arial" ))
+	(pt 1616 624)
+	(pt 1736 624)
+)
+(connector
+	(text "sensor7_empty" (rect 1626 600 1692 609)(font "Arial" ))
+	(pt 1616 608)
+	(pt 1736 608)
+)
+(connector
+	(text "sensor4_empty" (rect 1626 648 1692 657)(font "Arial" ))
+	(pt 1736 656)
+	(pt 1616 656)
+)
+(connector
+	(text "sseg0[7..0]" (rect 2314 672 2362 681)(font "Arial" ))
+	(pt 2280 680)
+	(pt 2400 680)
+	(bus)
+)
+(connector
+	(text "sseg1[7..0]" (rect 2314 688 2362 697)(font "Arial" ))
+	(pt 2280 696)
+	(pt 2400 696)
+	(bus)
+)
+(connector
+	(text "sseg2[7..0]" (rect 2314 704 2362 713)(font "Arial" ))
+	(pt 2280 712)
+	(pt 2400 712)
+	(bus)
+)
+(connector
+	(text "sseg3[7..0]" (rect 2314 720 2362 729)(font "Arial" ))
+	(pt 2280 728)
+	(pt 2400 728)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 1946 848 1986 857)(font "Arial" ))
+	(pt 1936 856)
+	(pt 2056 856)
+)
+(connector
+	(text "read" (rect 2274 864 2294 873)(font "Arial" ))
+	(pt 2264 872)
+	(pt 2400 872)
+)
+(connector
+	(text "sensor0_empty" (rect 1242 520 1308 529)(font "Arial" ))
+	(pt 1184 520)
+	(pt 1240 520)
+)
+(connector
+	(text "sensor0_data[23..0]" (rect 1250 496 1334 505)(font "Arial" ))
+	(pt 1184 504)
+	(pt 1240 504)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 800 866 809)(font "Arial" ))
+	(pt 816 808)
+	(pt 896 808)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 816 880 825)(font "Arial" ))
+	(pt 816 824)
+	(pt 896 824)
+)
+(connector
+	(pt 792 840)
+	(pt 896 840)
+)
+(connector
+	(pt 672 856)
+	(pt 896 856)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 952 866 961)(font "Arial" ))
+	(pt 816 960)
+	(pt 896 960)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 968 880 977)(font "Arial" ))
+	(pt 816 976)
+	(pt 896 976)
+)
+(connector
+	(pt 792 992)
+	(pt 896 992)
+)
+(connector
+	(pt 672 1008)
+	(pt 896 1008)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 1104 866 1113)(font "Arial" ))
+	(pt 816 1112)
+	(pt 896 1112)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 1120 880 1129)(font "Arial" ))
+	(pt 816 1128)
+	(pt 896 1128)
+)
+(connector
+	(pt 792 1144)
+	(pt 896 1144)
+)
+(connector
+	(pt 672 1160)
+	(pt 896 1160)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 1256 866 1265)(font "Arial" ))
+	(pt 816 1264)
+	(pt 896 1264)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 1272 880 1281)(font "Arial" ))
+	(pt 816 1280)
+	(pt 896 1280)
+)
+(connector
+	(pt 792 1296)
+	(pt 896 1296)
+)
+(connector
+	(pt 672 1312)
+	(pt 896 1312)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 1408 866 1417)(font "Arial" ))
+	(pt 816 1416)
+	(pt 896 1416)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 1424 880 1433)(font "Arial" ))
+	(pt 816 1432)
+	(pt 896 1432)
+)
+(connector
+	(pt 792 1448)
+	(pt 896 1448)
+)
+(connector
+	(pt 672 1464)
+	(pt 896 1464)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 826 1560 866 1569)(font "Arial" ))
+	(pt 816 1568)
+	(pt 896 1568)
+)
+(connector
+	(text "reset_FIFOs" (rect 826 1576 880 1585)(font "Arial" ))
+	(pt 816 1584)
+	(pt 896 1584)
+)
+(connector
+	(pt 792 1600)
+	(pt 896 1600)
+)
+(connector
+	(pt 672 1616)
+	(pt 896 1616)
+	(bus)
+)
+(connector
+	(pt 1872 664)
+	(pt 1872 640)
+)
+(connector
+	(pt 1872 592)
+	(pt 1872 528)
+)
+(connector
+	(text "read" (rect 826 560 846 569)(font "Arial" ))
+	(pt 896 568)
+	(pt 816 568)
+)
+(connector
+	(text "read" (rect 826 712 846 721)(font "Arial" ))
+	(pt 896 720)
+	(pt 816 720)
+)
+(connector
+	(text "read" (rect 818 864 838 873)(font "Arial" ))
+	(pt 808 872)
+	(pt 896 872)
+)
+(connector
+	(text "read" (rect 818 1016 838 1025)(font "Arial" ))
+	(pt 808 1024)
+	(pt 896 1024)
+)
+(connector
+	(text "read" (rect 818 1168 838 1177)(font "Arial" ))
+	(pt 808 1176)
+	(pt 896 1176)
+)
+(connector
+	(text "read" (rect 818 1320 838 1329)(font "Arial" ))
+	(pt 808 1328)
+	(pt 896 1328)
+)
+(connector
+	(text "read" (rect 818 1472 838 1481)(font "Arial" ))
+	(pt 896 1480)
+	(pt 808 1480)
+)
+(connector
+	(text "read" (rect 818 1624 838 1633)(font "Arial" ))
+	(pt 808 1632)
+	(pt 896 1632)
+)
+(connector
+	(text "sensor1_empty" (rect 1242 672 1308 681)(font "Arial" ))
+	(pt 1184 672)
+	(pt 1240 672)
+)
+(connector
+	(text "sensor1_data[23..0]" (rect 1250 648 1334 657)(font "Arial" ))
+	(pt 1184 656)
+	(pt 1240 656)
+	(bus)
+)
+(connector
+	(text "sensor2_empty" (rect 1234 824 1300 833)(font "Arial" ))
+	(pt 1184 824)
+	(pt 1232 824)
+)
+(connector
+	(text "sensor2_data[23..0]" (rect 1242 800 1326 809)(font "Arial" ))
+	(pt 1184 808)
+	(pt 1232 808)
+	(bus)
+)
+(connector
+	(text "sensor3_empty" (rect 1234 976 1300 985)(font "Arial" ))
+	(pt 1184 976)
+	(pt 1232 976)
+)
+(connector
+	(text "sensor3_data[23..0]" (rect 1242 952 1326 961)(font "Arial" ))
+	(pt 1184 960)
+	(pt 1232 960)
+	(bus)
+)
+(connector
+	(text "sensor4_empty" (rect 1234 1128 1300 1137)(font "Arial" ))
+	(pt 1184 1128)
+	(pt 1232 1128)
+)
+(connector
+	(text "sensor4_data[23..0]" (rect 1242 1104 1326 1113)(font "Arial" ))
+	(pt 1184 1112)
+	(pt 1232 1112)
+	(bus)
+)
+(connector
+	(text "sensor5_empty" (rect 1234 1280 1300 1289)(font "Arial" ))
+	(pt 1184 1280)
+	(pt 1232 1280)
+)
+(connector
+	(text "sensor5_data[23..0]" (rect 1242 1256 1326 1265)(font "Arial" ))
+	(pt 1184 1264)
+	(pt 1232 1264)
+	(bus)
+)
+(connector
+	(text "sensor6_empty" (rect 1234 1432 1300 1441)(font "Arial" ))
+	(pt 1184 1432)
+	(pt 1232 1432)
+)
+(connector
+	(text "sensor6_data[23..0]" (rect 1242 1408 1326 1417)(font "Arial" ))
+	(pt 1184 1416)
+	(pt 1232 1416)
+	(bus)
+)
+(connector
+	(text "sensor7_empty" (rect 1234 1584 1300 1593)(font "Arial" ))
+	(pt 1184 1584)
+	(pt 1232 1584)
+)
+(connector
+	(text "sensor7_data[23..0]" (rect 1242 1560 1326 1569)(font "Arial" ))
+	(pt 1184 1568)
+	(pt 1232 1568)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 826 576 881 585)(font "Arial" ))
+	(pt 896 584)
+	(pt 816 584)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 1786 784 1841 793)(font "Arial" ))
+	(pt 1776 792)
+	(pt 2288 792)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 826 728 881 737)(font "Arial" ))
+	(pt 896 736)
+	(pt 816 736)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 880 873 889)(font "Arial" ))
+	(pt 896 888)
+	(pt 808 888)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 1032 873 1041)(font "Arial" ))
+	(pt 896 1040)
+	(pt 808 1040)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 1184 873 1193)(font "Arial" ))
+	(pt 896 1192)
+	(pt 808 1192)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 1336 873 1345)(font "Arial" ))
+	(pt 896 1344)
+	(pt 808 1344)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 1488 873 1497)(font "Arial" ))
+	(pt 896 1496)
+	(pt 808 1496)
+	(bus)
+)
+(connector
+	(text "selector[2..0]" (rect 818 1640 873 1649)(font "Arial" ))
+	(pt 896 1648)
+	(pt 808 1648)
+	(bus)
 )
 (junction (pt 2176 480))
 (junction (pt 2288 792))
-(junction (pt 1672 496))
+(junction (pt 1776 792))

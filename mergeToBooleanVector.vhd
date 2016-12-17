@@ -8,6 +8,7 @@ entity mergeToBooleanVector is
 		constant number_entries  : natural := 8
 	);
    port( 
+		clock: in std_logic;
 		v0: in std_logic;
 		v1: in std_logic;
 		v2: in std_logic;
@@ -20,13 +21,17 @@ entity mergeToBooleanVector is
 end mergeToBooleanVector;
  
 architecture Behavioral of mergeToBooleanVector is
-begin 
-	vector(0) <= v0;
-	vector(1) <= v1;
-	vector(2) <= v2;
-	vector(3) <= v3;
-	vector(4) <= v4;
-	vector(5) <= v5;
-	vector(6) <= v6;
-	vector(7) <= v7;
+begin   process(clock,v0,v1,v2,v3,v4,v5,v6,v7)
+   begin
+		if rising_edge(clock) then
+			vector(0) <= v0;
+			vector(1) <= v1;
+			vector(2) <= v2;
+			vector(3) <= v3;
+			vector(4) <= v4;
+			vector(5) <= v5;
+			vector(6) <= v6;
+			vector(7) <= v7;
+		end if;
+	end process;
 end Behavioral;

@@ -39,7 +39,12 @@ begin   process(sensor)
 			error <= '0';
 			if(duration < 50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
-				result <= '1';
+				if(t_sweep_duration < 8191) then -- our duration can't be longer anyways, because we only reserver 13 bit
+					result <= '1';
+				else
+					result <= '0';
+					error <= '1';
+				end if;
 			elsif (duration > (63 - 5)) and (duration < (94 + 5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
@@ -59,8 +64,10 @@ begin   process(sensor)
 				sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
 				start_valid_sync <= t_0;
 				stop_valid_sync := (others => '0');
-				if( abs( sync_gap_duration - 8333 ) > 100 ) then
-					lighthouse_switch <= not lighthouse_switch;
+				if((sync_gap_duration - 8333 ) > 100 ) then
+					lighthouse_switch <= '1';
+				elsif ((sync_gap_duration - 8333 ) < -100 ) then
+					lighthouse_switch <= '0';
 				end if;
 			end if;
 			

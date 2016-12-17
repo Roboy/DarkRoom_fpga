@@ -9,10 +9,9 @@ entity sensor_mux is
 	);
    port( 
 	 clock: in std_logic;	-- clock signal
-	 sensor_empty: 	in std_logic_vector(number_of_sensors-1 downto 0); -- a vector containing the status of each sensors FIFO
  	 sensor_selector: out std_logic_vector(2 downto 0);	-- mux slector
-	 sensor_read: 	out std_logic_vector(number_of_sensors-1 downto 0); -- a vector containing the read enable of each sensors FIFO
-	 send: out std_logic);	-- send it
+	 sensor_read: 	out std_logic; -- trigger read
+	 send: out std_logic); -- send it
 end sensor_mux;
  
 architecture Behavioral of sensor_mux is
@@ -23,14 +22,9 @@ begin   process(clock, counter)
 		if rising_edge(clock) then
 			sensor := counter mod number_of_sensors;
 			sensor_selector <= std_logic_vector(to_unsigned(sensor, 32))(2 downto 0);
-			sensor_read <= (others => '0');
-			send <= '0';
-			if(sensor_empty(sensor) = '0') then
-				sensor_read(sensor) <= '1';
-				send <= '1';
-			end if;
+			sensor_read <= '1';
+			send <= '1';
 			counter <= counter + 1;
-			
 		end if;
    end process;
 end Behavioral;
