@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Sat Dec 17 23:28:11 2016
+Mon Dec 19 19:36:10 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -21,36 +21,36 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  13. Inverted Register Statistics
  14. Registers Added for RAM Pass-Through Logic
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated
- 17. Source assignments for STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tug1:auto_generated
- 18. Source assignments for STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated
- 19. Source assignments for STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated
- 20. Source assignments for STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated
- 21. Source assignments for STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated
- 22. Source assignments for STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated
- 23. Source assignments for STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_3vg1:auto_generated
- 24. Parameter Settings for User Entity Instance: spi_sender:inst20
- 25. Parameter Settings for User Entity Instance: spi_sender:inst20|spi_slave:spi_slave_0
- 26. Parameter Settings for User Entity Instance: sensor_mux:inst71
- 27. Parameter Settings for User Entity Instance: sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component
- 28. Parameter Settings for User Entity Instance: STD_FIFO:inst97
- 29. Parameter Settings for User Entity Instance: lighthouse:inst17
- 30. Parameter Settings for User Entity Instance: counter:inst24
- 31. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 16. Source assignments for STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated
+ 17. Source assignments for STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_rqg1:auto_generated
+ 18. Source assignments for STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated
+ 19. Source assignments for STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated
+ 20. Source assignments for STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated
+ 21. Source assignments for STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated
+ 22. Source assignments for STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated
+ 23. Source assignments for STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1rg1:auto_generated
+ 24. Parameter Settings for User Entity Instance: spi_sender:inst12
+ 25. Parameter Settings for User Entity Instance: spi_sender:inst12|spi_slave:spi_slave_0
+ 26. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 27. Parameter Settings for User Entity Instance: sensor_mux:inst71
+ 28. Parameter Settings for User Entity Instance: sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component
+ 29. Parameter Settings for User Entity Instance: STD_FIFO:inst97
+ 30. Parameter Settings for User Entity Instance: lighthouse:inst32
+ 31. Parameter Settings for User Entity Instance: counter:inst33
  32. Parameter Settings for User Entity Instance: STD_FIFO:inst95
- 33. Parameter Settings for User Entity Instance: lighthouse:inst16
+ 33. Parameter Settings for User Entity Instance: lighthouse:inst31
  34. Parameter Settings for User Entity Instance: STD_FIFO:inst94
- 35. Parameter Settings for User Entity Instance: lighthouse:inst14
+ 35. Parameter Settings for User Entity Instance: lighthouse:inst30
  36. Parameter Settings for User Entity Instance: STD_FIFO:inst93
- 37. Parameter Settings for User Entity Instance: lighthouse:inst13
+ 37. Parameter Settings for User Entity Instance: lighthouse:inst29
  38. Parameter Settings for User Entity Instance: STD_FIFO:inst92
- 39. Parameter Settings for User Entity Instance: lighthouse:inst12
+ 39. Parameter Settings for User Entity Instance: lighthouse:inst28
  40. Parameter Settings for User Entity Instance: STD_FIFO:inst91
- 41. Parameter Settings for User Entity Instance: lighthouse:inst11
+ 41. Parameter Settings for User Entity Instance: lighthouse:inst27
  42. Parameter Settings for User Entity Instance: STD_FIFO:inst90
- 43. Parameter Settings for User Entity Instance: lighthouse:inst10
+ 43. Parameter Settings for User Entity Instance: lighthouse:inst23
  44. Parameter Settings for User Entity Instance: STD_FIFO:inst89
- 45. Parameter Settings for User Entity Instance: lighthouse:inst9
+ 45. Parameter Settings for User Entity Instance: lighthouse:inst22
  46. Parameter Settings for User Entity Instance: sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component
  47. Parameter Settings for User Entity Instance: counter:inst26
  48. Parameter Settings for Inferred Entity Instance: STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0
@@ -63,7 +63,7 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  55. Parameter Settings for Inferred Entity Instance: STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0
  56. altpll Parameter Settings by Entity Instance
  57. altsyncram Parameter Settings by Entity Instance
- 58. Port Connectivity Checks: "spi_sender:inst20|spi_slave:spi_slave_0"
+ 58. Port Connectivity Checks: "spi_sender:inst12|spi_slave:spi_slave_0"
  59. Elapsed Time Per Partition
  60. Analysis & Synthesis Messages
 
@@ -91,18 +91,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 17 23:28:11 2016           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 19 19:36:09 2016           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; darkroom_top                                    ;
 ; Top-level Entity Name              ; darkroom_top                                    ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 9,434                                           ;
-;     Total combinational functions  ; 8,247                                           ;
-;     Dedicated logic registers      ; 2,096                                           ;
-; Total registers                    ; 2096                                            ;
+; Total logic elements               ; 9,458                                           ;
+;     Total combinational functions  ; 8,207                                           ;
+;     Dedicated logic registers      ; 2,209                                           ;
+; Total registers                    ; 2209                                            ;
 ; Total pins                         ; 68                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 33,792                                          ;
+; Total memory bits                  ; 1,960                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -221,19 +221,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; fifo.vhd                         ; yes             ; User VHDL File                     ; /home/letrend/altera/13.0sp1/darkroom/fifo.vhd                                     ;         ;
 ; sensor_mux.vhd                   ; yes             ; User VHDL File                     ; /home/letrend/altera/13.0sp1/darkroom/sensor_mux.vhd                               ;         ;
 ; sensor_mux_data.vhd              ; yes             ; User Wizard-Generated File         ; /home/letrend/altera/13.0sp1/darkroom/sensor_mux_data.vhd                          ;         ;
-; sensor_empty_mux.vhd             ; yes             ; Auto-Found Wizard-Generated File   ; /home/letrend/altera/13.0sp1/darkroom/sensor_empty_mux.vhd                         ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mux_h6e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/mux_h6e.tdf                               ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
 ; stratixii_pll.inc                ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
 ; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/pll_altpll.v                              ;         ;
-; db/mux_68e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/mux_68e.tdf                               ;         ;
+; sensor_empty_mux.vhd             ; yes             ; Auto-Found Wizard-Generated File   ; /home/letrend/altera/13.0sp1/darkroom/sensor_empty_mux.vhd                         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mux_h6e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/mux_h6e.tdf                               ;         ;
+; db/mux_58e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/mux_58e.tdf                               ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -242,45 +242,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_vug1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_vug1.tdf                       ;         ;
-; db/altsyncram_tug1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_tug1.tdf                       ;         ;
-; db/altsyncram_1vg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_1vg1.tdf                       ;         ;
-; db/altsyncram_3vg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_3vg1.tdf                       ;         ;
+; db/altsyncram_tqg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_tqg1.tdf                       ;         ;
+; db/altsyncram_rqg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_rqg1.tdf                       ;         ;
+; db/altsyncram_vqg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_vqg1.tdf                       ;         ;
+; db/altsyncram_1rg1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/letrend/altera/13.0sp1/darkroom/db/altsyncram_1rg1.tdf                       ;         ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 9,434          ;
-;                                             ;                ;
-; Total combinational functions               ; 8247           ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 2137           ;
-;     -- 3 input functions                    ; 3111           ;
-;     -- <=2 input functions                  ; 2999           ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 3192           ;
-;     -- arithmetic mode                      ; 5055           ;
-;                                             ;                ;
-; Total registers                             ; 2096           ;
-;     -- Dedicated logic registers            ; 2096           ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 68             ;
-; Total memory bits                           ; 33792          ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-; Total PLLs                                  ; 1              ;
-;     -- PLLs                                 ; 1              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; clock_50~input ;
-; Maximum fan-out                             ; 710            ;
-; Total fan-out                               ; 31440          ;
-; Average fan-out                             ; 2.96           ;
-+---------------------------------------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                               ;
++---------------------------------------------+-----------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                       ;
++---------------------------------------------+-----------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 9,458                                                                       ;
+;                                             ;                                                                             ;
+; Total combinational functions               ; 8207                                                                        ;
+; Logic element usage by number of LUT inputs ;                                                                             ;
+;     -- 4 input functions                    ; 2105                                                                        ;
+;     -- 3 input functions                    ; 3205                                                                        ;
+;     -- <=2 input functions                  ; 2897                                                                        ;
+;                                             ;                                                                             ;
+; Logic elements by mode                      ;                                                                             ;
+;     -- normal mode                          ; 3239                                                                        ;
+;     -- arithmetic mode                      ; 4968                                                                        ;
+;                                             ;                                                                             ;
+; Total registers                             ; 2209                                                                        ;
+;     -- Dedicated logic registers            ; 2209                                                                        ;
+;     -- I/O registers                        ; 0                                                                           ;
+;                                             ;                                                                             ;
+; I/O pins                                    ; 68                                                                          ;
+; Total memory bits                           ; 1960                                                                        ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                           ;
+; Total PLLs                                  ; 1                                                                           ;
+;     -- PLLs                                 ; 1                                                                           ;
+;                                             ;                                                                             ;
+; Maximum fan-out node                        ; pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 812                                                                         ;
+; Total fan-out                               ; 31368                                                                       ;
+; Average fan-out                             ; 2.92                                                                        ;
++---------------------------------------------+-----------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -288,52 +288,53 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |darkroom_top                              ; 8247 (0)          ; 2096 (0)     ; 33792       ; 0            ; 0       ; 0         ; 68   ; 0            ; |darkroom_top                                                                                   ; work         ;
-;    |STD_FIFO:inst89|                       ; 83 (83)           ; 66 (66)      ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_tug1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tug1:auto_generated ; work         ;
-;    |STD_FIFO:inst90|                       ; 84 (84)           ; 68 (68)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_vug1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ; work         ;
-;    |STD_FIFO:inst91|                       ; 84 (84)           ; 68 (68)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_vug1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ; work         ;
-;    |STD_FIFO:inst92|                       ; 85 (85)           ; 70 (70)      ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_1vg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ; work         ;
-;    |STD_FIFO:inst93|                       ; 84 (84)           ; 68 (68)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_vug1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ; work         ;
-;    |STD_FIFO:inst94|                       ; 85 (85)           ; 70 (70)      ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_1vg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ; work         ;
-;    |STD_FIFO:inst95|                       ; 86 (86)           ; 70 (70)      ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_1vg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4352        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ; work         ;
-;    |STD_FIFO:inst97|                       ; 87 (87)           ; 72 (72)      ; 4608        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97                                                                   ; work         ;
-;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 4608        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
-;          |altsyncram_3vg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 4608        ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_3vg1:auto_generated ; work         ;
-;    |counter:inst24|                        ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst24                                                                    ; work         ;
-;    |lighthouse:inst10|                     ; 920 (920)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                 ; work         ;
-;    |lighthouse:inst11|                     ; 924 (924)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst11                                                                 ; work         ;
-;    |lighthouse:inst12|                     ; 930 (930)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                 ; work         ;
-;    |lighthouse:inst13|                     ; 922 (922)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                 ; work         ;
-;    |lighthouse:inst14|                     ; 918 (918)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst14                                                                 ; work         ;
-;    |lighthouse:inst16|                     ; 916 (916)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst16                                                                 ; work         ;
-;    |lighthouse:inst17|                     ; 924 (924)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst17                                                                 ; work         ;
-;    |lighthouse:inst9|                      ; 918 (918)         ; 178 (178)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                  ; work         ;
+; |darkroom_top                              ; 8207 (1)          ; 2209 (0)     ; 1960        ; 0            ; 0       ; 0         ; 68   ; 0            ; |darkroom_top                                                                                   ; work         ;
+;    |STD_FIFO:inst89|                       ; 67 (67)           ; 66 (66)      ; 230         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 230         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_rqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 230         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_rqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst90|                       ; 66 (66)           ; 68 (68)      ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_tqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst91|                       ; 66 (66)           ; 68 (68)      ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_tqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst92|                       ; 65 (65)           ; 70 (70)      ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_vqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst93|                       ; 65 (65)           ; 68 (68)      ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_tqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 240         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst94|                       ; 67 (67)           ; 70 (70)      ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_vqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst95|                       ; 67 (67)           ; 70 (70)      ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_vqg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 250         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ; work         ;
+;    |STD_FIFO:inst97|                       ; 67 (67)           ; 72 (72)      ; 260         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97                                                                   ; work         ;
+;       |altsyncram:\fifo_proc:Memory_rtl_0| ; 0 (0)             ; 0 (0)        ; 260         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0                                ; work         ;
+;          |altsyncram_1rg1:auto_generated|  ; 0 (0)             ; 0 (0)        ; 260         ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1rg1:auto_generated ; work         ;
+;    |counter:inst26|                        ; 27 (27)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst26                                                                    ; work         ;
+;    |counter:inst33|                        ; 32 (32)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                    ; work         ;
+;    |lighthouse:inst22|                     ; 924 (924)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst22                                                                 ; work         ;
+;    |lighthouse:inst23|                     ; 925 (925)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst23                                                                 ; work         ;
+;    |lighthouse:inst27|                     ; 924 (924)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst27                                                                 ; work         ;
+;    |lighthouse:inst28|                     ; 921 (921)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst28                                                                 ; work         ;
+;    |lighthouse:inst29|                     ; 917 (917)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst29                                                                 ; work         ;
+;    |lighthouse:inst30|                     ; 928 (928)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst30                                                                 ; work         ;
+;    |lighthouse:inst31|                     ; 925 (925)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst31                                                                 ; work         ;
+;    |lighthouse:inst32|                     ; 923 (923)         ; 186 (186)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst32                                                                 ; work         ;
 ;    |pll:inst|                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                          ; work         ;
 ;       |altpll:altpll_component|            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                  ; work         ;
 ;          |pll_altpll:auto_generated|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                        ; work         ;
-;    |sensor_empty_mux:inst68|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68                                                           ; work         ;
-;       |lpm_mux:LPM_MUX_component|          ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68|lpm_mux:LPM_MUX_component                                 ; work         ;
-;          |mux_h6e:auto_generated|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68|lpm_mux:LPM_MUX_component|mux_h6e:auto_generated          ; work         ;
-;    |sensor_mux:inst71|                     ; 3 (3)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux:inst71                                                                 ; work         ;
-;    |sensor_mux_data:inst42|                ; 84 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42                                                            ; work         ;
-;       |lpm_mux:LPM_MUX_component|          ; 84 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component                                  ; work         ;
-;          |mux_68e:auto_generated|          ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component|mux_68e:auto_generated           ; work         ;
-;    |spi_sender:inst20|                     ; 74 (2)            ; 83 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst20                                                                 ; work         ;
-;       |spi_slave:spi_slave_0|              ; 72 (72)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst20|spi_slave:spi_slave_0                                           ; work         ;
+;    |sensor_empty_mux:inst68|               ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68                                                           ; work         ;
+;       |lpm_mux:LPM_MUX_component|          ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68|lpm_mux:LPM_MUX_component                                 ; work         ;
+;          |mux_h6e:auto_generated|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_empty_mux:inst68|lpm_mux:LPM_MUX_component|mux_h6e:auto_generated          ; work         ;
+;    |sensor_mux:inst71|                     ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux:inst71                                                                 ; work         ;
+;    |sensor_mux_data:inst42|                ; 124 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42                                                            ; work         ;
+;       |lpm_mux:LPM_MUX_component|          ; 124 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component                                  ; work         ;
+;          |mux_58e:auto_generated|          ; 124 (124)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component|mux_58e:auto_generated           ; work         ;
+;    |spi_sender:inst12|                     ; 99 (3)            ; 108 (29)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12                                                                 ; work         ;
+;       |spi_slave:spi_slave_0|              ; 96 (96)           ; 79 (79)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12|spi_slave:spi_slave_0                                           ; work         ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -343,14 +344,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 15           ; 256          ; 15           ; 3840 ; None ;
-; STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
-; STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
-; STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 17           ; 256          ; 17           ; 4352 ; None ;
-; STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 16           ; 256          ; 16           ; 4096 ; None ;
-; STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 17           ; 256          ; 17           ; 4352 ; None ;
-; STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 17           ; 256          ; 17           ; 4352 ; None ;
-; STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_3vg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 18           ; 256          ; 18           ; 4608 ; None ;
+; STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_rqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 23           ; 10           ; 23           ; 230  ; None ;
+; STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 24           ; 10           ; 24           ; 240  ; None ;
+; STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 24           ; 10           ; 24           ; 240  ; None ;
+; STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 25           ; 10           ; 25           ; 250  ; None ;
+; STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 24           ; 10           ; 24           ; 240  ; None ;
+; STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 25           ; 10           ; 25           ; 250  ; None ;
+; STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 25           ; 10           ; 25           ; 250  ; None ;
+; STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1rg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 10           ; 26           ; 10           ; 26           ; 260  ; None ;
 +----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
@@ -365,49 +366,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------+------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                    ;
-+----------------------------------------------------+--------------------------------------------------+
-; Register name                                      ; Reason for Removal                               ;
-+----------------------------------------------------+--------------------------------------------------+
-; lighthouse:inst9|sensor_value[0..8]                ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst10|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst10|sensor_value[1..8]               ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst11|sensor_value[0,2..8]             ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst11|sensor_value[1]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst12|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst12|sensor_value[2..8]               ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst12|sensor_value[1]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst13|sensor_value[0,3..8]             ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst13|sensor_value[2]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst13|sensor_value[1]                  ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst14|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst14|sensor_value[3..8]               ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst14|sensor_value[2]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst14|sensor_value[1]                  ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst16|sensor_value[0,3..8]             ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst16|sensor_value[1,2]                ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst17|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in           ;
-; lighthouse:inst17|sensor_value[3..8]               ; Stuck at GND due to stuck port data_in           ;
-; lighthouse:inst17|sensor_value[1,2]                ; Stuck at VCC due to stuck port data_in           ;
-; sensor_mux:inst71|sensor_read                      ; Stuck at VCC due to stuck port data_in           ;
-; sensor_mux:inst71|send                             ; Stuck at VCC due to stuck port data_in           ;
-; spi_sender:inst20|spi_slave:spi_slave_0|bit_cnt[0] ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst89|DataOut[0..8]                      ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst90|DataOut[1..8]                      ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst91|DataOut[0,2..8]                    ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst92|DataOut[2..8]                      ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst93|DataOut[0,1,3..8]                  ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst94|DataOut[1,3..8]                    ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst95|DataOut[0,3..8]                    ; Stuck at GND due to stuck port data_in           ;
-; STD_FIFO:inst97|DataOut[3..8]                      ; Stuck at GND due to stuck port data_in           ;
-; spi_sender:inst20|spi_tx_data[4..8]                ; Merged with spi_sender:inst20|spi_tx_data[3]     ;
-; spi_sender:inst20|sending                          ; Merged with spi_sender:inst20|prev_data          ;
-; spi_sender:inst20|spi_tx_data[3]                   ; Stuck at GND due to stuck port data_in           ;
-; sensor_mux:inst71|counter[0]                       ; Merged with sensor_mux:inst71|sensor_selector[0] ;
-; sensor_mux:inst71|counter[3..31]                   ; Lost fanout                                      ;
-; Total Number of Removed Registers = 172            ;                                                  ;
-+----------------------------------------------------+--------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++----------------------------------------------------+----------------------------------------------+
+; Register name                                      ; Reason for Removal                           ;
++----------------------------------------------------+----------------------------------------------+
+; lighthouse:inst22|sensor_value[0..8]               ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst23|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst23|sensor_value[1..8]               ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst27|sensor_value[0,2..8]             ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst27|sensor_value[1]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst28|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst28|sensor_value[2..8]               ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst28|sensor_value[1]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst29|sensor_value[0,3..8]             ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst29|sensor_value[2]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst29|sensor_value[1]                  ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst30|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst30|sensor_value[3..8]               ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst30|sensor_value[2]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst30|sensor_value[1]                  ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst31|sensor_value[0,3..8]             ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst31|sensor_value[1,2]                ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst32|sensor_value[0]                  ; Stuck at VCC due to stuck port data_in       ;
+; lighthouse:inst32|sensor_value[3..8]               ; Stuck at GND due to stuck port data_in       ;
+; lighthouse:inst32|sensor_value[1,2]                ; Stuck at VCC due to stuck port data_in       ;
+; sensor_mux:inst71|sensor_read                      ; Stuck at VCC due to stuck port data_in       ;
+; sensor_mux:inst71|send                             ; Stuck at VCC due to stuck port data_in       ;
+; spi_sender:inst12|spi_slave:spi_slave_0|bit_cnt[0] ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst89|DataOut[0..8]                      ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst90|DataOut[1..8]                      ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst91|DataOut[0,2..8]                    ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst92|DataOut[2..8]                      ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst93|DataOut[0,1,3..8]                  ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst94|DataOut[1,3..8]                    ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst95|DataOut[0,3..8]                    ; Stuck at GND due to stuck port data_in       ;
+; STD_FIFO:inst97|DataOut[3..8]                      ; Stuck at GND due to stuck port data_in       ;
+; spi_sender:inst12|spi_tx_data[4..8]                ; Merged with spi_sender:inst12|spi_tx_data[3] ;
+; spi_sender:inst12|spi_tx_data[3]                   ; Stuck at GND due to stuck port data_in       ;
+; sensor_mux:inst71|counter[0]                       ; Merged with counter:inst33|temp[0]           ;
+; sensor_mux:inst71|sensor_selector[0]               ; Merged with counter:inst33|temp[0]           ;
+; counter:inst33|temp[1]                             ; Merged with sensor_mux:inst71|counter[1]     ;
+; counter:inst33|temp[2]                             ; Merged with sensor_mux:inst71|counter[2]     ;
+; sensor_mux:inst71|counter[3]                       ; Merged with counter:inst33|temp[3]           ;
+; sensor_mux:inst71|counter[4]                       ; Merged with counter:inst33|temp[4]           ;
+; sensor_mux:inst71|counter[5]                       ; Merged with counter:inst33|temp[5]           ;
+; sensor_mux:inst71|counter[6]                       ; Merged with counter:inst33|temp[6]           ;
+; sensor_mux:inst71|counter[7]                       ; Merged with counter:inst33|temp[7]           ;
+; sensor_mux:inst71|counter[8]                       ; Merged with counter:inst33|temp[8]           ;
+; sensor_mux:inst71|counter[9]                       ; Merged with counter:inst33|temp[9]           ;
+; sensor_mux:inst71|counter[10]                      ; Merged with counter:inst33|temp[10]          ;
+; sensor_mux:inst71|counter[11]                      ; Merged with counter:inst33|temp[11]          ;
+; sensor_mux:inst71|counter[12]                      ; Merged with counter:inst33|temp[12]          ;
+; sensor_mux:inst71|counter[13]                      ; Merged with counter:inst33|temp[13]          ;
+; sensor_mux:inst71|counter[14]                      ; Merged with counter:inst33|temp[14]          ;
+; sensor_mux:inst71|counter[15]                      ; Merged with counter:inst33|temp[15]          ;
+; sensor_mux:inst71|counter[16]                      ; Merged with counter:inst33|temp[16]          ;
+; sensor_mux:inst71|counter[17]                      ; Merged with counter:inst33|temp[17]          ;
+; sensor_mux:inst71|counter[18]                      ; Merged with counter:inst33|temp[18]          ;
+; sensor_mux:inst71|counter[19]                      ; Merged with counter:inst33|temp[19]          ;
+; sensor_mux:inst71|counter[20]                      ; Merged with counter:inst33|temp[20]          ;
+; sensor_mux:inst71|counter[21..31]                  ; Lost fanout                                  ;
+; counter:inst26|temp[27..31]                        ; Lost fanout                                  ;
+; Total Number of Removed Registers = 179            ;                                              ;
++----------------------------------------------------+----------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -421,24 +443,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                   ;                           ; STD_FIFO:inst93|DataOut[8], STD_FIFO:inst94|DataOut[7], STD_FIFO:inst94|DataOut[8], ;
 ;                                   ;                           ; STD_FIFO:inst95|DataOut[7], STD_FIFO:inst95|DataOut[8], STD_FIFO:inst97|DataOut[7], ;
 ;                                   ;                           ; STD_FIFO:inst97|DataOut[8]                                                          ;
-; lighthouse:inst9|sensor_value[0]  ; Stuck at GND              ; STD_FIFO:inst89|DataOut[4], STD_FIFO:inst89|DataOut[3], STD_FIFO:inst89|DataOut[2], ;
-;                                   ; due to stuck port data_in ; STD_FIFO:inst89|DataOut[1], STD_FIFO:inst89|DataOut[0], STD_FIFO:inst89|DataOut[5], ;
+; lighthouse:inst22|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst89|DataOut[1], STD_FIFO:inst89|DataOut[0], STD_FIFO:inst89|DataOut[2], ;
+;                                   ; due to stuck port data_in ; STD_FIFO:inst89|DataOut[3], STD_FIFO:inst89|DataOut[4], STD_FIFO:inst89|DataOut[5], ;
 ;                                   ;                           ; STD_FIFO:inst89|DataOut[6]                                                          ;
-; lighthouse:inst10|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst90|DataOut[4], STD_FIFO:inst90|DataOut[3], STD_FIFO:inst90|DataOut[2], ;
-;                                   ; due to stuck port data_in ; STD_FIFO:inst90|DataOut[1], STD_FIFO:inst90|DataOut[5], STD_FIFO:inst90|DataOut[6]  ;
-; lighthouse:inst11|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst91|DataOut[4], STD_FIFO:inst91|DataOut[3], STD_FIFO:inst91|DataOut[2], ;
-;                                   ; due to stuck port data_in ; STD_FIFO:inst91|DataOut[0], STD_FIFO:inst91|DataOut[5], STD_FIFO:inst91|DataOut[6]  ;
-; lighthouse:inst13|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst93|DataOut[4], STD_FIFO:inst93|DataOut[3], STD_FIFO:inst93|DataOut[1], ;
-;                                   ; due to stuck port data_in ; STD_FIFO:inst93|DataOut[0], STD_FIFO:inst93|DataOut[5], STD_FIFO:inst93|DataOut[6]  ;
-; lighthouse:inst12|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst92|DataOut[4], STD_FIFO:inst92|DataOut[3], STD_FIFO:inst92|DataOut[2], ;
+; lighthouse:inst23|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst90|DataOut[1], STD_FIFO:inst90|DataOut[2], STD_FIFO:inst90|DataOut[3], ;
+;                                   ; due to stuck port data_in ; STD_FIFO:inst90|DataOut[4], STD_FIFO:inst90|DataOut[5], STD_FIFO:inst90|DataOut[6]  ;
+; lighthouse:inst27|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst91|DataOut[0], STD_FIFO:inst91|DataOut[2], STD_FIFO:inst91|DataOut[3], ;
+;                                   ; due to stuck port data_in ; STD_FIFO:inst91|DataOut[4], STD_FIFO:inst91|DataOut[5], STD_FIFO:inst91|DataOut[6]  ;
+; lighthouse:inst29|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst93|DataOut[1], STD_FIFO:inst93|DataOut[0], STD_FIFO:inst93|DataOut[3], ;
+;                                   ; due to stuck port data_in ; STD_FIFO:inst93|DataOut[4], STD_FIFO:inst93|DataOut[5], STD_FIFO:inst93|DataOut[6]  ;
+; lighthouse:inst28|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst92|DataOut[2], STD_FIFO:inst92|DataOut[3], STD_FIFO:inst92|DataOut[4], ;
 ;                                   ; due to stuck port data_in ; STD_FIFO:inst92|DataOut[5], STD_FIFO:inst92|DataOut[6]                              ;
-; lighthouse:inst14|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst94|DataOut[4], STD_FIFO:inst94|DataOut[3], STD_FIFO:inst94|DataOut[1], ;
+; lighthouse:inst30|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst94|DataOut[1], STD_FIFO:inst94|DataOut[3], STD_FIFO:inst94|DataOut[4], ;
 ;                                   ; due to stuck port data_in ; STD_FIFO:inst94|DataOut[5], STD_FIFO:inst94|DataOut[6]                              ;
-; lighthouse:inst16|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst95|DataOut[4], STD_FIFO:inst95|DataOut[3], STD_FIFO:inst95|DataOut[0], ;
+; lighthouse:inst31|sensor_value[0] ; Stuck at GND              ; STD_FIFO:inst95|DataOut[0], STD_FIFO:inst95|DataOut[3], STD_FIFO:inst95|DataOut[4], ;
 ;                                   ; due to stuck port data_in ; STD_FIFO:inst95|DataOut[5], STD_FIFO:inst95|DataOut[6]                              ;
-; lighthouse:inst17|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst97|DataOut[4], STD_FIFO:inst97|DataOut[3], STD_FIFO:inst97|DataOut[5], ;
+; lighthouse:inst32|sensor_value[0] ; Stuck at VCC              ; STD_FIFO:inst97|DataOut[3], STD_FIFO:inst97|DataOut[4], STD_FIFO:inst97|DataOut[5], ;
 ;                                   ; due to stuck port data_in ; STD_FIFO:inst97|DataOut[6]                                                          ;
-; sensor_mux:inst71|send            ; Stuck at VCC              ; spi_sender:inst20|spi_tx_data[3]                                                    ;
+; sensor_mux:inst71|send            ; Stuck at VCC              ; spi_sender:inst12|spi_tx_data[3]                                                    ;
 ;                                   ; due to stuck port data_in ;                                                                                     ;
 +-----------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
@@ -448,12 +470,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2096  ;
+; Total registers                              ; 2209  ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 58    ;
+; Number of registers using Asynchronous Clear ; 74    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 952   ;
+; Number of registers using Clock Enable       ; 1032  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -463,9 +485,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+---------+
 ; Inverted Register                                  ; Fan out ;
 +----------------------------------------------------+---------+
-; spi_sender:inst20|spi_slave:spi_slave_0|trdy       ; 3       ;
-; spi_sender:inst20|spi_slave:spi_slave_0|bit_cnt[1] ; 3       ;
-; Total number of inverted registers = 2             ;         ;
+; spi_sender:inst12|spi_slave:spi_slave_0|trdy       ; 3       ;
+; counter:inst33|temp[0]                             ; 93      ;
+; spi_sender:inst12|spi_slave:spi_slave_0|bit_cnt[1] ; 3       ;
+; Total number of inverted registers = 3             ;         ;
 +----------------------------------------------------+---------+
 
 
@@ -750,43 +773,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst10|start_valid_sync[2]  ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst9|start_valid_sync[23]  ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst11|start_valid_sync[27] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst12|start_valid_sync[18] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst14|start_valid_sync[14] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst13|start_valid_sync[10] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst16|start_valid_sync[23] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst17|start_valid_sync[13] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst89|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst89|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst91|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst91|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst90|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst90|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst92|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst92|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst93|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst93|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst95|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst95|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst94|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst94|Head                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst97|Tail                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst97|Head                   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst10|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst9|stop_valid_sync       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst11|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst12|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst14|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst13|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst16|stop_valid_sync      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst17|stop_valid_sync      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_sender:inst12|sending              ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst23|start_valid_sync[3]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst22|start_valid_sync[29] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst27|start_valid_sync[17] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst28|start_valid_sync[26] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst30|start_valid_sync[1]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst29|start_valid_sync[1]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst31|start_valid_sync[16] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst32|start_valid_sync[0]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst89|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst89|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst91|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst91|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst90|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst90|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst92|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst92|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst93|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst93|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst95|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst95|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst94|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst94|Head                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst97|Tail                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |darkroom_top|STD_FIFO:inst97|Head                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst23|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst22|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst27|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst28|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst30|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst29|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst31|stop_valid_sync      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |darkroom_top|lighthouse:inst32|stop_valid_sync      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ;
+; Source assignments for STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -795,7 +819,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tug1:auto_generated ;
+; Source assignments for STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_rqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -804,7 +828,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ;
+; Source assignments for STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -813,7 +837,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ;
+; Source assignments for STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -822,7 +846,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ;
+; Source assignments for STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -831,7 +855,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vug1:auto_generated ;
+; Source assignments for STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_tqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -840,7 +864,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1vg1:auto_generated ;
+; Source assignments for STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_vqg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -849,7 +873,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_3vg1:auto_generated ;
+; Source assignments for STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0|altsyncram_1rg1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -858,7 +882,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_sender:inst20 ;
+; Parameter Settings for User Entity Instance: spi_sender:inst12 ;
 +----------------+----------+------------------------------------+
 ; Parameter Name ; Value    ; Type                               ;
 +----------------+----------+------------------------------------+
@@ -870,76 +894,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_sender:inst20|spi_slave:spi_slave_0 ;
+; Parameter Settings for User Entity Instance: spi_sender:inst12|spi_slave:spi_slave_0 ;
 +----------------+-------+-------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
 ; cpol           ; '0'   ; Enumerated                                                  ;
 ; cpha           ; '0'   ; Enumerated                                                  ;
-; d_width        ; 24    ; Signed Integer                                              ;
+; d_width        ; 32    ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sensor_mux:inst71 ;
-+-------------------+-------+------------------------------------+
-; Parameter Name    ; Value ; Type                               ;
-+-------------------+-------+------------------------------------+
-; number_of_sensors ; 8     ; Signed Integer                     ;
-+-------------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component ;
-+------------------------+-------------+---------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                    ;
-+------------------------+-------------+---------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                            ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                          ;
-; LPM_WIDTH              ; 1           ; Signed Integer                                          ;
-; LPM_SIZE               ; 8           ; Signed Integer                                          ;
-; LPM_WIDTHS             ; 3           ; Signed Integer                                          ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                          ;
-; CBXI_PARAMETER         ; mux_h6e     ; Untyped                                                 ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                 ;
-+------------------------+-------------+---------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: STD_FIFO:inst97 ;
-+-------------------+-------+----------------------------------+
-; Parameter Name    ; Value ; Type                             ;
-+-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
-; number_of_sensors ; 8     ; Signed Integer                   ;
-; sensorid          ; 111   ; Unsigned Binary                  ;
-+-------------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst17 ;
-+----------------+-----------+-----------------------------------+
-; Parameter Name ; Value     ; Type                              ;
-+----------------+-----------+-----------------------------------+
-; sensorid       ; 000000111 ; Unsigned Binary                   ;
-+----------------+-----------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter:inst24 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; counter_width  ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1317,13 +1279,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sensor_mux:inst71 ;
++-------------------+-------+------------------------------------+
+; Parameter Name    ; Value ; Type                               ;
++-------------------+-------+------------------------------------+
+; number_of_sensors ; 8     ; Signed Integer                     ;
++-------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+---------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                    ;
++------------------------+-------------+---------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                          ;
+; LPM_WIDTH              ; 1           ; Signed Integer                                          ;
+; LPM_SIZE               ; 8           ; Signed Integer                                          ;
+; LPM_WIDTHS             ; 3           ; Signed Integer                                          ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                          ;
+; CBXI_PARAMETER         ; mux_h6e     ; Untyped                                                 ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                 ;
++------------------------+-------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: STD_FIFO:inst97 ;
++-------------------+-------+----------------------------------+
+; Parameter Name    ; Value ; Type                             ;
++-------------------+-------+----------------------------------+
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
+; number_of_sensors ; 8     ; Signed Integer                   ;
+; sensorid          ; 111   ; Unsigned Binary                  ;
++-------------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst32 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000111 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:inst33 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; counter_width  ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: STD_FIFO:inst95 ;
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 110   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1331,7 +1355,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst16 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst31 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1345,8 +1369,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 101   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1354,7 +1378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst14 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst30 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1368,8 +1392,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 100   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1377,7 +1401,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst13 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst29 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1391,8 +1415,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 011   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1400,7 +1424,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst12 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst28 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1414,8 +1438,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 010   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1423,7 +1447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst11 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst27 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1437,8 +1461,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 001   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
@@ -1446,7 +1470,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst10 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst23 ;
 +----------------+-----------+-----------------------------------+
 ; Parameter Name ; Value     ; Type                              ;
 +----------------+-----------+-----------------------------------+
@@ -1460,21 +1484,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+-------+----------------------------------+
 ; Parameter Name    ; Value ; Type                             ;
 +-------------------+-------+----------------------------------+
-; data_width        ; 24    ; Signed Integer                   ;
-; fifo_depth        ; 256   ; Signed Integer                   ;
+; data_width        ; 32    ; Signed Integer                   ;
+; fifo_depth        ; 10    ; Signed Integer                   ;
 ; number_of_sensors ; 8     ; Signed Integer                   ;
 ; sensorid          ; 000   ; Unsigned Binary                  ;
 +-------------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst9 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000000 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst22 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000000 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1487,11 +1511,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
 ; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                         ;
-; LPM_WIDTH              ; 24          ; Signed Integer                                         ;
+; LPM_WIDTH              ; 32          ; Signed Integer                                         ;
 ; LPM_SIZE               ; 8           ; Signed Integer                                         ;
 ; LPM_WIDTHS             ; 3           ; Signed Integer                                         ;
 ; LPM_PIPELINE           ; 0           ; Signed Integer                                         ;
-; CBXI_PARAMETER         ; mux_68e     ; Untyped                                                ;
+; CBXI_PARAMETER         ; mux_58e     ; Untyped                                                ;
 ; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                ;
 +------------------------+-------------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1519,18 +1543,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1563,7 +1587,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_vug1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_tqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1580,18 +1604,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 15                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 23                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 15                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 23                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1624,7 +1648,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_tug1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_rqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1641,18 +1665,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1685,7 +1709,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_vug1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_tqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1702,18 +1726,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1746,7 +1770,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_1vg1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_vqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1763,18 +1787,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1807,7 +1831,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_1vg1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_vqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1824,18 +1848,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 16                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 24                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1868,7 +1892,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_vug1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_tqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1885,18 +1909,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 17                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 25                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1929,7 +1953,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_1vg1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_vqg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1946,18 +1970,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                 ;
-; WIDTH_A                            ; 18                   ; Untyped                                 ;
-; WIDTHAD_A                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_A                         ; 256                  ; Untyped                                 ;
+; WIDTH_A                            ; 26                   ; Untyped                                 ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_A                         ; 10                   ; Untyped                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
-; WIDTH_B                            ; 18                   ; Untyped                                 ;
-; WIDTHAD_B                          ; 8                    ; Untyped                                 ;
-; NUMWORDS_B                         ; 256                  ; Untyped                                 ;
+; WIDTH_B                            ; 26                   ; Untyped                                 ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 10                   ; Untyped                                 ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
@@ -1990,7 +2014,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_3vg1      ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_1rg1      ; Untyped                                 ;
 +------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2020,88 +2044,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances                ; 8                                                  ;
 ; Entity Instance                           ; STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 16                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 24                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 16                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 24                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 15                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 23                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 15                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 23                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst91|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 16                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 24                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 16                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 24                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 17                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 25                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 17                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 25                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst94|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 17                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 25                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 17                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 25                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst93|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 16                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 24                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 16                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 24                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst95|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 17                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 25                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 17                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 25                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
 ; Entity Instance                           ; STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 18                                                 ;
-;     -- NUMWORDS_A                         ; 256                                                ;
+;     -- WIDTH_A                            ; 26                                                 ;
+;     -- NUMWORDS_A                         ; 10                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 18                                                 ;
-;     -- NUMWORDS_B                         ; 256                                                ;
+;     -- WIDTH_B                            ; 26                                                 ;
+;     -- NUMWORDS_B                         ; 10                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
@@ -2110,7 +2134,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi_sender:inst20|spi_slave:spi_slave_0"                                                    ;
+; Port Connectivity Checks: "spi_sender:inst12|spi_slave:spi_slave_0"                                                    ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2131,7 +2155,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:26     ;
+; Top            ; 00:00:22     ;
 +----------------+--------------+
 
 
@@ -2141,7 +2165,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Dec 17 23:27:38 2016
+    Info: Processing started: Mon Dec 19 19:35:42 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
@@ -2177,20 +2201,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file sensor_
     Info (12022): Found design unit 1: sensor_mux_data-SYN
     Info (12023): Found entity 1: sensor_mux_data
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
-Warning (275083): Bus "led2[2..0]" found using same base name as "led", which might lead to a name conflict.
 Warning (275080): Converted elements in bus name "led" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "led[3..0]" to "led3..0"
 Warning (275080): Converted elements in bus name "led2" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "led2[2..0]" to "led22..0"
-Warning (275043): Pin "led_fifo_full" is missing source
 Warning (275043): Pin "led_fifo_empty" is missing source
 Warning (275009): Pin "button0_read" not connected
-Info (12128): Elaborating entity "spi_sender" for hierarchy "spi_sender:inst20"
+Info (12128): Elaborating entity "spi_sender" for hierarchy "spi_sender:inst12"
 Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(25): object "spi_busy" assigned a value but never read
 Warning (10541): VHDL Signal Declaration warning at spi_sender.vhd(28): used implicit default value for signal "spi_rx_req" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(29): object "spi_rx_data" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(30): object "spi_rrdy" assigned a value but never read
-Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_sender:inst20|spi_slave:spi_slave_0"
+Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_sender:inst12|spi_slave:spi_slave_0"
 Warning (10492): VHDL Process Statement warning at spi_slave.vhd(74): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at spi_slave.vhd(87): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at spi_slave.vhd(92): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -2254,27 +2276,14 @@ Info (10041): Inferred latch for "rx_data[20]" at spi_slave.vhd(83)
 Info (10041): Inferred latch for "rx_data[21]" at spi_slave.vhd(83)
 Info (10041): Inferred latch for "rx_data[22]" at spi_slave.vhd(83)
 Info (10041): Inferred latch for "rx_data[23]" at spi_slave.vhd(83)
-Info (12128): Elaborating entity "sensor_mux" for hierarchy "sensor_mux:inst71"
-Warning (12125): Using design file sensor_empty_mux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: sensor_empty_mux-SYN
-    Info (12023): Found entity 1: sensor_empty_mux
-Info (12128): Elaborating entity "sensor_empty_mux" for hierarchy "sensor_empty_mux:inst68"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "1"
-    Info (12134): Parameter "LPM_SIZE" = "8"
-    Info (12134): Parameter "LPM_WIDTHS" = "3"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h6e.tdf
-    Info (12023): Found entity 1: mux_h6e
-Info (12128): Elaborating entity "mux_h6e" for hierarchy "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component|mux_h6e:auto_generated"
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst97"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst17"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "counter" for hierarchy "counter:inst24"
+Info (10041): Inferred latch for "rx_data[24]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[25]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[26]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[27]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[28]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[29]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[30]" at spi_slave.vhd(83)
+Info (10041): Inferred latch for "rx_data[31]" at spi_slave.vhd(83)
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component"
@@ -2336,40 +2345,61 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated"
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst95"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst16"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst94"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst14"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst93"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst13"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst92"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst12"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst91"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst11"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst90"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst10"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst89"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst9"
-Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
-Info (12128): Elaborating entity "sensor_mux_data" for hierarchy "sensor_mux_data:inst42"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "24"
+Info (12128): Elaborating entity "sensor_mux" for hierarchy "sensor_mux:inst71"
+Warning (12125): Using design file sensor_empty_mux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sensor_empty_mux-SYN
+    Info (12023): Found entity 1: sensor_empty_mux
+Info (12128): Elaborating entity "sensor_empty_mux" for hierarchy "sensor_empty_mux:inst68"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "1"
     Info (12134): Parameter "LPM_SIZE" = "8"
     Info (12134): Parameter "LPM_WIDTHS" = "3"
     Info (12134): Parameter "LPM_PIPELINE" = "0"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_68e.tdf
-    Info (12023): Found entity 1: mux_68e
-Info (12128): Elaborating entity "mux_68e" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component|mux_68e:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h6e.tdf
+    Info (12023): Found entity 1: mux_h6e
+Info (12128): Elaborating entity "mux_h6e" for hierarchy "sensor_empty_mux:inst68|LPM_MUX:LPM_MUX_component|mux_h6e:auto_generated"
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst97"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst32"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst95"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst31"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst94"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst30"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst93"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst29"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst92"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst28"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst91"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst27"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst90"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst23"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "STD_FIFO" for hierarchy "STD_FIFO:inst89"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst22"
+Warning (10036): Verilog HDL or VHDL warning at lighthouse.vhd(22): object "data" assigned a value but never read
+Info (12128): Elaborating entity "sensor_mux_data" for hierarchy "sensor_mux_data:inst42"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_SIZE" = "8"
+    Info (12134): Parameter "LPM_WIDTHS" = "3"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_58e.tdf
+    Info (12023): Found entity 1: mux_58e
+Info (12128): Elaborating entity "mux_58e" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component|mux_58e:auto_generated"
 Info (12128): Elaborating entity "LCD" for hierarchy "LCD:inst65"
 Warning (276020): Inferred RAM node "STD_FIFO:inst90|\fifo_proc:Memory_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "STD_FIFO:inst89|\fifo_proc:Memory_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -2382,12 +2412,12 @@ Warning (276020): Inferred RAM node "STD_FIFO:inst97|\fifo_proc:Memory_rtl_0" fr
 Info (19000): Inferred 8 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst90|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 16
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 16
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2398,12 +2428,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst89|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 15
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 15
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 23
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 23
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2414,12 +2444,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst91|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 16
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 16
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2430,12 +2460,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst92|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 17
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 17
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 25
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 25
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2446,12 +2476,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst94|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 17
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 17
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 25
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 25
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2462,12 +2492,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst93|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 16
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 16
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 24
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 24
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2478,12 +2508,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst95|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 17
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 17
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 25
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 25
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2494,12 +2524,12 @@ Info (19000): Inferred 8 megafunctions from design logic
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "STD_FIFO:inst97|\fifo_proc:Memory_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 18
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter WIDTH_B set to 18
-        Info (286033): Parameter WIDTHAD_B set to 8
-        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter WIDTH_A set to 26
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 10
+        Info (286033): Parameter WIDTH_B set to 26
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 10
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -2511,12 +2541,12 @@ Info (19000): Inferred 8 megafunctions from design logic
 Info (12130): Elaborated megafunction instantiation "STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0"
 Info (12133): Instantiated megafunction "STD_FIFO:inst90|altsyncram:\fifo_proc:Memory_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "16"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "WIDTH_B" = "16"
-    Info (12134): Parameter "WIDTHAD_B" = "8"
-    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "WIDTH_A" = "24"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "24"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -2525,17 +2555,17 @@ Info (12133): Instantiated megafunction "STD_FIFO:inst90|altsyncram:\fifo_proc:M
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vug1.tdf
-    Info (12023): Found entity 1: altsyncram_vug1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tqg1.tdf
+    Info (12023): Found entity 1: altsyncram_tqg1
 Info (12130): Elaborated megafunction instantiation "STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0"
 Info (12133): Instantiated megafunction "STD_FIFO:inst89|altsyncram:\fifo_proc:Memory_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "15"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "WIDTH_B" = "15"
-    Info (12134): Parameter "WIDTHAD_B" = "8"
-    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "WIDTH_A" = "23"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "23"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -2544,17 +2574,17 @@ Info (12133): Instantiated megafunction "STD_FIFO:inst89|altsyncram:\fifo_proc:M
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tug1.tdf
-    Info (12023): Found entity 1: altsyncram_tug1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rqg1.tdf
+    Info (12023): Found entity 1: altsyncram_rqg1
 Info (12130): Elaborated megafunction instantiation "STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0"
 Info (12133): Instantiated megafunction "STD_FIFO:inst92|altsyncram:\fifo_proc:Memory_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "17"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "WIDTH_B" = "17"
-    Info (12134): Parameter "WIDTHAD_B" = "8"
-    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "WIDTH_A" = "25"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "25"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -2563,17 +2593,17 @@ Info (12133): Instantiated megafunction "STD_FIFO:inst92|altsyncram:\fifo_proc:M
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1vg1.tdf
-    Info (12023): Found entity 1: altsyncram_1vg1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vqg1.tdf
+    Info (12023): Found entity 1: altsyncram_vqg1
 Info (12130): Elaborated megafunction instantiation "STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0"
 Info (12133): Instantiated megafunction "STD_FIFO:inst97|altsyncram:\fifo_proc:Memory_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "18"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "WIDTH_B" = "18"
-    Info (12134): Parameter "WIDTHAD_B" = "8"
-    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "WIDTH_A" = "26"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "10"
+    Info (12134): Parameter "WIDTH_B" = "26"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "10"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -2582,31 +2612,38 @@ Info (12133): Instantiated megafunction "STD_FIFO:inst97|altsyncram:\fifo_proc:M
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3vg1.tdf
-    Info (12023): Found entity 1: altsyncram_3vg1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1rg1.tdf
+    Info (12023): Found entity 1: altsyncram_1rg1
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[23]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[23]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[23]~1"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[22]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[22]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[22]~5"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[21]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[21]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[21]~9"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[20]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[20]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[20]~13"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[19]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[19]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[19]~17"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[18]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[18]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[18]~21"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[17]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[17]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[17]~25"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[16]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[16]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[16]~29"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[15]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[15]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[15]~33"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[14]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[14]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[14]~37"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[13]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[13]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[13]~41"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[12]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[12]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[12]~45"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[11]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[11]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[11]~49"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[10]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[10]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[10]~53"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[9]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[9]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[9]~57"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[2]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[2]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[2]~61"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[1]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[1]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[1]~65"
-    Warning (13310): Register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[0]" is converted into an equivalent circuit using register "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[0]~_emulated" and latch "spi_sender:inst20|spi_slave:spi_slave_0|tx_buf[0]~69"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]~1"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]~5"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]~9"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]~13"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]~17"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]~21"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]~25"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]~29"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]~33"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]~37"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]~41"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]~45"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]~49"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]~53"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]~57"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]~61"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]~65"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]~69"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]~73"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]~77"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]~81"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]~85"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]~89"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]~93"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]~97"
+    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]~101"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_fifo_full" is stuck at GND
     Warning (13410): Pin "led_fifo_empty" is stuck at GND
     Warning (13410): Pin "LCD0[7]" is stuck at VCC
     Warning (13410): Pin "LCD0[6]" is stuck at VCC
@@ -2641,22 +2678,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD3[1]" is stuck at GND
     Warning (13410): Pin "LCD3[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 29 registers lost all their fanouts during netlist optimizations.
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "spi_reset_n"
     Warning (15610): No output dependent on input pin "button0_read"
-Info (21057): Implemented 9725 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9789 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 44 output pins
     Info (21061): Implemented 9524 logic cells
-    Info (21064): Implemented 132 RAM segments
+    Info (21064): Implemented 196 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 127 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 132 warnings
     Info: Peak virtual memory: 405 megabytes
-    Info: Processing ended: Sat Dec 17 23:28:11 2016
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Processing ended: Mon Dec 19 19:36:10 2016
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 

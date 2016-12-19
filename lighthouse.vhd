@@ -11,7 +11,7 @@ entity lighthouse is
 		sensor: in std_logic;
 		timer: in std_logic_vector(31 downto 0);
 		result: out std_logic;
-		sensor_value: out std_logic_vector(23 downto 0);		
+		sensor_value: out std_logic_vector(31 downto 0);		
 		error: out std_logic);
 end lighthouse;
  
@@ -97,7 +97,7 @@ begin   process(sensor)
 				data  <= '1';
 			end if;
 
-			sensor_value(23 downto 11) <= t_sweep_duration(12 downto 0);
+			sensor_value(31 downto 11) <= t_sweep_duration(20 downto 0);
 			sensor_value(10) <= lighthouse_switch;
 			sensor_value(9) <= rotor;
 			sensor_value(8 downto 0) <= sensorID;

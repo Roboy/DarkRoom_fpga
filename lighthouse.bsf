@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 224 48)
 		(output)
-		(text "sensor_value[23..0]" (rect 0 0 79 12)(font "Arial" ))
-		(text "sensor_value[23..0]" (rect 124 43 203 55)(font "Arial" ))
+		(text "sensor_value[31..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "sensor_value[31..0]" (rect 126 43 203 55)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48)(line_width 3))
 	)
 	(port

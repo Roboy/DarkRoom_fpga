@@ -13,7 +13,7 @@ port(
   sclk    : IN    STD_LOGIC;  --spi serial clock
   ss_n    : IN    STD_LOGIC;  --spi slave select
   mosi    : IN    STD_LOGIC;  --spi master out, slave in
-  data 	 : IN		STD_LOGIC_VECTOR(23 DOWNTO 0); 	--data to be send via spi
+  data 	 : IN		STD_LOGIC_VECTOR(31 DOWNTO 0); 	--data to be send via spi
   newData : IN 	std_logic;
   miso    : OUT   STD_LOGIC;  --spi master in, slave out
   trdy_out    : OUT   STD_LOGIC; --spi transmit ready
@@ -21,12 +21,12 @@ port(
 end spi_sender;
 
 ARCHITECTURE logic OF spi_sender IS
-  CONSTANT spi_d_width : INTEGER := 24;  --spi data width in bits
+  CONSTANT spi_d_width : INTEGER := 32;  --spi data width in bits
   SIGNAL   spi_busy    : STD_LOGIC;
   SIGNAL   spi_tx_ena  : STD_LOGIC;
-  SIGNAL   spi_tx_data : STD_LOGIC_VECTOR(23 DOWNTO 0);
+  SIGNAL   spi_tx_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL   spi_rx_req  : STD_LOGIC;
-  SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(23 DOWNTO 0);
+  SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL   spi_rrdy    : STD_LOGIC;
 
   --declare spi slave component

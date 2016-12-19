@@ -8,11 +8,11 @@ entity counter is
 		constant counter_width  : natural := 32
 	);
    port( clock: in std_logic;
- 	 output: out std_logic_vector(0 to counter_width-1));
+ 	 output: out std_logic_vector(counter_width-1 downto 0));
 end counter;
  
 architecture Behavioral of counter is
-   signal temp: std_logic_vector(0 to counter_width-1);
+   signal temp: std_logic_vector(counter_width-1 downto 0);
 begin   process(clock)
    begin
 		if rising_edge(clock) then
