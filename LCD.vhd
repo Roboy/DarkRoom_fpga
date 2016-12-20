@@ -12,12 +12,16 @@ end LCD;
 
 architecture top of LCD is
 begin display : process(display_value) is
+	variable tmp: integer;
 	variable thousand: integer;
 	variable hundred: integer;
 	variable ten: integer;
 	variable one: integer;
   begin
-   thousand := display_value/1000;
+	tmp := display_value; 
+	tmp := tmp/1000000000000;
+	tmp := tmp mod 9999;
+   thousand := tmp/1000;
 	 case thousand is
       when 0 => sseg3 <= "11000000";
       when 1 => sseg3 <= "11111001";
@@ -32,7 +36,7 @@ begin display : process(display_value) is
       when others => sseg3 <= "11111111";
     end case;
 	
-	 hundred := (display_value-thousand*1000)/100;
+	 hundred := (tmp-thousand*1000)/100;
     case hundred is
       when 0 => sseg2 <= "11000000";
       when 1 => sseg2 <= "11111001";
@@ -47,7 +51,7 @@ begin display : process(display_value) is
       when others => sseg2 <= "11111111";
     end case;
 	 
-	 ten := (display_value-thousand*1000-hundred*100)/10;
+	 ten := (tmp-thousand*1000-hundred*100)/10;
 	 case ten is
       when 0 => sseg1 <= "11000000";
       when 1 => sseg1 <= "11111001";
@@ -62,7 +66,7 @@ begin display : process(display_value) is
       when others => sseg1 <= "11111111";
     end case;
 	 
-	 one := display_value-thousand*1000-hundred*100-ten*10;
+	 one := tmp-thousand*1000-hundred*100-ten*10;
 	 case one is
       when 0 => sseg0 <= "11000000";
       when 1 => sseg0 <= "11111001";

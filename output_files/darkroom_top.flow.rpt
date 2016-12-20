@@ -1,5 +1,5 @@
 Flow report for darkroom_top
-Mon Dec 19 19:37:54 2016
+Tue Dec 20 18:26:36 2016
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,21 +40,21 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 19 19:37:54 2016           ;
+; Flow Status                        ; Successful - Tue Dec 20 18:26:36 2016           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; darkroom_top                                    ;
 ; Top-level Entity Name              ; darkroom_top                                    ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 9,176 / 15,408 ( 60 % )                         ;
-;     Total combinational functions  ; 8,221 / 15,408 ( 53 % )                         ;
-;     Dedicated logic registers      ; 2,209 / 15,408 ( 14 % )                         ;
-; Total registers                    ; 2209                                            ;
-; Total pins                         ; 68 / 347 ( 20 % )                               ;
+; Total logic elements               ; 12,207 / 15,408 ( 79 % )                        ;
+;     Total combinational functions  ; 11,571 / 15,408 ( 75 % )                        ;
+;     Dedicated logic registers      ; 1,672 / 15,408 ( 11 % )                         ;
+; Total registers                    ; 1672                                            ;
+; Total pins                         ; 65 / 347 ( 19 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 1,960 / 516,096 ( < 1 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 8 / 112 ( 7 % )                                 ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
 +------------------------------------+-------------------------------------------------+
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/19/2016 19:35:43 ;
+; Start date & time ; 12/20/2016 18:22:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; darkroom_top        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.148217254324509                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.148225454811933                     ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --             ;
@@ -104,12 +104,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 405 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:00:58     ; 1.0                     ; 563 MB              ; 00:00:58                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 350 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:11     ; 1.0                     ; 413 MB              ; 00:00:10                           ;
-; EDA Netlist Writer        ; 00:00:19     ; 1.0                     ; 369 MB              ; 00:00:18                           ;
-; Total                     ; 00:01:57     ; --                      ; --                  ; 00:01:54                           ;
+; Analysis & Synthesis      ; 00:00:50     ; 1.0                     ; 425 MB              ; 00:00:41                           ;
+; Fitter                    ; 00:01:56     ; 1.0                     ; 569 MB              ; 00:01:49                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 346 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:15     ; 1.0                     ; 426 MB              ; 00:00:14                           ;
+; EDA Netlist Writer        ; 00:00:35     ; 1.0                     ; 377 MB              ; 00:00:31                           ;
+; Total                     ; 00:03:41     ; --                      ; --                  ; 00:03:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
