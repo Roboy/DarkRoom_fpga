@@ -36,10 +36,10 @@ begin   process(sensor)
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
 			sweep_detected <= '0';
-			if(duration < 50) then -- this is a sweep
+			if(duration < 50*50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
 				sweep_detected <= '1';
-			elsif (duration > (63 - 5)) and (duration < (94 + 5)) then -- this is a sync pulse, NOT skipping
+			elsif (duration > (63*50 - 5*50)) and (duration < (94*50 + 5*50)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
 				if(start_valid_sync = 0) then
@@ -53,40 +53,40 @@ begin   process(sensor)
 				sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
 				start_valid_sync <= t_0;
 				stop_valid_sync := (others => '0');
-				if((sync_gap_duration - 8333 ) > 100 ) then
+				if((sync_gap_duration - 8333*50 ) > 100*50 ) then
 					lighthouse <= '1';
-				elsif ((sync_gap_duration - 8333 ) < -100 ) then
+				elsif ((sync_gap_duration - 8333*50 ) < -100*50 ) then
 					lighthouse <= '0';
 				end if;
 			end if;
 			
-			if(abs(duration - 63) < 5) then
+			if(abs(duration - 63*50) < 5*50) then
 				rotor <= '0';
 				data  <= '0';
-			elsif(abs(duration - 73) < 5) then
+			elsif(abs(duration - 73*50) < 5*50) then
 				rotor <= '1';
 				data  <= '0';
-			elsif(abs(duration - 83) < 5) then
+			elsif(abs(duration - 83*50) < 5*50) then
 				rotor <= '0';
 				data  <= '1';
-			elsif(abs(duration - 94) < 5) then
+			elsif(abs(duration - 94*50) < 5*50) then
 				rotor <= '1';
 				data  <= '1';
-			elsif(abs(duration - 104) < 5) then
+			elsif(abs(duration - 104*50) < 5*50) then
 				rotor <= '0';
 				data  <= '0';
-			elsif(abs(duration - 115) < 5) then
+			elsif(abs(duration - 115*50) < 5*50) then
 				rotor <= '1';
 				data  <= '0';
-			elsif(abs(duration - 125) < 5) then
+			elsif(abs(duration - 125*50) < 5*50) then
 				rotor <= '0';
 				data  <= '1';
-			elsif(abs(duration - 135) < 5) then
+			elsif(abs(duration - 135*50) < 5*50) then
 				rotor <= '1';
 				data  <= '1';
 			end if;
 			
-			if(t_sweep_duration < 8192) and (t_sweep_duration > 0 ) then 
+			if(t_sweep_duration < 8192*50) and (t_sweep_duration > 0 ) then 
 				sensor_value(12) <= '1'; -- valid sweep
 			else
 				sensor_value(12) <= '0'; -- not valid
