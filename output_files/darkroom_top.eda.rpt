@@ -1,5 +1,5 @@
 EDA Netlist Writer report for darkroom_top
-Tue Dec 20 18:26:36 2016
+Tue Jan 17 18:20:44 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Dec 20 18:26:36 2016 ;
+; EDA Netlist Writer Status ; Successful - Tue Jan 17 18:20:44 2017 ;
 ; Revision Name             ; darkroom_top                          ;
 ; Top-level Entity Name     ; darkroom_top                          ;
 ; Family                    ; Cyclone III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                        ;
-+---------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                   ;
-+---------------------------------------------------------------------------------------------------+
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_6_1200mv_85c_slow.vho      ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_6_1200mv_0c_slow.vho       ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_min_1200mv_0c_fast.vho     ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top.vho                        ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_6_1200mv_85c_vhd_slow.sdo  ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_6_1200mv_0c_vhd_slow.sdo   ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_min_1200mv_0c_vhd_fast.sdo ;
-; /home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/darkroom_top_vhd.sdo                    ;
-+---------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                   ;
++----------------------------------------------------------------------------------------------+
+; Generated Files                                                                              ;
++----------------------------------------------------------------------------------------------+
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_6_1200mv_85c_slow.vho      ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_6_1200mv_0c_slow.vho       ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_min_1200mv_0c_fast.vho     ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top.vho                        ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_6_1200mv_85c_vhd_slow.sdo  ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_6_1200mv_0c_vhd_slow.sdo   ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_min_1200mv_0c_vhd_fast.sdo ;
+; /home/letrend/workspace/darkroom/simulation/modelsim/darkroom_top_vhd.sdo                    ;
++----------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 20 18:26:01 2016
+    Info: Processing started: Tue Jan 17 18:20:23 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off darkroom -c darkroom_top
-Info (204019): Generated file darkroom_top_6_1200mv_85c_slow.vho in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_6_1200mv_0c_slow.vho in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_min_1200mv_0c_fast.vho in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top.vho in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_6_1200mv_85c_vhd_slow.sdo in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_6_1200mv_0c_vhd_slow.sdo in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_min_1200mv_0c_vhd_fast.sdo in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file darkroom_top_vhd.sdo in folder "/home/letrend/altera/13.0sp1/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_6_1200mv_85c_slow.vho in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_6_1200mv_0c_slow.vho in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_min_1200mv_0c_fast.vho in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top.vho in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_6_1200mv_85c_vhd_slow.sdo in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_6_1200mv_0c_vhd_slow.sdo in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_min_1200mv_0c_vhd_fast.sdo in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file darkroom_top_vhd.sdo in folder "/home/letrend/workspace/darkroom/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 384 megabytes
-    Info: Processing ended: Tue Dec 20 18:26:36 2016
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 357 megabytes
+    Info: Processing ended: Tue Jan 17 18:20:44 2017
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:21
 
 

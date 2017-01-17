@@ -8,16 +8,31 @@ generic(
   spi_cpol    : STD_LOGIC := '0';        --spi clock polarity mode
   spi_cpha    : STD_LOGIC := '0');       --spi clock phase mode
 port(
-  clock   : IN    STD_LOGIC;  --system clock
-  reset_n : IN    STD_LOGIC;  --active low reset
-  sclk    : IN    STD_LOGIC;  --spi serial clock
-  ss_n    : IN    STD_LOGIC;  --spi slave select
-  mosi    : IN    STD_LOGIC;  --spi master out, slave in
-  data 	 : IN		STD_LOGIC_VECTOR(31 DOWNTO 0); 	--data to be send via spi
-  newData : IN 	std_logic;
-  miso    : OUT   STD_LOGIC;  --spi master in, slave out
-  trdy_out    : OUT   STD_LOGIC; --spi transmit ready
-  sending 		:OUT STD_LOGIC);
+	  clock   : IN    STD_LOGIC;  --system clock
+	  reset_n : IN    STD_LOGIC;  --active low reset
+	  sclk    : IN    STD_LOGIC;  --spi serial clock
+	  ss_n    : IN    STD_LOGIC;  --spi slave select
+	  mosi    : IN    STD_LOGIC;  --spi master out, slave in
+	  data 	 : IN		STD_LOGIC_VECTOR(31 DOWNTO 0); 	--data to be send via spi
+	  miso    : OUT   STD_LOGIC;  --spi master in, slave out
+	  trdy_out    : OUT   STD_LOGIC; --spi transmit ready
+	  send_sensor0: in std_logic;
+	 send_sensor1: in std_logic;
+	 send_sensor2: in std_logic;
+	 send_sensor3: in std_logic;
+	 send_sensor4: in std_logic;
+	 send_sensor5: in std_logic;
+	 send_sensor6: in std_logic;
+	 send_sensor7: in std_logic;
+	  sweep_detected_sensor0: in std_logic;
+	 sweep_detected_sensor1: in std_logic;
+	 sweep_detected_sensor2: in std_logic;
+	 sweep_detected_sensor3: in std_logic;
+	 sweep_detected_sensor4: in std_logic;
+	 sweep_detected_sensor5: in std_logic;
+	 sweep_detected_sensor6: in std_logic;
+	 sweep_detected_sensor7: in std_logic;
+	 sensor_selector: out std_logic_vector(2 downto 0));	-- mux slector
 end spi_sender;
 
 ARCHITECTURE logic OF spi_sender IS
@@ -28,6 +43,8 @@ ARCHITECTURE logic OF spi_sender IS
   SIGNAL   spi_rx_req  : STD_LOGIC;
   SIGNAL   spi_rx_data : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL   spi_rrdy    : STD_LOGIC;
+  signal sensors_sent: std_logic_vector(7 downto 0);
+  signal data_ready: std_logic;
 
   --declare spi slave component
   COMPONENT spi_slave IS
@@ -56,7 +73,6 @@ ARCHITECTURE logic OF spi_sender IS
   END COMPONENT spi_slave;
 
 BEGIN
-
   --instantiate the spi slave
   spi_slave_0:  spi_slave
     GENERIC MAP(cpol => spi_cpol, cpha => spi_cpha, d_width => spi_d_width)
@@ -65,23 +81,78 @@ BEGIN
              st_load_rrdy => '0', st_load_roe => '0', tx_load_en => spi_tx_ena,
              tx_load_data => spi_tx_data, trdy => trdy_out, rrdy => spi_rrdy, roe => open,
              rx_data => spi_rx_data, busy => spi_busy, miso => miso);
-	 process (clock,newData)
+	 process (clock)
 	 variable prev_data:		STD_LOGIC;
 	 begin 
 		if rising_edge(clock) then
-			if newData = '1' and prev_data = '0' then 
+			if ( spi_busy = '0' ) then
+				spi_tx_ena <= '0';
+				data_ready <= '0';
+				if sweep_detected_sensor0 = '1' and send_sensor0 = '1' and sensors_sent(0) = '0' then
+					sensor_selector <= "000";
+					data_ready <= '1';
+					sensors_sent(0) <= '1';
+				elsif sweep_detected_sensor1 = '1' and send_sensor1 = '1' and sensors_sent(1) = '0'  then 
+					sensor_selector <= "001";
+					data_ready <= '1';
+					sensors_sent(1) <= '1';
+				elsif sweep_detected_sensor2 = '1' and send_sensor2 = '1' and sensors_sent(2) = '0'  then 
+					sensor_selector <= "010";
+					data_ready <= '1';
+					sensors_sent(2) <= '1';
+				elsif sweep_detected_sensor3 = '1' and send_sensor3 = '1' and sensors_sent(3) = '0'  then 
+					sensor_selector <= "011";
+					data_ready <= '1';
+					sensors_sent(3) <= '1';
+				elsif sweep_detected_sensor4 = '1' and send_sensor4 = '1' and sensors_sent(4) = '0'  then 
+					sensor_selector <= "100";
+					data_ready <= '1';
+					sensors_sent(4) <= '1';
+				elsif sweep_detected_sensor5 = '1' and send_sensor5 = '1' and sensors_sent(5) = '0'  then 
+					sensor_selector <= "101";
+					data_ready <= '1';
+					sensors_sent(5) <= '1';
+				elsif sweep_detected_sensor6 = '1' and send_sensor6 = '1' and sensors_sent(6) = '0'  then 
+					sensor_selector <= "110";
+					data_ready <= '1';
+					sensors_sent(6) <= '1';
+				elsif sweep_detected_sensor7 = '1' and send_sensor7 = '1' and sensors_sent(7) = '0'  then 
+					sensor_selector <= "111";
+					data_ready <= '1';
+					sensors_sent(7) <= '1';
+				end if;
+			end if;
+			
+			if data_ready = '1' then
 				spi_tx_data <= data;
 				spi_tx_ena <= '1';
-				sending <= '1';
-				prev_data := '1';
-			elsif newData = '0' and prev_data = '1' then
-				sending <= '0';
-				spi_tx_ena <= '0';
-				prev_data := '0';
-			else 
-				spi_tx_ena <= '0';
+				data_ready <= '0';
+			end if;
+			
+			if sweep_detected_sensor0 = '0' then
+				sensors_sent(0) <= '0';
+			end if;
+			if sweep_detected_sensor1 = '0' then
+				sensors_sent(1) <= '0';
+			end if;
+			if sweep_detected_sensor2 = '0' then
+				sensors_sent(2) <= '0';
+			end if;
+			if sweep_detected_sensor3 = '0' then
+				sensors_sent(3) <= '0';
+			end if;
+			if sweep_detected_sensor4 = '0' then
+				sensors_sent(4) <= '0';
+			end if;
+			if sweep_detected_sensor5 = '0' then
+				sensors_sent(5) <= '0';
+			end if;
+			if sweep_detected_sensor6 = '0' then
+				sensors_sent(6) <= '0';
+			end if;
+			if sweep_detected_sensor7 = '0' then
+				sensors_sent(7) <= '0';
 			end if;
 		end if;
 	end process;
-	
  END logic;

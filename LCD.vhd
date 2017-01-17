@@ -19,7 +19,7 @@ begin display : process(display_value) is
 	variable one: integer;
   begin
 	tmp := display_value; 
-	tmp := tmp/1000000000000;
+	tmp := tmp;
 	tmp := tmp mod 9999;
    thousand := tmp/1000;
 	 case thousand is

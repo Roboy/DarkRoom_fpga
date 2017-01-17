@@ -1,74 +1,37 @@
 |darkroom_top
-spi_miso <= spi_sender:inst30.miso
+spi_miso <= spi_sender:inst12.miso
+clock_50 => spi_sender:inst12.clock
 clock_50 => pll:inst.inclk0
-spi_reset_n => spi_sender:inst30.reset_n
-spi_sclk => spi_sender:inst30.sclk
-spi_ss_n => spi_sender:inst30.ss_n
-spi_mosi => spi_sender:inst30.mosi
-SW0 => inst29.IN0
-sensor0 => lighthouse:inst14.sensor
-sensor1 => lighthouse:inst15.sensor
-sensor2 => lighthouse:inst16.sensor
-sensor3 => lighthouse:inst17.sensor
-sensor4 => lighthouse:inst18.sensor
-sensor5 => lighthouse:inst19.sensor
-sensor6 => lighthouse:inst20.sensor
-sensor7 => lighthouse:inst21.sensor
-SW1 => sensor_mux:inst31.send_sensor0
-SW2 => sensor_mux:inst31.send_sensor1
-SW3 => sensor_mux:inst31.send_sensor2
-SW4 => sensor_mux:inst31.send_sensor3
-SW5 => sensor_mux:inst31.send_sensor4
-SW6 => sensor_mux:inst31.send_sensor5
-SW7 => sensor_mux:inst31.send_sensor6
-SW8 => sensor_mux:inst31.send_sensor7
-spi_trdy <= spi_sender:inst30.trdy_out
+button1_reset => spi_sender:inst12.reset_n
+spi_sclk => spi_sender:inst12.sclk
+spi_ss_n => spi_sender:inst12.ss_n
+spi_mosi => spi_sender:inst12.mosi
+SW1 => spi_sender:inst12.send_sensor0
+SW2 => spi_sender:inst12.send_sensor1
+SW3 => spi_sender:inst12.send_sensor2
+SW4 => spi_sender:inst12.send_sensor3
+SW5 => spi_sender:inst12.send_sensor4
+SW6 => spi_sender:inst12.send_sensor5
+SW7 => spi_sender:inst12.send_sensor6
+SW8 => spi_sender:inst12.send_sensor7
+sensor0 => lighthouse:inst1.sensor
+sensor1 => lighthouse:inst2.sensor
+sensor2 => lighthouse:inst3.sensor
+sensor3 => lighthouse:inst4.sensor
+sensor4 => lighthouse:inst5.sensor
+sensor5 => lighthouse:inst6.sensor
+sensor6 => lighthouse:inst7.sensor
+sensor7 => lighthouse:inst8.sensor
+spi_trdy <= spi_sender:inst12.trdy_out
 led_fifo_empty <= <GND>
-LEDG9 <= spi_sent_counter[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDG8 <= inst29.DB_MAX_OUTPUT_PORT_TYPE
-LCD0[0] <= sseg0[0].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[1] <= sseg0[1].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[2] <= sseg0[2].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[3] <= sseg0[3].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[4] <= sseg0[4].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[5] <= sseg0[5].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[6] <= sseg0[6].DB_MAX_OUTPUT_PORT_TYPE
-LCD0[7] <= sseg0[7].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[0] <= sseg1[0].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[1] <= sseg1[1].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[2] <= sseg1[2].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[3] <= sseg1[3].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[4] <= sseg1[4].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[5] <= sseg1[5].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[6] <= sseg1[6].DB_MAX_OUTPUT_PORT_TYPE
-LCD1[7] <= sseg1[7].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[0] <= sseg2[0].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[1] <= sseg2[1].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[2] <= sseg2[2].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[3] <= sseg2[3].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[4] <= sseg2[4].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[5] <= sseg2[5].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[6] <= sseg2[6].DB_MAX_OUTPUT_PORT_TYPE
-LCD2[7] <= sseg2[7].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[0] <= sseg3[0].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[1] <= sseg3[1].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[2] <= sseg3[2].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[3] <= sseg3[3].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[4] <= sseg3[4].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[5] <= sseg3[5].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[6] <= sseg3[6].DB_MAX_OUTPUT_PORT_TYPE
-LCD3[7] <= sseg3[7].DB_MAX_OUTPUT_PORT_TYPE
 led[0] <= global_counter[20].DB_MAX_OUTPUT_PORT_TYPE
 led[1] <= global_counter[21].DB_MAX_OUTPUT_PORT_TYPE
 led[2] <= global_counter[22].DB_MAX_OUTPUT_PORT_TYPE
 led[3] <= global_counter[23].DB_MAX_OUTPUT_PORT_TYPE
 button0_read => ~NO_FANOUT~
-button1_reset => ~NO_FANOUT~
 
 
-|darkroom_top|spi_sender:inst30
-clock => sending~reg0.CLK
-clock => spi_tx_ena.CLK
+|darkroom_top|spi_sender:inst12
 clock => spi_tx_data[0].CLK
 clock => spi_tx_data[1].CLK
 clock => spi_tx_data[2].CLK
@@ -101,7 +64,19 @@ clock => spi_tx_data[28].CLK
 clock => spi_tx_data[29].CLK
 clock => spi_tx_data[30].CLK
 clock => spi_tx_data[31].CLK
-clock => prev_data.CLK
+clock => sensors_sent[0].CLK
+clock => sensors_sent[1].CLK
+clock => sensors_sent[2].CLK
+clock => sensors_sent[3].CLK
+clock => sensors_sent[4].CLK
+clock => sensors_sent[5].CLK
+clock => sensors_sent[6].CLK
+clock => sensors_sent[7].CLK
+clock => sensor_selector[0]~reg0.CLK
+clock => sensor_selector[1]~reg0.CLK
+clock => sensor_selector[2]~reg0.CLK
+clock => data_ready.CLK
+clock => spi_tx_ena.CLK
 reset_n => ~NO_FANOUT~
 sclk => spi_slave:spi_slave_0.sclk
 ss_n => spi_slave:spi_slave_0.ss_n
@@ -138,14 +113,38 @@ data[28] => spi_tx_data[28].DATAIN
 data[29] => spi_tx_data[29].DATAIN
 data[30] => spi_tx_data[30].DATAIN
 data[31] => spi_tx_data[31].DATAIN
-newData => process_0.IN1
-newData => process_0.IN1
 miso <= spi_slave:spi_slave_0.miso
 trdy_out <= spi_slave:spi_slave_0.trdy
-sending <= sending~reg0.DB_MAX_OUTPUT_PORT_TYPE
+send_sensor0 => process_0.IN0
+send_sensor1 => process_0.IN0
+send_sensor2 => process_0.IN0
+send_sensor3 => process_0.IN0
+send_sensor4 => process_0.IN0
+send_sensor5 => process_0.IN0
+send_sensor6 => process_0.IN0
+send_sensor7 => process_0.IN0
+sweep_detected_sensor0 => process_0.IN1
+sweep_detected_sensor0 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor1 => process_0.IN1
+sweep_detected_sensor1 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor2 => process_0.IN1
+sweep_detected_sensor2 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor3 => process_0.IN1
+sweep_detected_sensor3 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor4 => process_0.IN1
+sweep_detected_sensor4 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor5 => process_0.IN1
+sweep_detected_sensor5 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor6 => process_0.IN1
+sweep_detected_sensor6 => sensors_sent.OUTPUTSELECT
+sweep_detected_sensor7 => process_0.IN1
+sweep_detected_sensor7 => sensors_sent.OUTPUTSELECT
+sensor_selector[0] <= sensor_selector[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sensor_selector[1] <= sensor_selector[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sensor_selector[2] <= sensor_selector[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|spi_sender:inst30|spi_slave:spi_slave_0
+|darkroom_top|spi_sender:inst12|spi_slave:spi_slave_0
 sclk => miso~reg0.CLK
 sclk => miso~en.CLK
 sclk => tx_buf[0].CLK
@@ -487,109 +486,7 @@ busy <= ss_n.DB_MAX_OUTPUT_PORT_TYPE
 miso <= miso.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|pll:inst
-inclk0 => altpll:altpll_component.inclk[0]
-c0 <= altpll:altpll_component.clk[0]
-
-
-|darkroom_top|pll:inst|altpll:altpll_component
-inclk[0] => pll_altpll:auto_generated.inclk[0]
-inclk[1] => pll_altpll:auto_generated.inclk[1]
-fbin => ~NO_FANOUT~
-pllena => ~NO_FANOUT~
-clkswitch => ~NO_FANOUT~
-areset => ~NO_FANOUT~
-pfdena => ~NO_FANOUT~
-clkena[0] => ~NO_FANOUT~
-clkena[1] => ~NO_FANOUT~
-clkena[2] => ~NO_FANOUT~
-clkena[3] => ~NO_FANOUT~
-clkena[4] => ~NO_FANOUT~
-clkena[5] => ~NO_FANOUT~
-extclkena[0] => ~NO_FANOUT~
-extclkena[1] => ~NO_FANOUT~
-extclkena[2] => ~NO_FANOUT~
-extclkena[3] => ~NO_FANOUT~
-scanclk => ~NO_FANOUT~
-scanclkena => ~NO_FANOUT~
-scanaclr => ~NO_FANOUT~
-scanread => ~NO_FANOUT~
-scanwrite => ~NO_FANOUT~
-scandata => ~NO_FANOUT~
-phasecounterselect[0] => ~NO_FANOUT~
-phasecounterselect[1] => ~NO_FANOUT~
-phasecounterselect[2] => ~NO_FANOUT~
-phasecounterselect[3] => ~NO_FANOUT~
-phaseupdown => ~NO_FANOUT~
-phasestep => ~NO_FANOUT~
-configupdate => ~NO_FANOUT~
-fbmimicbidir <> <GND>
-clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
-clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
-clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
-clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
-clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
-extclk[0] <= <GND>
-extclk[1] <= <GND>
-extclk[2] <= <GND>
-extclk[3] <= <GND>
-clkbad[0] <= <GND>
-clkbad[1] <= <GND>
-enable1 <= <GND>
-enable0 <= <GND>
-activeclock <= <GND>
-clkloss <= <GND>
-locked <= <GND>
-scandataout <= <GND>
-scandone <= <GND>
-sclkout0 <= <GND>
-sclkout1 <= <GND>
-phasedone <= <GND>
-vcooverrange <= <GND>
-vcounderrange <= <GND>
-fbout <= <GND>
-fref <= <GND>
-icdrclk <= <GND>
-
-
-|darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated
-clk[0] <= pll1.CLK
-clk[1] <= pll1.CLK1
-clk[2] <= pll1.CLK2
-clk[3] <= pll1.CLK3
-clk[4] <= pll1.CLK4
-inclk[0] => pll1.CLK
-inclk[1] => pll1.CLK1
-
-
-|darkroom_top|sensor_mux:inst31
-clock => sensor_selector[0]~reg0.CLK
-clock => sensor_selector[1]~reg0.CLK
-clock => sensor_selector[2]~reg0.CLK
-clock => send~reg0.CLK
-sweep_detected_sensor0 => process_0.IN0
-sweep_detected_sensor1 => process_0.IN0
-sweep_detected_sensor2 => process_0.IN0
-sweep_detected_sensor3 => process_0.IN0
-sweep_detected_sensor4 => process_0.IN0
-sweep_detected_sensor5 => process_0.IN0
-sweep_detected_sensor6 => process_0.IN0
-sweep_detected_sensor7 => process_0.IN0
-send_sensor0 => process_0.IN1
-send_sensor1 => process_0.IN1
-send_sensor2 => process_0.IN1
-send_sensor3 => process_0.IN1
-send_sensor4 => process_0.IN1
-send_sensor5 => process_0.IN1
-send_sensor6 => process_0.IN1
-send_sensor7 => process_0.IN1
-sensor_selector[0] <= sensor_selector[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sensor_selector[1] <= sensor_selector[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-sensor_selector[2] <= sensor_selector[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-send <= send~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|darkroom_top|lighthouse:inst14
+|darkroom_top|lighthouse:inst1
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -952,7 +849,82 @@ output[30] <= temp[30].DB_MAX_OUTPUT_PORT_TYPE
 output[31] <= temp[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst15
+|darkroom_top|pll:inst
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|darkroom_top|pll:inst|altpll:altpll_component
+inclk[0] => pll_altpll:auto_generated.inclk[0]
+inclk[1] => pll_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+
+
+|darkroom_top|lighthouse:inst2
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -1248,7 +1220,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst16
+|darkroom_top|lighthouse:inst3
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -1544,7 +1516,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst17
+|darkroom_top|lighthouse:inst4
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -1840,7 +1812,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst18
+|darkroom_top|lighthouse:inst5
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -2136,7 +2108,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst19
+|darkroom_top|lighthouse:inst6
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -2432,7 +2404,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst20
+|darkroom_top|lighthouse:inst7
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -2728,7 +2700,7 @@ sensor_value[30] <= sensor_value[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sensor_value[31] <= sensor_value[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|darkroom_top|lighthouse:inst21
+|darkroom_top|lighthouse:inst8
 sensor => t_0[0].CLK
 sensor => t_0[1].CLK
 sensor => t_0[2].CLK
@@ -4736,140 +4708,5 @@ sel[2] => result_node[1].IN0
 sel[2] => _.IN0
 sel[2] => result_node[0].IN0
 sel[2] => _.IN0
-
-
-|darkroom_top|counter:inst26
-clock => temp[0].CLK
-clock => temp[1].CLK
-clock => temp[2].CLK
-clock => temp[3].CLK
-clock => temp[4].CLK
-clock => temp[5].CLK
-clock => temp[6].CLK
-clock => temp[7].CLK
-clock => temp[8].CLK
-clock => temp[9].CLK
-clock => temp[10].CLK
-clock => temp[11].CLK
-clock => temp[12].CLK
-clock => temp[13].CLK
-clock => temp[14].CLK
-clock => temp[15].CLK
-clock => temp[16].CLK
-clock => temp[17].CLK
-clock => temp[18].CLK
-clock => temp[19].CLK
-clock => temp[20].CLK
-clock => temp[21].CLK
-clock => temp[22].CLK
-clock => temp[23].CLK
-clock => temp[24].CLK
-clock => temp[25].CLK
-clock => temp[26].CLK
-clock => temp[27].CLK
-clock => temp[28].CLK
-clock => temp[29].CLK
-clock => temp[30].CLK
-clock => temp[31].CLK
-output[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= temp[4].DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= temp[5].DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= temp[6].DB_MAX_OUTPUT_PORT_TYPE
-output[7] <= temp[7].DB_MAX_OUTPUT_PORT_TYPE
-output[8] <= temp[8].DB_MAX_OUTPUT_PORT_TYPE
-output[9] <= temp[9].DB_MAX_OUTPUT_PORT_TYPE
-output[10] <= temp[10].DB_MAX_OUTPUT_PORT_TYPE
-output[11] <= temp[11].DB_MAX_OUTPUT_PORT_TYPE
-output[12] <= temp[12].DB_MAX_OUTPUT_PORT_TYPE
-output[13] <= temp[13].DB_MAX_OUTPUT_PORT_TYPE
-output[14] <= temp[14].DB_MAX_OUTPUT_PORT_TYPE
-output[15] <= temp[15].DB_MAX_OUTPUT_PORT_TYPE
-output[16] <= temp[16].DB_MAX_OUTPUT_PORT_TYPE
-output[17] <= temp[17].DB_MAX_OUTPUT_PORT_TYPE
-output[18] <= temp[18].DB_MAX_OUTPUT_PORT_TYPE
-output[19] <= temp[19].DB_MAX_OUTPUT_PORT_TYPE
-output[20] <= temp[20].DB_MAX_OUTPUT_PORT_TYPE
-output[21] <= temp[21].DB_MAX_OUTPUT_PORT_TYPE
-output[22] <= temp[22].DB_MAX_OUTPUT_PORT_TYPE
-output[23] <= temp[23].DB_MAX_OUTPUT_PORT_TYPE
-output[24] <= temp[24].DB_MAX_OUTPUT_PORT_TYPE
-output[25] <= temp[25].DB_MAX_OUTPUT_PORT_TYPE
-output[26] <= temp[26].DB_MAX_OUTPUT_PORT_TYPE
-output[27] <= temp[27].DB_MAX_OUTPUT_PORT_TYPE
-output[28] <= temp[28].DB_MAX_OUTPUT_PORT_TYPE
-output[29] <= temp[29].DB_MAX_OUTPUT_PORT_TYPE
-output[30] <= temp[30].DB_MAX_OUTPUT_PORT_TYPE
-output[31] <= temp[31].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|darkroom_top|LCD:inst65
-display_value[0] => Add0.IN66
-display_value[1] => Add0.IN65
-display_value[2] => Add0.IN64
-display_value[3] => Add0.IN63
-display_value[4] => Add0.IN62
-display_value[5] => Add0.IN61
-display_value[6] => Add0.IN60
-display_value[7] => Add0.IN59
-display_value[8] => Add0.IN58
-display_value[9] => Add0.IN57
-display_value[10] => Add0.IN56
-display_value[11] => Add0.IN55
-display_value[12] => Add0.IN54
-display_value[13] => Add0.IN53
-display_value[14] => Add0.IN52
-display_value[15] => Add0.IN51
-display_value[16] => Add0.IN50
-display_value[17] => Add0.IN49
-display_value[18] => Add0.IN48
-display_value[19] => Add0.IN47
-display_value[20] => Add0.IN46
-display_value[21] => Add0.IN45
-display_value[22] => Add0.IN44
-display_value[23] => Add0.IN43
-display_value[24] => Add0.IN42
-display_value[25] => Add0.IN41
-display_value[26] => Add0.IN40
-display_value[27] => Add0.IN39
-display_value[28] => Add0.IN38
-display_value[29] => Add0.IN37
-display_value[30] => Add0.IN36
-display_value[31] => Add0.IN34
-display_value[31] => Add0.IN35
-sseg0[0] <= WideOr23.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[1] <= WideOr22.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[2] <= sseg0.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[3] <= WideOr21.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[4] <= WideOr20.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[5] <= WideOr19.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[6] <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
-sseg0[7] <= <VCC>
-sseg1[0] <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[1] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[2] <= sseg1.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[3] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[4] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[5] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[6] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
-sseg1[7] <= <VCC>
-sseg2[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[1] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[2] <= sseg2.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[3] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[4] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[5] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-sseg2[7] <= <VCC>
-sseg3[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[2] <= sseg3.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-sseg3[7] <= <VCC>
 
 
