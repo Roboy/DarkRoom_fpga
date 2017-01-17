@@ -113,20 +113,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sclk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_ss_n
 set_location_assignment PIN_H6 -to SW2
 set_location_assignment PIN_E1 -to led_fifo_empty
-set_global_assignment -name VHDL_FILE counter.vhd
-set_global_assignment -name VHDL_FILE spi_sender.vhd
-set_global_assignment -name VHDL_FILE spi_slave.vhd
-set_global_assignment -name VHDL_FILE lighthouse.vhd
-set_global_assignment -name BDF_FILE darkroom_top.bdf
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name VHDL_FILE global_counter.vhd
-set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_global_assignment -name SDC_FILE output_files/SDC1.sdc
-set_global_assignment -name VERILOG_FILE simple_counter.v
-set_global_assignment -name VHDL_FILE LCD.vhd
-set_global_assignment -name VHDL_FILE fifo.vhd
-set_global_assignment -name VHDL_FILE sensor_mux.vhd
-set_global_assignment -name QIP_FILE sensor_mux_data.qip
 set_location_assignment PIN_AA8 -to sensor1
 set_location_assignment PIN_AA5 -to sensor2
 set_location_assignment PIN_AB4 -to sensor3
@@ -142,7 +128,17 @@ set_location_assignment PIN_J7 -to SW5
 set_location_assignment PIN_H7 -to SW6
 set_location_assignment PIN_E3 -to SW7
 set_location_assignment PIN_E4 -to SW8
-set_global_assignment -name CDF_FILE output_files/darkroom_top.cdf
 set_location_assignment PIN_B1 -to LEDG9
 set_location_assignment PIN_B2 -to LEDG8
+set_global_assignment -name VHDL_FILE sensor_mux.vhd
+set_global_assignment -name VHDL_FILE spi_slave.vhd
+set_global_assignment -name VHDL_FILE spi_sender.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE lighthouse.vhd
+set_global_assignment -name BDF_FILE darkroom_top.bdf
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name SDC_FILE output_files/SDC1.sdc
+set_global_assignment -name VERILOG_FILE simple_counter.v
+set_global_assignment -name CDF_FILE output_files/darkroom_top.cdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,12 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="darkroom_top">
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_jvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_mult:Mult1" CBX_FILE_NAME="mult_s6t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_t0p.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|LCD:inst65|lpm_mult:Mult0" CBX_FILE_NAME="mult_98t.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|pll:inst|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_58e.tdf"/>
 	</PROJECT>

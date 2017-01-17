@@ -47,15 +47,14 @@ begin   process(sensor)
 				elsif(start_valid_sync /= 0 and stop_valid_sync = 0) then
 					stop_valid_sync := t_0;
 				end if;
-			end if;
 			
 			if((start_valid_sync > 0) and (stop_valid_sync > 0)) then
 				sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
 				start_valid_sync <= t_0;
 				stop_valid_sync := (others => '0');
-				if((sync_gap_duration - 8333*50 ) > 100*50 ) then
+				if((sync_gap_duration - 8333 ) > 300 ) then
 					lighthouse <= '1';
-				elsif ((sync_gap_duration - 8333*50 ) < -100*50 ) then
+				elsif ((sync_gap_duration - 8333 ) < -300 ) then
 					lighthouse <= '0';
 				end if;
 			end if;
@@ -97,6 +96,7 @@ begin   process(sensor)
 			sensor_value(10) <= rotor;
 			sensor_value(11) <= data;
 			sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
+		end if;
 		end if;
    end process;
 end Behavioral;

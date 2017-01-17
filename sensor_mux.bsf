@@ -143,6 +143,13 @@ applicable agreement for further details.
 		(line (pt 0 288)(pt 16 288)(line_width 1))
 	)
 	(port
+		(pt 0 304)
+		(input)
+		(text "busy" (rect 0 0 20 12)(font "Arial" ))
+		(text "busy" (rect 21 299 41 311)(font "Arial" ))
+		(line (pt 0 304)(pt 16 304)(line_width 1))
+	)
+	(port
 		(pt 288 32)
 		(output)
 		(text "sensor_selector[2..0]" (rect 0 0 83 12)(font "Arial" ))
