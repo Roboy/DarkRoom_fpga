@@ -47,56 +47,56 @@ begin   process(sensor)
 				elsif(start_valid_sync /= 0 and stop_valid_sync = 0) then
 					stop_valid_sync := t_0;
 				end if;
-			
-			if((start_valid_sync > 0) and (stop_valid_sync > 0)) then
-				sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
-				start_valid_sync <= t_0;
-				stop_valid_sync := (others => '0');
-				if((sync_gap_duration - 8333 ) > 300 ) then
-					lighthouse <= '1';
-				elsif ((sync_gap_duration - 8333 ) < -300 ) then
-					lighthouse <= '0';
+				
+				if((start_valid_sync > 0) and (stop_valid_sync > 0)) then
+					sync_gap_duration := std_logic_vector(unsigned(stop_valid_sync) - unsigned(start_valid_sync));
+					start_valid_sync <= t_0;
+					stop_valid_sync := (others => '0');
+					if((sync_gap_duration - 8333 ) > 300 ) then
+						lighthouse <= '1';
+					elsif ((sync_gap_duration - 8333 ) < -300 ) then
+						lighthouse <= '0';
+					end if;
 				end if;
+				
+				if(abs(duration - 63) < 5) then
+					rotor <= '0';
+					data  <= '0';
+				elsif(abs(duration - 73) < 5) then
+					rotor <= '1';
+					data  <= '0';
+				elsif(abs(duration - 83) < 5) then
+					rotor <= '0';
+					data  <= '1';
+				elsif(abs(duration - 94) < 5) then
+					rotor <= '1';
+					data  <= '1';
+				elsif(abs(duration - 104) < 5) then
+					rotor <= '0';
+					data  <= '0';
+				elsif(abs(duration - 115) < 5) then
+					rotor <= '1';
+					data  <= '0';
+				elsif(abs(duration - 125) < 5) then
+					rotor <= '0';
+					data  <= '1';
+				elsif(abs(duration - 135) < 5) then
+					rotor <= '1';
+					data  <= '1';
+				end if;
+				
+				if(t_sweep_duration < 8192) and (t_sweep_duration > 0 ) then 
+					sensor_value(12) <= '1'; -- valid sweep
+				else
+					sensor_value(12) <= '0'; -- not valid
+				end if;
+				
+				sensor_value(8 downto 0) <= sensorID;
+				sensor_value(9) <= lighthouse;
+				sensor_value(10) <= rotor;
+				sensor_value(11) <= data;
+				sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
 			end if;
-			
-			if(abs(duration - 63) < 5) then
-				rotor <= '0';
-				data  <= '0';
-			elsif(abs(duration - 73) < 5) then
-				rotor <= '1';
-				data  <= '0';
-			elsif(abs(duration - 83) < 5) then
-				rotor <= '0';
-				data  <= '1';
-			elsif(abs(duration - 94) < 5) then
-				rotor <= '1';
-				data  <= '1';
-			elsif(abs(duration - 104) < 5) then
-				rotor <= '0';
-				data  <= '0';
-			elsif(abs(duration - 115) < 5) then
-				rotor <= '1';
-				data  <= '0';
-			elsif(abs(duration - 125) < 5) then
-				rotor <= '0';
-				data  <= '1';
-			elsif(abs(duration - 135) < 5) then
-				rotor <= '1';
-				data  <= '1';
-			end if;
-			
-			if(t_sweep_duration < 8192) and (t_sweep_duration > 0 ) then 
-				sensor_value(12) <= '1'; -- valid sweep
-			else
-				sensor_value(12) <= '0'; -- not valid
-			end if;
-			
-			sensor_value(8 downto 0) <= sensorID;
-			sensor_value(9) <= lighthouse;
-			sensor_value(10) <= rotor;
-			sensor_value(11) <= data;
-			sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
-		end if;
 		end if;
    end process;
 end Behavioral;

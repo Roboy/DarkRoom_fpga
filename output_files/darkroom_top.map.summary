@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jan 17 18:18:05 2017
+Analysis & Synthesis Status : Successful - Thu Jan 19 13:43:11 2017
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : darkroom_top
 Top-level Entity Name : darkroom_top
-Family : Cyclone III
+Family : Cyclone IV E
 Total logic elements : 8,322
     Total combinational functions : 7,330
     Dedicated logic registers : 1,646
 Total registers : 1646
-Total pins : 29
+Total pins : 24
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

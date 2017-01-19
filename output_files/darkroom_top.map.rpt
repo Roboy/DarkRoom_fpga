@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Tue Jan 17 18:18:06 2017
+Thu Jan 19 13:43:11 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -61,16 +61,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 17 18:18:05 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 19 13:43:11 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; darkroom_top                                    ;
 ; Top-level Entity Name              ; darkroom_top                                    ;
-; Family                             ; Cyclone III                                     ;
+; Family                             ; Cyclone IV E                                    ;
 ; Total logic elements               ; 8,322                                           ;
 ;     Total combinational functions  ; 7,330                                           ;
 ;     Dedicated logic registers      ; 1,646                                           ;
 ; Total registers                    ; 1646                                            ;
-; Total pins                         ; 29                                              ;
+; Total pins                         ; 24                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -83,9 +83,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
 ; Top-level entity name                                                      ; darkroom_top       ; darkroom_top       ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -198,7 +198,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; muxlut.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc        ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc      ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc      ;         ;
-; db/mux_58e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/darkroom/db/mux_58e.tdf                                ;         ;
+; db/mux_e9e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/darkroom/db/mux_e9e.tdf                                ;         ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -211,9 +211,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;               ;
 ; Total combinational functions               ; 7330          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 1649          ;
-;     -- 3 input functions                    ; 3144          ;
-;     -- <=2 input functions                  ; 2537          ;
+;     -- 4 input functions                    ; 1652          ;
+;     -- 3 input functions                    ; 3140          ;
+;     -- <=2 input functions                  ; 2538          ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
 ;     -- normal mode                          ; 2388          ;
@@ -223,15 +223,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 1646          ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 29            ;
+; I/O pins                                    ; 24            ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ; Total PLLs                                  ; 1             ;
 ;     -- PLLs                                 ; 1             ;
 ;                                             ;               ;
-; Maximum fan-out node                        ; sensor7~input ;
+; Maximum fan-out node                        ; sensor3~input ;
 ; Maximum fan-out                             ; 187           ;
 ; Total fan-out                               ; 25589         ;
-; Average fan-out                             ; 2.83          ;
+; Average fan-out                             ; 2.84          ;
 +---------------------------------------------+---------------+
 
 
@@ -240,22 +240,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
-; |darkroom_top                        ; 7330 (0)          ; 1646 (0)     ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |darkroom_top                                                                         ; work         ;
+; |darkroom_top                        ; 7330 (0)          ; 1646 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |darkroom_top                                                                         ; work         ;
 ;    |counter:inst33|                  ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                          ; work         ;
 ;    |lighthouse:inst1|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst1                                                        ; work         ;
 ;    |lighthouse:inst2|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst2                                                        ; work         ;
-;    |lighthouse:inst3|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst3                                                        ; work         ;
+;    |lighthouse:inst3|                ; 884 (884)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst3                                                        ; work         ;
 ;    |lighthouse:inst4|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst4                                                        ; work         ;
-;    |lighthouse:inst5|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst5                                                        ; work         ;
-;    |lighthouse:inst6|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                        ; work         ;
-;    |lighthouse:inst7|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                        ; work         ;
-;    |lighthouse:inst8|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                        ; work         ;
+;    |lighthouse:inst5|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst5                                                        ; work         ;
+;    |lighthouse:inst6|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                        ; work         ;
+;    |lighthouse:inst7|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                        ; work         ;
+;    |lighthouse:inst8|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                        ; work         ;
 ;    |pll:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                        ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated              ; work         ;
 ;    |sensor_mux_data:inst42|          ; 115 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42                                                  ; work         ;
 ;       |lpm_mux:LPM_MUX_component|    ; 115 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component                        ; work         ;
-;          |mux_58e:auto_generated|    ; 115 (115)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component|mux_58e:auto_generated ; work         ;
+;          |mux_e9e:auto_generated|    ; 115 (115)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component|mux_e9e:auto_generated ; work         ;
 ;    |spi_sender:inst12|               ; 129 (33)          ; 118 (39)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12                                                       ; work         ;
 ;       |spi_slave:spi_slave_0|        ; 96 (96)           ; 79 (79)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12|spi_slave:spi_slave_0                                 ; work         ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
@@ -360,8 +360,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst4|rotor                ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|data                 ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst5|data                 ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|rotor                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|rotor                ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|data                 ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|data                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -772,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_CLOCK                   ; 5                     ; Signed Integer        ;
 ; WIDTH_PHASECOUNTERSELECT      ; 4                     ; Untyped               ;
 ; USING_FBMIMICBIDIR_PORT       ; OFF                   ; Untyped               ;
-; DEVICE_FAMILY                 ; Cyclone III           ; Untyped               ;
+; DEVICE_FAMILY                 ; Cyclone IV E          ; Untyped               ;
 ; SCAN_CHAIN_MIF_FILE           ; UNUSED                ; Untyped               ;
 ; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                   ; Untyped               ;
 ; AUTO_CARRY_CHAINS             ; ON                    ; AUTO_CARRY            ;
@@ -855,20 +855,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component ;
-+------------------------+-------------+--------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                   ;
-+------------------------+-------------+--------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                         ;
-; LPM_WIDTH              ; 32          ; Signed Integer                                         ;
-; LPM_SIZE               ; 8           ; Signed Integer                                         ;
-; LPM_WIDTHS             ; 3           ; Signed Integer                                         ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                         ;
-; CBXI_PARAMETER         ; mux_58e     ; Untyped                                                ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                ;
-+------------------------+-------------+--------------------------------------------------------+
++------------------------+--------------+-------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                  ;
++------------------------+--------------+-------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                        ;
+; LPM_WIDTH              ; 32           ; Signed Integer                                        ;
+; LPM_SIZE               ; 8            ; Signed Integer                                        ;
+; LPM_WIDTHS             ; 3            ; Signed Integer                                        ;
+; LPM_PIPELINE           ; 0            ; Signed Integer                                        ;
+; CBXI_PARAMETER         ; mux_e9e      ; Untyped                                               ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                               ;
++------------------------+--------------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -910,7 +910,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:25     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -920,7 +920,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 17 18:17:31 2017
+    Info: Processing started: Thu Jan 19 13:42:58 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sensor_mux.vhd
@@ -946,8 +946,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
 Info (12021): Found 1 design units, including 1 entities, in source file simple_counter.v
     Info (12023): Found entity 1: simple_counter
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
+Warning (275083): Bus "LED1[2..0]" found using same base name as "LED", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "LED" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "LED[3..0]" to "LED3..0"
+Warning (275080): Converted elements in bus name "LED1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "LED1[2..0]" to "LED12..0"
 Warning (275043): Pin "led_fifo_empty" is missing source
-Warning (275009): Pin "button0_read" not connected
 Info (12128): Elaborating entity "spi_sender" for hierarchy "spi_sender:inst12"
 Warning (10541): VHDL Signal Declaration warning at spi_sender.vhd(43): used implicit default value for signal "spi_rx_req" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(44): object "spi_rx_data" assigned a value but never read
@@ -1107,9 +1111,9 @@ Info (12133): Instantiated megafunction "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_
     Info (12134): Parameter "LPM_PIPELINE" = "0"
     Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_58e.tdf
-    Info (12023): Found entity 1: mux_58e
-Info (12128): Elaborating entity "mux_58e" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component|mux_58e:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_e9e.tdf
+    Info (12023): Found entity 1: mux_e9e
+Info (12128): Elaborating entity "mux_e9e" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component|mux_e9e:auto_generated"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
@@ -1144,18 +1148,17 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "button1_reset"
-    Warning (15610): No output dependent on input pin "button0_read"
-Info (21057): Implemented 8369 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 22 input pins
-    Info (21059): Implemented 7 output pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "button1"
+Info (21057): Implemented 8364 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 10 output pins
     Info (21061): Implemented 8339 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 78 warnings
-    Info: Peak virtual memory: 397 megabytes
-    Info: Processing ended: Tue Jan 17 18:18:06 2017
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 405 megabytes
+    Info: Processing ended: Thu Jan 19 13:43:11 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 

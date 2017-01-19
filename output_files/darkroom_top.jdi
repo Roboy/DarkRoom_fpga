@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="96e4f5f01835150cb430"/>
+    <hash md5_digest_80b="3777ca20122ee89c5cf3"/>
   </project>
   <file_info>
-    <file device="EP3C16F484C6" path="darkroom_top.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE22F17C6" path="darkroom_top.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
