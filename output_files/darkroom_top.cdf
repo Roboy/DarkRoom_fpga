@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("/home/letrend/workspace/darkroom/output_files/") File("darkroom_top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22) Path("/home/letrend/workspace/darkroom/") File("output_file.jic") MfrSpec(OpMask(1) SEC_Device(EPCS64) Child_OpMask(1 1));
 
 ChainEnd;
 
