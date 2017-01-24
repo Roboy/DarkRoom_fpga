@@ -36,10 +36,10 @@ begin   process(sensor)
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
 			sweep_detected <= '0';
-			if(duration < 50*50) then -- this is a sweep
+			if(duration < 50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
 				sweep_detected <= '1';
-			elsif (duration > (63*50 - 5*50)) and (duration < (94*50 + 5*50)) then -- this is a sync pulse, NOT skipping
+			elsif (duration > (63 - 5)) and (duration < (94 + 5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
 				if(start_valid_sync = 0) then
