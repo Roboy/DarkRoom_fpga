@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="darkroom_top">
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|pll:inst|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|darkroom_top|sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_e9e.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

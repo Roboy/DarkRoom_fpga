@@ -1,6 +1,6 @@
 Flow report for darkroom_top
-Thu Jan 19 13:44:12 2017
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sat Feb 25 01:17:21 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -21,42 +21,43 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Jan 19 13:44:12 2017           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; darkroom_top                                    ;
-; Top-level Entity Name              ; darkroom_top                                    ;
-; Family                             ; Cyclone IV E                                    ;
-; Device                             ; EP4CE22F17C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 7,969 / 22,320 ( 36 % )                         ;
-;     Total combinational functions  ; 7,333 / 22,320 ( 33 % )                         ;
-;     Dedicated logic registers      ; 1,646 / 22,320 ( 7 % )                          ;
-; Total registers                    ; 1646                                            ;
-; Total pins                         ; 24 / 154 ( 16 % )                               ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sat Feb 25 01:17:21 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; darkroom_top                                ;
+; Top-level Entity Name              ; darkroom_top                                ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE22F17C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 66 / 22,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 62 / 22,320 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 56 / 22,320 ( < 1 % )                       ;
+; Total registers                    ; 56                                          ;
+; Total pins                         ; 13 / 154 ( 8 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,61 +65,64 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/19/2017 13:42:59 ;
+; Start date & time ; 02/25/2017 01:16:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; darkroom_top        ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.148482977905248                     ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.bsf                               ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.cmp                               ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.ppf                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                           ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 264840331551678.148798181625000                       ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; spi/synthesis/../spi.cmp                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; spi/synthesis/../../spi.qsys                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll.bsf                                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll_bb.v                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll.ppf                                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; fifo.bsf                                              ; --            ; --          ; --             ;
+; MISC_FILE                           ; fifo_bb.v                                             ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; 4                                                     ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                          ; --            ; --          ; --             ;
+; SLD_FILE                            ; spi/synthesis/spi.debuginfo                           ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME spi HAS_SOPCINFO 1 GENERATION_ID 1487975924 ; --            ; spi         ; --             ;
+; SOPCINFO_FILE                       ; spi/synthesis/../../spi.sopcinfo                      ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --            ; --          ; --             ;
++-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 405 MB              ; 00:00:11                           ;
-; Fitter                    ; 00:00:35     ; 1.0                     ; 581 MB              ; 00:00:35                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 346 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 427 MB              ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:10     ; 1.0                     ; 346 MB              ; 00:00:10                           ;
-; Total                     ; 00:01:06     ; --                      ; --                  ; 00:01:04                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 1026 MB             ; 00:00:38                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 1225 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 820 MB              ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:46                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                             ;
-+---------------------------+------------------+----------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+---------------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis      ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; Fitter                    ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; Assembler                 ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; TimeQuest Timing Analyzer ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; EDA Netlist Writer        ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-+---------------------------+------------------+----------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
+; Fitter               ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
+; Assembler            ; x220             ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
@@ -127,8 +131,6 @@ applicable agreement for further details.
 quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 quartus_fit --read_settings_files=off --write_settings_files=off darkroom -c darkroom_top
 quartus_asm --read_settings_files=off --write_settings_files=off darkroom -c darkroom_top
-quartus_sta darkroom -c darkroom_top
-quartus_eda --read_settings_files=off --write_settings_files=off darkroom -c darkroom_top
 
 
 

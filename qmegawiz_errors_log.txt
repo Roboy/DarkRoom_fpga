@@ -11,3 +11,24 @@ This may create a conflict of design files and/or lead to undesirable side
 effects.
 
 Is it OK to continue file generation?
+
+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.vhd
+
+Feb 24 01PM:30:38>: Error in CNX file format.
+
+Error messages are listed in file
+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v
+
+Feb 24 02PM:22:14>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+fifo.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?

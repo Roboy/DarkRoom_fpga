@@ -1,8 +1,16 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="3777ca20122ee89c5cf3"/>
+    <hash md5_digest_80b="7b953337e9a1b409b911"/>
   </project>
   <file_info>
     <file device="EP4CE22F17C6" path="darkroom_top.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <sld_infos>
+    <sld_info hpath="spi:inst9" name="inst9">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME spi HAS_SOPCINFO 1 GENERATION_ID 1487975924"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

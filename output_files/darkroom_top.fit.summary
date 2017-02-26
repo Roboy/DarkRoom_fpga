@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Jan 19 13:43:47 2017
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Sat Feb 25 01:17:18 2017
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : darkroom_top
 Top-level Entity Name : darkroom_top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 7,969 / 22,320 ( 36 % )
-    Total combinational functions : 7,333 / 22,320 ( 33 % )
-    Dedicated logic registers : 1,646 / 22,320 ( 7 % )
-Total registers : 1646
-Total pins : 24 / 154 ( 16 % )
+Total logic elements : 66 / 22,320 ( < 1 % )
+    Total combinational functions : 62 / 22,320 ( < 1 % )
+    Dedicated logic registers : 56 / 22,320 ( < 1 % )
+Total registers : 56
+Total pins : 13 / 154 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )

@@ -10,8 +10,8 @@ entity lighthouse is
    port( 
 		sensor: in std_logic;
 		timer: in std_logic_vector(31 downto 0);
-		sweep_detected: out std_logic;
-		sensor_value: out std_logic_vector(31 downto 0));
+		sensor_value: out std_logic_vector(31 downto 0);
+		sweep_detected: out std_logic);
 end lighthouse;
  
 architecture Behavioral of lighthouse is
