@@ -1,0 +1,36 @@
+from myhdl import *
+
+@block
+def dff(q, d, clk):
+
+    @always(clk.posedge)
+    def logic():
+        q.next = d
+
+    return logic
+
+
+from random import randrange
+
+def test_dff():
+
+    q, d, clk = [Signal(bool(0)) for i in range(3)]
+
+    dff_inst = dff(q, d, clk)
+
+    @always(delay(10))
+    def clkgen():
+        clk.next = not clk
+
+    @always(clk.negedge)
+    def stimulus():
+        d.next = randrange(2)
+
+    dff_inst.config_sim(backend='myhdl', trace=False)
+    dff_inst.run_sim(duration=2000)
+    
+    return dff_inst
+    
+dff_inst = test_dff()
+
+dff_inst.convert(hdl='Verilog')

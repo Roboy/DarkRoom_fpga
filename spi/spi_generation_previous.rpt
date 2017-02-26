@@ -1,0 +1,38 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi.qsys --block-symbol-file --output-directory=/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading DarkRoom_fpga/spi.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding spi_0 [altera_avalon_spi 16.1]
+Progress: Parameterizing module spi_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: spi.spi_0: Interrupt sender spi_0.irq is not connected to an interrupt receiver
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi.qsys --synthesis=VERILOG --output-directory=/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading DarkRoom_fpga/spi.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding spi_0 [altera_avalon_spi 16.1]
+Progress: Parameterizing module spi_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: spi.spi_0: Interrupt sender spi_0.irq is not connected to an interrupt receiver
+Info: spi: Generating spi "spi" for QUARTUS_SYNTH
+Info: spi_0: Starting RTL generation for module 'spi_spi_0'
+Info: spi_0:   Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7221_2061804449383234217.dir/0001_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7221_2061804449383234217.dir/0001_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]
+Info: spi_0: Done RTL generation for module 'spi_spi_0'
+Info: spi_0: "spi" instantiated altera_avalon_spi "spi_0"
+Info: rst_controller: "spi" instantiated altera_reset_controller "rst_controller"
+Info: spi: Done "spi" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
