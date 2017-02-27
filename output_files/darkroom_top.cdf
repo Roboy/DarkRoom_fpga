@@ -1,10 +1,10 @@
-/* Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition */
+/* Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22) Path("/home/letrend/workspace/darkroom/") File("output_file.jic") MfrSpec(OpMask(1) SEC_Device(EPCS64) Child_OpMask(1 1));
+		Device PartName(EP4CE22F17) Path("/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/output_files/") File("darkroom_top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LED0",
+					"strict" : false
+				},
+				{
 					"name" : "spi_mosi",
 					"strict" : false
 				},
@@ -13,26 +17,6 @@
 				},
 				{
 					"name" : "spi_ss_n",
-					"strict" : false
-				},
-				{
-					"name" : "LED0",
-					"strict" : false
-				},
-				{
-					"name" : "LED[7]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[5]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[4]",
 					"strict" : false
 				},
 				{

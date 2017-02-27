@@ -25,6 +25,14 @@
          type = "int";
       }
    }
+   element spi_0.spi_control_port
+   {
+      datum _lockedAddress
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -72,12 +80,12 @@
   <parameter name="disableAvalonFlowControl" value="false" />
   <parameter name="inputClockRate" value="50000000" />
   <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="false" />
-  <parameter name="insertSync" value="true" />
+  <parameter name="insertSync" value="false" />
   <parameter name="lsbOrderedFirst" value="false" />
   <parameter name="masterSPI" value="true" />
   <parameter name="numberOfSlaves" value="1" />
-  <parameter name="syncRegDepth" value="2" />
-  <parameter name="targetClockRate" value="500000" />
+  <parameter name="syncRegDepth" value="3" />
+  <parameter name="targetClockRate" value="1470000" />
   <parameter name="targetSlaveSelectToSClkDelay" value="0.0" />
  </module>
  <connection kind="clock" version="16.1" start="clk_0.clk" end="spi_0.clk" />

@@ -11,10 +11,10 @@ module SpiControl (
 	input dataReady,
 	input [15:0] dataTransmitted,
 	input reset_n,
-	output reg [15:0] bitfield,
-	output reg [2:0] spi_register,
-	output reg spi_select,
-	output reg send_n
+	input di_req,
+	input write_ack,
+	output reg [7:0] byte,
+	output reg wren
 );
 // Splits the 32-bit data into bitfield chunks
 // 
@@ -23,41 +23,37 @@ module SpiControl (
 // send -- toggle the transmission
 // bitfield -- which part should be send
 
-reg [1:0] nextField;
-reg done;
+reg [7:0] numberOfBytesTransmitted;
+reg write_ack_prev;
 
 always @(posedge clock, negedge reset_n) begin: SPICONTROL_SPILOGIC
     if (reset_n == 0) begin
-        bitfield <= 0;
-        send_n <= 1;
-		  done <= 1;
-		  spi_register <= 1;
+			numberOfBytesTransmitted <= 0;
+			wren <= 0;
+			write_ack_prev <= 0;
     end
+	 
     else begin
-		  
-        if (dataTransmitted ==1 && done==0) begin // if the data was transmitted and we are not done yet
-				case(nextField)
-					0: bitfield[7:0] <= data[7:0];
-					1: bitfield[7:0] <= data[15:8];
-					2: bitfield[7:0] <= data[23:16];
-					3: bitfield[7:0] <= data[31:24];
-					default: bitfield<=0;
+			
+			write_ack_prev <= write_ack;
+			if( write_ack_prev==0 && write_ack == 1 ) begin
+				wren <= 0;
+				numberOfBytesTransmitted <= numberOfBytesTransmitted + 1;
+			end
+			
+			if(di_req==1 && numberOfBytesTransmitted<34) begin
+				case(numberOfBytesTransmitted)
+					1: byte <= 0; // this signals to the esp that we want to write a 32bit status				
+					default: byte <= numberOfBytesTransmitted-2;
 				endcase
-            send_n <= 0;
-				nextField <= nextField + 1;
-				if(nextField == 3) begin
-					done <= 1;
-					spi_select <= 0;
-				end
-        end
-        else begin // else reset the send_n line
-            send_n <= 1;
-        end
-		  // if there is new data and all data was sent
-		  if(dataReady==1 && done==1) begin
-				done <= 0;
-				spi_select <= 1;
-		  end
+				wren <= 1;
+			end
+			
+			if (dataReady==1) begin
+				numberOfBytesTransmitted<= 0;
+				byte <= 2;
+				wren <= 1;
+			end
     end
 end
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Sat Feb 25 01:17:12 2017
+Mon Feb 27 12:03:09 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,32 +14,22 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Protected by Synthesis
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer
- 16. Source assignments for spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
- 17. Source assignments for spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
- 18. Source assignments for fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram
- 19. Parameter Settings for User Entity Instance: spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer
- 20. Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller
- 21. Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
- 22. Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
- 23. Parameter Settings for User Entity Instance: fifo:inst10|scfifo:scfifo_component
- 24. Parameter Settings for User Entity Instance: lighthouse:inst1
- 25. Parameter Settings for User Entity Instance: counter:inst33
- 26. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
- 27. scfifo Parameter Settings by Entity Instance
- 28. altpll Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
- 30. Port Connectivity Checks: "spi:inst9|altera_reset_controller:rst_controller"
- 31. Port Connectivity Checks: "spi:inst9|spi_spi_0:spi_0"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram
+ 15. Parameter Settings for User Entity Instance: spi_master:inst2
+ 16. Parameter Settings for User Entity Instance: fifo:inst10|scfifo:scfifo_component
+ 17. Parameter Settings for User Entity Instance: lighthouse:inst1
+ 18. Parameter Settings for User Entity Instance: counter:inst33
+ 19. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 20. scfifo Parameter Settings by Entity Instance
+ 21. altpll Parameter Settings by Entity Instance
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -66,20 +56,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 25 01:17:12 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 27 12:03:09 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 67                                          ;
-;     Total combinational functions  ; 61                                          ;
-;     Dedicated logic registers      ; 56                                          ;
-; Total registers                    ; 56                                          ;
-; Total pins                         ; 13                                          ;
+; Total logic elements               ; 81                                          ;
+;     Total combinational functions  ; 67                                          ;
+;     Dedicated logic registers      ; 59                                          ;
+; Total registers                    ; 59                                          ;
+; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 1                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -188,43 +178,39 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                            ; Library ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; SpiControl.v                                         ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v                                         ;         ;
-; spi/synthesis/spi.v                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/spi.v                                  ; spi     ;
-; spi/synthesis/submodules/altera_reset_controller.v   ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v   ; spi     ;
-; spi/synthesis/submodules/altera_reset_synchronizer.v ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_synchronizer.v ; spi     ;
-; spi/synthesis/submodules/spi_spi_0.v                 ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v                 ; spi     ;
-; counter.vhd                                          ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd                                          ;         ;
-; lighthouse.vhd                                       ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                       ;         ;
-; darkroom_top.bdf                                     ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                     ;         ;
-; pll.v                                                ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                ;         ;
-; fifo.v                                               ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                               ;         ;
-; oneshot.v                                            ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                            ;         ;
-; altera_std_synchronizer.v                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altera_std_synchronizer.v                     ;         ;
-; scfifo.tdf                                           ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                    ;         ;
-; a_regfifo.inc                                        ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                 ;         ;
-; a_dpfifo.inc                                         ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                  ;         ;
-; a_i2fifo.inc                                         ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                  ;         ;
-; a_fffifo.inc                                         ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                  ;         ;
-; a_f2fifo.inc                                         ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                  ;         ;
-; aglobal161.inc                                       ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                ;         ;
-; db/scfifo_g341.tdf                                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_g341.tdf                                   ;         ;
-; db/a_dpfifo_3r31.tdf                                 ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf                                 ;         ;
-; db/altsyncram_1eh1.tdf                               ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf                               ;         ;
-; db/cmpr_ls8.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ls8.tdf                                      ;         ;
-; db/cntr_0ab.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_0ab.tdf                                      ;         ;
-; db/cntr_da7.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_da7.tdf                                      ;         ;
-; db/cntr_1ab.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                      ;         ;
-; altpll.tdf                                           ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                    ;         ;
-; stratix_pll.inc                                      ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                               ;         ;
-; stratixii_pll.inc                                    ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                             ;         ;
-; cycloneii_pll.inc                                    ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                             ;         ;
-; db/pll_altpll.v                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                      ;         ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                  ; Library ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ;         ;
+; SpiControl.v                                               ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v                                               ;         ;
+; counter.vhd                                                ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd                                                ;         ;
+; lighthouse.vhd                                             ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                             ;         ;
+; darkroom_top.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                           ;         ;
+; pll.v                                                      ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                      ;         ;
+; fifo.v                                                     ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                                     ;         ;
+; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
+; scfifo.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                          ;         ;
+; a_regfifo.inc                                              ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                       ;         ;
+; a_dpfifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                        ;         ;
+; a_i2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                        ;         ;
+; a_fffifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                        ;         ;
+; a_f2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                        ;         ;
+; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
+; db/scfifo_g341.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_g341.tdf                                         ;         ;
+; db/a_dpfifo_3r31.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf                                       ;         ;
+; db/altsyncram_1eh1.tdf                                     ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf                                     ;         ;
+; db/cmpr_ls8.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ls8.tdf                                            ;         ;
+; db/cntr_0ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_0ab.tdf                                            ;         ;
+; db/cntr_da7.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_da7.tdf                                            ;         ;
+; db/cntr_1ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                            ;         ;
+; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
+; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
+; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
+; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
+; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -232,163 +218,98 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 67             ;
+; Estimated Total logic elements              ; 81             ;
 ;                                             ;                ;
-; Total combinational functions               ; 61             ;
+; Total combinational functions               ; 67             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 10             ;
-;     -- 3 input functions                    ; 8              ;
-;     -- <=2 input functions                  ; 43             ;
+;     -- 4 input functions                    ; 22             ;
+;     -- 3 input functions                    ; 19             ;
+;     -- <=2 input functions                  ; 26             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 31             ;
-;     -- arithmetic mode                      ; 30             ;
+;     -- normal mode                          ; 54             ;
+;     -- arithmetic mode                      ; 13             ;
 ;                                             ;                ;
-; Total registers                             ; 56             ;
-;     -- Dedicated logic registers            ; 56             ;
+; Total registers                             ; 59             ;
+;     -- Dedicated logic registers            ; 59             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 13             ;
+; I/O pins                                    ; 10             ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
-; Total PLLs                                  ; 1              ;
-;     -- PLLs                                 ; 1              ;
-;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
-; Maximum fan-out                             ; 33             ;
-; Total fan-out                               ; 328            ;
-; Average fan-out                             ; 2.28           ;
+; Maximum fan-out                             ; 59             ;
+; Total fan-out                               ; 397            ;
+; Average fan-out                             ; 2.72           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
-+----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name               ; Library Name ;
-+----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |darkroom_top                                                  ; 61 (0)              ; 56 (0)                    ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |darkroom_top                                                                                             ; darkroom_top              ; work         ;
-;    |counter:inst33|                                            ; 24 (24)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                              ; counter                   ; work         ;
-;    |oneshot:inst3|                                             ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst3                                                                               ; oneshot                   ; work         ;
-;    |pll:inst|                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                                    ; pll                       ; work         ;
-;       |altpll:altpll_component|                                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                            ; altpll                    ; work         ;
-;          |pll_altpll:auto_generated|                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                  ; pll_altpll                ; work         ;
-;    |spi:inst9|                                                 ; 36 (0)              ; 30 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi:inst9                                                                                   ; spi                       ; spi          ;
-;       |altera_reset_controller:rst_controller|                 ; 0 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi:inst9|altera_reset_controller:rst_controller                                            ; altera_reset_controller   ; spi          ;
-;          |altera_reset_synchronizer:alt_rst_sync_uq1|          ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ; altera_reset_synchronizer ; spi          ;
-;       |spi_spi_0:spi_0|                                        ; 36 (36)             ; 27 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi:inst9|spi_spi_0:spi_0                                                                   ; spi_spi_0                 ; spi          ;
-;          |altera_std_synchronizer:the_altera_std_synchronizer| ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer               ; altera_std_synchronizer   ; work         ;
-+----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
+; |darkroom_top              ; 67 (1)              ; 59 (0)                    ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |darkroom_top                   ; darkroom_top ; work         ;
+;    |SpiControl:inst11|     ; 25 (25)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11 ; SpiControl   ; work         ;
+;    |oneshot:inst3|         ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst3     ; oneshot      ; work         ;
+;    |spi_master:inst2|      ; 39 (39)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2  ; spi_master   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                       ;
-+--------+-------------------------+---------+--------------+--------------+----------------------------------------------------------------+-----------------+
-; Vendor ; IP Core Name            ; Version ; Release Date ; License Type ; Entity Instance                                                ; IP Include File ;
-+--------+-------------------------+---------+--------------+--------------+----------------------------------------------------------------+-----------------+
-; Altera ; ALTPLL                  ; 16.1    ; N/A          ; N/A          ; |darkroom_top|pll:inst                                         ; pll.v           ;
-; N/A    ; Qsys                    ; 16.1    ; N/A          ; N/A          ; |darkroom_top|spi:inst9                                        ; spi.qsys        ;
-; Altera ; altera_reset_controller ; 16.1    ; N/A          ; N/A          ; |darkroom_top|spi:inst9|altera_reset_controller:rst_controller ; spi.qsys        ;
-; Altera ; altera_avalon_spi       ; 16.1    ; N/A          ; N/A          ; |darkroom_top|spi:inst9|spi_spi_0:spi_0                        ; spi.qsys        ;
-; Altera ; FIFO                    ; 16.1    ; N/A          ; N/A          ; |darkroom_top|fifo:inst10                                      ; fifo.v          ;
-+--------+-------------------------+---------+--------------+--------------+----------------------------------------------------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                       ;
++--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File ;
++--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
+; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |darkroom_top|pll:inst    ; pll.v           ;
+; Altera ; FIFO         ; 16.1    ; N/A          ; N/A          ; |darkroom_top|fifo:inst10 ; fifo.v          ;
++--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Protected by Synthesis                                                                                                                                                                                                                   ;
-+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; Register Name                                                                                                                      ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
-+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0] ; yes                                                              ; yes                                        ;
-; spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1] ; yes                                                              ; yes                                        ;
-; spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer|dreg[0]                                              ; yes                                                              ; yes                                        ;
-; spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer|din_s1                                               ; yes                                                              ; yes                                        ;
-; Total number of protected registers is 4                                                                                           ;                                                                  ;                                            ;
-+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                         ;
++----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+; Register name                                                                                                                    ; Reason for Removal                      ;
++----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff                                    ; Lost fanout                             ;
+; counter:inst33|temp[0..31]                                                                                                       ; Lost fanout                             ;
+; lighthouse:inst1|stop_valid_sync[1..31]                                                                                          ; Lost fanout                             ;
+; lighthouse:inst1|sensor_value[0]                                                                                                 ; Lost fanout                             ;
+; lighthouse:inst1|t_0[0]                                                                                                          ; Lost fanout                             ;
+; lighthouse:inst1|sweep_detected                                                                                                  ; Lost fanout                             ;
+; lighthouse:inst1|t_sweep_duration[0..31]                                                                                         ; Lost fanout                             ;
+; lighthouse:inst1|t_sweep_start[0..31]                                                                                            ; Lost fanout                             ;
+; lighthouse:inst1|start_valid_sync[0..31]                                                                                         ; Lost fanout                             ;
+; lighthouse:inst1|lighthouse                                                                                                      ; Lost fanout                             ;
+; lighthouse:inst1|rotor                                                                                                           ; Lost fanout                             ;
+; lighthouse:inst1|data                                                                                                            ; Lost fanout                             ;
+; lighthouse:inst1|sensor_value[1..31]                                                                                             ; Lost fanout                             ;
+; lighthouse:inst1|t_0[1..31]                                                                                                      ; Lost fanout                             ;
+; lighthouse:inst1|stop_valid_sync[0]                                                                                              ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|full_dff                                     ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|low_addressa[0..7]                           ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|rd_ptr_lsb                                   ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff                               ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff                               ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_1ab:wr_ptr|counter_reg_bit[0..7]        ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_da7:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                             ;
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_0ab:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                             ;
+; spi_master:inst2|core_clk                                                                                                        ; Merged with spi_master:inst2|core_n_clk ;
+; Total Number of Removed Registers = 265                                                                                          ;                                         ;
++----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                 ;
-+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-; Register name                                                                                                                    ; Reason for Removal                              ;
-+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff                                    ; Lost fanout                                     ;
-; SpiControl:inst11|bitfield[0..7]                                                                                                 ; Stuck at GND due to stuck port clock_enable     ;
-; spi:inst9|spi_spi_0:spi_0|SSO_reg                                                                                                ; Stuck at GND due to stuck port clock_enable     ;
-; spi:inst9|spi_spi_0:spi_0|spi_slave_select_holding_reg[0]                                                                        ; Stuck at VCC due to stuck port clock_enable     ;
-; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[0..7]                                                                                   ; Stuck at GND due to stuck port data_in          ;
-; spi:inst9|spi_spi_0:spi_0|spi_slave_select_reg[0]                                                                                ; Stuck at VCC due to stuck port data_in          ;
-; lighthouse:inst1|stop_valid_sync[1..31]                                                                                          ; Lost fanout                                     ;
-; lighthouse:inst1|sensor_value[0]                                                                                                 ; Lost fanout                                     ;
-; lighthouse:inst1|t_0[0]                                                                                                          ; Lost fanout                                     ;
-; lighthouse:inst1|sweep_detected                                                                                                  ; Lost fanout                                     ;
-; lighthouse:inst1|t_sweep_duration[0..31]                                                                                         ; Lost fanout                                     ;
-; lighthouse:inst1|t_sweep_start[0..31]                                                                                            ; Lost fanout                                     ;
-; lighthouse:inst1|start_valid_sync[0..31]                                                                                         ; Lost fanout                                     ;
-; lighthouse:inst1|lighthouse                                                                                                      ; Lost fanout                                     ;
-; lighthouse:inst1|rotor                                                                                                           ; Lost fanout                                     ;
-; lighthouse:inst1|data                                                                                                            ; Lost fanout                                     ;
-; lighthouse:inst1|sensor_value[1..31]                                                                                             ; Lost fanout                                     ;
-; lighthouse:inst1|t_0[1..31]                                                                                                      ; Lost fanout                                     ;
-; lighthouse:inst1|stop_valid_sync[0]                                                                                              ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|full_dff                                     ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|low_addressa[0..7]                           ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|rd_ptr_lsb                                   ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff                               ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff                               ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_1ab:wr_ptr|counter_reg_bit[0..7]        ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_da7:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                                     ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_0ab:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                                     ;
-; SpiControl:inst11|nextField[0,1]                                                                                                 ; Lost fanout                                     ;
-; SpiControl:inst11|spi_select                                                                                                     ; Stuck at VCC due to stuck port data_in          ;
-; SpiControl:inst11|done                                                                                                           ; Lost fanout                                     ;
-; spi:inst9|spi_spi_0:spi_0|data_wr_strobe                                                                                         ; Merged with spi:inst9|spi_spi_0:spi_0|wr_strobe ;
-; counter:inst33|temp[24..31]                                                                                                      ; Lost fanout                                     ;
-; Total Number of Removed Registers = 264                                                                                          ;                                                 ;
-+----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                              ;
-+-----------------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                 ; Reason for Removal             ; Registers Removed due to This Register                                                                                  ;
-+-----------------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-; SpiControl:inst11|bitfield[7]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[7], lighthouse:inst1|sensor_value[31],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[23],                                                                                      ;
-;                                                                                               ;                                ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|full_dff,                           ;
-;                                                                                               ;                                ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_1ab:wr_ptr|counter_reg_bit[0], ;
-;                                                                                               ;                                ; SpiControl:inst11|nextField[1], SpiControl:inst11|nextField[0]                                                          ;
-; SpiControl:inst11|bitfield[0]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|spi_slave_select_holding_reg[0],                                                              ;
-;                                                                                               ; due to stuck port clock_enable ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[0],                                                                            ;
-;                                                                                               ;                                ; spi:inst9|spi_spi_0:spi_0|spi_slave_select_reg[0],                                                                      ;
-;                                                                                               ;                                ; lighthouse:inst1|sensor_value[24], lighthouse:inst1|sensor_value[16]                                                    ;
-; SpiControl:inst11|bitfield[6]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[6], lighthouse:inst1|sensor_value[30],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[22]                                                                                       ;
-; SpiControl:inst11|bitfield[5]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[5], lighthouse:inst1|sensor_value[29],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[21]                                                                                       ;
-; SpiControl:inst11|bitfield[4]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[4], lighthouse:inst1|sensor_value[28],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[20]                                                                                       ;
-; SpiControl:inst11|bitfield[3]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[3], lighthouse:inst1|sensor_value[27],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[19]                                                                                       ;
-; SpiControl:inst11|bitfield[2]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[2], lighthouse:inst1|sensor_value[26],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[18]                                                                                       ;
-; SpiControl:inst11|bitfield[1]                                                                 ; Stuck at GND                   ; spi:inst9|spi_spi_0:spi_0|tx_holding_reg[1], lighthouse:inst1|sensor_value[25],                                         ;
-;                                                                                               ; due to stuck port clock_enable ; lighthouse:inst1|sensor_value[17]                                                                                       ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff ; Lost Fanouts                   ; lighthouse:inst1|sweep_detected,                                                                                        ;
-;                                                                                               ;                                ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff,                     ;
-;                                                                                               ;                                ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff                      ;
-; lighthouse:inst1|t_0[31]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[31]                                                                                                 ;
-; SpiControl:inst11|spi_select                                                                  ; Stuck at VCC                   ; SpiControl:inst11|done                                                                                                  ;
-;                                                                                               ; due to stuck port data_in      ;                                                                                                                         ;
-; lighthouse:inst1|t_0[30]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[30]                                                                                                 ;
-; lighthouse:inst1|t_0[29]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[29]                                                                                                 ;
-; lighthouse:inst1|t_0[28]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[28]                                                                                                 ;
-; lighthouse:inst1|t_0[27]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[27]                                                                                                 ;
-; lighthouse:inst1|t_0[26]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[26]                                                                                                 ;
-; lighthouse:inst1|t_0[25]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[25]                                                                                                 ;
-; lighthouse:inst1|t_0[24]                                                                      ; Lost Fanouts                   ; counter:inst33|temp[24]                                                                                                 ;
-+-----------------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                              ;
++-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
+; Register name                                                                                 ; Reason for Removal ; Registers Removed due to This Register                                                              ;
++-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
+; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff ; Lost Fanouts       ; lighthouse:inst1|sweep_detected,                                                                    ;
+;                                                                                               ;                    ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff, ;
+;                                                                                               ;                    ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff  ;
++-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -396,72 +317,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
-; Number of registers using Synchronous Clear  ; 5     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 30    ;
+; Total registers                              ; 59    ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Clock Enable       ; 37    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                                                                                  ;
-+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Inverted Register                                                                                                                   ; Fan out ;
-+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; spi:inst9|spi_spi_0:spi_0|stateZero                                                                                                 ; 1       ;
-; spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; 27      ;
-; spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]  ; 1       ;
-; spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]  ; 1       ;
-; Total number of inverted registers = 4                                                                                              ;         ;
-+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; spi_master:inst2|core_n_ce             ; 9       ;
+; spi_master:inst2|core_n_clk            ; 4       ;
+; spi_master:inst2|di_req_o_reg          ; 1       ;
+; spi_master:inst2|spi_2x_ce             ; 3       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|spi:inst9|spi_spi_0:spi_0|shift_reg[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; Source assignments for spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer ;
-+-----------------------------+------------------------+------+----------------------------------------+
-; Assignment                  ; Value                  ; From ; To                                     ;
-+-----------------------------+------------------------+------+----------------------------------------+
-; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; dreg[0]                                ;
-; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; dreg[0]                                ;
-; DONT_MERGE_REGISTER         ; ON                     ; -    ; dreg[0]                                ;
-; PRESERVE_REGISTER           ; ON                     ; -    ; dreg[0]                                ;
-; ADV_NETLIST_OPT_ALLOWED     ; NEVER_ALLOW            ; -    ; din_s1                                 ;
-; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; din_s1                                 ;
-; DONT_MERGE_REGISTER         ; ON                     ; -    ; din_s1                                 ;
-; PRESERVE_REGISTER           ; ON                     ; -    ; din_s1                                 ;
-+-----------------------------+------------------------+------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Source assignments for spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ;
-+-------------------+-------+------+---------------------------------------------------------------------------------+
-; Assignment        ; Value ; From ; To                                                                              ;
-+-------------------+-------+------+---------------------------------------------------------------------------------+
-; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[1]                                          ;
-; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[0]                                          ;
-+-------------------+-------+------+---------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1 ;
-+-------------------+-------+------+-------------------------------------------------------------------------------------+
-; Assignment        ; Value ; From ; To                                                                                  ;
-+-------------------+-------+------+-------------------------------------------------------------------------------------+
-; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[0]                                              ;
-; PRESERVE_REGISTER ; on    ; -    ; altera_reset_synchronizer_int_chain[1]                                              ;
-+-------------------+-------+------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[1]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[5] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|byte[7]                     ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[5]                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -473,68 +361,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                              ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; depth          ; 2     ; Signed Integer                                                                                    ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller ;
-+---------------------------+----------+--------------------------------------------------------+
-; Parameter Name            ; Value    ; Type                                                   ;
-+---------------------------+----------+--------------------------------------------------------+
-; NUM_RESET_INPUTS          ; 1        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN0     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN1     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN2     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN3     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN4     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN5     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN6     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN7     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN8     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN9     ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN10    ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN11    ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN12    ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN13    ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN14    ; 0        ; Signed Integer                                         ;
-; USE_RESET_REQUEST_IN15    ; 0        ; Signed Integer                                         ;
-; OUTPUT_RESET_SYNC_EDGES   ; deassert ; String                                                 ;
-; SYNC_DEPTH                ; 2        ; Signed Integer                                         ;
-; RESET_REQUEST_PRESENT     ; 0        ; Signed Integer                                         ;
-; RESET_REQ_WAIT_TIME       ; 1        ; Signed Integer                                         ;
-; MIN_RST_ASSERTION_TIME    ; 3        ; Signed Integer                                         ;
-; RESET_REQ_EARLY_DSRT_TIME ; 1        ; Signed Integer                                         ;
-; ADAPT_RESET_REQUEST       ; 0        ; Signed Integer                                         ;
-+---------------------------+----------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                            ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------+
-; ASYNC_RESET    ; 1     ; Unsigned Binary                                                                                                 ;
-; DEPTH          ; 2     ; Signed Integer                                                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1 ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
-; ASYNC_RESET    ; 0     ; Signed Integer                                                                                                      ;
-; DEPTH          ; 2     ; Signed Integer                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_master:inst2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; n              ; 8     ; Signed Integer                       ;
+; cpol           ; '0'   ; Enumerated                           ;
+; cpha           ; '0'   ; Enumerated                           ;
+; prefetch       ; 2     ; Signed Integer                       ;
+; spi_2x_clk_div ; 5     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -993,91 +830,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" ;
-+----------+-------+----------+-----------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                       ;
-+----------+-------+----------+-----------------------------------------------------------------------------------------------+
-; reset_in ; Input ; Info     ; Stuck at GND                                                                                  ;
-+----------+-------+----------+-----------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi:inst9|altera_reset_controller:rst_controller" ;
-+----------------+--------+----------+-----------------------------------------+
-; Port           ; Type   ; Severity ; Details                                 ;
-+----------------+--------+----------+-----------------------------------------+
-; reset_req      ; Output ; Info     ; Explicitly unconnected                  ;
-; reset_req_in0  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in1      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in1  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in2      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in2  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in3      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in3  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in4      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in4  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in5      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in5  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in6      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in6  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in7      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in7  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in8      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in8  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in9      ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in9  ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in10     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in10 ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in11     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in11 ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in12     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in12 ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in13     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in13 ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in14     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in14 ; Input  ; Info     ; Stuck at GND                            ;
-; reset_in15     ; Input  ; Info     ; Stuck at GND                            ;
-; reset_req_in15 ; Input  ; Info     ; Stuck at GND                            ;
-+----------------+--------+----------+-----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi:inst9|spi_spi_0:spi_0"                                                                                        ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                  ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; irq           ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; dataavailable ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; endofpacket   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; readyfordata  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 56                          ;
-;     CLR               ; 11                          ;
-;     CLR SCLR          ; 5                           ;
-;     ENA CLR           ; 14                          ;
-;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 63                          ;
-;     arith             ; 30                          ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 33                          ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 10                          ;
-; cycloneiii_pll        ; 1                           ;
+; boundary_port         ; 10                          ;
+; cycloneiii_ff         ; 59                          ;
+;     CLR               ; 2                           ;
+;     ENA               ; 20                          ;
+;     ENA CLR SCLR      ; 8                           ;
+;     ENA SCLR          ; 2                           ;
+;     ENA SLD           ; 7                           ;
+;     SCLR              ; 2                           ;
+;     plain             ; 18                          ;
+; cycloneiii_lcell_comb ; 69                          ;
+;     arith             ; 13                          ;
+;         2 data inputs ; 13                          ;
+;     normal            ; 56                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.20                        ;
-; Average LUT depth     ; 2.07                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1096,10 +874,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat Feb 25 01:16:55 2017
+    Info: Processing started: Mon Feb 27 12:02:54 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
-Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
+Info (12021): Found 2 design units, including 1 entities, in source file spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+    Info (12022): Found design unit 1: spi_master-rtl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
+    Info (12023): Found entity 1: spi_master File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
+Warning (10463): Verilog HDL Declaration warning at SpiControl.v(16): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file SpiControl.v
     Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file spi/synthesis/spi.v
@@ -1131,30 +912,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file oneshot
     Info (12023): Found entity 1: oneshot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v Line: 1
 Warning (10037): Verilog HDL or VHDL warning at spi_spi_0.v(402): conditional expression evaluates to a constant File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 402
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
-Info (12128): Elaborating entity "spi" for hierarchy "spi:inst9"
-Info (12128): Elaborating entity "spi_spi_0" for hierarchy "spi:inst9|spi_spi_0:spi_0" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/spi.v Line: 37
-Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 418
-Info (12130): Elaborated megafunction instantiation "spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 418
-Info (12133): Instantiated megafunction "spi:inst9|spi_spi_0:spi_0|altera_std_synchronizer:the_altera_std_synchronizer" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 418
-    Info (12134): Parameter "depth" = "2"
-Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "spi:inst9|altera_reset_controller:rst_controller" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/spi.v Line: 100
-Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v Line: 208
-Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "spi:inst9|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v Line: 220
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Warning (275043): Pin "LED[1]" is missing source
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
 Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(47): truncated value with size 32 to match size of target (2) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 47
-Warning (10240): Verilog HDL Always Construct warning at SpiControl.v(29): inferring latch(es) for variable "bitfield", which holds its previous value in one or more paths through the always construct File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at SpiControl.v(29): inferring latch(es) for variable "spi_register", which holds its previous value in one or more paths through the always construct File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "spi_register[0]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "spi_register[1]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "spi_register[2]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[8]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[9]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[10]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[11]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[12]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[13]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[14]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
-Info (10041): Inferred latch for "bitfield[15]" at SpiControl.v(29) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 29
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(41): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 41
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(47): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 47
 Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst3"
 Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst10"
 Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst10|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
@@ -1289,24 +1052,28 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[29]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 968
         Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[30]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 1000
         Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[31]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 1032
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 132
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 78
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 243 registers lost all their fanouts during netlist optimizations.
+Info (17049): 264 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "spi" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "spi_spi_0" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "sensor0"
-Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 68 logic cells
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 1058 megabytes
-    Info: Processing ended: Sat Feb 25 01:17:12 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:38
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 1070 megabytes
+    Info: Processing ended: Mon Feb 27 12:03:09 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

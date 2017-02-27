@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="spi" kind="system" version="16.1" fabric="QSYS">
  <!-- Format version 16.1 196 (Future versions may contain additional information.) -->
- <!-- 2017.02.24.23:38:44 -->
+ <!-- 2017.02.27.01:33:46 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1487975924</value>
+  <value>1488155625</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -498,7 +498,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INSERT_SYNC</name>
-   <value>1</value>
+   <value>0</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.ISMASTER</name>
@@ -518,11 +518,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.SYNC_REG_DEPTH</name>
-   <value>2</value>
+   <value>3</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TARGETCLOCK</name>
-   <value>500000u</value>
+   <value>1470000u</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TARGETSSDELAY</name>
@@ -586,7 +586,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="insertSync">
    <type>boolean</type>
-   <value>true</value>
+   <value>false</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -618,15 +618,15 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="syncRegDepth">
    <type>int</type>
-   <value>2</value>
+   <value>3</value>
    <derived>false</derived>
-   <enabled>true</enabled>
+   <enabled>false</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
   <parameter name="targetClockRate">
    <type>long</type>
-   <value>500000</value>
+   <value>1470000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -661,7 +661,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="actualClockRate">
    <type>double</type>
-   <value>500000.0</value>
+   <value>1388888.0</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1937,5 +1937,5 @@ parameters are a RESULT of the module parameters. -->
   <version>16.1</version>
  </plugin>
  <reportVersion>16.1 196</reportVersion>
- <uniqueIdentifier>522F41FD480D0000015A7246C252</uniqueIdentifier>
+ <uniqueIdentifier>F079595A834A0000015A7CFCCA92</uniqueIdentifier>
 </EnsembleReport>

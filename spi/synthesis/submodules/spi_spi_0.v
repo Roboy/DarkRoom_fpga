@@ -30,7 +30,7 @@
 //INPUT_CLOCK: 50000000
 //ISMASTER: 1
 //DATABITS: 8
-//TARGETCLOCK: 500000
+//TARGETCLOCK: 1470000
 //NUMSLAVES: 1
 //CPOL: 0
 //CPHA: 0
@@ -115,7 +115,7 @@ wire             p1_data_rd_strobe;
 wire    [ 15: 0] p1_data_to_cpu;
 wire             p1_data_wr_strobe;
 wire             p1_rd_strobe;
-wire    [  5: 0] p1_slowcount;
+wire    [  4: 0] p1_slowcount;
 wire             p1_wr_strobe;
 reg              rd_strobe;
 wire             readyfordata;
@@ -123,7 +123,7 @@ reg     [  7: 0] rx_holding_reg;
 reg     [  7: 0] shift_reg;
 wire             slaveselect_wr_strobe;
 wire             slowclock;
-reg     [  5: 0] slowcount;
+reg     [  4: 0] slowcount;
 wire    [ 10: 0] spi_control;
 reg     [ 15: 0] spi_slave_select_holding_reg;
 reg     [ 15: 0] spi_slave_select_reg;
@@ -191,7 +191,7 @@ wire             write_tx_holding;
   assign dataavailable = RRDY;
 
   // Ready to accept streaming data.
-  assign readyfordata = TRDY;
+  assign readyfordata = TMT & ~ROE;
 
   // Endofpacket condition detected.
   assign endofpacket = EOP;
@@ -255,11 +255,11 @@ wire             write_tx_holding;
     end
 
 
-  // slowclock is active once every 50 system clock pulses.
-  assign slowclock = slowcount == 6'h31;
+  // slowclock is active once every 18 system clock pulses.
+  assign slowclock = slowcount == 5'h11;
 
-  assign p1_slowcount = ({6 {(transmitting && !slowclock)}} & (slowcount + 1)) |
-    ({6 {(~((transmitting && !slowclock)))}} & 0);
+  assign p1_slowcount = ({5 {(transmitting && !slowclock)}} & (slowcount + 1)) |
+    ({5 {(~((transmitting && !slowclock)))}} & 0);
 
   // Divide counter for SPI clock.
   always @(posedge clk or negedge reset_n)
@@ -409,16 +409,7 @@ wire             write_tx_holding;
     end
 
 
-  altera_std_synchronizer the_altera_std_synchronizer
-    (
-      .clk (clk),
-      .din (MISO),
-      .dout (ds_MISO),
-      .reset_n (reset_n)
-    );
-
-  defparam the_altera_std_synchronizer.depth = 2;
-
+  assign ds_MISO = MISO;
 
 endmodule
 

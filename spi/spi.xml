@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2017.02.24.23:38:44"
+ date="2017.02.27.01:33:46"
  outputDirectory="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/">
  <perimeter>
   <parameter
@@ -142,13 +142,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="spi:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE22F17C6,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1487975924,AUTO_UNIQUE_ID=(clock_source:16.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_spi:16.1:actualClockRate=500000.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=true,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=2,targetClockRate=500000,targetSlaveSelectToSClkDelay=0.0)(clock:16.1:)(reset:16.1:)"
+   parameterizationKey="spi:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE22F17C6,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1488155625,AUTO_UNIQUE_ID=(clock_source:16.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_spi:16.1:actualClockRate=1388888.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=false,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=3,targetClockRate=1470000,targetSlaveSelectToSClkDelay=0.0)(clock:16.1:)(reset:16.1:)"
    instancePathKey="spi"
    kind="spi"
    version="1.0"
    name="spi">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1487975924" />
+  <parameter name="AUTO_GENERATION_ID" value="1488155625" />
   <parameter name="AUTO_DEVICE" value="EP4CE22F17C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -209,7 +209,7 @@
    <message level="Debug" culprit="spi"><![CDATA["<b>spi</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
    <message level="Debug" culprit="spi">queue size: 1 starting:altera_avalon_spi "submodules/spi_spi_0"</message>
    <message level="Info" culprit="spi_0">Starting RTL generation for module 'spi_spi_0'</message>
-   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7221_2061804449383234217.dir/0003_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7221_2061804449383234217.dir/0003_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="spi_0">Done RTL generation for module 'spi_spi_0'</message>
    <message level="Info" culprit="spi_0"><![CDATA["<b>spi</b>" instantiated <b>altera_avalon_spi</b> "<b>spi_0</b>"]]></message>
    <message level="Debug" culprit="spi">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
@@ -218,24 +218,24 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_avalon_spi:16.1:actualClockRate=500000.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=true,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=2,targetClockRate=500000,targetSlaveSelectToSClkDelay=0.0"
+   parameterizationKey="altera_avalon_spi:16.1:actualClockRate=1388888.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=false,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=3,targetClockRate=1470000,targetSlaveSelectToSClkDelay=0.0"
    instancePathKey="spi:.:spi_0"
    kind="altera_avalon_spi"
    version="16.1"
    name="spi_spi_0">
   <parameter name="legacySignalsAllow" value="false" />
-  <parameter name="insertSync" value="true" />
-  <parameter name="targetClockRate" value="500000" />
+  <parameter name="insertSync" value="false" />
+  <parameter name="targetClockRate" value="1470000" />
   <parameter name="disableAvalonFlowControl" value="false" />
   <parameter name="avalonSpec" value="2.0" />
   <parameter name="clockPolarity" value="0" />
   <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="false" />
-  <parameter name="actualClockRate" value="500000.0" />
+  <parameter name="actualClockRate" value="1388888.0" />
   <parameter name="clockPhase" value="0" />
   <parameter name="masterSPI" value="true" />
   <parameter name="slaveDataBusWidth" value="16" />
   <parameter name="numberOfSlaves" value="1" />
-  <parameter name="syncRegDepth" value="2" />
+  <parameter name="syncRegDepth" value="3" />
   <parameter name="actualSlaveSelectToSClkDelay" value="0.0" />
   <parameter name="inputClockRate" value="50000000" />
   <parameter name="dataWidth" value="8" />
@@ -257,7 +257,7 @@
   <messages>
    <message level="Debug" culprit="spi">queue size: 1 starting:altera_avalon_spi "submodules/spi_spi_0"</message>
    <message level="Info" culprit="spi_0">Starting RTL generation for module 'spi_spi_0'</message>
-   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7221_2061804449383234217.dir/0003_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7221_2061804449383234217.dir/0003_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="spi_0">Done RTL generation for module 'spi_spi_0'</message>
    <message level="Info" culprit="spi_0"><![CDATA["<b>spi</b>" instantiated <b>altera_avalon_spi</b> "<b>spi_0</b>"]]></message>
   </messages>

@@ -15,7 +15,8 @@ module spi (
 		input  wire [2:0]  spi_0_spi_control_port_address,    //                       .address
 		input  wire        spi_0_spi_control_port_read_n,     //                       .read_n
 		input  wire        spi_0_spi_control_port_chipselect, //                       .chipselect
-		input  wire        spi_0_spi_control_port_write_n     //                       .write_n
+		input  wire        spi_0_spi_control_port_write_n,     //                       .write_n
+		output wire	ready_for_data
 	);
 
 	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> spi_0:reset_n
@@ -33,7 +34,8 @@ module spi (
 		.MISO          (spi_0_external_MISO),               //         external.export
 		.MOSI          (spi_0_external_MOSI),               //                 .export
 		.SCLK          (spi_0_external_SCLK),               //                 .export
-		.SS_n          (spi_0_external_SS_n)                //                 .export
+		.SS_n          (spi_0_external_SS_n),                //                 .export
+		.readyfordata(ready_for_data)
 	);
 
 	altera_reset_controller #(

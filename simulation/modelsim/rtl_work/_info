@@ -1,0 +1,254 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/simulation/modelsim
+Ecounter
+Z1 w1485616994
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd
+Z7 F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd
+l0
+L6
+Vh3eIbzD8F?JEZ9hk6CeQ@2
+!s100 6D9Zg6@SC;11=i0J1[7ZV1
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1488189136
+!i10b 1
+Z10 !s108 1488189136.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd|
+Z12 !s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 7 counter 0 22 h3eIbzD8F?JEZ9hk6CeQ@2
+l16
+L14
+V:A<@ZLS>c?9^8zE5S6?=g1
+!s100 :B9[RQOJg14`c3`z<S?8E0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+vfifo
+Z15 !s110 1488189135
+!i10b 1
+!s100 I[ec`k9gk]X=jeK9Xa2EK0
+IYF3zhS8Cd5XYeC^L9N:VH1
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z17 w1488100855
+8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v
+F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v
+Z18 L0 40
+Z19 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z20 !s108 1488189135.000000
+!s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v|
+!i113 1
+Z21 o-vlog01compat -work work
+Z22 !s92 -vlog01compat -work work +incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga
+Z23 tCvgOpt 0
+Elighthouse
+Z24 w1488100627
+R3
+Z25 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z26 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R5
+R0
+Z27 8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd
+Z28 F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd
+l0
+L6
+Vme0ghRQz@e2Jnc_8?RJ861
+!s100 N06o7MNn1GcjFNB9NDmab2
+R8
+31
+R9
+!i10b 1
+R10
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd|
+Z30 !s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R3
+R25
+R26
+R4
+R5
+DEx4 work 10 lighthouse 0 22 me0ghRQz@e2Jnc_8?RJ861
+l29
+L17
+VdRbVWdV8:X1S]f4;]62<62
+!s100 W8D3fNc:M=L=^6L1mPL5S0
+R8
+31
+R9
+!i10b 1
+R10
+R29
+R30
+!i113 1
+R13
+R14
+voneshot
+R15
+!i10b 1
+!s100 NP`KA?I^KAh1GkFcFU1PK3
+IIiG^0DUYMLX:a0;m<1JEj1
+R16
+R0
+R17
+8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v
+F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v
+L0 1
+R19
+r1
+!s85 0
+31
+R20
+!s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v|
+!i113 1
+R21
+R22
+R23
+vpll
+R15
+!i10b 1
+!s100 n?dG2ig:hk<>RG:Uf<Xna2
+IVPTcX^N7Az[EP;^@5TA3i2
+R16
+R0
+R17
+8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v
+F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v
+R18
+R19
+r1
+!s85 0
+31
+R20
+!s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v|
+!i113 1
+R21
+R22
+R23
+vpll_altpll
+R15
+!i10b 1
+!s100 b10HPXY[zcH4be8=miTdV3
+IN>0a1zClz?eRXKS9oYM<G2
+R16
+R0
+R24
+8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v
+F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v
+L0 30
+R19
+r1
+!s85 0
+31
+R20
+!s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v|
+!i113 1
+R21
+!s92 -vlog01compat -work work +incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db
+R23
+Espi_master
+Z31 w1316460792
+R3
+R2
+R26
+R4
+R5
+R0
+Z32 8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+Z33 F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+l0
+L173
+VW_WbQT;j19:J?loij>7Aj0
+!s100 mQe]VOEBH;Oi4FLk@m_XM1
+R8
+31
+R9
+!i10b 1
+R20
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd|
+Z35 !s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd|
+!i113 1
+R13
+R14
+Artl
+R3
+R2
+R26
+R4
+R5
+DEx4 work 10 spi_master 0 22 W_WbQT;j19:J?loij>7Aj0
+l282
+L215
+VbZA8M[`T<g[mM?H23@a;h0
+!s100 E>L4O^I;kDJiH@V_nD2b31
+R8
+31
+R9
+!i10b 1
+R20
+R34
+R35
+!i113 1
+R13
+R14
+vSpiControl
+R15
+!i10b 1
+!s100 B`KF?f?a6K2[YJA`hIP_@1
+I`@Sg21g>PM`380JbdC<<:0
+R16
+R0
+w1488188987
+8/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v
+F/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v
+L0 8
+R19
+r1
+!s85 0
+31
+R20
+!s107 /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga|/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v|
+!i113 1
+R21
+R22
+R23
+n@spi@control
