@@ -1,5 +1,5 @@
 Flow report for darkroom_top
-Mon Feb 27 12:03:17 2017
+Mon Feb 27 13:32:06 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Feb 27 12:03:17 2017       ;
+; Flow Status                        ; Successful - Mon Feb 27 13:32:06 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 78 / 22,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 67 / 22,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 59 / 22,320 ( < 1 % )                       ;
-; Total registers                    ; 59                                          ;
-; Total pins                         ; 10 / 154 ( 6 % )                            ;
+; Total logic elements               ; 5,839 / 22,320 ( 26 % )                     ;
+;     Total combinational functions  ; 5,391 / 22,320 ( 24 % )                     ;
+;     Dedicated logic registers      ; 1,396 / 22,320 ( 6 % )                      ;
+; Total registers                    ; 1396                                        ;
+; Total pins                         ; 17 / 154 ( 11 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,41 +65,35 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/27/2017 12:02:54 ;
+; Start date & time ; 02/27/2017 13:31:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; darkroom_top        ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                           ;
-+-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 264403980813130.148819337411582                       ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --             ;
-; MISC_FILE                           ; spi/synthesis/../spi.cmp                              ; --            ; --          ; --             ;
-; MISC_FILE                           ; spi/synthesis/../../spi.qsys                          ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.bsf                                               ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll_bb.v                                              ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.ppf                                               ; --            ; --          ; --             ;
-; MISC_FILE                           ; fifo.bsf                                              ; --            ; --          ; --             ;
-; MISC_FILE                           ; fifo_bb.v                                             ; --            ; --          ; --             ;
-; NUM_PARALLEL_PROCESSORS             ; 4                                                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                          ; --            ; --          ; --             ;
-; SLD_FILE                            ; spi/synthesis/spi.debuginfo                           ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME spi HAS_SOPCINFO 1 GENERATION_ID 1488155625 ; --            ; spi         ; --             ;
-; SOPCINFO_FILE                       ; spi/synthesis/../../spi.sopcinfo                      ; --            ; --          ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --            ; --          ; --             ;
-+-------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 264403980813130.148819867529658        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll.bsf                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll_bb.v                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; pll.ppf                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; fifo.bsf                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; fifo_bb.v                              ; --            ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -107,10 +101,10 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 1033 MB             ; 00:00:32                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 1234 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 818 MB              ; 00:00:01                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:39                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 1033 MB             ; 00:00:43                           ;
+; Fitter               ; 00:00:20     ; 1.1                     ; 1292 MB             ; 00:00:28                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 836 MB              ; 00:00:02                           ;
+; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

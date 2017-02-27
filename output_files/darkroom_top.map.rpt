@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Mon Feb 27 12:03:09 2017
+Mon Feb 27 13:31:41 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -19,17 +19,21 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram
- 15. Parameter Settings for User Entity Instance: spi_master:inst2
- 16. Parameter Settings for User Entity Instance: fifo:inst10|scfifo:scfifo_component
- 17. Parameter Settings for User Entity Instance: lighthouse:inst1
- 18. Parameter Settings for User Entity Instance: counter:inst33
- 19. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
- 20. scfifo Parameter Settings by Entity Instance
- 21. altpll Parameter Settings by Entity Instance
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: spi_master:inst2
+ 15. Parameter Settings for User Entity Instance: lighthouse:inst6
+ 16. Parameter Settings for User Entity Instance: counter:inst33
+ 17. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: lighthouse:inst8
+ 19. Parameter Settings for User Entity Instance: lighthouse:inst7
+ 20. Parameter Settings for User Entity Instance: lighthouse:inst9
+ 21. Parameter Settings for User Entity Instance: lighthouse:inst12
+ 22. Parameter Settings for User Entity Instance: lighthouse:inst10
+ 23. Parameter Settings for User Entity Instance: lighthouse:inst13
+ 24. Parameter Settings for User Entity Instance: lighthouse:inst15
+ 25. altpll Parameter Settings by Entity Instance
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -56,20 +60,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 27 12:03:09 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 27 13:31:41 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 81                                          ;
-;     Total combinational functions  ; 67                                          ;
-;     Dedicated logic registers      ; 59                                          ;
-; Total registers                    ; 59                                          ;
-; Total pins                         ; 10                                          ;
+; Total logic elements               ; 6,247                                       ;
+;     Total combinational functions  ; 5,391                                       ;
+;     Dedicated logic registers      ; 1,396                                       ;
+; Total registers                    ; 1396                                        ;
+; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -174,7 +178,8 @@ agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -189,23 +194,10 @@ agreement for further details.
 ; lighthouse.vhd                                             ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                             ;         ;
 ; darkroom_top.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                           ;         ;
 ; pll.v                                                      ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                      ;         ;
-; fifo.v                                                     ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                                     ;         ;
 ; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
-; scfifo.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                          ;         ;
-; a_regfifo.inc                                              ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                       ;         ;
-; a_dpfifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                        ;         ;
-; a_i2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                        ;         ;
-; a_fffifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                        ;         ;
-; a_f2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                        ;         ;
-; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
-; db/scfifo_g341.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_g341.tdf                                         ;         ;
-; db/a_dpfifo_3r31.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf                                       ;         ;
-; db/altsyncram_1eh1.tdf                                     ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf                                     ;         ;
-; db/cmpr_ls8.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ls8.tdf                                            ;         ;
-; db/cntr_0ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_0ab.tdf                                            ;         ;
-; db/cntr_da7.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_da7.tdf                                            ;         ;
-; db/cntr_1ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                            ;         ;
+; ConcatenateSensorValues.v                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v                                  ;         ;
 ; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
+; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
 ; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
 ; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
 ; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
@@ -213,103 +205,127 @@ agreement for further details.
 +------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 81             ;
-;                                             ;                ;
-; Total combinational functions               ; 67             ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 22             ;
-;     -- 3 input functions                    ; 19             ;
-;     -- <=2 input functions                  ; 26             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 54             ;
-;     -- arithmetic mode                      ; 13             ;
-;                                             ;                ;
-; Total registers                             ; 59             ;
-;     -- Dedicated logic registers            ; 59             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 10             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; clock_50~input ;
-; Maximum fan-out                             ; 59             ;
-; Total fan-out                               ; 397            ;
-; Average fan-out                             ; 2.72           ;
-+---------------------------------------------+----------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 6,247                ;
+;                                             ;                      ;
+; Total combinational functions               ; 5391                 ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 1379                 ;
+;     -- 3 input functions                    ; 2318                 ;
+;     -- <=2 input functions                  ; 1694                 ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 1951                 ;
+;     -- arithmetic mode                      ; 3440                 ;
+;                                             ;                      ;
+; Total registers                             ; 1396                 ;
+;     -- Dedicated logic registers            ; 1396                 ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 17                   ;
+;                                             ;                      ;
+; Embedded Multiplier 9-bit elements          ; 0                    ;
+;                                             ;                      ;
+; Total PLLs                                  ; 1                    ;
+;     -- PLLs                                 ; 1                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; sensor0_signal~input ;
+; Maximum fan-out                             ; 185                  ;
+; Total fan-out                               ; 19661                ;
+; Average fan-out                             ; 2.88                 ;
++---------------------------------------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
-; |darkroom_top              ; 67 (1)              ; 59 (0)                    ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |darkroom_top                   ; darkroom_top ; work         ;
-;    |SpiControl:inst11|     ; 25 (25)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11 ; SpiControl   ; work         ;
-;    |oneshot:inst3|         ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst3     ; oneshot      ; work         ;
-;    |spi_master:inst2|      ; 39 (39)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2  ; spi_master   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name  ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+--------------+
+; |darkroom_top                        ; 5391 (3)            ; 1396 (0)                  ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |darkroom_top                                                            ; darkroom_top ; work         ;
+;    |SpiControl:inst11|               ; 157 (157)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl   ; work         ;
+;    |counter:inst33|                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                             ; counter      ; work         ;
+;    |lighthouse:inst10|               ; 883 (883)           ; 177 (177)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                          ; lighthouse   ; work         ;
+;    |lighthouse:inst12|               ; 248 (248)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                          ; lighthouse   ; work         ;
+;    |lighthouse:inst13|               ; 248 (248)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                          ; lighthouse   ; work         ;
+;    |lighthouse:inst15|               ; 248 (248)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                          ; lighthouse   ; work         ;
+;    |lighthouse:inst6|                ; 883 (883)           ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                           ; lighthouse   ; work         ;
+;    |lighthouse:inst7|                ; 882 (882)           ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                           ; lighthouse   ; work         ;
+;    |lighthouse:inst8|                ; 883 (883)           ; 177 (177)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                           ; lighthouse   ; work         ;
+;    |lighthouse:inst9|                ; 883 (883)           ; 185 (185)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                           ; lighthouse   ; work         ;
+;    |oneshot:inst17|                  ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                             ; oneshot      ; work         ;
+;    |pll:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                   ; pll          ; work         ;
+;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                           ; altpll       ; work         ;
+;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll   ; work         ;
+;    |spi_master:inst2|                ; 40 (40)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                           ; spi_master   ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                       ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
-; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |darkroom_top|pll:inst    ; pll.v           ;
-; Altera ; FIFO         ; 16.1    ; N/A          ; N/A          ; |darkroom_top|fifo:inst10 ; fifo.v          ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                    ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |darkroom_top|pll:inst ; pll.v           ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                         ;
-+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
-; Register name                                                                                                                    ; Reason for Removal                      ;
-+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff                                    ; Lost fanout                             ;
-; counter:inst33|temp[0..31]                                                                                                       ; Lost fanout                             ;
-; lighthouse:inst1|stop_valid_sync[1..31]                                                                                          ; Lost fanout                             ;
-; lighthouse:inst1|sensor_value[0]                                                                                                 ; Lost fanout                             ;
-; lighthouse:inst1|t_0[0]                                                                                                          ; Lost fanout                             ;
-; lighthouse:inst1|sweep_detected                                                                                                  ; Lost fanout                             ;
-; lighthouse:inst1|t_sweep_duration[0..31]                                                                                         ; Lost fanout                             ;
-; lighthouse:inst1|t_sweep_start[0..31]                                                                                            ; Lost fanout                             ;
-; lighthouse:inst1|start_valid_sync[0..31]                                                                                         ; Lost fanout                             ;
-; lighthouse:inst1|lighthouse                                                                                                      ; Lost fanout                             ;
-; lighthouse:inst1|rotor                                                                                                           ; Lost fanout                             ;
-; lighthouse:inst1|data                                                                                                            ; Lost fanout                             ;
-; lighthouse:inst1|sensor_value[1..31]                                                                                             ; Lost fanout                             ;
-; lighthouse:inst1|t_0[1..31]                                                                                                      ; Lost fanout                             ;
-; lighthouse:inst1|stop_valid_sync[0]                                                                                              ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|full_dff                                     ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|low_addressa[0..7]                           ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|rd_ptr_lsb                                   ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff                               ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff                               ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_1ab:wr_ptr|counter_reg_bit[0..7]        ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_da7:usedw_counter|counter_reg_bit[0..7] ; Lost fanout                             ;
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_0ab:rd_ptr_msb|counter_reg_bit[0..6]    ; Lost fanout                             ;
-; spi_master:inst2|core_clk                                                                                                        ; Merged with spi_master:inst2|core_n_clk ;
-; Total Number of Removed Registers = 265                                                                                          ;                                         ;
-+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++-----------------------------------------+-----------------------------------------+
+; Register name                           ; Reason for Removal                      ;
++-----------------------------------------+-----------------------------------------+
+; lighthouse:inst10|lighthouse            ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst10|sensor_value[9]       ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst10|sensor_value[8]       ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst12|sensor_value[0]       ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst12|sensor_value[3..7]    ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst12|sensor_value[2]       ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst12|sensor_value[1]       ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst9|lighthouse             ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst9|sensor_value[9]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst9|sensor_value[8]        ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst7|sensor_value[0]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst7|lighthouse             ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst7|sensor_value[9]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst7|sensor_value[1..8]     ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst8|sensor_value[0]        ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst8|lighthouse             ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst8|sensor_value[9]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst8|sensor_value[2..8]     ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst8|sensor_value[1]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst6|sensor_value[0]        ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst6|lighthouse             ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst6|sensor_value[9]        ; Stuck at VCC due to stuck port data_in  ;
+; lighthouse:inst6|sensor_value[1..8]     ; Stuck at GND due to stuck port data_in  ;
+; lighthouse:inst15|t_sweep_start[19..31] ; Lost fanout                             ;
+; lighthouse:inst13|t_sweep_start[19..31] ; Lost fanout                             ;
+; lighthouse:inst12|t_sweep_start[19..31] ; Lost fanout                             ;
+; spi_master:inst2|core_clk               ; Merged with spi_master:inst2|core_n_clk ;
+; Total Number of Removed Registers = 87  ;                                         ;
++-----------------------------------------+-----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                              ;
-+-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
-; Register name                                                                                 ; Reason for Removal ; Registers Removed due to This Register                                                              ;
-+-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
-; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|empty_dff ; Lost Fanouts       ; lighthouse:inst1|sweep_detected,                                                                    ;
-;                                                                                               ;                    ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_0_dff, ;
-;                                                                                               ;                    ; fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|usedw_is_1_dff  ;
-+-----------------------------------------------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                       ;
++------------------------------+---------------------------+----------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register ;
++------------------------------+---------------------------+----------------------------------------+
+; lighthouse:inst10|lighthouse ; Stuck at VCC              ; lighthouse:inst10|sensor_value[9]      ;
+;                              ; due to stuck port data_in ;                                        ;
+; lighthouse:inst9|lighthouse  ; Stuck at VCC              ; lighthouse:inst9|sensor_value[9]       ;
+;                              ; due to stuck port data_in ;                                        ;
+; lighthouse:inst7|lighthouse  ; Stuck at VCC              ; lighthouse:inst7|sensor_value[9]       ;
+;                              ; due to stuck port data_in ;                                        ;
+; lighthouse:inst8|lighthouse  ; Stuck at VCC              ; lighthouse:inst8|sensor_value[9]       ;
+;                              ; due to stuck port data_in ;                                        ;
+; lighthouse:inst6|lighthouse  ; Stuck at VCC              ; lighthouse:inst6|sensor_value[9]       ;
+;                              ; due to stuck port data_in ;                                        ;
++------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -317,12 +333,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 59    ;
-; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 7     ;
+; Total registers                              ; 1396  ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Clock Enable       ; 1079  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -334,7 +350,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; spi_master:inst2|core_n_ce             ; 9       ;
 ; spi_master:inst2|core_n_clk            ; 4       ;
-; spi_master:inst2|di_req_o_reg          ; 1       ;
+; spi_master:inst2|di_req_o_reg          ; 2       ;
 ; spi_master:inst2|spi_2x_ce             ; 3       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
@@ -345,20 +361,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[1]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[5] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|byte[7]                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[2]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[0] ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[5]                    ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst10|rotor                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst9|data                         ;
+; 258:1              ; 6 bits    ; 1032 LEs      ; 72 LEs               ; 960 LEs                ; Yes        ; |darkroom_top|SpiControl:inst11|byte[7]                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                   ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                    ;
-+---------------------------------+--------------------+------+----------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -375,37 +387,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fifo:inst10|scfifo:scfifo_component ;
-+-------------------------+--------------+-----------------------------------------+
-; Parameter Name          ; Value        ; Type                                    ;
-+-------------------------+--------------+-----------------------------------------+
-; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                          ;
-; lpm_width               ; 32           ; Signed Integer                          ;
-; LPM_NUMWORDS            ; 256          ; Signed Integer                          ;
-; LPM_WIDTHU              ; 8            ; Signed Integer                          ;
-; LPM_SHOWAHEAD           ; OFF          ; Untyped                                 ;
-; UNDERFLOW_CHECKING      ; ON           ; Untyped                                 ;
-; OVERFLOW_CHECKING       ; ON           ; Untyped                                 ;
-; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                 ;
-; ADD_RAM_OUTPUT_REGISTER ; ON           ; Untyped                                 ;
-; ALMOST_FULL_VALUE       ; 0            ; Untyped                                 ;
-; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                 ;
-; ENABLE_ECC              ; FALSE        ; Untyped                                 ;
-; USE_EAB                 ; ON           ; Untyped                                 ;
-; MAXIMIZE_SPEED          ; 5            ; Untyped                                 ;
-; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                 ;
-; CBXI_PARAMETER          ; scfifo_g341  ; Untyped                                 ;
-+-------------------------+--------------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst1 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst6 ;
 +----------------+-----------+----------------------------------+
 ; Parameter Name ; Value     ; Type                             ;
 +----------------+-----------+----------------------------------+
@@ -798,19 +781,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; scfifo Parameter Settings by Entity Instance                     ;
-+----------------------------+-------------------------------------+
-; Name                       ; Value                               ;
-+----------------------------+-------------------------------------+
-; Number of entity instances ; 1                                   ;
-; Entity Instance            ; fifo:inst10|scfifo:scfifo_component ;
-;     -- FIFO Type           ; Single Clock                        ;
-;     -- lpm_width           ; 32                                  ;
-;     -- LPM_NUMWORDS        ; 256                                 ;
-;     -- LPM_SHOWAHEAD       ; OFF                                 ;
-;     -- USE_EAB             ; ON                                  ;
-+----------------------------+-------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst8 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; sensorid       ; 000000010 ; Unsigned Binary                  ;
++----------------+-----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst7 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; sensorid       ; 000000001 ; Unsigned Binary                  ;
++----------------+-----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst9 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; sensorid       ; 000000011 ; Unsigned Binary                  ;
++----------------+-----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst12 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000101 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst10 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000100 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst13 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000110 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst15 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000111 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------+
@@ -835,27 +873,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 59                          ;
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 1396                        ;
 ;     CLR               ; 2                           ;
-;     ENA               ; 20                          ;
+;     ENA               ; 1063                        ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     ENA SCLR          ; 2                           ;
-;     ENA SLD           ; 7                           ;
+;     ENA SCLR SLD      ; 6                           ;
 ;     SCLR              ; 2                           ;
-;     plain             ; 18                          ;
-; cycloneiii_lcell_comb ; 69                          ;
-;     arith             ; 13                          ;
-;         2 data inputs ; 13                          ;
-;     normal            ; 56                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 22                          ;
+;     plain             ; 313                         ;
+; cycloneiii_lcell_comb ; 5392                        ;
+;     arith             ; 3440                        ;
+;         2 data inputs ; 1494                        ;
+;         3 data inputs ; 1946                        ;
+;     normal            ; 1952                        ;
+;         0 data inputs ; 40                          ;
+;         1 data inputs ; 53                          ;
+;         2 data inputs ; 108                         ;
+;         3 data inputs ; 372                         ;
+;         4 data inputs ; 1379                        ;
+; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.71                        ;
+; Max LUT depth         ; 15.80                       ;
+; Average LUT depth     ; 12.03                       ;
 +-----------------------+-----------------------------+
 
 
@@ -864,7 +904,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -874,23 +914,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Feb 27 12:02:54 2017
+    Info: Processing started: Mon Feb 27 13:31:15 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
     Info (12022): Found design unit 1: spi_master-rtl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
     Info (12023): Found entity 1: spi_master File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
-Warning (10463): Verilog HDL Declaration warning at SpiControl.v(16): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 16
+Warning (10463): Verilog HDL Declaration warning at SpiControl.v(10): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file SpiControl.v
-    Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 8
-Info (12021): Found 1 design units, including 1 entities, in source file spi/synthesis/spi.v
-    Info (12023): Found entity 1: spi File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/spi.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file spi/synthesis/submodules/altera_reset_controller.v
-    Info (12023): Found entity 1: altera_reset_controller File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v Line: 42
-Info (12021): Found 1 design units, including 1 entities, in source file spi/synthesis/submodules/altera_reset_synchronizer.v
-    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_synchronizer.v Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file spi/synthesis/submodules/spi_spi_0.v
-    Info (12023): Found entity 1: spi_spi_0 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 41
+    Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file sensor_mux.vhd
     Info (12022): Found design unit 1: sensor_mux-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 30
     Info (12023): Found entity 1: sensor_mux File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 6
@@ -910,52 +942,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
     Info (12023): Found entity 1: fifo File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file oneshot.v
     Info (12023): Found entity 1: oneshot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v Line: 1
-Warning (10037): Verilog HDL or VHDL warning at spi_spi_0.v(402): conditional expression evaluates to a constant File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v Line: 402
+Info (12021): Found 1 design units, including 1 entities, in source file ConcatenateSensorValues.v
+    Info (12023): Found entity 1: ConcatenateSensorValues File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 3
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
-Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
-Warning (275043): Pin "LED[1]" is missing source
+Warning (275011): Block or symbol "NOT" of instance "pos_reset" overlaps another block or symbol
 Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
 Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(41): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 41
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(47): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 47
-Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst3"
-Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst10"
-Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst10|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12130): Elaborated megafunction instantiation "fifo:inst10|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12133): Instantiated megafunction "fifo:inst10|scfifo:scfifo_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-    Info (12134): Parameter "add_ram_output_register" = "ON"
-    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
-    Info (12134): Parameter "lpm_numwords" = "256"
-    Info (12134): Parameter "lpm_showahead" = "OFF"
-    Info (12134): Parameter "lpm_type" = "scfifo"
-    Info (12134): Parameter "lpm_width" = "32"
-    Info (12134): Parameter "lpm_widthu" = "8"
-    Info (12134): Parameter "overflow_checking" = "ON"
-    Info (12134): Parameter "underflow_checking" = "ON"
-    Info (12134): Parameter "use_eab" = "ON"
-Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_g341.tdf
-    Info (12023): Found entity 1: scfifo_g341 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_g341.tdf Line: 25
-Info (12128): Elaborating entity "scfifo_g341" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
-Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_3r31.tdf
-    Info (12023): Found entity 1: a_dpfifo_3r31 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_3r31" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_g341.tdf Line: 38
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1eh1.tdf
-    Info (12023): Found entity 1: altsyncram_1eh1 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_1eh1" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 46
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ls8.tdf
-    Info (12023): Found entity 1: cmpr_ls8 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ls8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cmpr_ls8:almost_full_comparer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 54
-Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cmpr_ls8:two_comparison" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 55
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0ab.tdf
-    Info (12023): Found entity 1: cntr_0ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_0ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_0ab" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_0ab:rd_ptr_msb" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 56
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_da7.tdf
-    Info (12023): Found entity 1: cntr_da7 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_da7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_da7" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_da7:usedw_counter" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 57
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
-    Info (12023): Found entity 1: cntr_1ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|cntr_1ab:wr_ptr" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_3r31.tdf Line: 58
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst1"
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(35): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 35
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(81): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 81
+Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst17"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
@@ -1018,62 +1014,27 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[0]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 40
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[1]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 72
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[2]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 104
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[3]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 136
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[4]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 168
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[5]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 200
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[6]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 232
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[7]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 264
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[8]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 296
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[9]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 328
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[10]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 360
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[11]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 392
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[12]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 424
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[13]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 456
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[14]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 488
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[15]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 520
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[16]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 552
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[17]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 584
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[18]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 616
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[19]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 648
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[20]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 680
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[21]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 712
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[22]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 744
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[23]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 776
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[24]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 808
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[25]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 840
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[26]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 872
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[27]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 904
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[28]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 936
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[29]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 968
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[30]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 1000
-        Warning (14320): Synthesized away node "fifo:inst10|scfifo:scfifo_component|scfifo_g341:auto_generated|a_dpfifo_3r31:dpfifo|altsyncram_1eh1:FIFOram|q_b[31]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_1eh1.tdf Line: 1032
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "pll:inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 78
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[1]" is stuck at GND
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst8"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst9"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst12"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst10"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst13"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst15"
+Info (12128): Elaborating entity "ConcatenateSensorValues" for hierarchy "ConcatenateSensorValues:inst5"
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 264 registers lost all their fanouts during netlist optimizations.
-Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "spi" -- entity does not exist in design
-Warning (20013): Ignored 24 assignments for entity "spi_spi_0" -- entity does not exist in design
+Info (17049): 39 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "sensor0"
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6274 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 1070 megabytes
-    Info: Processing ended: Mon Feb 27 12:03:09 2017
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21061): Implemented 6256 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 1062 megabytes
+    Info: Processing ended: Mon Feb 27 13:31:41 2017
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:43
 
 

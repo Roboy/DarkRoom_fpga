@@ -11,7 +11,7 @@ entity lighthouse is
 		sensor: in std_logic;
 		timer: in std_logic_vector(31 downto 0);
 		sensor_value: out std_logic_vector(31 downto 0);
-		sweep_detected: out std_logic);
+		send_data: out std_logic);
 end lighthouse;
  
 architecture Behavioral of lighthouse is
@@ -23,9 +23,6 @@ architecture Behavioral of lighthouse is
 	signal lighthouse: std_logic;
 	signal start_valid_sync 	: std_logic_vector(31 downto 0);
 	
-	constant zeros : std_logic_vector(t_0'range) := (others => '0');
-
-	
 begin   process(sensor)
 	variable duration: std_logic_vector(31 downto 0);
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
@@ -35,10 +32,8 @@ begin   process(sensor)
 			t_0 <= timer;
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
-			sweep_detected <= '0';
 			if(duration < 50*50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
-				sweep_detected <= '1';
 			elsif (duration > (63*50 - 5*50)) and (duration < (94*50 + 5*50)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
@@ -53,9 +48,11 @@ begin   process(sensor)
 					start_valid_sync <= t_0;
 					stop_valid_sync := (others => '0');
 					if((sync_gap_duration - 8333 ) > 300 ) then
+						send_data <= '1';	-- we can send the data shortly after a sync
 						lighthouse <= '1';
 					elsif ((sync_gap_duration - 8333 ) < -300 ) then
-						lighthouse <= '0';
+						send_data <= '1'; -- we can send the data shortly after a sync
+						send_data <= '0';
 					end if;
 				end if;
 				

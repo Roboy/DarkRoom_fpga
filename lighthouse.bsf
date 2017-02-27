@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 224 48)
 		(output)
-		(text "sweep_detected" (rect 0 0 63 12)(font "Arial" ))
-		(text "sweep_detected" (rect 140 43 203 55)(font "Arial" ))
+		(text "send_data" (rect 0 0 41 12)(font "Arial" ))
+		(text "send_data" (rect 162 43 203 55)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48)(line_width 1))
 	)
 	(parameter
