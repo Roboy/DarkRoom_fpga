@@ -306,7 +306,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1024 920 1200 936)
+	(rect 1000 920 1176 936)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[3]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -322,7 +322,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1024 1016 1200 1032)
+	(rect 1008 1016 1184 1032)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[4]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -338,7 +338,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1024 1376 1200 1392)
+	(rect 1032 1240 1208 1256)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[5]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -354,7 +354,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1024 1408 1200 1424)
+	(rect 1016 1280 1192 1296)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[6]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -370,7 +370,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1024 1496 1200 1512)
+	(rect 1016 1320 1192 1336)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[7]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -386,7 +386,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1328 512 1504 528)
+	(rect 1000 864 1176 880)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[2]" (rect 90 0 120 9)(font "Arial" ))
 	(pt 0 8)
@@ -1495,10 +1495,6 @@ agreement for further details.
 	(pt 840 1256)
 )
 (connector
-	(pt 944 1256)
-	(pt 944 1152)
-)
-(connector
 	(pt 976 1152)
 	(pt 944 1152)
 )
@@ -1596,64 +1592,8 @@ agreement for further details.
 	(pt 1408 1176)
 )
 (connector
-	(pt 1024 928)
-	(pt 960 928)
-)
-(connector
-	(pt 960 872)
-	(pt 960 928)
-)
-(connector
-	(pt 960 928)
-	(pt 960 1104)
-)
-(connector
-	(pt 1024 1024)
-	(pt 944 1024)
-)
-(connector
-	(pt 944 1000)
-	(pt 944 1024)
-)
-(connector
-	(pt 944 1024)
-	(pt 944 1120)
-)
-(connector
-	(pt 968 1504)
-	(pt 1024 1504)
-)
-(connector
-	(pt 968 1200)
-	(pt 968 1504)
-)
-(connector
-	(pt 968 1504)
-	(pt 968 1640)
-)
-(connector
-	(pt 952 1168)
-	(pt 952 1384)
-)
-(connector
 	(pt 840 1384)
 	(pt 952 1384)
-)
-(connector
-	(pt 952 1384)
-	(pt 1024 1384)
-)
-(connector
-	(pt 960 1416)
-	(pt 1024 1416)
-)
-(connector
-	(pt 960 1184)
-	(pt 960 1416)
-)
-(connector
-	(pt 960 1416)
-	(pt 960 1512)
 )
 (connector
 	(text "sensor1_value[31..0]" (rect 1034 736 1124 746)(font "Intel Clear" ))
@@ -1724,15 +1664,6 @@ agreement for further details.
 	(pt 1120 712)
 )
 (connector
-	(pt 968 744)
-	(pt 968 1088)
-)
-(connector
-	(text "global_counter[17]" (rect 1242 512 1325 522)(font "Intel Clear" ))
-	(pt 1328 520)
-	(pt 1232 520)
-)
-(connector
 	(pt 1368 1136)
 	(pt 1400 1136)
 )
@@ -1758,11 +1689,88 @@ agreement for further details.
 	(pt 1040 1144)
 	(pt 1144 1144)
 )
+(connector
+	(pt 944 1024)
+	(pt 1008 1024)
+)
+(connector
+	(pt 944 1000)
+	(pt 944 1024)
+)
+(connector
+	(pt 944 1024)
+	(pt 944 1120)
+)
+(connector
+	(pt 960 928)
+	(pt 1000 928)
+)
+(connector
+	(pt 960 872)
+	(pt 960 928)
+)
+(connector
+	(pt 960 928)
+	(pt 960 1104)
+)
+(connector
+	(pt 944 1248)
+	(pt 1032 1248)
+)
+(connector
+	(pt 944 1256)
+	(pt 944 1248)
+)
+(connector
+	(pt 944 1248)
+	(pt 944 1152)
+)
+(connector
+	(pt 1016 1288)
+	(pt 952 1288)
+)
+(connector
+	(pt 952 1168)
+	(pt 952 1288)
+)
+(connector
+	(pt 952 1288)
+	(pt 952 1384)
+)
+(connector
+	(pt 968 1200)
+	(pt 968 1640)
+)
+(connector
+	(pt 1016 1328)
+	(pt 960 1328)
+)
+(connector
+	(pt 960 1184)
+	(pt 960 1328)
+)
+(connector
+	(pt 960 1328)
+	(pt 960 1512)
+)
+(connector
+	(pt 1000 872)
+	(pt 968 872)
+)
+(connector
+	(pt 968 744)
+	(pt 968 872)
+)
+(connector
+	(pt 968 872)
+	(pt 968 1088)
+)
 (junction (pt 1992 648))
 (junction (pt 1832 728))
 (junction (pt 960 928))
 (junction (pt 944 1024))
-(junction (pt 968 1504))
-(junction (pt 952 1384))
-(junction (pt 960 1416))
 (junction (pt 1368 1136))
+(junction (pt 944 1248))
+(junction (pt 952 1288))
+(junction (pt 960 1328))
+(junction (pt 968 872))

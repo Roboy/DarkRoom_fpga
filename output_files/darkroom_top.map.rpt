@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Tue Feb 28 20:30:46 2017
+Tue Feb 28 20:56:24 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -60,13 +60,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 28 20:30:46 2017       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 28 20:56:24 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8,470                                       ;
-;     Total combinational functions  ; 7,512                                       ;
+; Total logic elements               ; 8,466                                       ;
+;     Total combinational functions  ; 7,508                                       ;
 ;     Dedicated logic registers      ; 1,587                                       ;
 ; Total registers                    ; 1587                                        ;
 ; Total pins                         ; 23                                          ;
@@ -210,16 +210,16 @@ agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 8,470                    ;
+; Estimated Total logic elements              ; 8,466                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 7512                     ;
+; Total combinational functions               ; 7508                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1684                     ;
-;     -- 3 input functions                    ; 3301                     ;
-;     -- <=2 input functions                  ; 2527                     ;
+;     -- 4 input functions                    ; 1676                     ;
+;     -- 3 input functions                    ; 3303                     ;
+;     -- <=2 input functions                  ; 2529                     ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2557                     ;
+;     -- normal mode                          ; 2553                     ;
 ;     -- arithmetic mode                      ; 4955                     ;
 ;                                             ;                          ;
 ; Total registers                             ; 1587                     ;
@@ -235,7 +235,7 @@ agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; oneshot:inst17|level_sig ;
 ; Maximum fan-out                             ; 196                      ;
-; Total fan-out                               ; 25985                    ;
+; Total fan-out                               ; 25963                    ;
 ; Average fan-out                             ; 2.84                     ;
 +---------------------------------------------+--------------------------+
 
@@ -245,9 +245,9 @@ agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
-; |darkroom_top                        ; 7512 (3)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
+; |darkroom_top                        ; 7508 (3)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
 ;    |ConcatenateSensorValues:inst20|  ; 184 (184)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|ConcatenateSensorValues:inst20                             ; ConcatenateSensorValues ; work         ;
-;    |SpiControl:inst11|               ; 183 (183)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
+;    |SpiControl:inst11|               ; 179 (179)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
 ;    |counter:inst33|                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                             ; counter                 ; work         ;
 ;    |lighthouse:inst10|               ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                          ; lighthouse              ; work         ;
 ;    |lighthouse:inst12|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                          ; lighthouse              ; work         ;
@@ -429,7 +429,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[1]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[2] ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[3]                    ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|rotor                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|rotor                        ;
@@ -952,20 +952,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 3                           ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 321                         ;
-; cycloneiii_lcell_comb ; 7513                        ;
+; cycloneiii_lcell_comb ; 7509                        ;
 ;     arith             ; 4955                        ;
 ;         2 data inputs ; 2226                        ;
 ;         3 data inputs ; 2729                        ;
-;     normal            ; 2558                        ;
+;     normal            ; 2554                        ;
 ;         0 data inputs ; 64                          ;
 ;         1 data inputs ; 77                          ;
-;         2 data inputs ; 161                         ;
-;         3 data inputs ; 572                         ;
-;         4 data inputs ; 1684                        ;
+;         2 data inputs ; 163                         ;
+;         3 data inputs ; 574                         ;
+;         4 data inputs ; 1676                        ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.80                       ;
-; Average LUT depth     ; 12.17                       ;
+; Average LUT depth     ; 12.18                       ;
 +-----------------------+-----------------------------+
 
 
@@ -974,7 +974,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:31     ;
+; Top            ; 00:00:18     ;
 +----------------+--------------+
 
 
@@ -984,7 +984,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Feb 28 20:29:41 2017
+    Info: Processing started: Tue Feb 28 20:55:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
@@ -1356,15 +1356,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "button1"
-Info (21057): Implemented 8511 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8507 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 8487 logic cells
+    Info (21061): Implemented 8483 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 1080 megabytes
-    Info: Processing ended: Tue Feb 28 20:30:46 2017
-    Info: Elapsed time: 00:01:05
-    Info: Total CPU time (on all processors): 00:01:36
+    Info: Peak virtual memory: 1076 megabytes
+    Info: Processing ended: Tue Feb 28 20:56:24 2017
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:59
 
 

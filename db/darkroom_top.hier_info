@@ -20,12 +20,12 @@ spi_sclk <= spi_master:inst2.spi_sck_o
 spi_ss_n <= spi_master:inst2.spi_ssel_o
 LED[0] <= send_data.DB_MAX_OUTPUT_PORT_TYPE
 LED[1] <= SpiControl:inst11.wren
-LED[2] <= global_counter[17].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= lighthouse:inst6.send_data
 LED[3] <= lighthouse:inst7.send_data
 LED[4] <= lighthouse:inst8.send_data
-LED[5] <= lighthouse:inst12.send_data
-LED[6] <= lighthouse:inst13.send_data
-LED[7] <= lighthouse:inst15.send_data
+LED[5] <= lighthouse:inst10.send_data
+LED[6] <= lighthouse:inst12.send_data
+LED[7] <= lighthouse:inst13.send_data
 button1 => ~NO_FANOUT~
 
 

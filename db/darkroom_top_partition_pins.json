@@ -56,15 +56,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "sensor7_signal",
-					"strict" : false
-				},
-				{
 					"name" : "sensor6_signal",
 					"strict" : false
 				},
 				{
 					"name" : "sensor5_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor4_signal",
 					"strict" : false
 				},
 				{
@@ -84,7 +84,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sensor4_signal",
+					"name" : "sensor7_signal",
 					"strict" : false
 				},
 				{
