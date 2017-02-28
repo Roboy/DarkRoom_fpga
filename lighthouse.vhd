@@ -23,18 +23,22 @@ architecture Behavioral of lighthouse is
 	signal lighthouse: std_logic;
 	signal start_valid_sync 	: std_logic_vector(31 downto 0);
 	
+
+	
 begin   process(sensor)
 	variable duration: std_logic_vector(31 downto 0);
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
    begin
+		sensor_value(8 downto 0) <= sensorID;	
 		if rising_edge(sensor) then
 			t_0 <= timer;
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
-			if(duration < 50*50) then -- this is a sweep
+			send_data <= '0';
+			if(duration < 50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
-			elsif (duration > (63*50 - 5*50)) and (duration < (94*50 + 5*50)) then -- this is a sync pulse, NOT skipping
+			elsif (duration > (63 - 5)) and (duration < (94 + 5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
 				if(start_valid_sync = 0) then
@@ -48,11 +52,9 @@ begin   process(sensor)
 					start_valid_sync <= t_0;
 					stop_valid_sync := (others => '0');
 					if((sync_gap_duration - 8333 ) > 300 ) then
-						send_data <= '1';	-- we can send the data shortly after a sync
 						lighthouse <= '1';
 					elsif ((sync_gap_duration - 8333 ) < -300 ) then
-						send_data <= '1'; -- we can send the data shortly after a sync
-						send_data <= '0';
+						lighthouse <= '0';
 					end if;
 				end if;
 				
@@ -88,11 +90,11 @@ begin   process(sensor)
 					sensor_value(12) <= '0'; -- not valid
 				end if;
 				
-				sensor_value(8 downto 0) <= sensorID;
 				sensor_value(9) <= lighthouse;
 				sensor_value(10) <= rotor;
 				sensor_value(11) <= data;
 				sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
+				send_data <= '1'; -- we can send the data shortly after a sync
 			end if;
 		end if;
    end process;

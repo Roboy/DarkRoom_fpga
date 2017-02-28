@@ -39,45 +39,45 @@ always @(posedge clock, negedge reset_n) begin: SPICONTROL_SPILOGIC
 				case(numberOfBytesTransmitted)
 					1: byte <= 0; // this is the address we want to write to on the esp(we start at 0)
 					// sensor0
-					2: byte <= data[(1*1*8)-1:((1*1-1)*8)];
-					3: byte <= data[(1*2*8)-1:((1*2-1)*8)];
-					4: byte <= data[(1*3*8)-1:((1*3-1)*8)];
-					5: byte <= data[(1*4*8)-1:((1*4-1)*8)];
+					2: byte <= data[7:0];
+					3: byte <= data[15:8];
+					4: byte <= data[23:16];
+					5: byte <= data[31:24];
 					// sensor1
-					6: byte <= data[(2*1*8)-1:((2*1-1)*8)];
-					7: byte <= data[(2*2*8)-1:((2*2-1)*8)];
-					8: byte <= data[(2*3*8)-1:((2*3-1)*8)];
-					9: byte <= data[(2*4*8)-1:((2*4-1)*8)];
+					6: byte <= data[39:32];
+					7: byte <= data[47:40];
+					8: byte <= data[55:48];
+					9: byte <= data[63:56];
 					// sensor3
-					10: byte <= data[(3*1*8)-1:((3*1-1)*8)];
-					11: byte <= data[(3*2*8)-1:((3*2-1)*8)];
-					12: byte <= data[(3*3*8)-1:((3*3-1)*8)];
-					13: byte <= data[(3*4*8)-1:((3*4-1)*8)];
+					10: byte <= data[71:64];
+					11: byte <= data[79:72];
+					12: byte <= data[87:80];
+					13: byte <= data[95:88];
 					// sensor4
-					14: byte <= data[(4*1*8)-1:((4*1-1)*8)];
-					15: byte <= data[(4*2*8)-1:((4*2-1)*8)];
-					16: byte <= data[(4*3*8)-1:((4*3-1)*8)];
-					17: byte <= data[(4*4*8)-1:((4*4-1)*8)];
+					14: byte <= data[103:96];
+					15: byte <= data[111:104];
+					16: byte <= data[119:112];
+					17: byte <= data[127:120];
 					// sensor5
-					18: byte <= data[(5*1*8)-1:((5*1-1)*8)];
-					19: byte <= data[(5*2*8)-1:((5*2-1)*8)];
-					20: byte <= data[(5*3*8)-1:((5*3-1)*8)];
-					21: byte <= data[(5*4*8)-1:((5*4-1)*8)];
+					18: byte <= data[135:128];
+					19: byte <= data[143:136];
+					20: byte <= data[153:144];
+					21: byte <= data[159:152];
 					// sensor6
-					22: byte <= data[(6*1*8)-1:((6*1-1)*8)];
-					23: byte <= data[(6*2*8)-1:((6*2-1)*8)];
-					24: byte <= data[(6*3*8)-1:((6*3-1)*8)];
-					25: byte <= data[(6*4*8)-1:((6*4-1)*8)];
+					22: byte <= data[167:160];
+					23: byte <= data[175:168];
+					24: byte <= data[183:176];
+					25: byte <= data[191:184];
 					// sensor7
-					26: byte <= data[(7*1*8)-1:((7*1-1)*8)];
-					27: byte <= data[(7*2*8)-1:((7*2-1)*8)];
-					28: byte <= data[(7*3*8)-1:((7*3-1)*8)];
-					29: byte <= data[(7*4*8)-1:((7*4-1)*8)];
+					26: byte <= data[199:192];
+					27: byte <= data[209:200];
+					28: byte <= data[215:208];
+					29: byte <= data[223:216];
 					// sensor8
-					30: byte <= data[(8*1*8)-1:((8*1-1)*8)];
-					31: byte <= data[(8*2*8)-1:((8*2-1)*8)];
-					32: byte <= data[(8*3*8)-1:((8*3-1)*8)];
-					33: byte <= data[(8*4*8)-1:((8*4-1)*8)];
+					30: byte <= data[231:224];
+					31: byte <= data[239:232];
+					32: byte <= data[247:240];
+					33: byte <= data[255:248];
 					default: byte <= numberOfBytesTransmitted-2;
 				endcase
 				wren <= 1;
