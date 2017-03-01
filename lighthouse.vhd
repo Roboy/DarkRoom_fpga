@@ -84,7 +84,7 @@ begin   process(sensor)
 					data  <= '1';
 				end if;
 				
-				if(t_sweep_duration < 8192) and (t_sweep_duration > 0 ) then 
+				if(t_sweep_duration < 8000) and (t_sweep_duration > 300 ) then 
 					sensor_value(12) <= '1'; -- valid sweep
 				else
 					sensor_value(12) <= '0'; -- not valid

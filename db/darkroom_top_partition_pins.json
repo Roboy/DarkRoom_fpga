@@ -48,11 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock_50",
+					"name" : "button0",
 					"strict" : false
 				},
 				{
-					"name" : "button0",
+					"name" : "clock_50",
 					"strict" : false
 				},
 				{
@@ -64,7 +64,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sensor4_signal",
+					"name" : "sensor3_signal",
 					"strict" : false
 				},
 				{
@@ -80,7 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sensor3_signal",
+					"name" : "sensor4_signal",
 					"strict" : false
 				},
 				{

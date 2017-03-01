@@ -56,7 +56,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 1840 688 2008 704)
+	(rect 1952 704 2120 720)
 	(text "INPUT" (rect 125 0 152 7)(font "Arial" (font_size 6)))
 	(text "spi_miso" (rect 5 0 45 9)(font "Arial" ))
 	(pt 168 8)
@@ -226,7 +226,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1840 776 2016 792)
+	(rect 1952 792 2128 808)
 	(text "OUTPUT" (rect 1 0 37 7)(font "Arial" (font_size 6)))
 	(text "LED[1]" (rect 90 0 120 10)(font "Intel Clear" ))
 	(pt 0 8)
@@ -242,7 +242,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 2248 672 2424 688)
+	(rect 2360 688 2536 704)
 	(text "OUTPUT" (rect -3 -2 33 5)(font "Arial" (font_size 6)))
 	(text "spi_mosi" (rect 128 -1 166 8)(font "Arial" ))
 	(pt 0 8)
@@ -258,7 +258,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 2248 656 2424 672)
+	(rect 2360 672 2536 688)
 	(text "OUTPUT" (rect -3 -2 33 5)(font "Arial" (font_size 6)))
 	(text "spi_sclk" (rect 131 -2 167 8)(font "Intel Clear" ))
 	(pt 0 8)
@@ -274,7 +274,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 2248 640 2424 656)
+	(rect 2520 616 2696 632)
 	(text "OUTPUT" (rect -3 -2 33 5)(font "Arial" (font_size 6)))
 	(text "spi_ss_n" (rect 129 -2 166 8)(font "Intel Clear" ))
 	(pt 0 8)
@@ -429,7 +429,7 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1080 392 1248 416))
 )
 (symbol
-	(rect 2016 616 2248 952)
+	(rect 2128 632 2360 968)
 	(text "spi_master" (rect 5 0 53 9)(font "Arial" ))
 	(text "inst2" (rect 8 320 30 330)(font "Intel Clear" ))
 	(port
@@ -628,7 +628,7 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 216 320))
 	)
-	(annotation_block (parameter)(rect 2024 520 2233 604))
+	(annotation_block (parameter)(rect 2136 536 2345 620))
 )
 (symbol
 	(rect 616 696 840 776)
@@ -1073,7 +1073,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1936 664 1984 696)
+	(rect 2048 680 2096 712)
 	(text "NOT" (rect 1 0 21 7)(font "Arial" (font_size 6)))
 	(text "pos_reset" (rect 3 21 46 31)(font "Intel Clear" ))
 	(port
@@ -1098,7 +1098,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1616 680 1800 824)
+	(rect 1728 696 1912 840)
 	(text "SpiControl" (rect 5 0 51 9)(font "Arial" ))
 	(text "inst11" (rect 8 128 36 137)(font "Arial" ))
 	(port
@@ -1147,14 +1147,14 @@ agreement for further details.
 		(pt 184 32)
 		(output)
 		(text "byte[7..0]" (rect 0 0 40 9)(font "Arial" ))
-		(text "byte[7..0]" (rect 130 27 163 36)(font "Arial" ))
+		(text "byte[7..0]" (rect 130 27 170 36)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(port
 		(pt 184 48)
 		(output)
 		(text "wren" (rect 0 0 22 9)(font "Arial" ))
-		(text "wren" (rect 145 43 163 52)(font "Arial" ))
+		(text "wren" (rect 145 43 167 52)(font "Arial" ))
 		(line (pt 184 48)(pt 168 48))
 	)
 	(drawing
@@ -1162,7 +1162,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1176 680 1384 888)
+	(rect 1416 696 1624 904)
 	(text "ConcatenateSensorValues" (rect 5 0 118 9)(font "Arial" ))
 	(text "inst20" (rect 8 192 36 202)(font "Intel Clear" ))
 	(port
@@ -1287,6 +1287,38 @@ agreement for further details.
 		(line (pt 215 64)(pt 191 64))
 	)
 )
+(symbol
+	(rect 2456 600 2520 648)
+	(text "AND2" (rect 1 0 24 7)(font "Arial" (font_size 6)))
+	(text "and1" (rect 3 37 26 46)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 20 16)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 20 32)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 66 24)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
 (connector
 	(text "clock_50" (rect 666 440 706 449)(font "Arial" ))
 	(pt 656 448)
@@ -1302,76 +1334,6 @@ agreement for further details.
 	(text "clock" (rect 962 440 986 449)(font "Arial" ))
 	(pt 952 448)
 	(pt 1032 448)
-)
-(connector
-	(pt 2008 696)
-	(pt 2016 696)
-)
-(connector
-	(pt 1992 648)
-	(pt 1992 664)
-)
-(connector
-	(text "clock_50" (rect 1938 640 1978 649)(font "Arial" ))
-	(pt 1928 648)
-	(pt 1992 648)
-)
-(connector
-	(pt 1992 648)
-	(pt 2016 648)
-)
-(connector
-	(pt 1992 664)
-	(pt 2016 664)
-)
-(connector
-	(pt 1800 712)
-	(pt 2016 712)
-	(bus)
-)
-(connector
-	(pt 2016 680)
-	(pt 1984 680)
-)
-(connector
-	(text "reset_n" (rect 1874 672 1907 682)(font "Intel Clear" ))
-	(pt 1864 680)
-	(pt 1936 680)
-)
-(connector
-	(text "write_ack" (rect 2258 712 2301 722)(font "Intel Clear" ))
-	(pt 2248 712)
-	(pt 2328 712)
-)
-(connector
-	(text "di_req" (rect 2258 696 2286 706)(font "Intel Clear" ))
-	(pt 2248 696)
-	(pt 2328 696)
-)
-(connector
-	(text "reset_n" (rect 1170 584 1203 594)(font "Intel Clear" ))
-	(pt 1160 600)
-	(pt 1320 600)
-)
-(connector
-	(text "write_ack" (rect 1554 784 1597 794)(font "Intel Clear" ))
-	(pt 1616 792)
-	(pt 1544 792)
-)
-(connector
-	(text "di_req" (rect 1554 768 1582 778)(font "Intel Clear" ))
-	(pt 1544 776)
-	(pt 1616 776)
-)
-(connector
-	(text "reset_n" (rect 1554 752 1587 762)(font "Intel Clear" ))
-	(pt 1616 760)
-	(pt 1544 760)
-)
-(connector
-	(text "clock_50" (rect 1554 704 1594 714)(font "Intel Clear" ))
-	(pt 1544 712)
-	(pt 1616 712)
 )
 (connector
 	(pt 616 856)
@@ -1454,7 +1416,6 @@ agreement for further details.
 	(pt 608 1624)
 )
 (connector
-	(text "<<__$DEF_ALIAS1732>>" (rect 840 744 948 754)(font "Intel Clear" )(invisible))
 	(pt 968 744)
 	(pt 840 744)
 )
@@ -1481,10 +1442,6 @@ agreement for further details.
 (connector
 	(pt 968 1128)
 	(pt 968 1136)
-)
-(connector
-	(pt 840 1128)
-	(pt 968 1128)
 )
 (connector
 	(pt 968 1136)
@@ -1517,27 +1474,6 @@ agreement for further details.
 (connector
 	(pt 840 1640)
 	(pt 968 1640)
-)
-(connector
-	(text "send_data" (rect 1554 736 1600 746)(font "Intel Clear" ))
-	(pt 1544 744)
-	(pt 1616 744)
-)
-(connector
-	(pt 1840 784)
-	(pt 1832 784)
-)
-(connector
-	(pt 1832 728)
-	(pt 1832 784)
-)
-(connector
-	(pt 1800 728)
-	(pt 1832 728)
-)
-(connector
-	(pt 1832 728)
-	(pt 2016 728)
 )
 (connector
 	(text "sensor0_value[31..0]" (rect 850 712 940 722)(font "Intel Clear" ))
@@ -1596,74 +1532,6 @@ agreement for further details.
 	(pt 952 1384)
 )
 (connector
-	(text "sensor1_value[31..0]" (rect 1034 736 1124 746)(font "Intel Clear" ))
-	(pt 1128 744)
-	(pt 1176 744)
-	(bus)
-)
-(connector
-	(text "sensor2_value[31..0]" (rect 1032 752 1122 762)(font "Intel Clear" ))
-	(pt 1126 760)
-	(pt 1176 760)
-	(bus)
-)
-(connector
-	(text "sensor3_value[31..0]" (rect 1032 768 1122 778)(font "Intel Clear" ))
-	(pt 1126 776)
-	(pt 1176 776)
-	(bus)
-)
-(connector
-	(text "sensor4_value[31..0]" (rect 1034 784 1124 794)(font "Intel Clear" ))
-	(pt 1128 792)
-	(pt 1176 792)
-	(bus)
-)
-(connector
-	(text "sensor5_value[31..0]" (rect 1034 800 1124 810)(font "Intel Clear" ))
-	(pt 1128 808)
-	(pt 1176 808)
-	(bus)
-)
-(connector
-	(text "sensor6_value[31..0]" (rect 1032 816 1122 826)(font "Intel Clear" ))
-	(pt 1126 824)
-	(pt 1176 824)
-	(bus)
-)
-(connector
-	(text "sensor7_value[31..0]" (rect 1032 832 1122 842)(font "Intel Clear" ))
-	(pt 1126 840)
-	(pt 1176 840)
-	(bus)
-)
-(connector
-	(text "sensor0_value[31..0]" (rect 1026 720 1116 730)(font "Intel Clear" ))
-	(pt 1176 728)
-	(pt 1120 728)
-	(bus)
-)
-(connector
-	(pt 1392 728)
-	(pt 1616 728)
-	(bus)
-)
-(connector
-	(pt 1392 728)
-	(pt 1392 712)
-	(bus)
-)
-(connector
-	(pt 1384 712)
-	(pt 1392 712)
-	(bus)
-)
-(connector
-	(text "send_data" (rect 1130 704 1176 714)(font "Intel Clear" ))
-	(pt 1176 712)
-	(pt 1120 712)
-)
-(connector
 	(pt 1368 1136)
 	(pt 1400 1136)
 )
@@ -1714,18 +1582,6 @@ agreement for further details.
 	(pt 960 1104)
 )
 (connector
-	(pt 944 1248)
-	(pt 1032 1248)
-)
-(connector
-	(pt 944 1256)
-	(pt 944 1248)
-)
-(connector
-	(pt 944 1248)
-	(pt 944 1152)
-)
-(connector
 	(pt 1016 1288)
 	(pt 952 1288)
 )
@@ -1765,12 +1621,209 @@ agreement for further details.
 	(pt 968 872)
 	(pt 968 1088)
 )
-(junction (pt 1992 648))
-(junction (pt 1832 728))
+(connector
+	(text "reset_n" (rect 1170 584 1203 594)(font "Intel Clear" ))
+	(pt 1200 600)
+	(pt 1160 600)
+)
+(connector
+	(pt 2120 712)
+	(pt 2128 712)
+)
+(connector
+	(pt 2104 664)
+	(pt 2104 680)
+)
+(connector
+	(pt 2104 680)
+	(pt 2128 680)
+)
+(connector
+	(pt 2128 696)
+	(pt 2096 696)
+)
+(connector
+	(text "write_ack" (rect 2370 728 2413 738)(font "Intel Clear" ))
+	(pt 2360 728)
+	(pt 2440 728)
+)
+(connector
+	(text "di_req" (rect 2370 712 2398 722)(font "Intel Clear" ))
+	(pt 2360 712)
+	(pt 2440 712)
+)
+(connector
+	(text "write_ack" (rect 1666 800 1709 810)(font "Intel Clear" ))
+	(pt 1728 808)
+	(pt 1656 808)
+)
+(connector
+	(text "di_req" (rect 1666 784 1694 794)(font "Intel Clear" ))
+	(pt 1656 792)
+	(pt 1728 792)
+)
+(connector
+	(text "reset_n" (rect 1666 768 1699 778)(font "Intel Clear" ))
+	(pt 1728 776)
+	(pt 1656 776)
+)
+(connector
+	(text "clock_50" (rect 1666 720 1706 730)(font "Intel Clear" ))
+	(pt 1656 728)
+	(pt 1728 728)
+)
+(connector
+	(text "send_data" (rect 1666 752 1712 762)(font "Intel Clear" ))
+	(pt 1656 760)
+	(pt 1728 760)
+)
+(connector
+	(pt 1952 800)
+	(pt 1944 800)
+)
+(connector
+	(pt 1944 744)
+	(pt 1944 800)
+)
+(connector
+	(pt 2456 632)
+	(pt 2400 632)
+)
+(connector
+	(pt 2400 632)
+	(pt 2400 664)
+)
+(connector
+	(pt 2400 664)
+	(pt 2360 664)
+)
+(connector
+	(text "reset_n" (rect 2402 608 2435 618)(font "Intel Clear" ))
+	(pt 2456 616)
+	(pt 2392 616)
+)
+(connector
+	(pt 1632 744)
+	(pt 1632 728)
+	(bus)
+)
+(connector
+	(pt 1624 728)
+	(pt 1632 728)
+	(bus)
+)
+(connector
+	(text "send_data" (rect 1370 720 1416 730)(font "Intel Clear" ))
+	(pt 1360 728)
+	(pt 1416 728)
+)
+(connector
+	(text "sensor0_value[31..0]" (rect 1266 736 1356 746)(font "Intel Clear" ))
+	(pt 1360 744)
+	(pt 1416 744)
+	(bus)
+)
+(connector
+	(text "sensor1_value[31..0]" (rect 1274 752 1364 762)(font "Intel Clear" ))
+	(pt 1368 760)
+	(pt 1416 760)
+	(bus)
+)
+(connector
+	(text "sensor2_value[31..0]" (rect 1272 768 1362 778)(font "Intel Clear" ))
+	(pt 1366 776)
+	(pt 1416 776)
+	(bus)
+)
+(connector
+	(text "sensor3_value[31..0]" (rect 1272 784 1362 794)(font "Intel Clear" ))
+	(pt 1366 792)
+	(pt 1416 792)
+	(bus)
+)
+(connector
+	(text "sensor4_value[31..0]" (rect 1274 800 1364 810)(font "Intel Clear" ))
+	(pt 1368 808)
+	(pt 1416 808)
+	(bus)
+)
+(connector
+	(text "sensor5_value[31..0]" (rect 1274 816 1364 826)(font "Intel Clear" ))
+	(pt 1368 824)
+	(pt 1416 824)
+	(bus)
+)
+(connector
+	(text "sensor6_value[31..0]" (rect 1272 832 1362 842)(font "Intel Clear" ))
+	(pt 1366 840)
+	(pt 1416 840)
+	(bus)
+)
+(connector
+	(text "sensor7_value[31..0]" (rect 1272 848 1362 858)(font "Intel Clear" ))
+	(pt 1366 856)
+	(pt 1416 856)
+	(bus)
+)
+(connector
+	(pt 1632 744)
+	(pt 1728 744)
+	(bus)
+)
+(connector
+	(text "clock_50" (rect 2050 656 2090 665)(font "Arial" ))
+	(pt 2040 664)
+	(pt 2104 664)
+)
+(connector
+	(pt 2104 664)
+	(pt 2128 664)
+)
+(connector
+	(pt 1912 744)
+	(pt 1944 744)
+)
+(connector
+	(pt 1944 744)
+	(pt 2128 744)
+)
+(connector
+	(pt 1912 728)
+	(pt 2128 728)
+	(bus)
+)
+(connector
+	(text "reset_n" (rect 1986 688 2019 698)(font "Intel Clear" ))
+	(pt 1976 696)
+	(pt 2048 696)
+)
+(connector
+	(pt 944 1152)
+	(pt 944 1256)
+)
+(connector
+	(pt 1032 1248)
+	(pt 920 1248)
+)
+(connector
+	(pt 920 1248)
+	(pt 920 1128)
+)
+(connector
+	(pt 840 1128)
+	(pt 920 1128)
+)
+(connector
+	(pt 920 1128)
+	(pt 968 1128)
+)
 (junction (pt 960 928))
 (junction (pt 944 1024))
 (junction (pt 1368 1136))
-(junction (pt 944 1248))
 (junction (pt 952 1288))
 (junction (pt 960 1328))
 (junction (pt 968 872))
+(junction (pt 2104 664))
+(junction (pt 1944 744))
+(junction (pt 920 1128))
+(text "this sets the ss_n low on reset, which allows the esp to boot" (rect 2336 568 2622 580)(font "Intel Clear" (font_size 8)))

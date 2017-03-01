@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Tue Feb 28 20:56:24 2017
+Wed Mar  1 15:37:57 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -60,13 +60,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 28 20:56:24 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  1 15:37:56 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8,466                                       ;
-;     Total combinational functions  ; 7,508                                       ;
+; Total logic elements               ; 8,481                                       ;
+;     Total combinational functions  ; 7,523                                       ;
 ;     Dedicated logic registers      ; 1,587                                       ;
 ; Total registers                    ; 1587                                        ;
 ; Total pins                         ; 23                                          ;
@@ -210,16 +210,16 @@ agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 8,466                    ;
+; Estimated Total logic elements              ; 8,481                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 7508                     ;
+; Total combinational functions               ; 7523                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1676                     ;
-;     -- 3 input functions                    ; 3303                     ;
-;     -- <=2 input functions                  ; 2529                     ;
+;     -- 4 input functions                    ; 1706                     ;
+;     -- 3 input functions                    ; 3285                     ;
+;     -- <=2 input functions                  ; 2532                     ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2553                     ;
+;     -- normal mode                          ; 2568                     ;
 ;     -- arithmetic mode                      ; 4955                     ;
 ;                                             ;                          ;
 ; Total registers                             ; 1587                     ;
@@ -235,7 +235,7 @@ agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; oneshot:inst17|level_sig ;
 ; Maximum fan-out                             ; 196                      ;
-; Total fan-out                               ; 25963                    ;
+; Total fan-out                               ; 26035                    ;
 ; Average fan-out                             ; 2.84                     ;
 +---------------------------------------------+--------------------------+
 
@@ -245,18 +245,18 @@ agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
-; |darkroom_top                        ; 7508 (3)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
+; |darkroom_top                        ; 7523 (4)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
 ;    |ConcatenateSensorValues:inst20|  ; 184 (184)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|ConcatenateSensorValues:inst20                             ; ConcatenateSensorValues ; work         ;
-;    |SpiControl:inst11|               ; 179 (179)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
+;    |SpiControl:inst11|               ; 178 (178)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
 ;    |counter:inst33|                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                             ; counter                 ; work         ;
-;    |lighthouse:inst10|               ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                          ; lighthouse              ; work         ;
-;    |lighthouse:inst12|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                          ; lighthouse              ; work         ;
-;    |lighthouse:inst13|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                          ; lighthouse              ; work         ;
-;    |lighthouse:inst15|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                          ; lighthouse              ; work         ;
-;    |lighthouse:inst6|                ; 883 (883)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                           ; lighthouse              ; work         ;
-;    |lighthouse:inst7|                ; 883 (883)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                           ; lighthouse              ; work         ;
-;    |lighthouse:inst8|                ; 882 (882)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                           ; lighthouse              ; work         ;
-;    |lighthouse:inst9|                ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst10|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst12|               ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst13|               ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst15|               ; 887 (887)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst6|                ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst7|                ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst8|                ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst9|                ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                           ; lighthouse              ; work         ;
 ;    |oneshot:inst17|                  ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                             ; oneshot                 ; work         ;
 ;    |pll:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                   ; pll                     ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                           ; altpll                  ; work         ;
@@ -952,20 +952,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 3                           ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 321                         ;
-; cycloneiii_lcell_comb ; 7509                        ;
+; cycloneiii_lcell_comb ; 7523                        ;
 ;     arith             ; 4955                        ;
 ;         2 data inputs ; 2226                        ;
 ;         3 data inputs ; 2729                        ;
-;     normal            ; 2554                        ;
+;     normal            ; 2568                        ;
 ;         0 data inputs ; 64                          ;
-;         1 data inputs ; 77                          ;
-;         2 data inputs ; 163                         ;
-;         3 data inputs ; 574                         ;
-;         4 data inputs ; 1676                        ;
+;         1 data inputs ; 76                          ;
+;         2 data inputs ; 166                         ;
+;         3 data inputs ; 556                         ;
+;         4 data inputs ; 1706                        ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.80                       ;
-; Average LUT depth     ; 12.18                       ;
+; Max LUT depth         ; 16.10                       ;
+; Average LUT depth     ; 12.21                       ;
 +-----------------------+-----------------------------+
 
 
@@ -974,7 +974,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:35     ;
 +----------------+--------------+
 
 
@@ -984,7 +984,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Feb 28 20:55:47 2017
+    Info: Processing started: Wed Mar  1 15:36:32 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
@@ -1356,15 +1356,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "button1"
-Info (21057): Implemented 8507 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8522 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 8483 logic cells
+    Info (21061): Implemented 8498 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 1076 megabytes
-    Info: Processing ended: Tue Feb 28 20:56:24 2017
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:59
+    Info: Processing ended: Wed Mar  1 15:37:57 2017
+    Info: Elapsed time: 00:01:25
+    Info: Total CPU time (on all processors): 00:01:32
 
 
