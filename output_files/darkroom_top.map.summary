@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Mar  8 14:36:30 2017
+Analysis & Synthesis Status : Successful - Wed Mar  8 18:12:13 2017
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 Revision Name : darkroom_top
 Top-level Entity Name : darkroom_top
 Family : Cyclone IV E
-Total logic elements : 8,481
-    Total combinational functions : 7,523
+Total logic elements : 8,483
+    Total combinational functions : 7,525
     Dedicated logic registers : 1,587
 Total registers : 1587
-Total pins : 23
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

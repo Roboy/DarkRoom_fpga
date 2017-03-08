@@ -16,6 +16,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "MPU_6050_interrupt_out",
+					"strict" : false
+				},
+				{
 					"name" : "LED[7]",
 					"strict" : false
 				},
@@ -49,6 +53,10 @@
 				},
 				{
 					"name" : "button0",
+					"strict" : false
+				},
+				{
+					"name" : "MPU_6050_interrupt_in",
 					"strict" : false
 				},
 				{

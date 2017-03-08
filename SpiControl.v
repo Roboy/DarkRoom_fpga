@@ -7,8 +7,10 @@ module SpiControl (
 	input reset_n,
 	input di_req,
 	input write_ack,
+	input mpu_interrupt_in,
 	output reg [7:0] byte,
-	output reg wren
+	output reg wren,
+	output mpu_interrupt_out
 );
 // Splits the 32-bit data into bitfield chunks
 // 
@@ -19,6 +21,8 @@ module SpiControl (
 
 reg [7:0] numberOfBytesTransmitted;
 reg write_ack_prev;
+
+assign mpu_interrupt_out = mpu_interrupt_in;
 
 always @(posedge clock, negedge reset_n) begin: SPICONTROL_SPILOGIC
     if (reset_n == 0) begin

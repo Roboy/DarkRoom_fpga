@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Wed Mar  8 14:36:30 2017
+Wed Mar  8 18:12:14 2017
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -60,16 +60,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar  8 14:36:30 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar  8 18:12:13 2017       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8,481                                       ;
-;     Total combinational functions  ; 7,523                                       ;
+; Total logic elements               ; 8,483                                       ;
+;     Total combinational functions  ; 7,525                                       ;
 ;     Dedicated logic registers      ; 1,587                                       ;
 ; Total registers                    ; 1587                                        ;
-; Total pins                         ; 23                                          ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -210,23 +210,23 @@ agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 8,481                    ;
+; Estimated Total logic elements              ; 8,483                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 7523                     ;
+; Total combinational functions               ; 7525                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1706                     ;
-;     -- 3 input functions                    ; 3285                     ;
-;     -- <=2 input functions                  ; 2532                     ;
+;     -- 4 input functions                    ; 1707                     ;
+;     -- 3 input functions                    ; 3283                     ;
+;     -- <=2 input functions                  ; 2535                     ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2568                     ;
+;     -- normal mode                          ; 2570                     ;
 ;     -- arithmetic mode                      ; 4955                     ;
 ;                                             ;                          ;
 ; Total registers                             ; 1587                     ;
 ;     -- Dedicated logic registers            ; 1587                     ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 23                       ;
+; I/O pins                                    ; 25                       ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
@@ -235,7 +235,7 @@ agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; oneshot:inst17|level_sig ;
 ; Maximum fan-out                             ; 196                      ;
-; Total fan-out                               ; 26035                    ;
+; Total fan-out                               ; 26042                    ;
 ; Average fan-out                             ; 2.84                     ;
 +---------------------------------------------+--------------------------+
 
@@ -245,7 +245,7 @@ agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
-; |darkroom_top                        ; 7523 (4)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
+; |darkroom_top                        ; 7525 (5)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
 ;    |ConcatenateSensorValues:inst20|  ; 184 (184)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|ConcatenateSensorValues:inst20                             ; ConcatenateSensorValues ; work         ;
 ;    |SpiControl:inst11|               ; 178 (178)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
 ;    |counter:inst33|                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                             ; counter                 ; work         ;
@@ -261,7 +261,7 @@ agreement for further details.
 ;    |pll:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                   ; pll                     ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                           ; altpll                  ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll              ; work         ;
-;    |spi_master:inst2|                ; 40 (40)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                           ; spi_master              ; work         ;
+;    |spi_master:inst2|                ; 41 (41)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                           ; spi_master              ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -943,7 +943,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 23                          ;
+; boundary_port         ; 25                          ;
 ; cycloneiii_ff         ; 1587                        ;
 ;     CLR               ; 1                           ;
 ;     CLR SLD           ; 1                           ;
@@ -952,20 +952,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 3                           ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 321                         ;
-; cycloneiii_lcell_comb ; 7523                        ;
+; cycloneiii_lcell_comb ; 7525                        ;
 ;     arith             ; 4955                        ;
 ;         2 data inputs ; 2226                        ;
 ;         3 data inputs ; 2729                        ;
-;     normal            ; 2568                        ;
+;     normal            ; 2570                        ;
 ;         0 data inputs ; 64                          ;
 ;         1 data inputs ; 76                          ;
-;         2 data inputs ; 166                         ;
-;         3 data inputs ; 556                         ;
-;         4 data inputs ; 1706                        ;
+;         2 data inputs ; 169                         ;
+;         3 data inputs ; 554                         ;
+;         4 data inputs ; 1707                        ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.10                       ;
-; Average LUT depth     ; 12.21                       ;
+; Max LUT depth         ; 15.80                       ;
+; Average LUT depth     ; 12.20                       ;
 +-----------------------+-----------------------------+
 
 
@@ -974,7 +974,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -984,14 +984,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar  8 14:35:59 2017
+    Info: Processing started: Wed Mar  8 18:11:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 2 design units, including 1 entities, in source file spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
     Info (12022): Found design unit 1: spi_master-rtl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
     Info (12023): Found entity 1: spi_master File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
-Warning (10463): Verilog HDL Declaration warning at SpiControl.v(10): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 10
+Warning (10463): Verilog HDL Declaration warning at SpiControl.v(11): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file SpiControl.v
     Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file sensor_mux.vhd
@@ -1014,14 +1014,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file oneshot
 Info (12021): Found 1 design units, including 1 entities, in source file ConcatenateSensorValues.v
     Info (12023): Found entity 1: ConcatenateSensorValues File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 3
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
+Warning (275011): Block or symbol "spi_master" of instance "inst2" overlaps another block or symbol
 Warning (275011): Block or symbol "NOT" of instance "pos_reset" overlaps another block or symbol
 Warning (275009): Pin "button1" not connected
 Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
 Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(35): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 35
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(64): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 64
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(73): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 73
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(81): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 81
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(39): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 39
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(68): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 68
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(77): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 77
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(85): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 85
 Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst17"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
@@ -1356,15 +1357,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "button1"
-Info (21057): Implemented 8522 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 8498 logic cells
+Info (21057): Implemented 8526 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 8500 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 1079 megabytes
-    Info: Processing ended: Wed Mar  8 14:36:30 2017
-    Info: Elapsed time: 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 1085 megabytes
+    Info: Processing ended: Wed Mar  8 18:12:14 2017
+    Info: Elapsed time: 00:00:32
     Info: Total CPU time (on all processors): 00:00:50
 
 

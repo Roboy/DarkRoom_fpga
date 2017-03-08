@@ -8,6 +8,7 @@ clock_50 => pll:inst.inclk0
 button0 => pos_reset.IN0
 button0 => SpiControl:inst11.reset_n
 button0 => and1.IN0
+button0 => and2.IN1
 spi_miso => spi_master:inst2.spi_miso_i
 sensor0_signal => lighthouse:inst6.sensor
 sensor2_signal => lighthouse:inst8.sensor
@@ -17,8 +18,10 @@ sensor5_signal => lighthouse:inst12.sensor
 sensor4_signal => lighthouse:inst10.sensor
 sensor6_signal => lighthouse:inst13.sensor
 sensor7_signal => lighthouse:inst15.sensor
+MPU_6050_interrupt_in => SpiControl:inst11.mpu_interrupt_in
 spi_sclk <= spi_master:inst2.spi_sck_o
 spi_ss_n <= and1.DB_MAX_OUTPUT_PORT_TYPE
+MPU_6050_interrupt_out <= and2.DB_MAX_OUTPUT_PORT_TYPE
 LED[0] <= send_data.DB_MAX_OUTPUT_PORT_TYPE
 LED[1] <= SpiControl:inst11.wren
 LED[2] <= lighthouse:inst6.send_data
@@ -457,6 +460,7 @@ reset_n => byte[1]~reg0.ENA
 di_req => always0.IN1
 write_ack => always0.IN1
 write_ack => write_ack_prev.DATAIN
+mpu_interrupt_in => mpu_interrupt_out.DATAIN
 byte[0] <= byte[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 byte[1] <= byte[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 byte[2] <= byte[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -466,6 +470,7 @@ byte[5] <= byte[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 byte[6] <= byte[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 byte[7] <= byte[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 wren <= wren~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mpu_interrupt_out <= mpu_interrupt_in.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |darkroom_top|oneshot:inst17
