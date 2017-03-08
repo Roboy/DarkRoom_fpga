@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "spi_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "spi_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "spi_ss_n",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "button0",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50",
+					"strict" : false
+				},
+				{
+					"name" : "sensor6_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor5_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor3_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor2_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor1_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor0_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor4_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor7_signal",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

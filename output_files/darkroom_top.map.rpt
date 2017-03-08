@@ -1,6 +1,6 @@
 Analysis & Synthesis report for darkroom_top
-Thu Jan 19 13:43:11 2017
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Mar  8 14:36:30 2017
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
 ---------------------
@@ -14,68 +14,67 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: spi_sender:inst12
- 15. Parameter Settings for User Entity Instance: spi_sender:inst12|spi_slave:spi_slave_0
- 16. Parameter Settings for User Entity Instance: lighthouse:inst1
- 17. Parameter Settings for User Entity Instance: counter:inst33
- 18. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
- 19. Parameter Settings for User Entity Instance: lighthouse:inst2
- 20. Parameter Settings for User Entity Instance: lighthouse:inst3
- 21. Parameter Settings for User Entity Instance: lighthouse:inst4
- 22. Parameter Settings for User Entity Instance: lighthouse:inst5
- 23. Parameter Settings for User Entity Instance: lighthouse:inst6
- 24. Parameter Settings for User Entity Instance: lighthouse:inst7
- 25. Parameter Settings for User Entity Instance: lighthouse:inst8
- 26. Parameter Settings for User Entity Instance: sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component
- 27. altpll Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "spi_sender:inst12|spi_slave:spi_slave_0"
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: spi_master:inst2
+ 15. Parameter Settings for User Entity Instance: lighthouse:inst6
+ 16. Parameter Settings for User Entity Instance: counter:inst33
+ 17. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: lighthouse:inst8
+ 19. Parameter Settings for User Entity Instance: lighthouse:inst7
+ 20. Parameter Settings for User Entity Instance: lighthouse:inst9
+ 21. Parameter Settings for User Entity Instance: lighthouse:inst12
+ 22. Parameter Settings for User Entity Instance: lighthouse:inst10
+ 23. Parameter Settings for User Entity Instance: lighthouse:inst13
+ 24. Parameter Settings for User Entity Instance: lighthouse:inst15
+ 25. altpll Parameter Settings by Entity Instance
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 19 13:43:11 2017           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; darkroom_top                                    ;
-; Top-level Entity Name              ; darkroom_top                                    ;
-; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 8,322                                           ;
-;     Total combinational functions  ; 7,330                                           ;
-;     Dedicated logic registers      ; 1,646                                           ;
-; Total registers                    ; 1646                                            ;
-; Total pins                         ; 24                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 1                                               ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Mar  8 14:36:30 2017       ;
+; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
+; Revision Name                      ; darkroom_top                                ;
+; Top-level Entity Name              ; darkroom_top                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 8,481                                       ;
+;     Total combinational functions  ; 7,523                                       ;
+;     Dedicated logic registers      ; 1,587                                       ;
+; Total registers                    ; 1587                                        ;
+; Total pins                         ; 23                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -85,14 +84,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
 ; Top-level entity name                                                      ; darkroom_top       ; darkroom_top       ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 4                  ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
@@ -145,7 +145,7 @@ applicable agreement for further details.
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
 ; HDL message level                                                          ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
@@ -161,157 +161,238 @@ applicable agreement for further details.
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; spi_slave.vhd                    ; yes             ; User VHDL File                     ; /home/letrend/workspace/darkroom/spi_slave.vhd                                 ;         ;
-; spi_sender.vhd                   ; yes             ; User VHDL File                     ; /home/letrend/workspace/darkroom/spi_sender.vhd                                ;         ;
-; counter.vhd                      ; yes             ; User VHDL File                     ; /home/letrend/workspace/darkroom/counter.vhd                                   ;         ;
-; lighthouse.vhd                   ; yes             ; User VHDL File                     ; /home/letrend/workspace/darkroom/lighthouse.vhd                                ;         ;
-; darkroom_top.bdf                 ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/darkroom/darkroom_top.bdf                              ;         ;
-; pll.vhd                          ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/darkroom/pll.vhd                                       ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/darkroom/db/pll_altpll.v                               ;         ;
-; sensor_mux_data.vhd              ; yes             ; Auto-Found Wizard-Generated File   ; /home/letrend/workspace/darkroom/sensor_mux_data.vhd                           ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf       ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc        ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc      ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; /home/letrend/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc      ;         ;
-; db/mux_e9e.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/darkroom/db/mux_e9e.tdf                                ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                  ; Library ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ;         ;
+; SpiControl.v                                               ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v                                               ;         ;
+; counter.vhd                                                ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd                                                ;         ;
+; lighthouse.vhd                                             ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                             ;         ;
+; darkroom_top.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                           ;         ;
+; pll.v                                                      ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                      ;         ;
+; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
+; ConcatenateSensorValues.v                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v                                  ;         ;
+; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
+; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
+; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
+; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
+; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
+; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
++------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 8,322         ;
-;                                             ;               ;
-; Total combinational functions               ; 7330          ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 1652          ;
-;     -- 3 input functions                    ; 3140          ;
-;     -- <=2 input functions                  ; 2538          ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 2388          ;
-;     -- arithmetic mode                      ; 4942          ;
-;                                             ;               ;
-; Total registers                             ; 1646          ;
-;     -- Dedicated logic registers            ; 1646          ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 24            ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-; Total PLLs                                  ; 1             ;
-;     -- PLLs                                 ; 1             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; sensor3~input ;
-; Maximum fan-out                             ; 187           ;
-; Total fan-out                               ; 25589         ;
-; Average fan-out                             ; 2.84          ;
-+---------------------------------------------+---------------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 8,481                    ;
+;                                             ;                          ;
+; Total combinational functions               ; 7523                     ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 1706                     ;
+;     -- 3 input functions                    ; 3285                     ;
+;     -- <=2 input functions                  ; 2532                     ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 2568                     ;
+;     -- arithmetic mode                      ; 4955                     ;
+;                                             ;                          ;
+; Total registers                             ; 1587                     ;
+;     -- Dedicated logic registers            ; 1587                     ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 23                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Total PLLs                                  ; 1                        ;
+;     -- PLLs                                 ; 1                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; oneshot:inst17|level_sig ;
+; Maximum fan-out                             ; 196                      ;
+; Total fan-out                               ; 26035                    ;
+; Average fan-out                             ; 2.84                     ;
++---------------------------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
-; |darkroom_top                        ; 7330 (0)          ; 1646 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |darkroom_top                                                                         ; work         ;
-;    |counter:inst33|                  ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                          ; work         ;
-;    |lighthouse:inst1|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst1                                                        ; work         ;
-;    |lighthouse:inst2|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst2                                                        ; work         ;
-;    |lighthouse:inst3|                ; 884 (884)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst3                                                        ; work         ;
-;    |lighthouse:inst4|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst4                                                        ; work         ;
-;    |lighthouse:inst5|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst5                                                        ; work         ;
-;    |lighthouse:inst6|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                        ; work         ;
-;    |lighthouse:inst7|                ; 882 (882)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                        ; work         ;
-;    |lighthouse:inst8|                ; 881 (881)         ; 187 (187)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                        ; work         ;
-;    |pll:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                ; work         ;
-;       |altpll:altpll_component|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                        ; work         ;
-;          |pll_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated              ; work         ;
-;    |sensor_mux_data:inst42|          ; 115 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42                                                  ; work         ;
-;       |lpm_mux:LPM_MUX_component|    ; 115 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component                        ; work         ;
-;          |mux_e9e:auto_generated|    ; 115 (115)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_mux_data:inst42|lpm_mux:LPM_MUX_component|mux_e9e:auto_generated ; work         ;
-;    |spi_sender:inst12|               ; 129 (33)          ; 118 (39)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12                                                       ; work         ;
-;       |spi_slave:spi_slave_0|        ; 96 (96)           ; 79 (79)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_sender:inst12|spi_slave:spi_slave_0                                 ; work         ;
-+--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
+; |darkroom_top                        ; 7523 (4)            ; 1587 (0)                  ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |darkroom_top                                                            ; darkroom_top            ; work         ;
+;    |ConcatenateSensorValues:inst20|  ; 184 (184)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|ConcatenateSensorValues:inst20                             ; ConcatenateSensorValues ; work         ;
+;    |SpiControl:inst11|               ; 178 (178)           ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                          ; SpiControl              ; work         ;
+;    |counter:inst33|                  ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                             ; counter                 ; work         ;
+;    |lighthouse:inst10|               ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst12|               ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst13|               ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst15|               ; 887 (887)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                          ; lighthouse              ; work         ;
+;    |lighthouse:inst6|                ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst7|                ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst8|                ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                           ; lighthouse              ; work         ;
+;    |lighthouse:inst9|                ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                           ; lighthouse              ; work         ;
+;    |oneshot:inst17|                  ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                             ; oneshot                 ; work         ;
+;    |pll:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                   ; pll                     ; work         ;
+;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                           ; altpll                  ; work         ;
+;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll              ; work         ;
+;    |spi_master:inst2|                ; 40 (40)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                           ; spi_master              ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                       ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                                      ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |darkroom_top|pll:inst               ; /home/letrend/workspace/darkroom/pll.vhd             ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |darkroom_top|sensor_mux_data:inst42 ; /home/letrend/workspace/darkroom/sensor_mux_data.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                    ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
+; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |darkroom_top|pll:inst ; pll.v           ;
++--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+----------------------------------------------------+----------------------------------------------+
-; Register name                                      ; Reason for Removal                           ;
-+----------------------------------------------------+----------------------------------------------+
-; spi_sender:inst12|spi_slave:spi_slave_0|bit_cnt[0] ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst8|sensor_value[0]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst8|sensor_value[3..8]                ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst8|sensor_value[1,2]                 ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst7|sensor_value[0,3..8]              ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst7|sensor_value[1,2]                 ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst6|sensor_value[0]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst6|sensor_value[3..8]                ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst6|sensor_value[2]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst6|sensor_value[1]                   ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst5|sensor_value[0,3..8]              ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst5|sensor_value[2]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst5|sensor_value[1]                   ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst4|sensor_value[0]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst4|sensor_value[2..8]                ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst4|sensor_value[1]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst3|sensor_value[0,2..8]              ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst3|sensor_value[1]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst2|sensor_value[0]                   ; Stuck at VCC due to stuck port data_in       ;
-; lighthouse:inst2|sensor_value[1..8]                ; Stuck at GND due to stuck port data_in       ;
-; lighthouse:inst1|sensor_value[0..8]                ; Stuck at GND due to stuck port data_in       ;
-; spi_sender:inst12|spi_tx_data[4..8]                ; Merged with spi_sender:inst12|spi_tx_data[3] ;
-; spi_sender:inst12|spi_tx_data[3]                   ; Stuck at GND due to stuck port data_in       ;
-; Total Number of Removed Registers = 79             ;                                              ;
-+----------------------------------------------------+----------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++------------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal      ; Free of Timing Hazards ;
++------------------------------------------------------+--------------------------+------------------------+
+; ConcatenateSensorValues:inst20|data[247]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[255]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[143]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[175]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[63]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[87]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[55]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[95]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[79]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[31]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[15]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[23]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[47]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[111]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[191]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[215]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[183]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[223]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[207]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[127]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[151]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[119]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[159]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[239]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[246]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[254]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[142]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[174]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[86]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[62]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[54]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[94]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[78]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[30]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[14]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[22]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[46]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[110]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[206]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[214]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[190]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[182]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[222]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[126]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[150]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[118]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[158]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[238]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[245]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[253]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[141]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[173]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[77]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[61]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[85]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[53]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[93]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[29]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[13]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[21]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[45]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[109]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[189]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[213]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[181]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[221]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[205]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[149]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[125]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[117]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[157]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[237]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[244]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[252]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[140]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[172]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[84]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[60]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[52]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[92]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[76]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[28]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[12]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[20]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[44]              ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[108]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[204]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[212]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[188]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[180]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[220]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[124]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[148]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[116]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[156]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[236]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[243]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[251]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[139]             ; oneshot:inst17|level_sig ; yes                    ;
+; ConcatenateSensorValues:inst20|data[171]             ; oneshot:inst17|level_sig ; yes                    ;
+; Number of user-specified and inferred latches = 184  ;                          ;                        ;
++------------------------------------------------------+--------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                           ;
-+----------------------------------+---------------------------+----------------------------------------+
-; Register name                    ; Reason for Removal        ; Registers Removed due to This Register ;
-+----------------------------------+---------------------------+----------------------------------------+
-; lighthouse:inst8|sensor_value[3] ; Stuck at GND              ; spi_sender:inst12|spi_tx_data[3]       ;
-;                                  ; due to stuck port data_in ;                                        ;
-+----------------------------------+---------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++---------------------------------------+-----------------------------------------+
+; Register name                         ; Reason for Removal                      ;
++---------------------------------------+-----------------------------------------+
+; spi_master:inst2|core_clk             ; Merged with spi_master:inst2|core_n_clk ;
+; Total Number of Removed Registers = 1 ;                                         ;
++---------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -319,78 +400,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1646  ;
-; Number of registers using Synchronous Clear  ; 1     ;
+; Total registers                              ; 1587  ;
+; Number of registers using Synchronous Clear  ; 13    ;
 ; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 74    ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1287  ;
+; Number of registers using Clock Enable       ; 1262  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------+
-; Inverted Register Statistics                                 ;
-+----------------------------------------------------+---------+
-; Inverted Register                                  ; Fan out ;
-+----------------------------------------------------+---------+
-; spi_sender:inst12|spi_slave:spi_slave_0|trdy       ; 3       ;
-; spi_sender:inst12|spi_slave:spi_slave_0|bit_cnt[1] ; 3       ;
-; Total number of inverted registers = 2             ;         ;
-+----------------------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; spi_master:inst2|core_n_ce             ; 9       ;
+; spi_master:inst2|core_n_clk            ; 4       ;
+; spi_master:inst2|di_req_o_reg          ; 3       ;
+; spi_master:inst2|spi_2x_ce             ; 3       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst2|start_valid_sync[5]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst1|start_valid_sync[6]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst3|start_valid_sync[7]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst4|start_valid_sync[9]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst6|start_valid_sync[9]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst5|start_valid_sync[30] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst7|start_valid_sync[4]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |darkroom_top|lighthouse:inst8|start_valid_sync[6]  ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |darkroom_top|spi_sender:inst12|sensor_selector[0]  ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst2|rotor                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst1|rotor                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst3|rotor                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst4|rotor                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|data                 ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst5|data                 ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|data                 ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|data                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[1]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[2] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[3]                    ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|rotor                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst9|data                         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst10|data                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst12|data                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst13|data                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst15|rotor                       ;
+; 258:1              ; 7 bits    ; 1204 LEs      ; 126 LEs              ; 1078 LEs               ; Yes        ; |darkroom_top|SpiControl:inst11|byte[5]                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_sender:inst12 ;
-+----------------+----------+------------------------------------+
-; Parameter Name ; Value    ; Type                               ;
-+----------------+----------+------------------------------------+
-; sys_clk_frq    ; 50000000 ; Signed Integer                     ;
-; spi_cpol       ; '0'      ; Enumerated                         ;
-; spi_cpha       ; '0'      ; Enumerated                         ;
-+----------------+----------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_sender:inst12|spi_slave:spi_slave_0 ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; cpol           ; '0'   ; Enumerated                                                  ;
-; cpha           ; '0'   ; Enumerated                                                  ;
-; d_width        ; 32    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_master:inst2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; n              ; 8     ; Signed Integer                       ;
+; cpol           ; '0'   ; Enumerated                           ;
+; cpha           ; '0'   ; Enumerated                           ;
+; prefetch       ; 2     ; Signed Integer                       ;
+; spi_2x_clk_div ; 5     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst1 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst6 ;
 +----------------+-----------+----------------------------------+
 ; Parameter Name ; Value     ; Type                             ;
 +----------------+-----------+----------------------------------+
@@ -698,7 +766,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLK2_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
 ; CLK1_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
 ; CLK0_OUTPUT_FREQUENCY         ; 0                     ; Untyped               ;
-; INTENDED_DEVICE_FAMILY        ; Cyclone III           ; Untyped               ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E          ; Untyped               ;
 ; PORT_CLKENA0                  ; PORT_UNUSED           ; Untyped               ;
 ; PORT_CLKENA1                  ; PORT_UNUSED           ; Untyped               ;
 ; PORT_CLKENA2                  ; PORT_UNUSED           ; Untyped               ;
@@ -784,17 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst2 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000001 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst3 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst8 ;
 +----------------+-----------+----------------------------------+
 ; Parameter Name ; Value     ; Type                             ;
 +----------------+-----------+----------------------------------+
@@ -804,7 +862,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst4 ;
+; Parameter Settings for User Entity Instance: lighthouse:inst7 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; sensorid       ; 000000001 ; Unsigned Binary                  ;
++----------------+-----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst9 ;
 +----------------+-----------+----------------------------------+
 ; Parameter Name ; Value     ; Type                             ;
 +----------------+-----------+----------------------------------+
@@ -813,62 +881,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst5 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000100 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst12 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000101 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst6 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000101 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst10 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000100 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst7 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000110 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst13 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000110 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst8 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000111 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component ;
-+------------------------+--------------+-------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                  ;
-+------------------------+--------------+-------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                          ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                        ;
-; LPM_WIDTH              ; 32           ; Signed Integer                                        ;
-; LPM_SIZE               ; 8            ; Signed Integer                                        ;
-; LPM_WIDTHS             ; 3            ; Signed Integer                                        ;
-; LPM_PIPELINE           ; 0            ; Signed Integer                                        ;
-; CBXI_PARAMETER         ; mux_e9e      ; Untyped                                               ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                               ;
-+------------------------+--------------+-------------------------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst15 ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; sensorid       ; 000000111 ; Unsigned Binary                   ;
++----------------+-----------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -889,20 +938,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spi_sender:inst12|spi_slave:spi_slave_0"                                                    ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; reset_n      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; st_load_en   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; st_load_trdy ; Input  ; Info     ; Stuck at GND                                                                        ;
-; st_load_rrdy ; Input  ; Info     ; Stuck at GND                                                                        ;
-; st_load_roe  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rrdy         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; roe          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rx_data      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 23                          ;
+; cycloneiii_ff         ; 1587                        ;
+;     CLR               ; 1                           ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 1251                        ;
+;     ENA CLR SCLR      ; 8                           ;
+;     ENA SCLR          ; 3                           ;
+;     SCLR              ; 2                           ;
+;     plain             ; 321                         ;
+; cycloneiii_lcell_comb ; 7523                        ;
+;     arith             ; 4955                        ;
+;         2 data inputs ; 2226                        ;
+;         3 data inputs ; 2729                        ;
+;     normal            ; 2568                        ;
+;         0 data inputs ; 64                          ;
+;         1 data inputs ; 76                          ;
+;         2 data inputs ; 166                         ;
+;         3 data inputs ; 556                         ;
+;         4 data inputs ; 1706                        ;
+; cycloneiii_pll        ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 16.10                       ;
+; Average LUT depth     ; 12.21                       ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -910,7 +974,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -918,122 +982,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jan 19 13:42:58 2017
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Wed Mar  8 14:35:59 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
+Info (12021): Found 2 design units, including 1 entities, in source file spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+    Info (12022): Found design unit 1: spi_master-rtl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
+    Info (12023): Found entity 1: spi_master File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
+Warning (10463): Verilog HDL Declaration warning at SpiControl.v(10): "byte" is SystemVerilog-2005 keyword File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file SpiControl.v
+    Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file sensor_mux.vhd
-    Info (12022): Found design unit 1: sensor_mux-Behavioral
-    Info (12023): Found entity 1: sensor_mux
-Info (12021): Found 2 design units, including 1 entities, in source file spi_slave.vhd
-    Info (12022): Found design unit 1: spi_slave-logic
-    Info (12023): Found entity 1: spi_slave
-Info (12021): Found 2 design units, including 1 entities, in source file spi_sender.vhd
-    Info (12022): Found design unit 1: spi_sender-logic
-    Info (12023): Found entity 1: spi_sender
+    Info (12022): Found design unit 1: sensor_mux-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 30
+    Info (12023): Found entity 1: sensor_mux File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: counter-Behavioral
-    Info (12023): Found entity 1: counter
+    Info (12022): Found design unit 1: counter-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 14
+    Info (12023): Found entity 1: counter File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lighthouse.vhd
-    Info (12022): Found design unit 1: lighthouse-Behavioral
-    Info (12023): Found entity 1: lighthouse
+    Info (12022): Found design unit 1: lighthouse-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 17
+    Info (12023): Found entity 1: lighthouse File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file darkroom_top.bdf
     Info (12023): Found entity 1: darkroom_top
-Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-SYN
-    Info (12023): Found entity 1: pll
+Info (12021): Found 1 design units, including 1 entities, in source file pll.v
+    Info (12023): Found entity 1: pll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file simple_counter.v
-    Info (12023): Found entity 1: simple_counter
+    Info (12023): Found entity 1: simple_counter File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/simple_counter.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file oneshot.v
+    Info (12023): Found entity 1: oneshot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ConcatenateSensorValues.v
+    Info (12023): Found entity 1: ConcatenateSensorValues File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 3
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
-Warning (275083): Bus "LED1[2..0]" found using same base name as "LED", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "LED" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "LED[3..0]" to "LED3..0"
-Warning (275080): Converted elements in bus name "LED1" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "LED1[2..0]" to "LED12..0"
-Warning (275043): Pin "led_fifo_empty" is missing source
-Info (12128): Elaborating entity "spi_sender" for hierarchy "spi_sender:inst12"
-Warning (10541): VHDL Signal Declaration warning at spi_sender.vhd(43): used implicit default value for signal "spi_rx_req" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(44): object "spi_rx_data" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at spi_sender.vhd(45): object "spi_rrdy" assigned a value but never read
-Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_sender:inst12|spi_slave:spi_slave_0"
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(74): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(87): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(92): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(97): signal "st_load_trdy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(97): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(99): signal "st_load_trdy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(101): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(101): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(103): signal "rd_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(103): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(108): signal "st_load_rrdy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(108): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(110): signal "st_load_rrdy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(112): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(112): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(114): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(114): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(119): signal "st_load_roe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(119): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(121): signal "st_load_roe" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(123): signal "rrdy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(123): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(123): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(125): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(125): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(131): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(135): signal "wr_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(135): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(141): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(144): signal "rx_buf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(148): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(151): signal "tx_load_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(152): signal "rd_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(152): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(157): signal "reset_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(159): signal "rd_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(166): signal "rd_add" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at spi_slave.vhd(166): signal "bit_cnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at spi_slave.vhd(83): inferring latch(es) for signal or variable "rx_data", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "rx_data[0]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[1]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[2]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[3]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[4]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[5]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[6]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[7]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[8]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[9]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[10]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[11]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[12]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[13]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[14]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[15]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[16]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[17]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[18]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[19]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[20]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[21]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[22]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[23]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[24]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[25]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[26]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[27]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[28]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[29]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[30]" at spi_slave.vhd(83)
-Info (10041): Inferred latch for "rx_data[31]" at spi_slave.vhd(83)
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst1"
+Warning (275011): Block or symbol "NOT" of instance "pos_reset" overlaps another block or symbol
+Warning (275009): Pin "button1" not connected
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
+Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(35): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 35
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(64): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 64
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(73): truncated value with size 10 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 73
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(81): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 81
+Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst17"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component"
-Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component"
-Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter:
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
+Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "50"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1041,7 +1036,7 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
     Info (12134): Parameter "clk0_phase_shift" = "0"
     Info (12134): Parameter "compensate_clock" = "CLK0"
     Info (12134): Parameter "inclk0_input_frequency" = "20000"
-    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=pll"
     Info (12134): Parameter "lpm_type" = "altpll"
     Info (12134): Parameter "operation_mode" = "NORMAL"
@@ -1089,76 +1084,287 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll
-Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst2"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst3"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst4"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst5"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
+    Info (12023): Found entity 1: pll_altpll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst8"
-Warning (12125): Using design file sensor_mux_data.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: sensor_mux_data-SYN
-    Info (12023): Found entity 1: sensor_mux_data
-Info (12128): Elaborating entity "sensor_mux_data" for hierarchy "sensor_mux_data:inst42"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "32"
-    Info (12134): Parameter "LPM_SIZE" = "8"
-    Info (12134): Parameter "LPM_WIDTHS" = "3"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_e9e.tdf
-    Info (12023): Found entity 1: mux_e9e
-Info (12128): Elaborating entity "mux_e9e" for hierarchy "sensor_mux_data:inst42|LPM_MUX:LPM_MUX_component|mux_e9e:auto_generated"
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[31]~1"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[30]~5"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[29]~9"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[28]~13"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[27]~17"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[26]~21"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[25]~25"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[24]~29"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[23]~33"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[22]~37"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[21]~41"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[20]~45"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[19]~49"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[18]~53"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[17]~57"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[16]~61"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[15]~65"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[14]~69"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[13]~73"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[12]~77"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[11]~81"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[10]~85"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[9]~89"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[2]~93"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[1]~97"
-    Warning (13310): Register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]" is converted into an equivalent circuit using register "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]~_emulated" and latch "spi_sender:inst12|spi_slave:spi_slave_0|tx_buf[0]~101"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_fifo_empty" is stuck at GND
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst9"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst12"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst10"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst13"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst15"
+Info (12128): Elaborating entity "ConcatenateSensorValues" for hierarchy "ConcatenateSensorValues:inst20"
+Warning (10240): Verilog HDL Always Construct warning at ConcatenateSensorValues.v(16): inferring latch(es) for variable "data", which holds its previous value in one or more paths through the always construct File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[0]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[1]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[2]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[3]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[4]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[5]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[6]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[7]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[8]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[9]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[10]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[11]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[12]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[13]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[14]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[15]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[16]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[17]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[18]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[19]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[20]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[21]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[22]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[23]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[24]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[25]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[26]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[27]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[28]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[29]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[30]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[31]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[32]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[33]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[34]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[35]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[36]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[37]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[38]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[39]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[40]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[41]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[42]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[43]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[44]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[45]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[46]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[47]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[48]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[49]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[50]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[51]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[52]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[53]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[54]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[55]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[56]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[57]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[58]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[59]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[60]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[61]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[62]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[63]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[64]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[65]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[66]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[67]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[68]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[69]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[70]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[71]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[72]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[73]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[74]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[75]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[76]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[77]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[78]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[79]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[80]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[81]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[82]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[83]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[84]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[85]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[86]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[87]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[88]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[89]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[90]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[91]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[92]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[93]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[94]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[95]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[96]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[97]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[98]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[99]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[100]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[101]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[102]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[103]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[104]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[105]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[106]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[107]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[108]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[109]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[110]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[111]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[112]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[113]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[114]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[115]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[116]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[117]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[118]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[119]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[120]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[121]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[122]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[123]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[124]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[125]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[126]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[127]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[128]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[129]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[130]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[131]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[132]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[133]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[134]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[135]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[136]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[137]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[138]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[139]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[140]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[141]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[142]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[143]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[144]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[145]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[146]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[147]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[148]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[149]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[150]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[151]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[152]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[153]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[154]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[155]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[156]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[157]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[158]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[159]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[160]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[161]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[162]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[163]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[164]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[165]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[166]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[167]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[168]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[169]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[170]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[171]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[172]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[173]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[174]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[175]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[176]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[177]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[178]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[179]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[180]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[181]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[182]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[183]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[184]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[185]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[186]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[187]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[188]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[189]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[190]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[191]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[192]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[193]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[194]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[195]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[196]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[197]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[198]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[199]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[200]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[201]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[202]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[203]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[204]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[205]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[206]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[207]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[208]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[209]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[210]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[211]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[212]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[213]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[214]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[215]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[216]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[217]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[218]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[219]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[220]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[221]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[222]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[223]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[224]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[225]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[226]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[227]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[228]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[229]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[230]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[231]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[232]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[233]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[234]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[235]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[236]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[237]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[238]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[239]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[240]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[241]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[242]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[243]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[244]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[245]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[246]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[247]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[248]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[249]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[250]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[251]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[252]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[253]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[254]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
+Info (10041): Inferred latch for "data[255]" at ConcatenateSensorValues.v(16) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "button1"
-Info (21057): Implemented 8364 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 8339 logic cells
+Info (21057): Implemented 8522 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 8498 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 81 warnings
-    Info: Peak virtual memory: 405 megabytes
-    Info: Processing ended: Thu Jan 19 13:43:11 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 1079 megabytes
+    Info: Processing ended: Wed Mar  8 14:36:30 2017
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:50
 
 

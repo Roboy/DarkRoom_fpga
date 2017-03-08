@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY darkroom_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:08:16  DEZEMBER 15, 2016"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.2 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -53,24 +53,24 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_R8 -to clock_50
-set_location_assignment PIN_D5 -to sensor0
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_D3 -to spi_miso
-set_location_assignment PIN_C3 -to spi_mosi
-set_location_assignment PIN_A3 -to spi_sclk
-set_location_assignment PIN_B4 -to spi_ss_n
-set_location_assignment PIN_B5 -to spi_trdy
-set_location_assignment PIN_A6 -to sensor1
-set_location_assignment PIN_D6 -to sensor2
-set_location_assignment PIN_C6 -to sensor3
-set_location_assignment PIN_E6 -to sensor4
-set_location_assignment PIN_D8 -to sensor5
-set_location_assignment PIN_F8 -to sensor6
-set_location_assignment PIN_E9 -to sensor7
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_location_assignment PIN_A6 -to spi_miso
+set_location_assignment PIN_D6 -to spi_mosi
+set_location_assignment PIN_C6 -to spi_sclk
+set_location_assignment PIN_E6 -to spi_ss_n
+set_location_assignment PIN_J15 -to button0
+set_location_assignment PIN_E1 -to button1
+set_location_assignment PIN_A13 -to LED[1]
+set_location_assignment PIN_B13 -to LED[2]
+set_location_assignment PIN_A11 -to LED[3]
+set_location_assignment PIN_D1 -to LED[4]
+set_location_assignment PIN_F3 -to LED[5]
+set_location_assignment PIN_B1 -to LED[6]
+set_global_assignment -name VHDL_FILE spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+set_global_assignment -name VERILOG_FILE SpiControl.v
 set_global_assignment -name VHDL_FILE sensor_mux.vhd
-set_global_assignment -name VHDL_FILE spi_slave.vhd
-set_global_assignment -name VHDL_FILE spi_sender.vhd
 set_global_assignment -name VHDL_FILE counter.vhd
 set_global_assignment -name VHDL_FILE lighthouse.vhd
 set_global_assignment -name BDF_FILE darkroom_top.bdf
@@ -79,13 +79,16 @@ set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name SDC_FILE output_files/SDC1.sdc
 set_global_assignment -name VERILOG_FILE simple_counter.v
 set_global_assignment -name CDF_FILE output_files/darkroom_top.cdf
-set_location_assignment PIN_J15 -to button0
-set_location_assignment PIN_E1 -to button1
-set_location_assignment PIN_A15 -to LED0
-set_location_assignment PIN_A13 -to LED1
-set_location_assignment PIN_B13 -to LED2
-set_location_assignment PIN_A11 -to LED3
-set_location_assignment PIN_D1 -to LED10
-set_location_assignment PIN_F3 -to LED11
-set_location_assignment PIN_L3 -to LED12
+set_global_assignment -name VERILOG_FILE oneshot.v
+set_global_assignment -name VERILOG_FILE ConcatenateSensorValues.v
+set_location_assignment PIN_F13 -to sensor1_signal
+set_location_assignment PIN_T15 -to sensor2_signal
+set_location_assignment PIN_T13 -to sensor3_signal
+set_location_assignment PIN_T12 -to sensor4_signal
+set_location_assignment PIN_T11 -to sensor5_signal
+set_location_assignment PIN_R11 -to sensor6_signal
+set_location_assignment PIN_R10 -to sensor7_signal
+set_location_assignment PIN_A15 -to LED[0]
+set_location_assignment PIN_D5 -to sensor0_signal
+set_location_assignment PIN_L3 -to LED[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

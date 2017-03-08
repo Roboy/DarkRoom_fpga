@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2017.02.27.01:33:46"
+ outputDirectory="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE22F17C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="spi_0_external" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="spi_0_external_MISO" direction="input" role="MISO" width="1" />
+   <port name="spi_0_external_MOSI" direction="output" role="MOSI" width="1" />
+   <port name="spi_0_external_SCLK" direction="output" role="SCLK" width="1" />
+   <port name="spi_0_external_SS_n" direction="output" role="SS_n" width="1" />
+  </interface>
+  <interface name="spi_0_spi_control_port" kind="avalon" start="0">
+   <property name="addressAlignment" value="NATIVE" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="8" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="1" />
+   <property name="writeWaitTime" value="1" />
+   <port
+       name="spi_0_spi_control_port_writedata"
+       direction="input"
+       role="writedata"
+       width="16" />
+   <port
+       name="spi_0_spi_control_port_readdata"
+       direction="output"
+       role="readdata"
+       width="16" />
+   <port
+       name="spi_0_spi_control_port_address"
+       direction="input"
+       role="address"
+       width="3" />
+   <port
+       name="spi_0_spi_control_port_read_n"
+       direction="input"
+       role="read_n"
+       width="1" />
+   <port
+       name="spi_0_spi_control_port_chipselect"
+       direction="input"
+       role="chipselect"
+       width="1" />
+   <port
+       name="spi_0_spi_control_port_write_n"
+       direction="input"
+       role="write_n"
+       width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="spi:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE22F17C6,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1488155625,AUTO_UNIQUE_ID=(clock_source:16.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_spi:16.1:actualClockRate=1388888.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=false,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=3,targetClockRate=1470000,targetSlaveSelectToSClkDelay=0.0)(clock:16.1:)(reset:16.1:)"
+   instancePathKey="spi"
+   kind="spi"
+   version="1.0"
+   name="spi">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1488155625" />
+  <parameter name="AUTO_DEVICE" value="EP4CE22F17C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/spi.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/home/letrend/altera/16.1/ip/altera/sopc_builder_ip/altera_avalon_spi/altera_avalon_spi_hw.tcl" />
+   <file
+       path="/home/letrend/altera/16.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="spi">queue size: 0 starting:spi "spi"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
+   <message level="Debug" culprit="spi"><![CDATA["<b>spi</b>" reuses <b>altera_avalon_spi</b> "<b>submodules/spi_spi_0</b>"]]></message>
+   <message level="Debug" culprit="spi"><![CDATA["<b>spi</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="spi">queue size: 1 starting:altera_avalon_spi "submodules/spi_spi_0"</message>
+   <message level="Info" culprit="spi_0">Starting RTL generation for module 'spi_spi_0'</message>
+   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="spi_0">Done RTL generation for module 'spi_spi_0'</message>
+   <message level="Info" culprit="spi_0"><![CDATA["<b>spi</b>" instantiated <b>altera_avalon_spi</b> "<b>spi_0</b>"]]></message>
+   <message level="Debug" culprit="spi">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>spi</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_spi:16.1:actualClockRate=1388888.0,actualSlaveSelectToSClkDelay=0.0,avalonSpec=2.0,clockPhase=0,clockPolarity=0,dataWidth=8,disableAvalonFlowControl=false,inputClockRate=50000000,insertDelayBetweenSlaveSelectAndSClk=false,insertSync=false,legacySignalsAllow=false,lsbOrderedFirst=false,masterSPI=true,numberOfSlaves=1,slaveDataBusWidth=16,syncRegDepth=3,targetClockRate=1470000,targetSlaveSelectToSClkDelay=0.0"
+   instancePathKey="spi:.:spi_0"
+   kind="altera_avalon_spi"
+   version="16.1"
+   name="spi_spi_0">
+  <parameter name="legacySignalsAllow" value="false" />
+  <parameter name="insertSync" value="false" />
+  <parameter name="targetClockRate" value="1470000" />
+  <parameter name="disableAvalonFlowControl" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clockPolarity" value="0" />
+  <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="false" />
+  <parameter name="actualClockRate" value="1388888.0" />
+  <parameter name="clockPhase" value="0" />
+  <parameter name="masterSPI" value="true" />
+  <parameter name="slaveDataBusWidth" value="16" />
+  <parameter name="numberOfSlaves" value="1" />
+  <parameter name="syncRegDepth" value="3" />
+  <parameter name="actualSlaveSelectToSClkDelay" value="0.0" />
+  <parameter name="inputClockRate" value="50000000" />
+  <parameter name="dataWidth" value="8" />
+  <parameter name="targetSlaveSelectToSClkDelay" value="0.0" />
+  <parameter name="lsbOrderedFirst" value="false" />
+  <generatedFiles>
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/spi_spi_0.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/letrend/altera/16.1/ip/altera/sopc_builder_ip/altera_avalon_spi/altera_avalon_spi_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="spi" as="spi_0" />
+  <messages>
+   <message level="Debug" culprit="spi">queue size: 1 starting:altera_avalon_spi "submodules/spi_spi_0"</message>
+   <message level="Info" culprit="spi_0">Starting RTL generation for module 'spi_spi_0'</message>
+   <message level="Info" culprit="spi_0">  Generation command is [exec /home/letrend/altera/16.1/quartus/linux64/perl/bin/perl -I /home/letrend/altera/16.1/quartus/linux64/perl/lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/europa -I /home/letrend/altera/16.1/quartus/sopc_builder/bin/perl_lib -I /home/letrend/altera/16.1/quartus/sopc_builder/bin -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- /home/letrend/altera/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=spi_spi_0 --dir=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen/ --quartus_dir=/home/letrend/altera/16.1/quartus --verilog --config=/tmp/alt7224_5954013587890128727.dir/0001_spi_0_gen//spi_spi_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="spi_0">Done RTL generation for module 'spi_spi_0'</message>
+   <message level="Info" culprit="spi_0"><![CDATA["<b>spi</b>" instantiated <b>altera_avalon_spi</b> "<b>spi_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:16.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="spi:.:rst_controller"
+   kind="altera_reset_controller"
+   version="16.1"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="/home/letrend/altera/16.1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="spi" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="spi">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>spi</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>
