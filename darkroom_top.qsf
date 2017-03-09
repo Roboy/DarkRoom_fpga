@@ -56,10 +56,10 @@ set_location_assignment PIN_R8 -to clock_50
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
-set_location_assignment PIN_R10 -to spi_miso
-set_location_assignment PIN_P9 -to spi_mosi
-set_location_assignment PIN_N11 -to spi_sclk
-set_location_assignment PIN_K16 -to spi_ss_n
+set_location_assignment PIN_B11 -to spi_miso
+set_location_assignment PIN_E10 -to spi_mosi
+set_location_assignment PIN_D11 -to spi_sclk
+set_location_assignment PIN_B12 -to spi_ss_n
 set_location_assignment PIN_J15 -to button0
 set_location_assignment PIN_E1 -to button1
 set_location_assignment PIN_A13 -to LED[1]
@@ -91,6 +91,16 @@ set_location_assignment PIN_E9 -to sensor7_signal
 set_location_assignment PIN_A15 -to LED[0]
 set_location_assignment PIN_D5 -to sensor0_signal
 set_location_assignment PIN_L3 -to LED[7]
-set_location_assignment PIN_L16 -to MPU_6050_interrupt_in
-set_location_assignment PIN_N9 -to MPU_6050_interrupt_out
+set_location_assignment PIN_A12 -to MPU_6050_interrupt_in
+set_location_assignment PIN_D12 -to MPU_6050_interrupt_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_miso
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_ss_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MPU_6050_interrupt_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MPU_6050_interrupt_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
