@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Fri Mar 10 12:54:47 2017
+Fri Mar 10 14:07:51 2017
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -21,10 +21,10 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram
  15. Parameter Settings for User Entity Instance: spi_master:inst2
- 16. Parameter Settings for User Entity Instance: fifo:inst3|scfifo:scfifo_component
- 17. Parameter Settings for User Entity Instance: lighthouse:inst7
- 18. Parameter Settings for User Entity Instance: counter:inst33
- 19. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 16. Parameter Settings for User Entity Instance: counter:inst33
+ 17. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: fifo:inst3|scfifo:scfifo_component
+ 19. Parameter Settings for User Entity Instance: lighthouse:inst7
  20. Parameter Settings for User Entity Instance: lighthouse:inst8
  21. Parameter Settings for User Entity Instance: lighthouse:inst9
  22. Parameter Settings for User Entity Instance: lighthouse:inst10
@@ -32,11 +32,12 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
  24. Parameter Settings for User Entity Instance: lighthouse:inst13
  25. Parameter Settings for User Entity Instance: lighthouse:inst15
  26. Parameter Settings for User Entity Instance: lighthouse:inst6
- 27. scfifo Parameter Settings by Entity Instance
+ 27. Parameter Settings for Inferred Entity Instance: DarkRoomControl:inst1|lpm_divide:Mod0
  28. altpll Parameter Settings by Entity Instance
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 29. scfifo Parameter Settings by Entity Instance
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -63,16 +64,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 10 12:54:47 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 10 14:07:51 2017       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8,406                                       ;
-;     Total combinational functions  ; 7,432                                       ;
+; Total logic elements               ; 9,030                                       ;
+;     Total combinational functions  ; 8,056                                       ;
 ;     Dedicated logic registers      ; 1,675                                       ;
 ; Total registers                    ; 1675                                        ;
-; Total pins                         ; 25                                          ;
+; Total pins                         ; 24                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -200,13 +201,19 @@ agreement for further details.
 ; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
 ; fifo.v                                                     ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                                     ;         ;
 ; sensor_select.v                                            ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v                                            ;         ;
+; DarkRoomControl.v                                          ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v                                          ;         ;
+; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
+; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
+; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
+; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
+; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
+; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
 ; scfifo.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                          ;         ;
 ; a_regfifo.inc                                              ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                       ;         ;
 ; a_dpfifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                        ;         ;
 ; a_i2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                        ;         ;
 ; a_fffifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                        ;         ;
 ; a_f2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                        ;         ;
-; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
 ; db/scfifo_e041.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf                                         ;         ;
 ; db/a_dpfifo_1o31.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf                                       ;         ;
 ; db/altsyncram_pdh1.tdf                                     ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf                                     ;         ;
@@ -214,11 +221,14 @@ agreement for further details.
 ; db/cntr_1ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                            ;         ;
 ; db/cntr_ea7.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf                                            ;         ;
 ; db/cntr_2ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf                                            ;         ;
-; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
-; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
-; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
-; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
-; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
+; lpm_divide.tdf                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/lpm_divide.tdf                                      ;         ;
+; abs_divider.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/abs_divider.inc                                     ;         ;
+; sign_div_unsign.inc                                        ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                 ;         ;
+; db/lpm_divide_gcm.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf                                      ;         ;
+; db/sign_div_unsign_5nh.tdf                                 ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf                                 ;         ;
+; db/alt_u_div_u9f.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf                                       ;         ;
+; db/add_sub_7pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf                                         ;         ;
+; db/add_sub_8pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf                                         ;         ;
 +------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -227,23 +237,23 @@ agreement for further details.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimated Total logic elements              ; 8,406                ;
+; Estimated Total logic elements              ; 9,030                ;
 ;                                             ;                      ;
-; Total combinational functions               ; 7432                 ;
+; Total combinational functions               ; 8056                 ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 1756                 ;
-;     -- 3 input functions                    ; 3124                 ;
-;     -- <=2 input functions                  ; 2552                 ;
+;     -- 4 input functions                    ; 1926                 ;
+;     -- 3 input functions                    ; 3324                 ;
+;     -- <=2 input functions                  ; 2806                 ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 2460                 ;
-;     -- arithmetic mode                      ; 4972                 ;
+;     -- normal mode                          ; 2901                 ;
+;     -- arithmetic mode                      ; 5155                 ;
 ;                                             ;                      ;
 ; Total registers                             ; 1675                 ;
 ;     -- Dedicated logic registers            ; 1675                 ;
 ;     -- I/O registers                        ; 0                    ;
 ;                                             ;                      ;
-; I/O pins                                    ; 25                   ;
+; I/O pins                                    ; 24                   ;
 ; Total memory bits                           ; 16384                ;
 ;                                             ;                      ;
 ; Embedded Multiplier 9-bit elements          ; 0                    ;
@@ -253,50 +263,54 @@ agreement for further details.
 ;                                             ;                      ;
 ; Maximum fan-out node                        ; sensor3_signal~input ;
 ; Maximum fan-out                             ; 187                  ;
-; Total fan-out                               ; 26764                ;
+; Total fan-out                               ; 28506                ;
 ; Average fan-out                             ; 2.91                 ;
 +---------------------------------------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name     ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |darkroom_top                            ; 7432 (3)            ; 1675 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 25   ; 0            ; |darkroom_top                                                                                                            ; darkroom_top    ; work         ;
-;    |SpiControl:inst11|                   ; 56 (56)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                                                                          ; SpiControl      ; work         ;
-;    |counter:inst33|                      ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                                             ; counter         ; work         ;
-;    |fifo:inst3|                          ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3                                                                                                 ; fifo            ; work         ;
-;       |scfifo:scfifo_component|          ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component                                                                         ; scfifo          ; work         ;
-;          |scfifo_e041:auto_generated|    ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated                                              ; scfifo_e041     ; work         ;
-;             |a_dpfifo_1o31:dpfifo|       ; 72 (43)             ; 43 (17)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo                         ; a_dpfifo_1o31   ; work         ;
-;                |altsyncram_pdh1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram ; altsyncram_pdh1 ; work         ;
-;                |cntr_1ab:rd_ptr_msb|     ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb     ; cntr_1ab        ; work         ;
-;                |cntr_2ab:wr_ptr|         ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr         ; cntr_2ab        ; work         ;
-;                |cntr_ea7:usedw_counter|  ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter  ; cntr_ea7        ; work         ;
-;    |lighthouse:inst10|                   ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                          ; lighthouse      ; work         ;
-;    |lighthouse:inst12|                   ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                          ; lighthouse      ; work         ;
-;    |lighthouse:inst13|                   ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                          ; lighthouse      ; work         ;
-;    |lighthouse:inst15|                   ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                          ; lighthouse      ; work         ;
-;    |lighthouse:inst6|                    ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                           ; lighthouse      ; work         ;
-;    |lighthouse:inst7|                    ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                           ; lighthouse      ; work         ;
-;    |lighthouse:inst8|                    ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                           ; lighthouse      ; work         ;
-;    |lighthouse:inst9|                    ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                           ; lighthouse      ; work         ;
-;    |oneshot:inst17|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst18|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst18                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst19|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst19                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst20|                      ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst20                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst21|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst21                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst22|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst22                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst23|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst23                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst24|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst24                                                                                             ; oneshot         ; work         ;
-;    |oneshot:inst25|                      ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst25                                                                                             ; oneshot         ; work         ;
-;    |pll:inst|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                                                   ; pll             ; work         ;
-;       |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                                           ; altpll          ; work         ;
-;          |pll_altpll:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                 ; pll_altpll      ; work         ;
-;    |sensor_select:inst16|                ; 135 (135)           ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst16                                                                                       ; sensor_select   ; work         ;
-;    |spi_master:inst2|                    ; 40 (40)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                                                                           ; spi_master      ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                             ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |darkroom_top                             ; 8056 (3)            ; 1675 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 24   ; 0            ; |darkroom_top                                                                                                                       ; darkroom_top        ; work         ;
+;    |DarkRoomControl:inst1|                ; 635 (11)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1                                                                                                 ; DarkRoomControl     ; work         ;
+;       |lpm_divide:Mod0|                   ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_gcm:auto_generated|  ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated                                                   ; lpm_divide_gcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 624 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_u9f:divider|    ; 624 (624)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
+;    |SpiControl:inst11|                    ; 53 (53)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                                                                                     ; SpiControl          ; work         ;
+;    |counter:inst33|                       ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                                                        ; counter             ; work         ;
+;    |fifo:inst3|                           ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3                                                                                                            ; fifo                ; work         ;
+;       |scfifo:scfifo_component|           ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component                                                                                    ; scfifo              ; work         ;
+;          |scfifo_e041:auto_generated|     ; 72 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated                                                         ; scfifo_e041         ; work         ;
+;             |a_dpfifo_1o31:dpfifo|        ; 72 (43)             ; 43 (17)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo                                    ; a_dpfifo_1o31       ; work         ;
+;                |altsyncram_pdh1:FIFOram|  ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram            ; altsyncram_pdh1     ; work         ;
+;                |cntr_1ab:rd_ptr_msb|      ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb                ; cntr_1ab            ; work         ;
+;                |cntr_2ab:wr_ptr|          ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr                    ; cntr_2ab            ; work         ;
+;                |cntr_ea7:usedw_counter|   ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter             ; cntr_ea7            ; work         ;
+;    |lighthouse:inst10|                    ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst12|                    ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst13|                    ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst15|                    ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst6|                     ; 884 (884)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst7|                     ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst8|                     ; 885 (885)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst9|                     ; 886 (886)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                                      ; lighthouse          ; work         ;
+;    |oneshot:inst17|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst18|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst18                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst19|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst19                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst20|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst20                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst21|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst21                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst22|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst22                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst23|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst23                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst24|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst24                                                                                                        ; oneshot             ; work         ;
+;    |pll:inst|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                                                              ; pll                 ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                                                      ; altpll              ; work         ;
+;          |pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                            ; pll_altpll          ; work         ;
+;    |sensor_select:inst16|                 ; 134 (134)           ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst16                                                                                                  ; sensor_select       ; work         ;
+;    |spi_master:inst2|                     ; 40 (40)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                                                                                      ; spi_master          ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -341,7 +355,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1313  ;
+; Number of registers using Clock Enable       ; 1314  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -351,12 +365,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
-; spi_master:inst2|core_n_ce                    ; 9       ;
 ; spi_master:inst2|core_n_clk                   ; 4       ;
-; SpiControl:inst11|numberOfBytesTransmitted[1] ; 17      ;
-; SpiControl:inst11|numberOfBytesTransmitted[5] ; 4       ;
-; spi_master:inst2|di_req_o_reg                 ; 2       ;
+; SpiControl:inst11|numberOfBytesTransmitted[1] ; 15      ;
+; SpiControl:inst11|numberOfBytesTransmitted[5] ; 5       ;
+; spi_master:inst2|di_req_o_reg                 ; 1       ;
 ; spi_master:inst2|spi_2x_ce                    ; 3       ;
+; spi_master:inst2|core_n_ce                    ; 2       ;
 ; Total number of inverted registers = 6        ;         ;
 +-----------------------------------------------+---------+
 
@@ -367,8 +381,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[2]                 ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[7] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|wren                        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[6] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|next_value                  ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[2]                    ;
 ; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|Byte[2]                     ;
 ; 256:1              ; 3 bits    ; 510 LEs       ; 15 LEs               ; 495 LEs                ; Yes        ; |darkroom_top|sensor_select:inst16|sensor_value_out[1]      ;
@@ -381,7 +395,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst12|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst13|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst15|data                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -401,49 +415,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+--------------------------------------+
 ; n              ; 8     ; Signed Integer                       ;
 ; cpol           ; '0'   ; Enumerated                           ;
-; cpha           ; '0'   ; Enumerated                           ;
+; cpha           ; '1'   ; Enumerated                           ;
 ; prefetch       ; 2     ; Signed Integer                       ;
-; spi_2x_clk_div ; 5     ; Signed Integer                       ;
+; spi_2x_clk_div ; 10    ; Signed Integer                       ;
 +----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fifo:inst3|scfifo:scfifo_component ;
-+-------------------------+--------------+----------------------------------------+
-; Parameter Name          ; Value        ; Type                                   ;
-+-------------------------+--------------+----------------------------------------+
-; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                         ;
-; lpm_width               ; 32           ; Signed Integer                         ;
-; LPM_NUMWORDS            ; 512          ; Signed Integer                         ;
-; LPM_WIDTHU              ; 9            ; Signed Integer                         ;
-; LPM_SHOWAHEAD           ; ON           ; Untyped                                ;
-; UNDERFLOW_CHECKING      ; ON           ; Untyped                                ;
-; OVERFLOW_CHECKING       ; ON           ; Untyped                                ;
-; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                ;
-; ADD_RAM_OUTPUT_REGISTER ; ON           ; Untyped                                ;
-; ALMOST_FULL_VALUE       ; 0            ; Untyped                                ;
-; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                ;
-; ENABLE_ECC              ; FALSE        ; Untyped                                ;
-; USE_EAB                 ; ON           ; Untyped                                ;
-; MAXIMIZE_SPEED          ; 5            ; Untyped                                ;
-; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                ;
-; CBXI_PARAMETER          ; scfifo_e041  ; Untyped                                ;
-+-------------------------+--------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lighthouse:inst7 ;
-+----------------+-----------+----------------------------------+
-; Parameter Name ; Value     ; Type                             ;
-+----------------+-----------+----------------------------------+
-; sensorid       ; 000000001 ; Unsigned Binary                  ;
-+----------------+-----------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -831,6 +806,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:inst3|scfifo:scfifo_component ;
++-------------------------+--------------+----------------------------------------+
+; Parameter Name          ; Value        ; Type                                   ;
++-------------------------+--------------+----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                         ;
+; lpm_width               ; 32           ; Signed Integer                         ;
+; LPM_NUMWORDS            ; 512          ; Signed Integer                         ;
+; LPM_WIDTHU              ; 9            ; Signed Integer                         ;
+; LPM_SHOWAHEAD           ; ON           ; Untyped                                ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF          ; Untyped                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON           ; Untyped                                ;
+; ALMOST_FULL_VALUE       ; 0            ; Untyped                                ;
+; ALMOST_EMPTY_VALUE      ; 0            ; Untyped                                ;
+; ENABLE_ECC              ; FALSE        ; Untyped                                ;
+; USE_EAB                 ; ON           ; Untyped                                ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED      ; 5            ; Untyped                                ;
+; CBXI_PARAMETER          ; scfifo_e041  ; Untyped                                ;
++-------------------------+--------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lighthouse:inst7 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; sensorid       ; 000000001 ; Unsigned Binary                  ;
++----------------+-----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lighthouse:inst8 ;
 +----------------+-----------+----------------------------------+
@@ -901,19 +915,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------+
-; scfifo Parameter Settings by Entity Instance                    ;
-+----------------------------+------------------------------------+
-; Name                       ; Value                              ;
-+----------------------------+------------------------------------+
-; Number of entity instances ; 1                                  ;
-; Entity Instance            ; fifo:inst3|scfifo:scfifo_component ;
-;     -- FIFO Type           ; Single Clock                       ;
-;     -- lpm_width           ; 32                                 ;
-;     -- LPM_NUMWORDS        ; 512                                ;
-;     -- LPM_SHOWAHEAD       ; ON                                 ;
-;     -- USE_EAB             ; ON                                 ;
-+----------------------------+------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DarkRoomControl:inst1|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                      ;
+; LPM_WIDTHD             ; 10             ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_gcm ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------+
@@ -933,35 +955,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------+
 
 
++-----------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                    ;
++----------------------------+------------------------------------+
+; Name                       ; Value                              ;
++----------------------------+------------------------------------+
+; Number of entity instances ; 1                                  ;
+; Entity Instance            ; fifo:inst3|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                       ;
+;     -- lpm_width           ; 32                                 ;
+;     -- LPM_NUMWORDS        ; 512                                ;
+;     -- LPM_SHOWAHEAD       ; ON                                 ;
+;     -- USE_EAB             ; ON                                 ;
++----------------------------+------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 25                          ;
+; boundary_port         ; 24                          ;
 ; cycloneiii_ff         ; 1675                        ;
 ;     CLR               ; 5                           ;
-;     ENA               ; 1280                        ;
+;     ENA               ; 1281                        ;
 ;     ENA CLR           ; 5                           ;
 ;     ENA SCLR          ; 2                           ;
 ;     ENA SLD           ; 26                          ;
 ;     SCLR              ; 3                           ;
-;     plain             ; 354                         ;
-; cycloneiii_lcell_comb ; 7433                        ;
-;     arith             ; 4972                        ;
-;         2 data inputs ; 2235                        ;
-;         3 data inputs ; 2737                        ;
-;     normal            ; 2461                        ;
-;         0 data inputs ; 65                          ;
+;     plain             ; 353                         ;
+; cycloneiii_lcell_comb ; 8057                        ;
+;     arith             ; 5155                        ;
+;         2 data inputs ; 2242                        ;
+;         3 data inputs ; 2913                        ;
+;     normal            ; 2902                        ;
+;         0 data inputs ; 88                          ;
 ;         1 data inputs ; 80                          ;
-;         2 data inputs ; 173                         ;
-;         3 data inputs ; 387                         ;
-;         4 data inputs ; 1756                        ;
+;         2 data inputs ; 397                         ;
+;         3 data inputs ; 411                         ;
+;         4 data inputs ; 1926                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.80                       ;
-; Average LUT depth     ; 12.16                       ;
+; Max LUT depth         ; 67.30                       ;
+; Average LUT depth     ; 15.44                       ;
 +-----------------------+-----------------------------+
 
 
@@ -970,7 +1007,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -980,7 +1017,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Fri Mar 10 12:54:22 2017
+    Info: Processing started: Fri Mar 10 14:07:24 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
@@ -1012,53 +1049,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
     Info (12023): Found entity 1: fifo File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file sensor_select.v
     Info (12023): Found entity 1: sensor_select File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file DarkRoomControl.v
+    Info (12023): Found entity 1: DarkRoomControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 1
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
 Warning (275011): Block or symbol "NOT" of instance "pos_reset" overlaps another block or symbol
 Warning (275011): Block or symbol "SpiControl" of instance "inst11" overlaps another block or symbol
 Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
 Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
 Warning (10230): Verilog HDL assignment warning at SpiControl.v(41): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 41
-Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst25"
-Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst3"
-Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12130): Elaborated megafunction instantiation "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12133): Instantiated megafunction "fifo:inst3|scfifo:scfifo_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-    Info (12134): Parameter "add_ram_output_register" = "ON"
-    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
-    Info (12134): Parameter "lpm_numwords" = "512"
-    Info (12134): Parameter "lpm_showahead" = "ON"
-    Info (12134): Parameter "lpm_type" = "scfifo"
-    Info (12134): Parameter "lpm_width" = "32"
-    Info (12134): Parameter "lpm_widthu" = "9"
-    Info (12134): Parameter "overflow_checking" = "ON"
-    Info (12134): Parameter "underflow_checking" = "ON"
-    Info (12134): Parameter "use_eab" = "ON"
-Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_e041.tdf
-    Info (12023): Found entity 1: scfifo_e041 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 25
-Info (12128): Elaborating entity "scfifo_e041" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
-Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_1o31.tdf
-    Info (12023): Found entity 1: a_dpfifo_1o31 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_1o31" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 38
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pdh1.tdf
-    Info (12023): Found entity 1: altsyncram_pdh1 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_pdh1" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 46
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ms8.tdf
-    Info (12023): Found entity 1: cmpr_ms8 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:almost_full_comparer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 55
-Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:three_comparison" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 56
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
-    Info (12023): Found entity 1: cntr_1ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 57
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ea7.tdf
-    Info (12023): Found entity 1: cntr_ea7 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_ea7" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 58
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2ab.tdf
-    Info (12023): Found entity 1: cntr_2ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_2ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 59
-Info (12128): Elaborating entity "sensor_select" for hierarchy "sensor_select:inst16"
-Warning (10230): Verilog HDL assignment warning at sensor_select.v(22): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 22
-Info (10264): Verilog HDL Case Statement information at sensor_select.v(23): all case item expressions in this case statement are onehot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 23
-Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
+Info (12128): Elaborating entity "DarkRoomControl" for hierarchy "DarkRoomControl:inst1"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
@@ -1121,6 +1120,47 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst3"
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+Info (12130): Elaborated megafunction instantiation "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+Info (12133): Instantiated megafunction "fifo:inst3|scfifo:scfifo_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+    Info (12134): Parameter "add_ram_output_register" = "ON"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "512"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthu" = "9"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_e041.tdf
+    Info (12023): Found entity 1: scfifo_e041 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 25
+Info (12128): Elaborating entity "scfifo_e041" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_1o31.tdf
+    Info (12023): Found entity 1: a_dpfifo_1o31 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_1o31" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pdh1.tdf
+    Info (12023): Found entity 1: altsyncram_pdh1 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_pdh1" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ms8.tdf
+    Info (12023): Found entity 1: cmpr_ms8 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:almost_full_comparer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 55
+Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:three_comparison" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
+    Info (12023): Found entity 1: cntr_1ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf Line: 26
+Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ea7.tdf
+    Info (12023): Found entity 1: cntr_ea7 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_ea7" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2ab.tdf
+    Info (12023): Found entity 1: cntr_2ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf Line: 26
+Info (12128): Elaborating entity "cntr_2ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 59
+Info (12128): Elaborating entity "sensor_select" for hierarchy "sensor_select:inst16"
+Warning (10230): Verilog HDL assignment warning at sensor_select.v(22): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 22
+Info (10264): Verilog HDL Case Statement information at sensor_select.v(23): all case item expressions in this case statement are onehot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 23
+Info (12128): Elaborating entity "oneshot" for hierarchy "oneshot:inst18"
+Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst8"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst9"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst10"
@@ -1128,21 +1168,39 @@ Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst12"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst13"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst15"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DarkRoomControl:inst1|Mod0" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+Info (12130): Elaborated megafunction instantiation "DarkRoomControl:inst1|lpm_divide:Mod0" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+Info (12133): Instantiated megafunction "DarkRoomControl:inst1|lpm_divide:Mod0" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gcm.tdf
+    Info (12023): Found entity 1: lpm_divide_gcm File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u9f.tdf
+    Info (12023): Found entity 1: alt_u_div_u9f File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf Line: 23
 Info (13000): Registers with preset signals will power-up high File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 37
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8484 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Info (21057): Implemented 9108 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 8426 logic cells
+    Info (21061): Implemented 9051 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1100 megabytes
-    Info: Processing ended: Fri Mar 10 12:54:47 2017
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 1120 megabytes
+    Info: Processing ended: Fri Mar 10 14:07:51 2017
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:47
 
 

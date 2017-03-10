@@ -80,10 +80,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "button1",
-					"strict" : false
-				},
-				{
 					"name" : "sensor4_signal",
 					"strict" : false
 				},
