@@ -1552,6 +1552,49 @@ agreement for further details.
 	(annotation_block (parameter)(rect 2016 992 2225 1076))
 )
 (symbol
+	(rect 1496 1472 1680 1584)
+	(text "DarkRoomControl" (rect 5 0 91 10)(font "Arial" ))
+	(text "inst1" (rect 8 96 31 106)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 10)(font "Arial" ))
+		(text "clk" (rect 21 27 35 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "timer[31..0]" (rect 0 0 53 10)(font "Arial" ))
+		(text "timer[31..0]" (rect 21 43 74 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "command[31..0]" (rect 0 0 76 10)(font "Arial" ))
+		(text "command[31..0]" (rect 21 59 97 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "start" (rect 0 0 22 10)(font "Arial" ))
+		(text "start" (rect 145 27 167 37)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "state" (rect 0 0 24 10)(font "Arial" ))
+		(text "state" (rect 143 43 167 53)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 96))
+	)
+)
+(symbol
 	(rect 1472 1136 1712 1376)
 	(text "SpiControl" (rect 5 0 55 10)(font "Arial" ))
 	(text "inst11" (rect 8 224 37 234)(font "Arial" ))
@@ -1667,51 +1710,15 @@ agreement for further details.
 		(text "command[31..0]" (rect 155 91 219 101)(font "Arial" ))
 		(line (pt 240 96)(pt 224 96)(line_width 3))
 	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "active" (rect 0 0 29 10)(font "Arial" ))
+		(text "active" (rect 195 107 219 117)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112))
+	)
 	(drawing
 		(rectangle (rect 16 16 224 224))
-	)
-)
-(symbol
-	(rect 1496 1472 1680 1584)
-	(text "DarkRoomControl" (rect 5 0 91 10)(font "Arial" ))
-	(text "inst1" (rect 8 96 31 106)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 10)(font "Arial" ))
-		(text "clk" (rect 21 27 35 37)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "timer[31..0]" (rect 0 0 53 10)(font "Arial" ))
-		(text "timer[31..0]" (rect 21 43 74 53)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "command[31..0]" (rect 0 0 76 10)(font "Arial" ))
-		(text "command[31..0]" (rect 21 59 97 69)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "start" (rect 0 0 22 10)(font "Arial" ))
-		(text "start" (rect 145 27 163 37)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32))
-	)
-	(port
-		(pt 184 48)
-		(output)
-		(text "state" (rect 0 0 24 10)(font "Arial" ))
-		(text "state" (rect 143 43 163 53)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48))
-	)
-	(drawing
-		(rectangle (rect 16 16 168 96))
 	)
 )
 (connector
@@ -1920,11 +1927,6 @@ agreement for further details.
 (connector
 	(pt 2280 1120)
 	(pt 2240 1120)
-)
-(connector
-	(text "reset_n" (rect 2282 1064 2319 1076)(font "Intel Clear" ))
-	(pt 2336 1072)
-	(pt 2272 1072)
 )
 (connector
 	(text "reset_n" (rect 1866 1144 1903 1156)(font "Intel Clear" ))
@@ -2370,6 +2372,16 @@ agreement for further details.
 	(pt 1880 880)
 	(pt 1896 880)
 )
+(connector
+	(text "spi_active" (rect 1736 1240 1785 1252)(font "Intel Clear" ))
+	(pt 1712 1248)
+	(pt 1728 1248)
+)
+(connector
+	(text "spi_active" (rect 2274 1056 2323 1068)(font "Intel Clear" ))
+	(pt 2272 1072)
+	(pt 2336 1072)
+)
 (junction (pt 928 744))
 (junction (pt 1984 1120))
 (junction (pt 928 1000))
@@ -2377,4 +2389,4 @@ agreement for further details.
 (junction (pt 928 872))
 (junction (pt 1808 816))
 (text "GPIO2 pulled low" (rect 1912 1440 2017 1454)(font "Intel Clear" (font_size 8)))
-(text "this sets the ss_n(GPIO15) low on reset, which allows the esp to boot " (rect 2272 1032 2676 1046)(font "Intel Clear" (font_size 8)))
+(text "GPIO15 pulled low if spi not active, which allows the esp to boot " (rect 2272 1032 2649 1046)(font "Intel Clear" (font_size 8)))

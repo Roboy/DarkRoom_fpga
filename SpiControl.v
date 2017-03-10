@@ -16,7 +16,8 @@ module SpiControl (
 	output reg [7:0] Byte,
 	output reg wren,
 	output mpu_interrupt_out,
-	output reg [31:0]command
+	output reg [31:0]command,
+	output reg active
 );
 
 reg [7:0] numberOfBytesTransmitted;
@@ -60,12 +61,17 @@ always @(posedge clock, negedge reset_n) begin: SPICONTROL_SPILOGIC
 				next_value <= 0;
 			end
 			
-			if (start==1 && numberOfBytesTransmitted>=34 && fifo_content>8) begin
-				numberOfBytesTransmitted<= 0;
-				Byte <= 2;
-				wren <= 1;
-				next_value <= 1;
-			end
+			if ( numberOfBytesTransmitted>=34 ) begin
+				active <= 0;
+				if (start==1 && fifo_content>8) begin
+					numberOfBytesTransmitted<= 0;
+					Byte <= 2;
+					wren <= 1;
+					next_value <= 1;
+					active <= 1;
+				end
+			end 
+			
 		end else if (state==1) begin // read command register
 			write_ack_prev <= write_ack;
 			if( write_ack_prev==0 && write_ack == 1) begin
@@ -88,12 +94,18 @@ always @(posedge clock, negedge reset_n) begin: SPICONTROL_SPILOGIC
 				endcase
 			end
 			
-			if (start==1 && numberOfBytesTransmitted>=5) begin
-				numberOfBytesTransmitted<= 0;
-				Byte <= 0;
-				wren <= 1;
-				next_value <= 1;
-			end
+			
+			if ( numberOfBytesTransmitted>=5 ) begin
+				active <= 0;
+				if (start==1) begin
+					numberOfBytesTransmitted<= 0;
+					Byte <= 0;
+					wren <= 1;
+					next_value <= 1;
+					active <= 1;
+				end
+			end 
+			
 		end
 	end
 end
