@@ -18,6 +18,7 @@ clock_50 => fifo:inst3.clock
 button0 => pos_reset.IN0
 button0 => SpiControl:inst11.reset_n
 button0 => inst26.IN0
+button0 => and1.IN0
 button0 => and2.IN1
 spi_miso => spi_master:inst2.spi_miso_i
 MPU_6050_interrupt_in => SpiControl:inst11.mpu_interrupt_in

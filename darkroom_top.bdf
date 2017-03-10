@@ -2378,7 +2378,7 @@ agreement for further details.
 	(pt 1728 1248)
 )
 (connector
-	(text "spi_active" (rect 2274 1056 2323 1068)(font "Intel Clear" ))
+	(text "reset_n" (rect 2274 1056 2311 1068)(font "Intel Clear" ))
 	(pt 2272 1072)
 	(pt 2336 1072)
 )

@@ -1,5 +1,5 @@
 Flow report for darkroom_top
-Fri Mar 10 20:23:48 2017
+Fri Mar 10 20:44:53 2017
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 10 20:23:48 2017       ;
+; Flow Status                        ; Successful - Fri Mar 10 20:44:53 2017       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 8,724 / 22,320 ( 39 % )                     ;
-;     Total combinational functions  ; 8,065 / 22,320 ( 36 % )                     ;
-;     Dedicated logic registers      ; 1,676 / 22,320 ( 8 % )                      ;
-; Total registers                    ; 1676                                        ;
+; Total logic elements               ; 8,695 / 22,320 ( 39 % )                     ;
+;     Total combinational functions  ; 8,061 / 22,320 ( 36 % )                     ;
+;     Dedicated logic registers      ; 1,675 / 22,320 ( 8 % )                      ;
+; Total registers                    ; 1675                                        ;
 ; Total pins                         ; 24 / 154 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384 / 608,256 ( 3 % )                    ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/10/2017 20:22:35 ;
+; Start date & time ; 03/10/2017 20:43:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; darkroom_top        ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 264840331551678.148917375506103        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 264840331551678.148917499219593        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -101,10 +101,10 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 1080 MB             ; 00:00:44                           ;
-; Fitter               ; 00:00:43     ; 1.1                     ; 1336 MB             ; 00:01:23                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 844 MB              ; 00:00:02                           ;
-; Total                ; 00:01:10     ; --                      ; --                  ; 00:02:09                           ;
+; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 1080 MB             ; 00:00:51                           ;
+; Fitter               ; 00:01:01     ; 1.1                     ; 1336 MB             ; 00:01:43                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 843 MB              ; 00:00:03                           ;
+; Total                ; 00:01:36     ; --                      ; --                  ; 00:02:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
