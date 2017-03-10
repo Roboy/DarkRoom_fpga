@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at SpiControl.v(31): always construct contains both blocking and non-blocking assignments File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 31

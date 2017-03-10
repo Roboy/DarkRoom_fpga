@@ -11,7 +11,7 @@ entity lighthouse is
 		sensor: in std_logic;
 		timer: in std_logic_vector(31 downto 0);
 		sensor_value: out std_logic_vector(31 downto 0);
-		send_data: out std_logic);
+		data_available: out std_logic);
 end lighthouse;
  
 architecture Behavioral of lighthouse is
@@ -35,7 +35,7 @@ begin   process(sensor)
 			t_0 <= timer;
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
-			send_data <= '0';
+			data_available <= '0';
 			if(duration < 50) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
 			elsif (duration > (63 - 5)) and (duration < (94 + 5)) then -- this is a sync pulse, NOT skipping
@@ -94,7 +94,7 @@ begin   process(sensor)
 				sensor_value(10) <= rotor;
 				sensor_value(11) <= data;
 				sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
-				send_data <= '1'; -- we can send the data shortly after a sync
+				data_available <= '1'; -- we can send the data shortly after a sync
 			end if;
 		end if;
    end process;

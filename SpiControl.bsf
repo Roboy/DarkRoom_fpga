@@ -34,16 +34,16 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "data[255..0]" (rect 0 0 46 12)(font "Arial" ))
-		(text "data[255..0]" (rect 21 43 67 55)(font "Arial" ))
+		(text "data[31..0]" (rect 0 0 40 12)(font "Arial" ))
+		(text "data[31..0]" (rect 21 43 61 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "dataReady" (rect 0 0 44 12)(font "Arial" ))
-		(text "dataReady" (rect 21 59 65 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
+		(text "fifo_content[8..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "fifo_content[8..0]" (rect 21 59 88 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 0 80)
@@ -74,10 +74,17 @@ agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "send" (rect 0 0 18 12)(font "Arial" ))
+		(text "send" (rect 21 139 39 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
 		(pt 240 32)
 		(output)
-		(text "byte[7..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "byte[7..0]" (rect 182 27 219 39)(font "Arial" ))
+		(text "Byte[7..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "Byte[7..0]" (rect 181 27 219 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(port
@@ -90,9 +97,16 @@ agreement for further details.
 	(port
 		(pt 240 64)
 		(output)
-		(text "mpu_interrupt_out" (rect 0 0 73 12)(font "Arial" ))
-		(text "mpu_interrupt_out" (rect 146 59 219 71)(font "Arial" ))
+		(text "fifo_read" (rect 0 0 36 12)(font "Arial" ))
+		(text "fifo_read" (rect 183 59 219 71)(font "Arial" ))
 		(line (pt 240 64)(pt 224 64)(line_width 1))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "mpu_interrupt_out" (rect 0 0 73 12)(font "Arial" ))
+		(text "mpu_interrupt_out" (rect 146 75 219 87)(font "Arial" ))
+		(line (pt 240 80)(pt 224 80)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 224 160)(line_width 1))

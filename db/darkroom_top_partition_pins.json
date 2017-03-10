@@ -64,14 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sensor6_signal",
-					"strict" : false
-				},
-				{
-					"name" : "sensor5_signal",
-					"strict" : false
-				},
-				{
 					"name" : "sensor3_signal",
 					"strict" : false
 				},
@@ -88,7 +80,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "button1",
+					"strict" : false
+				},
+				{
 					"name" : "sensor4_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor5_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor6_signal",
 					"strict" : false
 				},
 				{

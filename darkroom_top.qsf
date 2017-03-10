@@ -68,19 +68,6 @@ set_location_assignment PIN_A11 -to LED[3]
 set_location_assignment PIN_D1 -to LED[4]
 set_location_assignment PIN_F3 -to LED[5]
 set_location_assignment PIN_B1 -to LED[6]
-set_global_assignment -name VHDL_FILE spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
-set_global_assignment -name VERILOG_FILE SpiControl.v
-set_global_assignment -name VHDL_FILE sensor_mux.vhd
-set_global_assignment -name VHDL_FILE counter.vhd
-set_global_assignment -name VHDL_FILE lighthouse.vhd
-set_global_assignment -name BDF_FILE darkroom_top.bdf
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_global_assignment -name SDC_FILE output_files/SDC1.sdc
-set_global_assignment -name VERILOG_FILE simple_counter.v
-set_global_assignment -name CDF_FILE output_files/darkroom_top.cdf
-set_global_assignment -name VERILOG_FILE oneshot.v
-set_global_assignment -name VERILOG_FILE ConcatenateSensorValues.v
 set_location_assignment PIN_A6 -to sensor1_signal
 set_location_assignment PIN_D6 -to sensor2_signal
 set_location_assignment PIN_C6 -to sensor3_signal
@@ -103,4 +90,19 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MPU_6050_interrupt_in
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MPU_6050_interrupt_out
+set_global_assignment -name VHDL_FILE spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
+set_global_assignment -name VERILOG_FILE SpiControl.v
+set_global_assignment -name VHDL_FILE sensor_mux.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE lighthouse.vhd
+set_global_assignment -name BDF_FILE darkroom_top.bdf
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name SDC_FILE output_files/SDC1.sdc
+set_global_assignment -name VERILOG_FILE simple_counter.v
+set_global_assignment -name CDF_FILE output_files/darkroom_top.cdf
+set_global_assignment -name VERILOG_FILE oneshot.v
+set_global_assignment -name VERILOG_FILE ConcatenateSensorValues.v
+set_global_assignment -name QIP_FILE fifo.qip
+set_global_assignment -name VERILOG_FILE sensor_select.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -32,3 +32,15 @@ This may create a conflict of design files and/or lead to undesirable side
 effects.
 
 Is it OK to continue file generation?
+
+/home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.v
+
+Mar 09 03PM:16:39>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+sensor_mux.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
