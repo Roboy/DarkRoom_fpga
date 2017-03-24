@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Mar 10 20:44:45 2017
+Fitter Status : Successful - Thu Mar 23 18:37:44 2017
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 Revision Name : darkroom_top
 Top-level Entity Name : darkroom_top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 8,695 / 22,320 ( 39 % )
-    Total combinational functions : 8,061 / 22,320 ( 36 % )
+Total logic elements : 10,402 / 22,320 ( 47 % )
+    Total combinational functions : 9,774 / 22,320 ( 44 % )
     Dedicated logic registers : 1,675 / 22,320 ( 8 % )
 Total registers : 1675
 Total pins : 24 / 154 ( 16 % )
