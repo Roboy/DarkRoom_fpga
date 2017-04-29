@@ -96,6 +96,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "sensor8_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor9_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor10_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor11_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor12_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor13_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor14_signal",
+					"strict" : false
+				},
+				{
+					"name" : "sensor15_signal",
+					"strict" : false
+				},
+				{
 					"name" : "spi_miso",
 					"strict" : false
 				}
