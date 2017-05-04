@@ -23,12 +23,11 @@ architecture Behavioral of lighthouse is
 	signal lighthouse: std_logic;
 	signal start_valid_sync 	: std_logic_vector(31 downto 0);
 	
-
-	
 begin   process(sensor)
 	variable duration: std_logic_vector(31 downto 0);
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
+	variable offset: unsigned(3 downto 0);
    begin
 		sensor_value(8 downto 0) <= sensorID;	
 		if rising_edge(sensor) then
@@ -38,7 +37,7 @@ begin   process(sensor)
 			data_available <= '0';
 			if(duration < 50+5) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
-			elsif (duration > (63+5 - 5)) and (duration < (94+5 + 5)) then -- this is a sync pulse, NOT skipping
+			elsif (duration > (63+std_logic_vector(offset) - 5)) and (duration < (94+std_logic_vector(offset) + 5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
 				if(start_valid_sync = 0) then
@@ -53,33 +52,35 @@ begin   process(sensor)
 					stop_valid_sync := (others => '0');
 					if((sync_gap_duration - 8333 ) > 300 ) then
 						lighthouse <= '1';
+						offset := to_unsigned(8, 4);
 					elsif ((sync_gap_duration - 8333 ) < -300 ) then
 						lighthouse <= '0';
+						offset := to_unsigned(3, 4);
 					end if;
 				end if;
 				
-				if(abs(duration - 63+5) < 5) then
+				if(abs(duration - 63+std_logic_vector(offset)) < 5) then
 					rotor <= '0';
 					data  <= '0';
-				elsif(abs(duration - 73+5) < 5) then
+				elsif(abs(duration - 73+std_logic_vector(offset)) < 5) then
 					rotor <= '1';
 					data  <= '0';
-				elsif(abs(duration - 83+5) < 5) then
+				elsif(abs(duration - 83+std_logic_vector(offset)) < 5) then
 					rotor <= '0';
 					data  <= '1';
-				elsif(abs(duration - 94+5) < 5) then
+				elsif(abs(duration - 94+std_logic_vector(offset)) < 5) then
 					rotor <= '1';
 					data  <= '1';
-				elsif(abs(duration - 104+5) < 5) then
+				elsif(abs(duration - 104+std_logic_vector(offset)) < 5) then
 					rotor <= '0';
 					data  <= '0';
-				elsif(abs(duration - 115+5) < 5) then
+				elsif(abs(duration - 115+std_logic_vector(offset)) < 5) then
 					rotor <= '1';
 					data  <= '0';
-				elsif(abs(duration - 125+5) < 5) then
+				elsif(abs(duration - 125+std_logic_vector(offset)) < 5) then
 					rotor <= '0';
 					data  <= '1';
-				elsif(abs(duration - 135+5) < 5) then
+				elsif(abs(duration - 135+std_logic_vector(offset)) < 5) then
 					rotor <= '1';
 					data  <= '1';
 				end if;

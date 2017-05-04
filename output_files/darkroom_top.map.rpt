@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Sun Apr 30 23:13:22 2017
+Thu May  4 12:33:33 2017
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -20,7 +20,7 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram
- 15. Parameter Settings for User Entity Instance: spi_master:inst2
+ 15. Parameter Settings for User Entity Instance: spi_master:spiinst
  16. Parameter Settings for User Entity Instance: counter:inst33
  17. Parameter Settings for User Entity Instance: pll:inst|altpll:altpll_component
  18. Parameter Settings for User Entity Instance: fifo:inst3|scfifo:scfifo_component
@@ -72,15 +72,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 30 23:13:22 2017       ;
+; Analysis & Synthesis Status        ; Successful - Thu May  4 12:33:33 2017       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 19,021                                      ;
-;     Total combinational functions  ; 17,087                                      ;
-;     Dedicated logic registers      ; 3,188                                       ;
-; Total registers                    ; 3188                                        ;
+; Total logic elements               ; 20,287                                      ;
+;     Total combinational functions  ; 18,353                                      ;
+;     Dedicated logic registers      ; 3,220                                       ;
+; Total registers                    ; 3220                                        ;
 ; Total pins                         ; 32                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
@@ -181,7 +181,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -195,49 +195,49 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
-+------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                  ; Library ;
-+------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ;         ;
-; SpiControl.v                                               ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v                                               ;         ;
-; counter.vhd                                                ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd                                                ;         ;
-; lighthouse.vhd                                             ; yes             ; User VHDL File                     ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                             ;         ;
-; darkroom_top.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                           ;         ;
-; pll.v                                                      ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                      ;         ;
-; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
-; fifo.v                                                     ; yes             ; User Wizard-Generated File         ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                                     ;         ;
-; sensor_select.v                                            ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v                                            ;         ;
-; DarkRoomControl.v                                          ; yes             ; User Verilog HDL File              ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v                                          ;         ;
-; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
-; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
-; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
-; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
-; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
-; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
-; scfifo.tdf                                                 ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                          ;         ;
-; a_regfifo.inc                                              ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                       ;         ;
-; a_dpfifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                        ;         ;
-; a_i2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                        ;         ;
-; a_fffifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                        ;         ;
-; a_f2fifo.inc                                               ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                        ;         ;
-; db/scfifo_e041.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf                                         ;         ;
-; db/a_dpfifo_1o31.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf                                       ;         ;
-; db/altsyncram_pdh1.tdf                                     ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf                                     ;         ;
-; db/cmpr_ms8.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf                                            ;         ;
-; db/cntr_1ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                            ;         ;
-; db/cntr_ea7.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf                                            ;         ;
-; db/cntr_2ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf                                            ;         ;
-; lpm_divide.tdf                                             ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/lpm_divide.tdf                                      ;         ;
-; abs_divider.inc                                            ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/abs_divider.inc                                     ;         ;
-; sign_div_unsign.inc                                        ; yes             ; Megafunction                       ; /home/letrend/altera/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                 ;         ;
-; db/lpm_divide_gcm.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf                                      ;         ;
-; db/sign_div_unsign_5nh.tdf                                 ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf                                 ;         ;
-; db/alt_u_div_u9f.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf                                       ;         ;
-; db/add_sub_7pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf                                         ;         ;
-; db/add_sub_8pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf                                         ;         ;
-+------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                ; Library ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ; yes             ; User VHDL File                     ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd ;         ;
+; SpiControl.v                                               ; yes             ; User Verilog HDL File              ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v                                               ;         ;
+; counter.vhd                                                ; yes             ; User VHDL File                     ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd                                                ;         ;
+; lighthouse.vhd                                             ; yes             ; User VHDL File                     ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd                                             ;         ;
+; darkroom_top.bdf                                           ; yes             ; User Block Diagram/Schematic File  ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/darkroom_top.bdf                                           ;         ;
+; pll.v                                                      ; yes             ; User Wizard-Generated File         ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/pll.v                                                      ;         ;
+; oneshot.v                                                  ; yes             ; User Verilog HDL File              ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v                                                  ;         ;
+; fifo.v                                                     ; yes             ; User Wizard-Generated File         ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v                                                     ;         ;
+; sensor_select.v                                            ; yes             ; User Verilog HDL File              ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v                                            ;         ;
+; DarkRoomControl.v                                          ; yes             ; User Verilog HDL File              ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v                                          ;         ;
+; altpll.tdf                                                 ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                                          ;         ;
+; aglobal161.inc                                             ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc                                      ;         ;
+; stratix_pll.inc                                            ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc                                     ;         ;
+; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc                                   ;         ;
+; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                   ;         ;
+; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v                                            ;         ;
+; scfifo.tdf                                                 ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf                                          ;         ;
+; a_regfifo.inc                                              ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/a_regfifo.inc                                       ;         ;
+; a_dpfifo.inc                                               ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/a_dpfifo.inc                                        ;         ;
+; a_i2fifo.inc                                               ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/a_i2fifo.inc                                        ;         ;
+; a_fffifo.inc                                               ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/a_fffifo.inc                                        ;         ;
+; a_f2fifo.inc                                               ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/a_f2fifo.inc                                        ;         ;
+; db/scfifo_e041.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf                                         ;         ;
+; db/a_dpfifo_1o31.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf                                       ;         ;
+; db/altsyncram_pdh1.tdf                                     ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf                                     ;         ;
+; db/cmpr_ms8.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf                                            ;         ;
+; db/cntr_1ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf                                            ;         ;
+; db/cntr_ea7.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf                                            ;         ;
+; db/cntr_2ab.tdf                                            ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf                                            ;         ;
+; lpm_divide.tdf                                             ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/lpm_divide.tdf                                      ;         ;
+; abs_divider.inc                                            ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/abs_divider.inc                                     ;         ;
+; sign_div_unsign.inc                                        ; yes             ; Megafunction                       ; /home/roboy/altera/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                 ;         ;
+; db/lpm_divide_gcm.tdf                                      ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf                                      ;         ;
+; db/sign_div_unsign_5nh.tdf                                 ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf                                 ;         ;
+; db/alt_u_div_u9f.tdf                                       ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf                                       ;         ;
+; db/add_sub_7pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf                                         ;         ;
+; db/add_sub_8pc.tdf                                         ; yes             ; Auto-Generated Megafunction        ; /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf                                         ;         ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -245,20 +245,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 19,021         ;
+; Estimated Total logic elements              ; 20,287         ;
 ;                                             ;                ;
-; Total combinational functions               ; 17087          ;
+; Total combinational functions               ; 18353          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 3718           ;
-;     -- 3 input functions                    ; 6601           ;
-;     -- <=2 input functions                  ; 6768           ;
+;     -- 4 input functions                    ; 4188           ;
+;     -- 3 input functions                    ; 8491           ;
+;     -- <=2 input functions                  ; 5674           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 5660           ;
-;     -- arithmetic mode                      ; 11427          ;
+;     -- normal mode                          ; 6302           ;
+;     -- arithmetic mode                      ; 12051          ;
 ;                                             ;                ;
-; Total registers                             ; 3188           ;
-;     -- Dedicated logic registers            ; 3188           ;
+; Total registers                             ; 3220           ;
+;     -- Dedicated logic registers            ; 3220           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 32             ;
@@ -271,8 +271,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
 ; Maximum fan-out                             ; 197            ;
-; Total fan-out                               ; 57442          ;
-; Average fan-out                             ; 2.82           ;
+; Total fan-out                               ; 62932          ;
+; Average fan-out                             ; 2.90           ;
 +---------------------------------------------+----------------+
 
 
@@ -281,7 +281,7 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |darkroom_top                             ; 17087 (3)           ; 3188 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 32   ; 0            ; |darkroom_top                                                                                                                       ; darkroom_top        ; work         ;
+; |darkroom_top                             ; 18353 (3)           ; 3220 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 32   ; 0            ; |darkroom_top                                                                                                                       ; darkroom_top        ; work         ;
 ;    |DarkRoomControl:inst1|                ; 570 (11)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1                                                                                                 ; DarkRoomControl     ; work         ;
 ;       |lpm_divide:Mod0|                   ; 559 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_gcm:auto_generated|  ; 559 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated                                                   ; lpm_divide_gcm      ; work         ;
@@ -289,30 +289,30 @@ agreement for further details.
 ;                |alt_u_div_u9f:divider|    ; 559 (559)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
 ;    |SpiControl:inst11|                    ; 56 (56)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                                                                                     ; SpiControl          ; work         ;
 ;    |counter:inst33|                       ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                                                        ; counter             ; work         ;
-;    |fifo:inst3|                           ; 73 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3                                                                                                            ; fifo                ; work         ;
-;       |scfifo:scfifo_component|           ; 73 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component                                                                                    ; scfifo              ; work         ;
-;          |scfifo_e041:auto_generated|     ; 73 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated                                                         ; scfifo_e041         ; work         ;
-;             |a_dpfifo_1o31:dpfifo|        ; 73 (44)             ; 43 (17)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo                                    ; a_dpfifo_1o31       ; work         ;
+;    |fifo:inst3|                           ; 78 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3                                                                                                            ; fifo                ; work         ;
+;       |scfifo:scfifo_component|           ; 78 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component                                                                                    ; scfifo              ; work         ;
+;          |scfifo_e041:auto_generated|     ; 78 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated                                                         ; scfifo_e041         ; work         ;
+;             |a_dpfifo_1o31:dpfifo|        ; 78 (49)             ; 43 (17)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo                                    ; a_dpfifo_1o31       ; work         ;
 ;                |altsyncram_pdh1:FIFOram|  ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram            ; altsyncram_pdh1     ; work         ;
 ;                |cntr_1ab:rd_ptr_msb|      ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb                ; cntr_1ab            ; work         ;
 ;                |cntr_2ab:wr_ptr|          ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr                    ; cntr_2ab            ; work         ;
 ;                |cntr_ea7:usedw_counter|   ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter             ; cntr_ea7            ; work         ;
-;    |lighthouse:inst10|                    ; 983 (983)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst12|                    ; 1027 (1027)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst13|                    ; 985 (985)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst15|                    ; 1004 (1004)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst27|                    ; 998 (998)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst27                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst29|                    ; 1007 (1007)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst29                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst31|                    ; 1014 (1014)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst31                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst34|                    ; 1002 (1002)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst34                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst36|                    ; 986 (986)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst36                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst38|                    ; 987 (987)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst38                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst40|                    ; 998 (998)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst40                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst42|                    ; 994 (994)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst42                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst6|                     ; 986 (986)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst7|                     ; 1000 (1000)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst8|                     ; 992 (992)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst9|                     ; 999 (999)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst10|                    ; 1083 (1083)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst12|                    ; 1080 (1080)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst13|                    ; 1086 (1086)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst15|                    ; 1069 (1069)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst27|                    ; 1089 (1089)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst27                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst29|                    ; 1092 (1092)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst29                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst31|                    ; 1076 (1076)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst31                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst34|                    ; 1064 (1064)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst34                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst36|                    ; 1095 (1095)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst36                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst38|                    ; 1060 (1060)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst38                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst40|                    ; 1047 (1047)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst40                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst42|                    ; 1078 (1078)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst42                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst6|                     ; 1076 (1076)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst7|                     ; 1072 (1072)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst8|                     ; 1079 (1079)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst9|                     ; 1078 (1078)         ; 189 (189)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                                      ; lighthouse          ; work         ;
 ;    |oneshot:inst17|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst18|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst18                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst19|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst19                                                                                                        ; oneshot             ; work         ;
@@ -324,16 +324,16 @@ agreement for further details.
 ;    |oneshot:inst25|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst25                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst28|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst28                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst30|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst30                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst32|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst32                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst32|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst32                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst35|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst35                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst37|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst37                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst39|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst39                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst39|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst39                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst41|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst41                                                                                                        ; oneshot             ; work         ;
 ;    |pll:inst|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                                                              ; pll                 ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                                                      ; altpll              ; work         ;
 ;          |pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                            ; pll_altpll          ; work         ;
-;    |sensor_select:inst43|                 ; 336 (336)           ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst43                                                                                                  ; sensor_select       ; work         ;
-;    |spi_master:inst2|                     ; 40 (40)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                                                                                      ; spi_master          ; work         ;
+;    |sensor_select:inst43|                 ; 335 (335)           ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst43                                                                                                  ; sensor_select       ; work         ;
+;    |spi_master:spiinst|                   ; 40 (40)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:spiinst                                                                                                    ; spi_master          ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -363,10 +363,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                               ; Reason for Removal                                   ;
 +---------------------------------------------+------------------------------------------------------+
 ; DarkRoomControl:inst1|state                 ; Stuck at GND due to stuck port data_in               ;
-; spi_master:inst2|core_clk                   ; Merged with spi_master:inst2|core_n_clk              ;
+; spi_master:spiinst|core_clk                 ; Merged with spi_master:spiinst|core_n_clk            ;
+; lighthouse:inst8|offset[1]                  ; Merged with lighthouse:inst8|offset[0]               ;
+; lighthouse:inst7|offset[1]                  ; Merged with lighthouse:inst7|offset[0]               ;
+; lighthouse:inst6|offset[1]                  ; Merged with lighthouse:inst6|offset[0]               ;
 ; sensor_select:inst43|sensor_value_out[5..8] ; Merged with sensor_select:inst43|sensor_value_out[4] ;
+; lighthouse:inst9|offset[1]                  ; Merged with lighthouse:inst9|offset[0]               ;
+; lighthouse:inst10|offset[1]                 ; Merged with lighthouse:inst10|offset[0]              ;
+; lighthouse:inst12|offset[1]                 ; Merged with lighthouse:inst12|offset[0]              ;
+; lighthouse:inst13|offset[1]                 ; Merged with lighthouse:inst13|offset[0]              ;
+; lighthouse:inst15|offset[1]                 ; Merged with lighthouse:inst15|offset[0]              ;
+; lighthouse:inst27|offset[1]                 ; Merged with lighthouse:inst27|offset[0]              ;
+; lighthouse:inst29|offset[1]                 ; Merged with lighthouse:inst29|offset[0]              ;
+; lighthouse:inst31|offset[1]                 ; Merged with lighthouse:inst31|offset[0]              ;
+; lighthouse:inst34|offset[1]                 ; Merged with lighthouse:inst34|offset[0]              ;
+; lighthouse:inst36|offset[1]                 ; Merged with lighthouse:inst36|offset[0]              ;
+; lighthouse:inst38|offset[1]                 ; Merged with lighthouse:inst38|offset[0]              ;
+; lighthouse:inst40|offset[1]                 ; Merged with lighthouse:inst40|offset[0]              ;
+; lighthouse:inst42|offset[1]                 ; Merged with lighthouse:inst42|offset[0]              ;
+; lighthouse:inst42|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst40|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst38|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst36|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst34|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst31|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst29|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst27|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst15|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst13|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst12|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst10|offset[2]                 ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst9|offset[2]                  ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst8|offset[2]                  ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst7|offset[2]                  ; Stuck at GND due to stuck port data_in               ;
+; lighthouse:inst6|offset[2]                  ; Stuck at GND due to stuck port data_in               ;
 ; sensor_select:inst43|sensor_value_out[4]    ; Stuck at GND due to stuck port data_in               ;
-; Total Number of Removed Registers = 7       ;                                                      ;
+; Total Number of Removed Registers = 39      ;                                                      ;
 +---------------------------------------------+------------------------------------------------------+
 
 
@@ -375,12 +407,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3188  ;
+; Total registers                              ; 3220  ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2539  ;
+; Number of registers using Clock Enable       ; 2555  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -390,12 +422,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
-; spi_master:inst2|core_n_clk                   ; 4       ;
+; spi_master:spiinst|core_n_clk                 ; 4       ;
 ; SpiControl:inst11|numberOfBytesTransmitted[1] ; 15      ;
 ; SpiControl:inst11|numberOfBytesTransmitted[5] ; 5       ;
-; spi_master:inst2|di_req_o_reg                 ; 3       ;
-; spi_master:inst2|spi_2x_ce                    ; 3       ;
-; spi_master:inst2|core_n_ce                    ; 2       ;
+; spi_master:spiinst|di_req_o_reg               ; 3       ;
+; spi_master:spiinst|spi_2x_ce                  ; 3       ;
+; spi_master:spiinst|core_n_ce                  ; 2       ;
 ; Total number of inverted registers = 6        ;         ;
 +-----------------------------------------------+---------+
 
@@ -405,12 +437,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|state_reg[2]                 ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[2] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|next_value                  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:inst2|sh_reg[2]                    ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|Byte[4]                     ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|data                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|spi_master:spiinst|state_reg[1]               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|wren                        ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |darkroom_top|spi_master:spiinst|sh_reg[4]                  ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|Byte[5]                     ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst6|rotor                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst7|data                         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst8|rotor                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst9|rotor                        ;
@@ -418,17 +450,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst12|rotor                       ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst13|rotor                       ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst15|rotor                       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst27|data                        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst29|data                        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst31|data                        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst27|rotor                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst29|rotor                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst31|rotor                       ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst34|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst36|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst38|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst40|data                        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |darkroom_top|lighthouse:inst42|data                        ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |darkroom_top|sensor_select:inst43|sensor_value_out[0]      ;
-; 17:1               ; 23 bits   ; 253 LEs       ; 253 LEs              ; 0 LEs                  ; Yes        ; |darkroom_top|sensor_select:inst43|sensor_value_out[31]     ;
+; 17:1               ; 23 bits   ; 253 LEs       ; 253 LEs              ; 0 LEs                  ; Yes        ; |darkroom_top|sensor_select:inst43|sensor_value_out[19]     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted[5] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst8|offset                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst7|offset                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst6|offset                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst9|offset                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst10|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst12|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst13|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst15|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst27|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst29|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst31|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst34|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst36|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst38|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst40|offset                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |darkroom_top|lighthouse:inst42|offset                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -441,17 +489,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: spi_master:inst2 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; n              ; 8     ; Signed Integer                       ;
-; cpol           ; '0'   ; Enumerated                           ;
-; cpha           ; '1'   ; Enumerated                           ;
-; prefetch       ; 2     ; Signed Integer                       ;
-; spi_2x_clk_div ; 10    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_master:spiinst ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n              ; 8     ; Signed Integer                         ;
+; cpol           ; '0'   ; Enumerated                             ;
+; cpha           ; '1'   ; Enumerated                             ;
+; prefetch       ; 2     ; Signed Integer                         ;
+; spi_2x_clk_div ; 10    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1089,29 +1137,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 32                          ;
-; cycloneiii_ff         ; 3188                        ;
+; cycloneiii_ff         ; 3220                        ;
 ;     CLR               ; 5                           ;
-;     ENA               ; 2506                        ;
+;     ENA               ; 2522                        ;
 ;     ENA CLR           ; 5                           ;
 ;     ENA SCLR          ; 2                           ;
 ;     ENA SLD           ; 26                          ;
 ;     SCLR              ; 3                           ;
-;     plain             ; 641                         ;
-; cycloneiii_lcell_comb ; 17090                       ;
-;     arith             ; 11427                       ;
-;         2 data inputs ; 5786                        ;
-;         3 data inputs ; 5641                        ;
-;     normal            ; 5663                        ;
+;     plain             ; 657                         ;
+; cycloneiii_lcell_comb ; 18356                       ;
+;     arith             ; 12051                       ;
+;         2 data inputs ; 4490                        ;
+;         3 data inputs ; 7561                        ;
+;     normal            ; 6305                        ;
 ;         0 data inputs ; 152                         ;
-;         1 data inputs ; 202                         ;
-;         2 data inputs ; 631                         ;
-;         3 data inputs ; 960                         ;
-;         4 data inputs ; 3718                        ;
+;         1 data inputs ; 154                         ;
+;         2 data inputs ; 881                         ;
+;         3 data inputs ; 930                         ;
+;         4 data inputs ; 4188                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 67.30                       ;
-; Average LUT depth     ; 14.29                       ;
+; Average LUT depth     ; 24.77                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1120,7 +1168,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:21     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -1130,54 +1178,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sun Apr 30 23:12:38 2017
+    Info: Processing started: Thu May  4 12:33:04 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
-Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 2 design units, including 1 entities, in source file spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd
-    Info (12022): Found design unit 1: spi_master-rtl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
-    Info (12023): Found entity 1: spi_master File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
+    Info (12022): Found design unit 1: spi_master-rtl File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 215
+    Info (12023): Found entity 1: spi_master File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/spi_master_slave/trunk/rtl/spi_master_slave/spi_master.vhd Line: 173
 Info (12021): Found 1 design units, including 1 entities, in source file SpiControl.v
-    Info (12023): Found entity 1: SpiControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 3
+    Info (12023): Found entity 1: SpiControl File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file sensor_mux.vhd
-    Info (12022): Found design unit 1: sensor_mux-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 30
-    Info (12023): Found entity 1: sensor_mux File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 6
+    Info (12022): Found design unit 1: sensor_mux-Behavioral File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 30
+    Info (12023): Found entity 1: sensor_mux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_mux.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: counter-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 14
-    Info (12023): Found entity 1: counter File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 6
+    Info (12022): Found design unit 1: counter-Behavioral File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 14
+    Info (12023): Found entity 1: counter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/counter.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lighthouse.vhd
-    Info (12022): Found design unit 1: lighthouse-Behavioral File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 17
-    Info (12023): Found entity 1: lighthouse File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 6
+    Info (12022): Found design unit 1: lighthouse-Behavioral File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 17
+    Info (12023): Found entity 1: lighthouse File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/lighthouse.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file darkroom_top.bdf
     Info (12023): Found entity 1: darkroom_top
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: pll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 40
+    Info (12023): Found entity 1: pll File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file simple_counter.v
-    Info (12023): Found entity 1: simple_counter File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/simple_counter.v Line: 3
+    Info (12023): Found entity 1: simple_counter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/simple_counter.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file oneshot.v
-    Info (12023): Found entity 1: oneshot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v Line: 1
+    Info (12023): Found entity 1: oneshot File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/oneshot.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ConcatenateSensorValues.v
-    Info (12023): Found entity 1: ConcatenateSensorValues File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 3
+    Info (12023): Found entity 1: ConcatenateSensorValues File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/ConcatenateSensorValues.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
-    Info (12023): Found entity 1: fifo File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 40
+    Info (12023): Found entity 1: fifo File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file sensor_select.v
-    Info (12023): Found entity 1: sensor_select File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 1
+    Info (12023): Found entity 1: sensor_select File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file DarkRoomControl.v
-    Info (12023): Found entity 1: DarkRoomControl File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 1
+    Info (12023): Found entity 1: DarkRoomControl File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 1
 Info (12127): Elaborating entity "darkroom_top" for the top level hierarchy
+Warning (275011): Block or symbol "AND2" of instance "gpio2and" overlaps another block or symbol
+Warning (275011): Block or symbol "spi_master" of instance "spiinst" overlaps another block or symbol
 Warning (275011): Block or symbol "NOT" of instance "pos_reset" overlaps another block or symbol
-Warning (275011): Block or symbol "AND2" of instance "and2" overlaps another block or symbol
-Warning (275011): Block or symbol "spi_master" of instance "inst2" overlaps another block or symbol
-Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:inst2"
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:spiinst"
 Info (12128): Elaborating entity "SpiControl" for hierarchy "SpiControl:inst11"
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(41): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 41
-Warning (10230): Verilog HDL assignment warning at SpiControl.v(79): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 79
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(41): truncated value with size 32 to match size of target (8) File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 41
+Warning (10230): Verilog HDL assignment warning at SpiControl.v(79): truncated value with size 32 to match size of target (8) File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 79
 Info (12128): Elaborating entity "DarkRoomControl" for hierarchy "DarkRoomControl:inst1"
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst33"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
-Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
-Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
+Info (12128): Elaborating entity "altpll" for hierarchy "pll:inst|altpll:altpll_component" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
+Info (12130): Elaborated megafunction instantiation "pll:inst|altpll:altpll_component" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
+Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with the following parameter: File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "50"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1233,12 +1280,12 @@ Info (12133): Instantiated megafunction "pll:inst|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: pll_altpll File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: pll_altpll File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/pll_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst|altpll:altpll_component|pll_altpll:auto_generated" File: /home/roboy/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "fifo" for hierarchy "fifo:inst3"
-Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12130): Elaborated megafunction instantiation "fifo:inst3|scfifo:scfifo_component" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
-Info (12133): Instantiated megafunction "fifo:inst3|scfifo:scfifo_component" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:inst3|scfifo:scfifo_component" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+Info (12130): Elaborated megafunction instantiation "fifo:inst3|scfifo:scfifo_component" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
+Info (12133): Instantiated megafunction "fifo:inst3|scfifo:scfifo_component" with the following parameter: File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fifo.v Line: 83
     Info (12134): Parameter "add_ram_output_register" = "ON"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_numwords" = "512"
@@ -1250,30 +1297,30 @@ Info (12133): Instantiated megafunction "fifo:inst3|scfifo:scfifo_component" wit
     Info (12134): Parameter "underflow_checking" = "ON"
     Info (12134): Parameter "use_eab" = "ON"
 Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_e041.tdf
-    Info (12023): Found entity 1: scfifo_e041 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 25
-Info (12128): Elaborating entity "scfifo_e041" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated" File: /home/letrend/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
+    Info (12023): Found entity 1: scfifo_e041 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 25
+Info (12128): Elaborating entity "scfifo_e041" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated" File: /home/roboy/altera/16.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_1o31.tdf
-    Info (12023): Found entity 1: a_dpfifo_1o31 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_1o31" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 38
+    Info (12023): Found entity 1: a_dpfifo_1o31 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_1o31" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/scfifo_e041.tdf Line: 38
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pdh1.tdf
-    Info (12023): Found entity 1: altsyncram_pdh1 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_pdh1" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 46
+    Info (12023): Found entity 1: altsyncram_pdh1 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/altsyncram_pdh1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_pdh1" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|altsyncram_pdh1:FIFOram" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ms8.tdf
-    Info (12023): Found entity 1: cmpr_ms8 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:almost_full_comparer" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 55
-Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:three_comparison" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 56
+    Info (12023): Found entity 1: cmpr_ms8 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cmpr_ms8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:almost_full_comparer" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 55
+Info (12128): Elaborating entity "cmpr_ms8" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cmpr_ms8:three_comparison" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
-    Info (12023): Found entity 1: cntr_1ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 57
+    Info (12023): Found entity 1: cntr_1ab File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_1ab.tdf Line: 26
+Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ea7.tdf
-    Info (12023): Found entity 1: cntr_ea7 File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_ea7" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 58
+    Info (12023): Found entity 1: cntr_ea7 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_ea7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_ea7" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 58
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2ab.tdf
-    Info (12023): Found entity 1: cntr_2ab File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_2ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 59
+    Info (12023): Found entity 1: cntr_2ab File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/cntr_2ab.tdf Line: 26
+Info (12128): Elaborating entity "cntr_2ab" for hierarchy "fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/a_dpfifo_1o31.tdf Line: 59
 Info (12128): Elaborating entity "sensor_select" for hierarchy "sensor_select:inst43"
-Warning (10230): Verilog HDL assignment warning at sensor_select.v(29): truncated value with size 32 to match size of target (8) File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 29
-Info (10264): Verilog HDL Case Statement information at sensor_select.v(30): all case item expressions in this case statement are onehot File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 30
+Warning (10230): Verilog HDL assignment warning at sensor_select.v(29): truncated value with size 32 to match size of target (8) File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 29
+Info (10264): Verilog HDL Case Statement information at sensor_select.v(30): all case item expressions in this case statement are onehot File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/sensor_select.v Line: 30
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst6"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst7"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst8"
@@ -1292,41 +1339,41 @@ Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst38"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst40"
 Info (12128): Elaborating entity "lighthouse" for hierarchy "lighthouse:inst42"
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DarkRoomControl:inst1|Mod0" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
-Info (12130): Elaborated megafunction instantiation "DarkRoomControl:inst1|lpm_divide:Mod0" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
-Info (12133): Instantiated megafunction "DarkRoomControl:inst1|lpm_divide:Mod0" with the following parameter: File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DarkRoomControl:inst1|Mod0" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+Info (12130): Elaborated megafunction instantiation "DarkRoomControl:inst1|lpm_divide:Mod0" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
+Info (12133): Instantiated megafunction "DarkRoomControl:inst1|lpm_divide:Mod0" with the following parameter: File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/DarkRoomControl.v Line: 11
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gcm.tdf
-    Info (12023): Found entity 1: lpm_divide_gcm File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_gcm File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/lpm_divide_gcm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_5nh File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/sign_div_unsign_5nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u9f.tdf
-    Info (12023): Found entity 1: alt_u_div_u9f File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_u9f File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf Line: 23
-Info (13000): Registers with preset signals will power-up high File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 36
+    Info (12023): Found entity 1: add_sub_8pc File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/add_sub_8pc.tdf Line: 23
+Info (13000): Registers with preset signals will power-up high File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/SpiControl.v Line: 36
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_29_result_int[1]~18" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 137
-    Info (17048): Logic cell "DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_30_result_int[1]~20" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 147
+    Info (17048): Logic cell "DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_29_result_int[1]~18" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 137
+    Info (17048): Logic cell "DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_30_result_int[1]~20" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 147
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19125 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 20406 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 19060 logic cells
+    Info (21061): Implemented 20341 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1152 megabytes
-    Info: Processing ended: Sun Apr 30 23:13:23 2017
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:03
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 1142 megabytes
+    Info: Processing ended: Thu May  4 12:33:33 2017
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:44
 
 
