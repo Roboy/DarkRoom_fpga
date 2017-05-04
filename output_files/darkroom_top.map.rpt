@@ -1,5 +1,5 @@
 Analysis & Synthesis report for darkroom_top
-Sat Apr 29 01:50:04 2017
+Sun Apr 30 23:13:22 2017
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -72,13 +72,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 29 01:50:04 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 30 23:13:22 2017       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; darkroom_top                                ;
 ; Top-level Entity Name              ; darkroom_top                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 21,245                                      ;
-;     Total combinational functions  ; 19,311                                      ;
+; Total logic elements               ; 19,021                                      ;
+;     Total combinational functions  ; 17,087                                      ;
 ;     Dedicated logic registers      ; 3,188                                       ;
 ; Total registers                    ; 3188                                        ;
 ; Total pins                         ; 32                                          ;
@@ -245,17 +245,17 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 21,245         ;
+; Estimated Total logic elements              ; 19,021         ;
 ;                                             ;                ;
-; Total combinational functions               ; 19311          ;
+; Total combinational functions               ; 17087          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 3865           ;
-;     -- 3 input functions                    ; 6515           ;
-;     -- <=2 input functions                  ; 8931           ;
+;     -- 4 input functions                    ; 3718           ;
+;     -- 3 input functions                    ; 6601           ;
+;     -- <=2 input functions                  ; 6768           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 5900           ;
-;     -- arithmetic mode                      ; 13411          ;
+;     -- normal mode                          ; 5660           ;
+;     -- arithmetic mode                      ; 11427          ;
 ;                                             ;                ;
 ; Total registers                             ; 3188           ;
 ;     -- Dedicated logic registers            ; 3188           ;
@@ -271,8 +271,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; clock_50~input ;
 ; Maximum fan-out                             ; 197            ;
-; Total fan-out                               ; 62034          ;
-; Average fan-out                             ; 2.75           ;
+; Total fan-out                               ; 57442          ;
+; Average fan-out                             ; 2.82           ;
 +---------------------------------------------+----------------+
 
 
@@ -281,13 +281,13 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |darkroom_top                             ; 19311 (3)           ; 3188 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 32   ; 0            ; |darkroom_top                                                                                                                       ; darkroom_top        ; work         ;
+; |darkroom_top                             ; 17087 (3)           ; 3188 (0)                  ; 16384       ; 0            ; 0       ; 0         ; 32   ; 0            ; |darkroom_top                                                                                                                       ; darkroom_top        ; work         ;
 ;    |DarkRoomControl:inst1|                ; 570 (11)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1                                                                                                 ; DarkRoomControl     ; work         ;
 ;       |lpm_divide:Mod0|                   ; 559 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_gcm:auto_generated|  ; 559 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated                                                   ; lpm_divide_gcm      ; work         ;
 ;             |sign_div_unsign_5nh:divider| ; 559 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
 ;                |alt_u_div_u9f:divider|    ; 559 (559)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
-;    |SpiControl:inst11|                    ; 55 (55)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                                                                                     ; SpiControl          ; work         ;
+;    |SpiControl:inst11|                    ; 56 (56)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|SpiControl:inst11                                                                                                     ; SpiControl          ; work         ;
 ;    |counter:inst33|                       ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|counter:inst33                                                                                                        ; counter             ; work         ;
 ;    |fifo:inst3|                           ; 73 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3                                                                                                            ; fifo                ; work         ;
 ;       |scfifo:scfifo_component|           ; 73 (0)              ; 43 (0)                    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component                                                                                    ; scfifo              ; work         ;
@@ -297,34 +297,34 @@ agreement for further details.
 ;                |cntr_1ab:rd_ptr_msb|      ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_1ab:rd_ptr_msb                ; cntr_1ab            ; work         ;
 ;                |cntr_2ab:wr_ptr|          ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_2ab:wr_ptr                    ; cntr_2ab            ; work         ;
 ;                |cntr_ea7:usedw_counter|   ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|fifo:inst3|scfifo:scfifo_component|scfifo_e041:auto_generated|a_dpfifo_1o31:dpfifo|cntr_ea7:usedw_counter             ; cntr_ea7            ; work         ;
-;    |lighthouse:inst10|                    ; 1132 (1132)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst12|                    ; 1118 (1118)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst13|                    ; 1126 (1126)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst15|                    ; 1152 (1152)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst27|                    ; 1140 (1140)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst27                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst29|                    ; 1143 (1143)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst29                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst31|                    ; 1125 (1125)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst31                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst34|                    ; 1144 (1144)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst34                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst36|                    ; 1128 (1128)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst36                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst38|                    ; 1137 (1137)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst38                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst40|                    ; 1137 (1137)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst40                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst42|                    ; 1133 (1133)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst42                                                                                                     ; lighthouse          ; work         ;
-;    |lighthouse:inst6|                     ; 1163 (1163)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst7|                     ; 1129 (1129)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst8|                     ; 1154 (1154)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                                      ; lighthouse          ; work         ;
-;    |lighthouse:inst9|                     ; 1118 (1118)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst10|                    ; 983 (983)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst10                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst12|                    ; 1027 (1027)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst12                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst13|                    ; 985 (985)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst13                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst15|                    ; 1004 (1004)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst15                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst27|                    ; 998 (998)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst27                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst29|                    ; 1007 (1007)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst29                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst31|                    ; 1014 (1014)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst31                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst34|                    ; 1002 (1002)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst34                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst36|                    ; 986 (986)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst36                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst38|                    ; 987 (987)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst38                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst40|                    ; 998 (998)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst40                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst42|                    ; 994 (994)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst42                                                                                                     ; lighthouse          ; work         ;
+;    |lighthouse:inst6|                     ; 986 (986)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst6                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst7|                     ; 1000 (1000)         ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst7                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst8|                     ; 992 (992)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst8                                                                                                      ; lighthouse          ; work         ;
+;    |lighthouse:inst9|                     ; 999 (999)           ; 187 (187)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|lighthouse:inst9                                                                                                      ; lighthouse          ; work         ;
 ;    |oneshot:inst17|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst17                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst18|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst18                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst19|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst19                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst19|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst19                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst20|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst20                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst21|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst21                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst22|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst22                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst23|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst23                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst24|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst24                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst25|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst25                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst28|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst28                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst25|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst25                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst28|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst28                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst30|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst30                                                                                                        ; oneshot             ; work         ;
-;    |oneshot:inst32|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst32                                                                                                        ; oneshot             ; work         ;
+;    |oneshot:inst32|                       ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst32                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst35|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst35                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst37|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst37                                                                                                        ; oneshot             ; work         ;
 ;    |oneshot:inst39|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|oneshot:inst39                                                                                                        ; oneshot             ; work         ;
@@ -332,8 +332,8 @@ agreement for further details.
 ;    |pll:inst|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst                                                                                                              ; pll                 ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component                                                                                      ; altpll              ; work         ;
 ;          |pll_altpll:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|pll:inst|altpll:altpll_component|pll_altpll:auto_generated                                                            ; pll_altpll          ; work         ;
-;    |sensor_select:inst43|                 ; 344 (344)           ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst43                                                                                                  ; sensor_select       ; work         ;
-;    |spi_master:inst2|                     ; 42 (42)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                                                                                      ; spi_master          ; work         ;
+;    |sensor_select:inst43|                 ; 336 (336)           ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|sensor_select:inst43                                                                                                  ; sensor_select       ; work         ;
+;    |spi_master:inst2|                     ; 40 (40)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |darkroom_top|spi_master:inst2                                                                                                      ; spi_master          ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -393,7 +393,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spi_master:inst2|core_n_clk                   ; 4       ;
 ; SpiControl:inst11|numberOfBytesTransmitted[1] ; 15      ;
 ; SpiControl:inst11|numberOfBytesTransmitted[5] ; 5       ;
-; spi_master:inst2|di_req_o_reg                 ; 1       ;
+; spi_master:inst2|di_req_o_reg                 ; 3       ;
 ; spi_master:inst2|spi_2x_ce                    ; 3       ;
 ; spi_master:inst2|core_n_ce                    ; 2       ;
 ; Total number of inverted registers = 6        ;         ;
@@ -1097,21 +1097,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 26                          ;
 ;     SCLR              ; 3                           ;
 ;     plain             ; 641                         ;
-; cycloneiii_lcell_comb ; 19314                       ;
-;     arith             ; 13411                       ;
-;         2 data inputs ; 7770                        ;
+; cycloneiii_lcell_comb ; 17090                       ;
+;     arith             ; 11427                       ;
+;         2 data inputs ; 5786                        ;
 ;         3 data inputs ; 5641                        ;
-;     normal            ; 5903                        ;
+;     normal            ; 5663                        ;
 ;         0 data inputs ; 152                         ;
-;         1 data inputs ; 266                         ;
-;         2 data inputs ; 746                         ;
-;         3 data inputs ; 874                         ;
-;         4 data inputs ; 3865                        ;
+;         1 data inputs ; 202                         ;
+;         2 data inputs ; 631                         ;
+;         3 data inputs ; 960                         ;
+;         4 data inputs ; 3718                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 67.30                       ;
-; Average LUT depth     ; 14.69                       ;
+; Average LUT depth     ; 14.29                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1120,7 +1120,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:20     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -1130,7 +1130,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Sat Apr 29 01:49:28 2017
+    Info: Processing started: Sun Apr 30 23:12:38 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off darkroom -c darkroom_top
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
@@ -1317,16 +1317,16 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "DarkRoomControl:inst1|lpm_divide:Mod0|lpm_divide_gcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_30_result_int[1]~20" File: /home/letrend/workspace/DarkRoom/src/DarkRoom_fpga/db/alt_u_div_u9f.tdf Line: 147
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 21350 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 21285 logic cells
+    Info (21061): Implemented 19060 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1145 megabytes
-    Info: Processing ended: Sat Apr 29 01:50:04 2017
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 1152 megabytes
+    Info: Processing ended: Sun Apr 30 23:13:23 2017
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:01:03
 
 

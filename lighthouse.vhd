@@ -36,9 +36,9 @@ begin   process(sensor)
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
 			data_available <= '0';
-			if(duration < 50+10) then -- this is a sweep
+			if(duration < 50+5) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
-			elsif (duration > (63+10 - 5)) and (duration < (94+10 + 5)) then -- this is a sync pulse, NOT skipping
+			elsif (duration > (63+5 - 5)) and (duration < (94+5 + 5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
 				
 				if(start_valid_sync = 0) then
@@ -58,28 +58,28 @@ begin   process(sensor)
 					end if;
 				end if;
 				
-				if(abs(duration - 63+10) < 5) then
+				if(abs(duration - 63+5) < 5) then
 					rotor <= '0';
 					data  <= '0';
-				elsif(abs(duration - 73+10) < 5) then
+				elsif(abs(duration - 73+5) < 5) then
 					rotor <= '1';
 					data  <= '0';
-				elsif(abs(duration - 83+10) < 5) then
+				elsif(abs(duration - 83+5) < 5) then
 					rotor <= '0';
 					data  <= '1';
-				elsif(abs(duration - 94+10) < 5) then
+				elsif(abs(duration - 94+5) < 5) then
 					rotor <= '1';
 					data  <= '1';
-				elsif(abs(duration - 104+10) < 5) then
+				elsif(abs(duration - 104+5) < 5) then
 					rotor <= '0';
 					data  <= '0';
-				elsif(abs(duration - 115+10) < 5) then
+				elsif(abs(duration - 115+5) < 5) then
 					rotor <= '1';
 					data  <= '0';
-				elsif(abs(duration - 125+10) < 5) then
+				elsif(abs(duration - 125+5) < 5) then
 					rotor <= '0';
 					data  <= '1';
-				elsif(abs(duration - 135+10) < 5) then
+				elsif(abs(duration - 135+5) < 5) then
 					rotor <= '1';
 					data  <= '1';
 				end if;

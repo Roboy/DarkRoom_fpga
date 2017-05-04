@@ -96,6 +96,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "sensor11_signal",
+					"strict" : false
+				},
+				{
 					"name" : "sensor8_signal",
 					"strict" : false
 				},
@@ -105,10 +109,6 @@
 				},
 				{
 					"name" : "sensor10_signal",
-					"strict" : false
-				},
-				{
-					"name" : "sensor11_signal",
 					"strict" : false
 				},
 				{
