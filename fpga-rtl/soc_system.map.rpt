@@ -1,0 +1,549 @@
+Analysis & Synthesis report for soc_system
+Wed May 17 23:56:01 2017
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis IP Cores Summary
+  6. Analysis & Synthesis Messages
+  7. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed May 17 23:56:01 2017           ;
+; Quartus Prime Version       ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
+; Revision Name               ; soc_system                                  ;
+; Top-level Entity Name       ; ghrd                                        ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
+; Top-level entity name                                                           ; ghrd               ; soc_system         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                  ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                      ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------+-----------------+
+; N/A    ; Qsys         ; 16.1    ; N/A          ; N/A          ; |ghrd|soc_system:u0                                  ; soc_system.qsys ;
+; Altera ; altera_pll   ; 16.1    ; N/A          ; N/A          ; |ghrd|soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz ; pll.v           ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------+-----------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Wed May 17 23:55:46 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off soc_system -c soc_system
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Counter.v
+    Info (12023): Found entity 1: Counter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/Counter.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file sensor_select.v
+    Info (12023): Found entity 1: sensor_select File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/sensor_select.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file oneshot.v
+    Info (12023): Found entity 1: oneshot File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/oneshot.v Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file lighthouse.vhd
+    Info (12022): Found design unit 1: lighthouse-Behavioral File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/lighthouse.vhd Line: 17
+    Info (12023): Found entity 1: lighthouse File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/lighthouse.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file DarkRoom.v
+    Info (12023): Found entity 1: DarkRoom File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/DarkRoom.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ip/intr_capturer/intr_capturer.v
+    Info (12023): Found entity 1: intr_capturer File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ip/intr_capturer/intr_capturer.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file ip/edge_detect/altera_edge_detector.v
+    Info (12023): Found entity 1: altera_edge_detector File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ip/edge_detect/altera_edge_detector.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ip/debounce/debounce.v
+    Info (12023): Found entity 1: debounce File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ip/debounce/debounce.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file ip/altsource_probe/hps_reset.v
+    Info (12023): Found entity 1: hps_reset File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ip/altsource_probe/hps_reset.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/soc_system.v
+    Info (12023): Found entity 1: soc_system File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/soc_system.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_irq_mapper_001.sv
+    Info (12023): Found entity 1: soc_system_irq_mapper_001 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_irq_mapper_001.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_irq_mapper.sv
+    Info (12023): Found entity 1: soc_system_irq_mapper File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_width_adapter.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_mux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_rsp_mux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_mux.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_demux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_rsp_demux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_mux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_mux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_demux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_cmd_demux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv Line: 49
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_001.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_001_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router_001 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_1_router_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_1_router File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_1_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv
+    Info (12023): Found entity 1: altera_merlin_axi_slave_ni File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_001.v
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_001 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_001.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux_003.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_003 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux_003.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux_002.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux_002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_007.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux_007 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_007.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_002.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux_002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_001.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux_001 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_007.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_007 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_007.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_002.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_001.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux_001 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux_003.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_003 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux_003.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux_002.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux_002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+Info (12021): Found 5 design units, including 5 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_incr_burst_converter.sv
+    Info (12023): Found entity 1: altera_incr_burst_converter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_wrap_burst_converter.sv
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_wrap_burst_converter.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_default_burst_converter.sv
+    Info (12023): Found entity 1: altera_default_burst_converter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_default_burst_converter.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_012.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_012_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_012.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_012 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_012.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_007.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_007_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_007.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_007 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_007.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_006.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_006_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_006.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_006 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_006.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_005.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_005_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_005 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_005.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_003.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_003_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_003 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_003.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_002_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_default_decode File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv
+    Info (12023): Found entity 1: altera_merlin_axi_master_ni File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_sysid_qsys.v
+    Info (12023): Found entity 1: soc_system_sysid_qsys File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_sysid_qsys.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_onchip_memory2_0.v
+    Info (12023): Found entity 1: soc_system_onchip_memory2_0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_onchip_memory2_0.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_led_pio.v
+    Info (12023): Found entity 1: soc_system_led_pio File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_led_pio.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file soc_system/synthesis/submodules/soc_system_jtag_uart.v
+    Info (12023): Found entity 1: soc_system_jtag_uart_sim_scfifo_w File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_jtag_uart.v Line: 21
+    Info (12023): Found entity 2: soc_system_jtag_uart_scfifo_w File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_jtag_uart.v Line: 78
+    Info (12023): Found entity 3: soc_system_jtag_uart_sim_scfifo_r File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_jtag_uart.v Line: 164
+    Info (12023): Found entity 4: soc_system_jtag_uart_scfifo_r File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_jtag_uart.v Line: 243
+    Info (12023): Found entity 5: soc_system_jtag_uart File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_jtag_uart.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/intr_capturer.v
+    Info (12023): Found entity 1: intr_capturer File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/intr_capturer.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0.v
+    Info (12023): Found entity 1: soc_system_hps_0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_hps_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v
+    Info (12023): Found entity 1: soc_system_hps_0_hps_io File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram.v
+    Info (12023): Found entity 1: hps_sdram File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_hard_memory_controller_top_cyclonev File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0.sv
+    Info (12023): Found entity 1: hps_sdram_p0 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_dll_cyclonev File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_reset.v
+    Info (12023): Found entity 1: hps_sdram_p0_reset File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_reset.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v
+    Info (12023): Found entity 1: hps_sdram_p0_reset_sync File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv
+    Info (12023): Found entity 1: altdq_dqs2_acv_connect_to_hard_phy_cyclonev File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv
+    Info (12023): Found entity 1: hps_sdram_p0_phy_csr File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v
+    Info (12023): Found entity 1: altera_mem_if_hhp_qseq_synth_top File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v
+    Info (12023): Found entity 1: hps_sdram_p0_altdqdqs File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_pll.sv
+    Info (12023): Found entity 1: hps_sdram_pll File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_pll.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_addr_cmd_pads File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v
+    Info (12023): Found entity 1: hps_sdram_p0_generic_ddio File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v
+    Info (12023): Found entity 1: hps_sdram_p0_acv_ldc File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_io_pads File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v
+    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_memphy File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
+    Info (12023): Found entity 1: altera_mem_if_oct_cyclonev File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v
+    Info (12023): Found entity 1: hps_sdram_p0_clock_pair_generator File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v
+    Info (12023): Found entity 1: hps_sdram_p0_iss_probe File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv
+    Info (12023): Found entity 1: soc_system_hps_0_hps_io_border File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv
+    Info (12023): Found entity 1: soc_system_hps_0_fpga_interfaces File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_fpga_only_master.v
+    Info (12023): Found entity 1: soc_system_fpga_only_master File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_fpga_only_master.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_fpga_only_master_p2b_adapter.sv
+    Info (12023): Found entity 1: soc_system_fpga_only_master_p2b_adapter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_fpga_only_master_p2b_adapter.sv Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_fpga_only_master_b2p_adapter.sv
+    Info (12023): Found entity 1: soc_system_fpga_only_master_b2p_adapter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_fpga_only_master_b2p_adapter.sv Line: 55
+Info (12021): Found 7 design units, including 7 entities, in source file soc_system/synthesis/submodules/altera_avalon_packets_to_master.v
+    Info (12023): Found entity 1: altera_avalon_packets_to_master File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 22
+    Info (12023): Found entity 2: packets_to_fifo File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 142
+    Info (12023): Found entity 3: fifo_buffer_single_clock_fifo File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 512
+    Info (12023): Found entity 4: fifo_buffer_scfifo_with_controls File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 573
+    Info (12023): Found entity 5: fifo_buffer File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 627
+    Info (12023): Found entity 6: fifo_to_packet File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 697
+    Info (12023): Found entity 7: packets_to_master File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v Line: 851
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+    Info (12023): Found entity 1: altera_avalon_st_packets_to_bytes File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+    Info (12023): Found entity 1: altera_avalon_st_bytes_to_packets File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_fpga_only_master_timing_adt.sv
+    Info (12023): Found entity 1: soc_system_fpga_only_master_timing_adt File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_fpga_only_master_timing_adt.sv Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v
+    Info (12023): Found entity 1: altera_avalon_st_jtag_interface File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v Line: 20
+Info (12021): Found 3 design units, including 3 entities, in source file soc_system/synthesis/submodules/altera_jtag_dc_streaming.v
+    Info (12023): Found entity 1: altera_jtag_control_signal_crosser File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v Line: 30
+    Info (12023): Found entity 2: altera_jtag_src_crosser File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v Line: 72
+    Info (12023): Found entity 3: altera_jtag_dc_streaming File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v Line: 135
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_jtag_sld_node.v
+    Info (12023): Found entity 1: altera_jtag_sld_node File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_jtag_sld_node.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_jtag_streaming.v
+    Info (12023): Found entity 1: altera_jtag_streaming File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_jtag_streaming.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_remover File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_inserter File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_dipsw_pio.v
+    Info (12023): Found entity 1: soc_system_dipsw_pio File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_dipsw_pio.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_button_pio.v
+    Info (12023): Found entity 1: soc_system_button_pio File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/soc_system_button_pio.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/DarkRoom.v
+    Info (12023): Found entity 1: DarkRoom File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file pll.v
+    Info (12023): Found entity 1: pll File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
+    Info (12023): Found entity 1: pll_0002 File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll/pll_0002.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at altera_edge_detector.v(21): created implicit net for "reset_qual_n" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ip/edge_detect/altera_edge_detector.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/hps_sdram_pll.sv Line: 168
+Warning (10275): Verilog HDL Module Instantiation warning at ghrd.v(237): ignored dangling comma in List of Port Connections File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 237
+Warning (12125): Using design file ghrd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ghrd File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 37
+Info (12127): Elaborating entity "ghrd" for the top level hierarchy
+Warning (10034): Output port "ADC_CONVST" at ghrd.v(40) has no driver File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 40
+Warning (10034): Output port "ADC_SCK" at ghrd.v(41) has no driver File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 41
+Warning (10034): Output port "ADC_SDI" at ghrd.v(42) has no driver File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 42
+Info (12128): Elaborating entity "soc_system" for hierarchy "soc_system:u0" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/ghrd.v Line: 237
+Info (12128): Elaborating entity "DarkRoom" for hierarchy "soc_system:u0|DarkRoom:darkroom_0" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/soc_system.v Line: 272
+Warning (10858): Verilog HDL warning at DarkRoom.v(35): object sensor9 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 35
+Warning (10858): Verilog HDL warning at DarkRoom.v(36): object sensor10 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 36
+Warning (10858): Verilog HDL warning at DarkRoom.v(37): object sensor11 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 37
+Warning (10858): Verilog HDL warning at DarkRoom.v(38): object sensor12 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 38
+Warning (10858): Verilog HDL warning at DarkRoom.v(39): object sensor13 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 39
+Warning (10858): Verilog HDL warning at DarkRoom.v(40): object sensor14 used but never assigned File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 40
+Warning (10030): Net "sensor9" at DarkRoom.v(35) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 35
+Warning (10030): Net "sensor10" at DarkRoom.v(36) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 36
+Warning (10030): Net "sensor11" at DarkRoom.v(37) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 37
+Warning (10030): Net "sensor12" at DarkRoom.v(38) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 38
+Warning (10030): Net "sensor13" at DarkRoom.v(39) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 39
+Warning (10030): Net "sensor14" at DarkRoom.v(40) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 40
+Warning (10030): Net "data_available[15..9]" at DarkRoom.v(43) has no driver or initial value, using a default initial value '0' File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 43
+Info (12128): Elaborating entity "pll" for hierarchy "soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 79
+Info (12128): Elaborating entity "pll_0002" for hierarchy "soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz|pll_0002:pll_inst" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll/pll_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz|pll_0002:pll_inst|altera_pll:altera_pll_i" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll/pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "soc_system:u0|DarkRoom:darkroom_0|pll:pll_1MHz|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/pll/pll_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "1.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "Counter" for hierarchy "soc_system:u0|DarkRoom:darkroom_0|Counter:counter" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 85
+Info (12128): Elaborating entity "lighthouse" for hierarchy "soc_system:u0|DarkRoom:darkroom_0|lighthouse:sensor0_decoder" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 92
+Error (10517): VHDL type mismatch error at lighthouse.vhd(8): std_logic_vector type does not match integer literal File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/lighthouse.vhd Line: 8
+Error (12152): Can't elaborate user hierarchy "soc_system:u0|DarkRoom:darkroom_0|lighthouse:sensor0_decoder" File: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system/synthesis/submodules/DarkRoom.v Line: 92
+Info (144001): Generated suppressed messages file /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 21 warnings
+    Error: Peak virtual memory: 1105 megabytes
+    Error: Processing ended: Wed May 17 23:58:48 2017
+    Error: Elapsed time: 00:03:02
+    Error: Total CPU time (on all processors): 00:03:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/soc_system.map.smsg.
+
+

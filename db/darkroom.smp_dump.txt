@@ -1,5 +1,0 @@
-
-State Machine - |darkroom_top|SpiControl:inst11|numberOfBytesTransmitted
-Name numberOfBytesTransmitted.0100 
-numberOfBytesTransmitted.0000 0 
-numberOfBytesTransmitted.0100 1 
