@@ -1,0 +1,17 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/roscreate.pc
+/root/ros_catkin_ws/install_isolated/share/roscreate/cmake/roscreateConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/roscreate/cmake/roscreateConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/roscreate/package.xml
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/stack.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/CMakeLists.stack.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/CMakeLists.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/manifest.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/Makefile.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/Makefile.stack.tmpl
+/root/ros_catkin_ws/install_isolated/share/roscreate/templates/mainpage.tmpl

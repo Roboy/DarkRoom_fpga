@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/src/cmake-build-debug/devel/setup.sh

@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/roslaunch
+
+Name: roslaunch
+Description: Description of roslaunch
+Version: 1.12.7
+Cflags: 
+Libs: -L/root/ros_catkin_ws/devel_isolated/roslaunch/lib 
+Requires: 

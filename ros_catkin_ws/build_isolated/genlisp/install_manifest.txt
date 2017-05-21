@@ -1,0 +1,16 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/genlisp.pc
+/root/ros_catkin_ws/install_isolated/share/genlisp/cmake/genlisp-extras.cmake
+/root/ros_catkin_ws/install_isolated/share/genlisp/cmake/genlispConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/genlisp/cmake/genlispConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/genlisp/package.xml
+/root/ros_catkin_ws/install_isolated/etc/ros/genmsg/genlisp
+/root/ros_catkin_ws/install_isolated/share/common-lisp/rospack_nosubdirs
+/root/ros_catkin_ws/install_isolated/share/genlisp/msg.lisp.template
+/root/ros_catkin_ws/install_isolated/share/genlisp/srv.lisp.template
+/root/ros_catkin_ws/install_isolated/lib/genlisp/gen_lisp.py

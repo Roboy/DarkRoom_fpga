@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/rostest
+
+Name: rostest
+Description: Description of rostest
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/src/ros_comm/rostest/include -I/usr/local/include
+Libs: -L/root/ros_catkin_ws/devel_isolated/rostest/lib -l:/usr/local/lib/libboost_system.so -l:/usr/local/lib/libboost_thread.so -l:/usr/local/lib/libboost_chrono.so -l:/usr/local/lib/libboost_date_time.so -l:/usr/local/lib/libboost_atomic.so
+Requires: 

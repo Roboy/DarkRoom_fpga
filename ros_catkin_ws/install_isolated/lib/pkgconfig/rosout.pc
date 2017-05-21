@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: rosout
+Description: Description of rosout
+Version: 1.12.7
+Cflags: 
+Libs: -L/root/ros_catkin_ws/install_isolated/lib 
+Requires: 

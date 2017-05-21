@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/roslib
+
+Name: roslib
+Description: Description of roslib
+Version: 1.13.5
+Cflags: -I/root/ros_catkin_ws/src/ros/roslib/include
+Libs: -L/root/ros_catkin_ws/devel_isolated/roslib/lib -lroslib
+Requires: rospack

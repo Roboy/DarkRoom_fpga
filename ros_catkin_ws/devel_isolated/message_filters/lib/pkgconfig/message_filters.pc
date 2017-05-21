@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/message_filters
+
+Name: message_filters
+Description: Description of message_filters
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/src/ros_comm/message_filters/include
+Libs: -L/root/ros_catkin_ws/devel_isolated/message_filters/lib -lmessage_filters
+Requires: roscpp xmlrpcpp rosconsole

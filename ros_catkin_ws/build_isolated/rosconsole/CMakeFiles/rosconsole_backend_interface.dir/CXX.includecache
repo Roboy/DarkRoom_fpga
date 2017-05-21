@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/ros_catkin_ws/src/ros_comm/rosconsole/include/ros/console_backend.h
+
+/root/ros_catkin_ws/src/ros_comm/rosconsole/src/rosconsole/rosconsole_backend.cpp
+ros/console_backend.h
+/root/ros_catkin_ws/src/ros_comm/rosconsole/src/rosconsole/ros/console_backend.h
+

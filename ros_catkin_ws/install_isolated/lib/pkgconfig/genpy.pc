@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: genpy
+Description: Description of genpy
+Version: 0.6.5
+Cflags: 
+Libs: -L/root/ros_catkin_ws/install_isolated/lib 
+Requires: genmsg
