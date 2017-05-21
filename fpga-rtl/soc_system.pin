@@ -73,7 +73,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 CHIP  "soc_system"  ASSIGNED TO AN: 5CSEMA4U23C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -296,7 +296,7 @@ GPIO_1[5]                    : AH24      : bidir  : 3.3-V LVTTL       :         
 VCCIO4A                      : AH25      : power  :                   : 3.3V    : 4A        :                
 GPIO_1[14]                   : AH26      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
 GPIO_1[3]                    : AH27      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
-GND                          : B1        :        :                   :         :           :                
+RREF                         : B1        :        :                   :         :           :                
 DNU                          : B2        :        :                   :         :           :                
 GND                          : B3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 7C        :                

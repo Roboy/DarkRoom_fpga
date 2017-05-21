@@ -5,7 +5,7 @@ USE IEEE.std_logic_signed.all;
 
 entity lighthouse is
 	Generic (
-		constant sensorID  : std_logic_vector(8 downto 0) := "000000000"
+		constant sensorID  : INTEGER RANGE 0 TO 100
 	);
    port( 
 		sensor: in std_logic;
@@ -28,7 +28,7 @@ begin   process(sensor)
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
    begin
-		sensor_value(8 downto 0) <= sensorID;	
+		sensor_value(8 downto 0) <= std_logic_vector(to_unsigned(sensorID, 9));
 		if rising_edge(sensor) then
 			t_0 <= timer;
 		elsif falling_edge(sensor) then

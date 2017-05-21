@@ -44,7 +44,8 @@ int main(int argc, char *argv[]) {
 
 	while(1){
 		printf("--------------------------------------\n");
-		uint32_t reg = IORD(h2p_lw_darkroom_addr, 0x0);
+		uint32_t reg = IORD(h2p_lw_darkroom_addr, 6);
+		printf("sensor %X\n",reg);
 		printf("sensor %d, lighthouse %d, rotor %d, duration %d\n",reg&0x1FF, (reg>>9)&0x1, (reg>>10)&0x1, (reg>>13));
 		reg = IORD(h2p_lw_darkroom_addr, 0x1);
 		printf("sensor %d, lighthouse %d, rotor %d, duration %d\n",reg&0x1FF, (reg>>9)&0x1, (reg>>10)&0x1, (reg>>13));

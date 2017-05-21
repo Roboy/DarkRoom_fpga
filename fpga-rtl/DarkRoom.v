@@ -79,7 +79,7 @@ pll pll_1MHz(
 );
 
 Counter counter(
-	.clk(clock),
+	.clk(clock_1MHz),
 	.reset(~reset_n),
 	.count(timer)
 );
@@ -93,56 +93,56 @@ lighthouse #(0) sensor0_decoder(
 
 lighthouse #(1) sensor1_decoder(
 	.sensor(sensor_signal_i[1]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor1),
 	.data_available(data_available[1])
 );
 
 lighthouse #(2) sensor2_decoder(
 	.sensor(sensor_signal_i[2]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor2),
 	.data_available(data_available[2])
 );
 
 lighthouse #(3) sensor3_decoder(
 	.sensor(sensor_signal_i[3]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor3),
 	.data_available(data_available[3])
 );
 
 lighthouse #(4) sensor4_decoder(
 	.sensor(sensor_signal_i[4]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor4),
 	.data_available(data_available[4])
 );
 
 lighthouse #(5) sensor5_decoder(
 	.sensor(sensor_signal_i[5]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor5),
 	.data_available(data_available[5])
 );
 
 lighthouse #(6) sensor6_decoder(
 	.sensor(sensor_signal_i[6]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor6),
 	.data_available(data_available[6])
 );
 
 lighthouse #(7) sensor7_decoder(
 	.sensor(sensor_signal_i[7]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor7),
 	.data_available(data_available[7])
 );
 
 lighthouse #(8) sensor8_decoder(
 	.sensor(sensor_signal_i[8]),
-	.timer(clock_1MHz),
+	.timer(timer),
 	.sensor_value(sensor8),
 	.data_available(data_available[8])
 );

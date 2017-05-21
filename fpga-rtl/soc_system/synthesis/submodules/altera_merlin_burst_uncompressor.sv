@@ -24,9 +24,9 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/16.1/ip/merlin/altera_merlin_slave_agent/altera_merlin_burst_uncompressor.sv#1 $
+// $Id: //acds/rel/17.0std/ip/merlin/altera_merlin_slave_agent/altera_merlin_burst_uncompressor.sv#1 $
 // $Revision: #1 $
-// $Date: 2016/08/07 $
+// $Date: 2017/01/22 $
 // $Author: swbranch $
 
 // ------------------------------------------

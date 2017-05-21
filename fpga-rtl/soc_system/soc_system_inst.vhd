@@ -3,6 +3,7 @@
 			button_pio_external_connection_export : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			clk_clk                               : in    std_logic                     := 'X';             -- clk
 			darkroom_sensor_signal_i              : in    std_logic_vector(15 downto 0) := (others => 'X'); -- sensor_signal_i
+			darkroom_led                          : out   std_logic_vector(6 downto 0);                     -- led
 			dipsw_pio_external_connection_export  : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			hps_0_f2h_cold_reset_req_reset_n      : in    std_logic                     := 'X';             -- reset_n
 			hps_0_f2h_debug_reset_req_reset_n     : in    std_logic                     := 'X';             -- reset_n
@@ -83,6 +84,7 @@
 			button_pio_external_connection_export => CONNECTED_TO_button_pio_external_connection_export, -- button_pio_external_connection.export
 			clk_clk                               => CONNECTED_TO_clk_clk,                               --                            clk.clk
 			darkroom_sensor_signal_i              => CONNECTED_TO_darkroom_sensor_signal_i,              --                       darkroom.sensor_signal_i
+			darkroom_led                          => CONNECTED_TO_darkroom_led,                          --                               .led
 			dipsw_pio_external_connection_export  => CONNECTED_TO_dipsw_pio_external_connection_export,  --  dipsw_pio_external_connection.export
 			hps_0_f2h_cold_reset_req_reset_n      => CONNECTED_TO_hps_0_f2h_cold_reset_req_reset_n,      --       hps_0_f2h_cold_reset_req.reset_n
 			hps_0_f2h_debug_reset_req_reset_n     => CONNECTED_TO_hps_0_f2h_debug_reset_req_reset_n,     --      hps_0_f2h_debug_reset_req.reset_n
