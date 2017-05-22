@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/root/ros_catkin_ws/src/ros_comm/rostest/include;/usr/local/include")

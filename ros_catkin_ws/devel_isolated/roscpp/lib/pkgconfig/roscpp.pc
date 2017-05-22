@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/roscpp
+
+Name: roscpp
+Description: Description of roscpp
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/devel_isolated/roscpp/include -I/root/ros_catkin_ws/src/ros_comm/roscpp/include -I/root/ros_catkin_ws/devel_isolated/roscpp/include/ros -I/usr/local/include
+Libs: -L/root/ros_catkin_ws/devel_isolated/roscpp/lib -lroscpp -lpthread -l:/usr/local/lib/libboost_signals.so -l:/usr/local/lib/libboost_filesystem.so -l:/usr/local/lib/libboost_system.so
+Requires: cpp_common message_runtime rosconsole roscpp_serialization roscpp_traits rosgraph_msgs rostime std_msgs xmlrpcpp

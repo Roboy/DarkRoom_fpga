@@ -1,0 +1,13 @@
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/install/local.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/download_extra_data.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/clean_test_results.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/install/strip.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/edit_cache.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/install.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/rebuild_cache.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/_catkin_empty_exported_target.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/tests.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/doxygen.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/list_install_components.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/test.dir
+/root/ros_catkin_ws/build_isolated/rosclean/CMakeFiles/run_tests.dir

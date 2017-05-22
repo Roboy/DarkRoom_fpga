@@ -1,0 +1,15 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/roslib.pc
+/root/ros_catkin_ws/install_isolated/share/roslib/cmake/roslib-extras.cmake
+/root/ros_catkin_ws/install_isolated/share/roslib/cmake/roslibConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/roslib/cmake/roslibConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/roslib/package.xml
+/root/ros_catkin_ws/install_isolated/etc/catkin/profile.d/10.ros.sh
+/root/ros_catkin_ws/install_isolated/lib/libroslib.so
+/root/ros_catkin_ws/install_isolated/include/ros/package.h
+/root/ros_catkin_ws/install_isolated/lib/roslib/gendeps

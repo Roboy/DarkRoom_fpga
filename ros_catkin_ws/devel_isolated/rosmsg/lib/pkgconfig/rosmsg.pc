@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/rosmsg
+
+Name: rosmsg
+Description: Description of rosmsg
+Version: 1.12.7
+Cflags: 
+Libs: -L/root/ros_catkin_ws/devel_isolated/rosmsg/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: xmlrpcpp
+Description: Description of xmlrpcpp
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/install_isolated/include
+Libs: -L/root/ros_catkin_ws/install_isolated/lib -lxmlrpcpp
+Requires: cpp_common

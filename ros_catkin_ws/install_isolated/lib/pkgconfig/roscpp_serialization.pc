@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: roscpp_serialization
+Description: Description of roscpp_serialization
+Version: 0.6.2
+Cflags: -I/root/ros_catkin_ws/install_isolated/include
+Libs: -L/root/ros_catkin_ws/install_isolated/lib -lroscpp_serialization
+Requires: cpp_common roscpp_traits rostime

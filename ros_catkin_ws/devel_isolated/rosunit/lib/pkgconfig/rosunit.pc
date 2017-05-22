@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/rosunit
+
+Name: rosunit
+Description: Description of rosunit
+Version: 1.13.5
+Cflags: 
+Libs: -L/root/ros_catkin_ws/devel_isolated/rosunit/lib 
+Requires: 

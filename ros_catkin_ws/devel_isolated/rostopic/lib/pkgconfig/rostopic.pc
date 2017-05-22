@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/rostopic
+
+Name: rostopic
+Description: Description of rostopic
+Version: 1.12.7
+Cflags: 
+Libs: -L/root/ros_catkin_ws/devel_isolated/rostopic/lib 
+Requires: 
