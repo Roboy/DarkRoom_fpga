@@ -16,8 +16,7 @@ module DarkRoom (
 	input read,
 	output signed [31:0] readdata,
 	output waitrequest,
-//	output interrupt_sender_irq,
-	// these are the spi ports
+	input reset_key,
 	input [15:0] sensor_signal_i,
 	output [6:0] LED
 );
@@ -60,10 +59,10 @@ assign readdata =
 	32'hDEAD_BEEF;
 
 // when spi is done we transfer the results, which would be a bad time to read the values.
-assign waitrequest = 0;
+assign waitrequest = !data_available[2];
 
 wire clock_1MHz;
-reg [31:0] timer;
+wire [31:0] timer;
 
 assign LED[3:0] = timer[24:21];
 assign LED[4] = data_available[0];
@@ -82,61 +81,13 @@ Counter counter(
 	.count(timer)
 );
 
-lighthouse #(1) sensor1_decoder(
-	.sensor(sensor_signal_i[1]),
+lighthouse sensor1_decoder(
+	.clk(clock),
+	.reset(~reset_n||~reset_key),
+	.sensor_signal(sensor_signal_i[2]),
 	.timer(timer),
-	.sensor_value(sensor1),
-	.data_available(data_available[1])
-);
-
-lighthouse #(2) sensor2_decoder(
-	.sensor(sensor_signal_i[2]),
-	.timer(timer),
-	.sensor_value(sensor2),
-	.data_available(data_available[2])
-);
-
-lighthouse #(3) sensor3_decoder(
-	.sensor(sensor_signal_i[3]),
-	.timer(timer),
-	.sensor_value(sensor3),
-	.data_available(data_available[3])
-);
-
-lighthouse #(4) sensor4_decoder(
-	.sensor(sensor_signal_i[4]),
-	.timer(timer),
-	.sensor_value(sensor4),
-	.data_available(data_available[4])
-);
-
-lighthouse #(5) sensor5_decoder(
-	.sensor(sensor_signal_i[5]),
-	.timer(timer),
-	.sensor_value(sensor5),
-	.data_available(data_available[5])
-);
-
-lighthouse #(6) sensor6_decoder(
-	.sensor(sensor_signal_i[6]),
-	.timer(timer),
-	.sensor_value(sensor6),
-	.data_available(data_available[6])
-);
-
-lighthouse #(7) sensor7_decoder(
-	.sensor(sensor_signal_i[7]),
-	.timer(timer),
-	.sensor_value(sensor7),
-	.data_available(data_available[7])
-);
-
-lighthouse #(8) sensor8_decoder(
-	.sensor(sensor_signal_i[8]),
-	.timer(timer),
-	.sensor_value(sensor8),
-	.data_available(data_available[8])
+	.sensor_data(sensor1),
+	.data_ready(data_available[2])
 );
 
 endmodule
-

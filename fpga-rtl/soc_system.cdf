@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4) Path("/home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/") File("DarkRoom.jic") MfrSpec(OpMask(1) SEC_Device(EPCS128) Child_OpMask(1 1));
+		Device PartName(5CSEMA4U23) Path("/home/roboy/workspace/DarkRoom/src/DarkRoom_fpga/fpga-rtl/") File("soc_system.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

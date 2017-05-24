@@ -8,6 +8,7 @@ module soc_system (
 		input  wire        clk_clk,                               //                            clk.clk
 		input  wire [15:0] darkroom_sensor_signal_i,              //                       darkroom.sensor_signal_i
 		output wire [6:0]  darkroom_led,                          //                               .led
+		input  wire        darkroom_reset_key,                    //                               .reset_key
 		input  wire [3:0]  dipsw_pio_external_connection_export,  //  dipsw_pio_external_connection.export
 		input  wire        hps_0_f2h_cold_reset_req_reset_n,      //       hps_0_f2h_cold_reset_req.reset_n
 		input  wire        hps_0_f2h_debug_reset_req_reset_n,     //      hps_0_f2h_debug_reset_req.reset_n
@@ -268,7 +269,8 @@ module soc_system (
 		.waitrequest     (mm_interconnect_0_darkroom_0_avalon_slave_0_waitrequest), //               .waitrequest
 		.clock           (clk_clk),                                                 //     clock_sink.clk
 		.sensor_signal_i (darkroom_sensor_signal_i),                                // sensor_signals.sensor_signal_i
-		.LED             (darkroom_led)                                             //               .led
+		.LED             (darkroom_led),                                            //               .led
+		.reset_key       (darkroom_reset_key)                                       //               .reset_key
 	);
 
 	soc_system_button_pio button_pio (
