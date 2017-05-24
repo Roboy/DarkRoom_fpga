@@ -12,9 +12,9 @@ module DarkRoom (
 	// this is for the avalon interface
 	input [5:0] address,
 	input write,
-	input signed [31:0] writedata,
+	input [31:0] writedata,
 	input read,
-	output signed [31:0] readdata,
+	output [31:0] readdata,
 	output waitrequest,
 	input reset_key,
 	input [15:0] sensor_signal_i,
@@ -22,23 +22,23 @@ module DarkRoom (
 );
 
 // sensor results
-reg unsigned [31:0] sensor1;
-reg unsigned [31:0] sensor2;
-reg unsigned [31:0] sensor3;
-reg unsigned [31:0] sensor4;
-reg unsigned [31:0] sensor5;
-reg unsigned [31:0] sensor6;
-reg unsigned [31:0] sensor7;
-reg unsigned [31:0] sensor8;
-reg unsigned [31:0] sensor9;
-reg unsigned [31:0] sensor10;
-reg unsigned [31:0] sensor11;
-reg unsigned [31:0] sensor12;
-reg unsigned [31:0] sensor13;
-reg unsigned [31:0] sensor14;
-reg unsigned [31:0] sensor15;
+reg [31:0] sensor1;
+reg [31:0] sensor2;
+reg [31:0] sensor3;
+reg [31:0] sensor4;
+reg [31:0] sensor5;
+reg [31:0] sensor6;
+reg [31:0] sensor7;
+reg [31:0] sensor8;
+reg [31:0] sensor9;
+reg [31:0] sensor10;
+reg [31:0] sensor11;
+reg [31:0] sensor12;
+reg [31:0] sensor13;
+reg [31:0] sensor14;
+reg [31:0] sensor15;
 
-reg unsigned [15:0] data_available;
+reg [15:0] data_available;
 
 assign readdata = 
 	((address == 0))? data_available:
@@ -59,7 +59,7 @@ assign readdata =
 	32'hDEAD_BEEF;
 
 // when spi is done we transfer the results, which would be a bad time to read the values.
-assign waitrequest = !data_available[2];
+assign waitrequest = 0;//!data_available[2];
 
 wire clock_1MHz;
 wire [31:0] timer;
@@ -81,12 +81,10 @@ Counter counter(
 	.count(timer)
 );
 
-lighthouse sensor1_decoder(
-	.clk(clock),
-	.reset(~reset_n||~reset_key),
-	.sensor_signal(sensor_signal_i[2]),
+lighthouse sensor2_decoder(
+	.sensor(sensor_signal_i[2]),
 	.timer(timer),
-	.sensor_data(sensor1),
+	.sensor_data(sensor2),
 	.data_ready(data_available[2])
 );
 

@@ -28,7 +28,7 @@ DarkRoom::~DarkRoom(){
 };
 
 void DarkRoom::getSensorValues(){
-    ros::Rate rate(120);
+    ros::Rate rate(200);
     while(getData){
         uint32_t data_available = IORD(h2p_lw_darkroom_addr, 0);
         roboy_communication_middleware::DarkRoom msg;

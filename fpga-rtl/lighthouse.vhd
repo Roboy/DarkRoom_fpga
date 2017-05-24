@@ -5,13 +5,13 @@ USE IEEE.std_logic_signed.all;
 
 entity lighthouse is
 	Generic (
-		constant sensorID  : INTEGER RANGE 0 TO 100
+		constant sensorID  : INTEGER RANGE 0 TO 100 := 0
 	);
    port( 
 		sensor: in std_logic;
 		timer: in std_logic_vector(31 downto 0);
-		sensor_value: out std_logic_vector(31 downto 0);
-		data_available: out std_logic);
+		sensor_data: out std_logic_vector(31 downto 0);
+		data_ready: out std_logic);
 end lighthouse;
  
 architecture Behavioral of lighthouse is
@@ -28,17 +28,18 @@ begin   process(sensor)
 	variable stop_valid_sync : std_logic_vector(31 downto 0) := (others => '0');
 	variable sync_gap_duration 	: std_logic_vector(31 downto 0):= (others => '0');
    begin
-		sensor_value(8 downto 0) <= std_logic_vector(to_unsigned(sensorID, 9));
 		if rising_edge(sensor) then
 			t_0 <= timer;
 		elsif falling_edge(sensor) then
 			duration := std_logic_vector(unsigned(timer)-unsigned(t_0));
-			data_available <= '0';
+			data_ready <= '0';
 			if(duration < 50+5) then -- this is a sweep
 				t_sweep_duration <= (t_0-t_sweep_start);
+--				sensor_data <= (t_0-t_sweep_start);
+--				data_ready <= '1';
 			elsif (duration > (63-5)) and (duration < (94+5)) then -- this is a sync pulse, NOT skipping
 				t_sweep_start <= t_0;
-				
+--				
 				if(start_valid_sync = 0) then
 					start_valid_sync <= t_0;
 				elsif(start_valid_sync /= 0 and stop_valid_sync = 0) then
@@ -83,16 +84,16 @@ begin   process(sensor)
 				end if;
 				
 				if(t_sweep_duration < 8000) and (t_sweep_duration > 300 ) then 
-					sensor_value(12) <= '1'; -- valid sweep
+					sensor_data(12) <= '1'; -- valid sweep
 				else
-					sensor_value(12) <= '0'; -- not valid
+					sensor_data(12) <= '0'; -- not valid
 				end if;
 				
-				sensor_value(9) <= lighthouse;
-				sensor_value(10) <= rotor;
-				sensor_value(11) <= data;
-				sensor_value(31 downto 13) <= t_sweep_duration(18 downto 0);
-				data_available <= '1'; -- we can send the data shortly after a sync
+				sensor_data(9) <= lighthouse;
+				sensor_data(10) <= rotor;
+				sensor_data(11) <= data;
+				sensor_data(31 downto 13) <= t_sweep_duration(18 downto 0);
+				data_ready <= '1'; -- we can send the data shortly after a sync
 			end if;
 		end if;
    end process;
