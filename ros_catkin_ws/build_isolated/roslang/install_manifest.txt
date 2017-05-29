@@ -1,0 +1,11 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/roslang.pc
+/root/ros_catkin_ws/install_isolated/share/roslang/cmake/roslangConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/roslang/cmake/roslangConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/roslang/package.xml
+/root/ros_catkin_ws/install_isolated/share/roslang/cmake/roslang.cmake

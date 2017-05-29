@@ -4,14 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LED[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[7]",
-					"strict" : false
-				},
-				{
 					"name" : "LED[0]",
 					"strict" : false
 				},
@@ -29,6 +21,14 @@
 				},
 				{
 					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
 					"strict" : false
 				},
 				{
@@ -64,10 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_CLK1_50",
-					"strict" : false
-				},
-				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
@@ -81,6 +77,10 @@
 				},
 				{
 					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{

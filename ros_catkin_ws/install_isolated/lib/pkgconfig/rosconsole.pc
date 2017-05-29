@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: rosconsole
+Description: Description of rosconsole
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/install_isolated/include -I/usr/local/include
+Libs: -L/root/ros_catkin_ws/install_isolated/lib -lrosconsole -lrosconsole_print -lrosconsole_backend_interface -l:/usr/local/lib/libboost_regex.so -l:/usr/local/lib/libboost_system.so -l:/usr/local/lib/libboost_thread.so -l:/usr/local/lib/libboost_chrono.so -l:/usr/local/lib/libboost_date_time.so -l:/usr/local/lib/libboost_atomic.so
+Requires: cpp_common rostime

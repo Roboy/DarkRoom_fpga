@@ -1,0 +1,16 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/roscpp_traits.pc
+/root/ros_catkin_ws/install_isolated/share/roscpp_traits/cmake/roscpp_traitsConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/roscpp_traits/cmake/roscpp_traitsConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/roscpp_traits/package.xml
+/root/ros_catkin_ws/install_isolated/include/ros/message_traits.h
+/root/ros_catkin_ws/install_isolated/include/ros/message_operations.h
+/root/ros_catkin_ws/install_isolated/include/ros/message_forward.h
+/root/ros_catkin_ws/install_isolated/include/ros/builtin_message_traits.h
+/root/ros_catkin_ws/install_isolated/include/ros/message_event.h
+/root/ros_catkin_ws/install_isolated/include/ros/service_traits.h

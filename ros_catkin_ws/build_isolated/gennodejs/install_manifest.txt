@@ -1,0 +1,13 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/gennodejs.pc
+/root/ros_catkin_ws/install_isolated/share/gennodejs/cmake/gennodejs-extras.cmake
+/root/ros_catkin_ws/install_isolated/share/gennodejs/cmake/gennodejsConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/gennodejs/cmake/gennodejsConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/gennodejs/package.xml
+/root/ros_catkin_ws/install_isolated/etc/ros/genmsg/gennodejs
+/root/ros_catkin_ws/install_isolated/lib/gennodejs/gen_nodejs.py

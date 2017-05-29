@@ -1,0 +1,11 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/rostopic.pc
+/root/ros_catkin_ws/install_isolated/share/rostopic/cmake/rostopicConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/rostopic/cmake/rostopicConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/rostopic/package.xml
+/root/ros_catkin_ws/install_isolated/lib/rostopic/rostopic

@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/devel_isolated/roslz4
+
+Name: roslz4
+Description: Description of roslz4
+Version: 1.12.7
+Cflags: -I/root/ros_catkin_ws/src/ros_comm/roslz4/include -I/usr/include
+Libs: -L/root/ros_catkin_ws/devel_isolated/roslz4/lib -lroslz4 -l:/usr/lib/liblz4.so
+Requires: 

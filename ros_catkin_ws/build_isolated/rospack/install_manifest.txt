@@ -1,0 +1,16 @@
+/root/ros_catkin_ws/install_isolated/_setup_util.py
+/root/ros_catkin_ws/install_isolated/env.sh
+/root/ros_catkin_ws/install_isolated/setup.bash
+/root/ros_catkin_ws/install_isolated/setup.sh
+/root/ros_catkin_ws/install_isolated/setup.zsh
+/root/ros_catkin_ws/install_isolated/.rosinstall
+/root/ros_catkin_ws/install_isolated/lib/pkgconfig/rospack.pc
+/root/ros_catkin_ws/install_isolated/share/rospack/cmake/rospackConfig.cmake
+/root/ros_catkin_ws/install_isolated/share/rospack/cmake/rospackConfig-version.cmake
+/root/ros_catkin_ws/install_isolated/share/rospack/package.xml
+/root/ros_catkin_ws/install_isolated/lib/librospack.so
+/root/ros_catkin_ws/install_isolated/bin/rospack
+/root/ros_catkin_ws/install_isolated/bin/rosstack
+/root/ros_catkin_ws/install_isolated/include/rospack/rospack.h
+/root/ros_catkin_ws/install_isolated/include/rospack/macros.h
+/root/ros_catkin_ws/install_isolated/include/rospack/rospack_backcompat.h

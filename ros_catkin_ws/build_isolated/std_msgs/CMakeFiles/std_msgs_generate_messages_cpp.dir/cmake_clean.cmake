@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/std_msgs_generate_messages_cpp"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Float64.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt8MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt32.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int64MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Byte.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int16MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int64.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Float64MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int8.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/ColorRGBA.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/MultiArrayLayout.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int32.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Time.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Bool.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Duration.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/MultiArrayDimension.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int16.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Empty.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Char.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/String.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/ByteMultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt64.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt8.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt32MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Float32MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Header.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt64MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt16.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/UInt16MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int32MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Int8MultiArray.h"
+  "/root/ros_catkin_ws/devel_isolated/std_msgs/include/std_msgs/Float32.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

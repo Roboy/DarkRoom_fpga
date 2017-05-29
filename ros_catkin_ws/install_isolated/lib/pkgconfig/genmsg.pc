@@ -1,0 +1,8 @@
+prefix=/root/ros_catkin_ws/install_isolated
+
+Name: genmsg
+Description: Description of genmsg
+Version: 0.5.8
+Cflags: 
+Libs: -L/root/ros_catkin_ws/install_isolated/lib 
+Requires: 
