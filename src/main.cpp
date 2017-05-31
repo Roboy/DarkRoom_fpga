@@ -43,6 +43,8 @@ int main(int argc, char *argv[]) {
 	h2p_lw_darkroom_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + DARKROOM_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
 
 	DarkRoom darkroom(h2p_lw_darkroom_addr);
+
+	// PREVENT ROS STUFF
 	while (1) {
 		usleep(10000);
 	}
