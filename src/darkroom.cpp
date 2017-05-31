@@ -2,6 +2,7 @@
 #include <iostream>
 
 DarkRoom::DarkRoom(void* h2p_lw_darkroom_addr):h2p_lw_darkroom_addr(h2p_lw_darkroom_addr){
+	/*
     if (!ros::isInitialized()) {
         int argc = 0;
         char **argv = NULL;
@@ -13,7 +14,7 @@ DarkRoom::DarkRoom(void* h2p_lw_darkroom_addr):h2p_lw_darkroom_addr(h2p_lw_darkr
 
     spinner = boost::shared_ptr<ros::AsyncSpinner>(new ros::AsyncSpinner(1));
     spinner->start();
-
+*/
     sensor_thread = boost::shared_ptr<thread>(new thread(&DarkRoom::getSensorValues, this));
     sensor_thread->detach();
 }
@@ -29,6 +30,14 @@ DarkRoom::~DarkRoom(){
 };
 
 void DarkRoom::getSensorValues(){
+	int i = 0;
+	while (i < 100000) {
+		cout << (++i) << " running" << endl;
+		usleep(1000);
+
+
+	}
+
     ros::Rate rate(120);
 
     int nSkipDurations[] = {63, 73, 83, 94};

@@ -43,6 +43,10 @@ int main(int argc, char *argv[]) {
 	h2p_lw_darkroom_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + DARKROOM_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
 
 	DarkRoom darkroom(h2p_lw_darkroom_addr);
+	while (1) {
+		usleep(10000);
+	}
+
     while(ros::ok()){
         usleep(10000);
         ROS_INFO_THROTTLE(5,"retrieving sensor data");
