@@ -47,7 +47,7 @@ module soc_system_mm_interconnect_0_router_003_default_decode
      parameter DEFAULT_CHANNEL = 5,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 0 
+               DEFAULT_DESTID = 7 
    )
   (output [104 - 102 : 0] default_destination_id,
    output [8-1 : 0] default_wr_channel,
@@ -134,7 +134,7 @@ module soc_system_mm_interconnect_0_router_003
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h100 - 64'h0); 
+    localparam PAD0 = log2ceil(64'h20 - 64'h0); 
     localparam PAD1 = log2ceil(64'h10008 - 64'h10000); 
     localparam PAD2 = log2ceil(64'h10050 - 64'h10040); 
     localparam PAD3 = log2ceil(64'h10090 - 64'h10080); 
@@ -198,40 +198,40 @@ module soc_system_mm_interconnect_0_router_003
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x0 .. 0x100 )
+    // ( 0x0 .. 0x20 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 18'h0   ) begin
             src_channel = 8'b100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x10000 .. 0x10008 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 18'h10000  && read_transaction  ) begin
             src_channel = 8'b000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
     // ( 0x10040 .. 0x10050 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 18'h10040   ) begin
             src_channel = 8'b000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x10080 .. 0x10090 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 18'h10080   ) begin
             src_channel = 8'b001000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x100c0 .. 0x100d0 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 18'h100c0   ) begin
             src_channel = 8'b010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x20000 .. 0x20008 )
     if ( {address[RG:PAD5],{PAD5{1'b0}}} == 18'h20000   ) begin
             src_channel = 8'b000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

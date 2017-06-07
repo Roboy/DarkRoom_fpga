@@ -9,14 +9,6 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element DarkRoom_0
-   {
-      datum _sortIndex
-      {
-         value = "11";
-         type = "int";
-      }
-   }
    element button_pio
    {
       datum _sortIndex
@@ -215,6 +207,14 @@
          type = "String";
       }
    }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element sysid_qsys
    {
       datum _sortIndex
@@ -234,6 +234,19 @@
       {
          value = "65536";
          type = "String";
+      }
+   }
+   element test_dr_0
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
 }
@@ -263,11 +276,6 @@
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
- <interface
-   name="darkroom"
-   internal="DarkRoom_0.sensor_signals"
-   type="conduit"
-   dir="end" />
  <interface
    name="dipsw_pio_external_connection"
    internal="dipsw_pio.external_connection"
@@ -307,7 +315,6 @@
    dir="end" />
  <interface name="memory" internal="hps_0.memory" type="conduit" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <module name="DarkRoom_0" kind="DarkRoom" version="1.0" enabled="1" />
  <module name="button_pio" kind="altera_avalon_pio" version="17.0" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="true" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -980,6 +987,7 @@
    enabled="1">
   <parameter name="id" value="-1395322110" />
  </module>
+ <module name="test_dr_0" kind="test_dr" version="1.0" enabled="1" />
  <connection
    kind="avalon"
    version="17.0"
@@ -1002,7 +1010,7 @@
    kind="avalon"
    version="17.0"
    start="hps_0.h2f_lw_axi_master"
-   end="DarkRoom_0.avalon_slave_0">
+   end="test_dr_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -1144,7 +1152,7 @@
    kind="clock"
    version="17.0"
    start="clk_0.clk"
-   end="DarkRoom_0.clock_sink" />
+   end="test_dr_0.clock_sink" />
  <connection
    kind="clock"
    version="17.0"
@@ -1241,7 +1249,7 @@
    kind="reset"
    version="17.0"
    start="clk_0.clk_reset"
-   end="DarkRoom_0.reset" />
+   end="test_dr_0.reset" />
  <connection
    kind="reset"
    version="17.0"

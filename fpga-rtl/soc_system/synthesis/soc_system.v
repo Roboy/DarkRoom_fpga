@@ -6,8 +6,6 @@
 module soc_system (
 		input  wire [3:0]  button_pio_external_connection_export, // button_pio_external_connection.export
 		input  wire        clk_clk,                               //                            clk.clk
-		input  wire [15:0] darkroom_sensor_signal_i,              //                       darkroom.sensor_signal_i
-		output wire [6:0]  darkroom_led,                          //                               .led
 		input  wire [3:0]  dipsw_pio_external_connection_export,  //  dipsw_pio_external_connection.export
 		input  wire        hps_0_f2h_cold_reset_req_reset_n,      //       hps_0_f2h_cold_reset_req.reset_n
 		input  wire        hps_0_f2h_debug_reset_req_reset_n,     //      hps_0_f2h_debug_reset_req.reset_n
@@ -196,12 +194,12 @@ module soc_system (
 	wire    [1:0] mm_interconnect_0_button_pio_s1_address;                   // mm_interconnect_0:button_pio_s1_address -> button_pio:address
 	wire          mm_interconnect_0_button_pio_s1_write;                     // mm_interconnect_0:button_pio_s1_write -> button_pio:write_n
 	wire   [31:0] mm_interconnect_0_button_pio_s1_writedata;                 // mm_interconnect_0:button_pio_s1_writedata -> button_pio:writedata
-	wire   [31:0] mm_interconnect_0_darkroom_0_avalon_slave_0_readdata;      // DarkRoom_0:readdata -> mm_interconnect_0:DarkRoom_0_avalon_slave_0_readdata
-	wire          mm_interconnect_0_darkroom_0_avalon_slave_0_waitrequest;   // DarkRoom_0:waitrequest -> mm_interconnect_0:DarkRoom_0_avalon_slave_0_waitrequest
-	wire    [5:0] mm_interconnect_0_darkroom_0_avalon_slave_0_address;       // mm_interconnect_0:DarkRoom_0_avalon_slave_0_address -> DarkRoom_0:address
-	wire          mm_interconnect_0_darkroom_0_avalon_slave_0_read;          // mm_interconnect_0:DarkRoom_0_avalon_slave_0_read -> DarkRoom_0:read
-	wire          mm_interconnect_0_darkroom_0_avalon_slave_0_write;         // mm_interconnect_0:DarkRoom_0_avalon_slave_0_write -> DarkRoom_0:write
-	wire   [31:0] mm_interconnect_0_darkroom_0_avalon_slave_0_writedata;     // mm_interconnect_0:DarkRoom_0_avalon_slave_0_writedata -> DarkRoom_0:writedata
+	wire   [31:0] mm_interconnect_0_test_dr_0_avalon_slave_0_readdata;       // test_dr_0:readdata -> mm_interconnect_0:test_dr_0_avalon_slave_0_readdata
+	wire          mm_interconnect_0_test_dr_0_avalon_slave_0_waitrequest;    // test_dr_0:waitrequest -> mm_interconnect_0:test_dr_0_avalon_slave_0_waitrequest
+	wire    [2:0] mm_interconnect_0_test_dr_0_avalon_slave_0_address;        // mm_interconnect_0:test_dr_0_avalon_slave_0_address -> test_dr_0:address
+	wire          mm_interconnect_0_test_dr_0_avalon_slave_0_read;           // mm_interconnect_0:test_dr_0_avalon_slave_0_read -> test_dr_0:read
+	wire          mm_interconnect_0_test_dr_0_avalon_slave_0_write;          // mm_interconnect_0:test_dr_0_avalon_slave_0_write -> test_dr_0:write
+	wire   [31:0] mm_interconnect_0_test_dr_0_avalon_slave_0_writedata;      // mm_interconnect_0:test_dr_0_avalon_slave_0_writedata -> test_dr_0:writedata
 	wire   [31:0] hps_only_master_master_readdata;                           // mm_interconnect_1:hps_only_master_master_readdata -> hps_only_master:master_readdata
 	wire          hps_only_master_master_waitrequest;                        // mm_interconnect_1:hps_only_master_master_waitrequest -> hps_only_master:master_waitrequest
 	wire   [31:0] hps_only_master_master_address;                            // hps_only_master:master_address -> mm_interconnect_1:hps_only_master_master_address
@@ -254,22 +252,9 @@ module soc_system (
 	wire          irq_mapper_receiver1_irq;                                  // button_pio:irq -> [irq_mapper:receiver1_irq, irq_mapper_002:receiver1_irq]
 	wire          irq_mapper_receiver2_irq;                                  // dipsw_pio:irq -> [irq_mapper:receiver2_irq, irq_mapper_002:receiver2_irq]
 	wire          irq_mapper_receiver0_irq;                                  // jtag_uart:av_irq -> [irq_mapper:receiver0_irq, irq_mapper_002:receiver0_irq]
-	wire          rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [DarkRoom_0:reset_n, button_pio:reset_n, dipsw_pio:reset_n, intr_capturer_0:rst_n, irq_mapper_002:reset, jtag_uart:rst_n, led_pio:reset_n, mm_interconnect_0:fpga_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:onchip_memory2_0_reset1_reset_bridge_in_reset_reset, mm_interconnect_1:hps_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:hps_only_master_master_translator_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, rst_translator:in_reset, sysid_qsys:reset_n]
+	wire          rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [button_pio:reset_n, dipsw_pio:reset_n, intr_capturer_0:rst_n, irq_mapper_002:reset, jtag_uart:rst_n, led_pio:reset_n, mm_interconnect_0:fpga_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:onchip_memory2_0_reset1_reset_bridge_in_reset_reset, mm_interconnect_1:hps_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:hps_only_master_master_translator_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, rst_translator:in_reset, sysid_qsys:reset_n, test_dr_0:reset]
 	wire          rst_controller_reset_out_reset_req;                        // rst_controller:reset_req -> [onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire          rst_controller_001_reset_out_reset;                        // rst_controller_001:reset_out -> [mm_interconnect_0:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:hps_0_f2h_axi_slave_agent_reset_sink_reset_bridge_in_reset_reset]
-
-	DarkRoom darkroom_0 (
-		.reset_n         (~rst_controller_reset_out_reset),                         //          reset.reset_n
-		.address         (mm_interconnect_0_darkroom_0_avalon_slave_0_address),     // avalon_slave_0.address
-		.write           (mm_interconnect_0_darkroom_0_avalon_slave_0_write),       //               .write
-		.writedata       (mm_interconnect_0_darkroom_0_avalon_slave_0_writedata),   //               .writedata
-		.read            (mm_interconnect_0_darkroom_0_avalon_slave_0_read),        //               .read
-		.readdata        (mm_interconnect_0_darkroom_0_avalon_slave_0_readdata),    //               .readdata
-		.waitrequest     (mm_interconnect_0_darkroom_0_avalon_slave_0_waitrequest), //               .waitrequest
-		.clock           (clk_clk),                                                 //     clock_sink.clk
-		.sensor_signal_i (darkroom_sensor_signal_i),                                // sensor_signals.sensor_signal_i
-		.LED             (darkroom_led)                                             //               .led
-	);
 
 	soc_system_button_pio button_pio (
 		.clk        (clk_clk),                                    //                 clk.clk
@@ -577,6 +562,18 @@ module soc_system (
 		.address  (mm_interconnect_0_sysid_qsys_control_slave_address)   //              .address
 	);
 
+	test_dr test_dr_0 (
+		.reset           (rst_controller_reset_out_reset),                         //          reset.reset
+		.address         (mm_interconnect_0_test_dr_0_avalon_slave_0_address),     // avalon_slave_0.address
+		.write           (mm_interconnect_0_test_dr_0_avalon_slave_0_write),       //               .write
+		.writedata       (mm_interconnect_0_test_dr_0_avalon_slave_0_writedata),   //               .writedata
+		.read            (mm_interconnect_0_test_dr_0_avalon_slave_0_read),        //               .read
+		.readdata        (mm_interconnect_0_test_dr_0_avalon_slave_0_readdata),    //               .readdata
+		.waitrequest     (mm_interconnect_0_test_dr_0_avalon_slave_0_waitrequest), //               .waitrequest
+		.clock           (clk_clk),                                                //     clock_sink.clk
+		.sensor_signal_i ()                                                        //    conduit_end.sensor_signal_i
+	);
+
 	soc_system_mm_interconnect_0 mm_interconnect_0 (
 		.hps_0_h2f_axi_master_awid                                        (hps_0_h2f_axi_master_awid),                                 //                                       hps_0_h2f_axi_master.awid
 		.hps_0_h2f_axi_master_awaddr                                      (hps_0_h2f_axi_master_awaddr),                               //                                                           .awaddr
@@ -667,12 +664,6 @@ module soc_system (
 		.button_pio_s1_readdata                                           (mm_interconnect_0_button_pio_s1_readdata),                  //                                                           .readdata
 		.button_pio_s1_writedata                                          (mm_interconnect_0_button_pio_s1_writedata),                 //                                                           .writedata
 		.button_pio_s1_chipselect                                         (mm_interconnect_0_button_pio_s1_chipselect),                //                                                           .chipselect
-		.DarkRoom_0_avalon_slave_0_address                                (mm_interconnect_0_darkroom_0_avalon_slave_0_address),       //                                  DarkRoom_0_avalon_slave_0.address
-		.DarkRoom_0_avalon_slave_0_write                                  (mm_interconnect_0_darkroom_0_avalon_slave_0_write),         //                                                           .write
-		.DarkRoom_0_avalon_slave_0_read                                   (mm_interconnect_0_darkroom_0_avalon_slave_0_read),          //                                                           .read
-		.DarkRoom_0_avalon_slave_0_readdata                               (mm_interconnect_0_darkroom_0_avalon_slave_0_readdata),      //                                                           .readdata
-		.DarkRoom_0_avalon_slave_0_writedata                              (mm_interconnect_0_darkroom_0_avalon_slave_0_writedata),     //                                                           .writedata
-		.DarkRoom_0_avalon_slave_0_waitrequest                            (mm_interconnect_0_darkroom_0_avalon_slave_0_waitrequest),   //                                                           .waitrequest
 		.dipsw_pio_s1_address                                             (mm_interconnect_0_dipsw_pio_s1_address),                    //                                               dipsw_pio_s1.address
 		.dipsw_pio_s1_write                                               (mm_interconnect_0_dipsw_pio_s1_write),                      //                                                           .write
 		.dipsw_pio_s1_readdata                                            (mm_interconnect_0_dipsw_pio_s1_readdata),                   //                                                           .readdata
@@ -701,7 +692,13 @@ module soc_system (
 		.onchip_memory2_0_s1_chipselect                                   (mm_interconnect_0_onchip_memory2_0_s1_chipselect),          //                                                           .chipselect
 		.onchip_memory2_0_s1_clken                                        (mm_interconnect_0_onchip_memory2_0_s1_clken),               //                                                           .clken
 		.sysid_qsys_control_slave_address                                 (mm_interconnect_0_sysid_qsys_control_slave_address),        //                                   sysid_qsys_control_slave.address
-		.sysid_qsys_control_slave_readdata                                (mm_interconnect_0_sysid_qsys_control_slave_readdata)        //                                                           .readdata
+		.sysid_qsys_control_slave_readdata                                (mm_interconnect_0_sysid_qsys_control_slave_readdata),       //                                                           .readdata
+		.test_dr_0_avalon_slave_0_address                                 (mm_interconnect_0_test_dr_0_avalon_slave_0_address),        //                                   test_dr_0_avalon_slave_0.address
+		.test_dr_0_avalon_slave_0_write                                   (mm_interconnect_0_test_dr_0_avalon_slave_0_write),          //                                                           .write
+		.test_dr_0_avalon_slave_0_read                                    (mm_interconnect_0_test_dr_0_avalon_slave_0_read),           //                                                           .read
+		.test_dr_0_avalon_slave_0_readdata                                (mm_interconnect_0_test_dr_0_avalon_slave_0_readdata),       //                                                           .readdata
+		.test_dr_0_avalon_slave_0_writedata                               (mm_interconnect_0_test_dr_0_avalon_slave_0_writedata),      //                                                           .writedata
+		.test_dr_0_avalon_slave_0_waitrequest                             (mm_interconnect_0_test_dr_0_avalon_slave_0_waitrequest)     //                                                           .waitrequest
 	);
 
 	soc_system_mm_interconnect_1 mm_interconnect_1 (
