@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO_0[1]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},

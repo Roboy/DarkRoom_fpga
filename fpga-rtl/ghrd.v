@@ -149,6 +149,7 @@ module ghrd(
 		//Clock&Reset
 	  .clk_clk                               (FPGA_CLK1_50 ),                               //                            clk.clk
 	  .reset_reset_n                         (hps_fpga_reset_n ),                         //                          reset.reset_n
+	  .test_dr_0_conduit_end_sensor_signal_i (GPIO_0[15:0]),								  //          test_dr_0_conduit_end.sensor_signal_i
 	  //.darkroom_sensor_signal_i				  (GPIO_0[15:0]),
 	  //.darkroom_led								  (LED[7:1]),
 	  //HPS ddr3

@@ -38,7 +38,7 @@ begin
 			-- STATES
 			if state = "000" then
 				-- wait until start == '1'
-			
+				state <= "010"; -- ONLY FOR TESTING!! REMOVE LATER
 			elsif state = "001" then
 				-- waiting for sensor to go up (rising edge)
 				if (sensor_prev = '0' and sensor = '1') then
@@ -57,8 +57,9 @@ begin
 				--  calc duration
 				
 				-- TODO: check for overflow: time_sensor_fall < time_sensor_rise
-				
-				duration <= std_logic_vector(unsigned(time_sensor_fall) - unsigned(time_sensor_rise));
+				-- ONLY FOR TESTING!! REMOVE LATER
+				duration <= timer; 
+				-- std_logic_vector(unsigned(time_sensor_fall) - unsigned(time_sensor_rise));
 				state <= "000"; -- wait again
 			
 			end if;

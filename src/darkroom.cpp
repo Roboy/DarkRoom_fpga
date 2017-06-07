@@ -37,9 +37,15 @@ void DarkRoom::getSensorValues(){
 	int i = 0;
 	while (i < 100000) {
 		cout << (++i) << " running" << endl;
-		usleep(1000);
-
-
+		for (int i = 0; i < 10; i++) {
+			int32_t data_read = IORD(h2p_lw_darkroom_addr, i);
+			cout << "read: " << data_read << endl;
+			usleep(100);
+		}
+				
+		IOWR(h2p_lw_darkroom_addr,0,1); // base reg data
+		cout << "written some stuff, waiting" << endl;
+		usleep(100000);
 	}
 
     ros::Rate rate(120);

@@ -59,7 +59,7 @@ always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
 end
 
 // if sensor ha no data we have to wait
-assign waitrequest = ! test_ready;
+assign waitrequest = 0; //! test_ready;
 
 
 
@@ -69,7 +69,7 @@ reg [31:0] timer;
 wire 			test_sensor_in;
 reg 			test_start;
 wire 			test_ready;
-reg [31:0]  test_duration;
+wire        test_duration;
 
 // 1 MHz clock
 pll pll_1MHz(
@@ -87,7 +87,7 @@ Counter counter(
 
 // test lighthouse sensor
 test_lighthouse test_sensor(
-	.clk_1MHz(clock_1MHz),
+	.clk_1MHz(clock), // clock_1MHz 
 	.start(test_start), // set this to 1 to start
 	.sensor(sensor_signal_i[1]), // sensor input
 	.timer(timer),  
