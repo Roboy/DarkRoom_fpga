@@ -72,6 +72,7 @@
 		.memory_mem_odt                        (<connected-to-memory_mem_odt>),                        //                               .mem_odt
 		.memory_mem_dm                         (<connected-to-memory_mem_dm>),                         //                               .mem_dm
 		.memory_oct_rzqin                      (<connected-to-memory_oct_rzqin>),                      //                               .oct_rzqin
-		.reset_reset_n                         (<connected-to-reset_reset_n>)                          //                          reset.reset_n
+		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
+		.test_dr_0_conduit_end_sensor_signal_i (<connected-to-test_dr_0_conduit_end_sensor_signal_i>)  //          test_dr_0_conduit_end.sensor_signal_i
 	);
 

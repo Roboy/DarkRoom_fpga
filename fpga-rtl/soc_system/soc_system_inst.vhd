@@ -73,7 +73,8 @@
 			memory_mem_odt                        : out   std_logic;                                        -- mem_odt
 			memory_mem_dm                         : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_oct_rzqin                      : in    std_logic                     := 'X';             -- oct_rzqin
-			reset_reset_n                         : in    std_logic                     := 'X'              -- reset_n
+			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
+			test_dr_0_conduit_end_sensor_signal_i : in    std_logic_vector(15 downto 0) := (others => 'X')  -- sensor_signal_i
 		);
 	end component soc_system;
 
@@ -152,6 +153,7 @@
 			memory_mem_odt                        => CONNECTED_TO_memory_mem_odt,                        --                               .mem_odt
 			memory_mem_dm                         => CONNECTED_TO_memory_mem_dm,                         --                               .mem_dm
 			memory_oct_rzqin                      => CONNECTED_TO_memory_oct_rzqin,                      --                               .oct_rzqin
-			reset_reset_n                         => CONNECTED_TO_reset_reset_n                          --                          reset.reset_n
+			reset_reset_n                         => CONNECTED_TO_reset_reset_n,                         --                          reset.reset_n
+			test_dr_0_conduit_end_sensor_signal_i => CONNECTED_TO_test_dr_0_conduit_end_sensor_signal_i  --          test_dr_0_conduit_end.sensor_signal_i
 		);
 

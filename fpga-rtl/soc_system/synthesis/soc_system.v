@@ -77,7 +77,8 @@ module soc_system (
 		output wire        memory_mem_odt,                        //                               .mem_odt
 		output wire [3:0]  memory_mem_dm,                         //                               .mem_dm
 		input  wire        memory_oct_rzqin,                      //                               .oct_rzqin
-		input  wire        reset_reset_n                          //                          reset.reset_n
+		input  wire        reset_reset_n,                         //                          reset.reset_n
+		input  wire [15:0] test_dr_0_conduit_end_sensor_signal_i  //          test_dr_0_conduit_end.sensor_signal_i
 	);
 
 	wire    [1:0] hps_0_h2f_axi_master_awburst;                              // hps_0:h2f_AWBURST -> mm_interconnect_0:hps_0_h2f_axi_master_awburst
@@ -571,7 +572,7 @@ module soc_system (
 		.readdata        (mm_interconnect_0_test_dr_0_avalon_slave_0_readdata),    //               .readdata
 		.waitrequest     (mm_interconnect_0_test_dr_0_avalon_slave_0_waitrequest), //               .waitrequest
 		.clock           (clk_clk),                                                //     clock_sink.clk
-		.sensor_signal_i ()                                                        //    conduit_end.sensor_signal_i
+		.sensor_signal_i (test_dr_0_conduit_end_sensor_signal_i)                   //    conduit_end.sensor_signal_i
 	);
 
 	soc_system_mm_interconnect_0 mm_interconnect_0 (
