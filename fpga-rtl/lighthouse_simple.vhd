@@ -13,7 +13,7 @@ use IEEE.std_logic_signed.all;
 
 entity test_lighthouse is 
 	port (
-		clk_1MHz : in std_logic;
+		clk : in std_logic;
 		start : in std_logic;  -- set this to 1 to start
 		sensor : in std_logic; -- sensor input
 		timer : in std_logic_vector(31 downto 0);
@@ -25,41 +25,48 @@ end test_lighthouse;
 architecture baustein42 of test_lighthouse is
 	signal sensor_prev : std_logic;
 	signal state : std_logic_vector(2 downto 0) := (others => '0');
-	signal time_sensor_rise : std_logic_vector(31 downto 0);
-	signal time_sensor_fall : std_logic_vector(31 downto 0);
+	signal time_sensor_rise : unsigned(63 downto 0);
+	signal time_sensor_fall : unsigned(63 downto 0);
+	signal counter : unsigned(63 downto 0) := (others => '0');
+	
 begin
 	
-	process(clk_1MHz)
+
+	
+	process(clk)
 	begin
-		if rising_edge(clk_1MHz) then
+		if rising_edge(clk) then
 			if start = '1' then
 			end if;
+			
+			
+			--duration(0) <= sensor;
 			
 			-- STATES
 			if state = "000" then
 				-- wait until start == '1'
-				state <= "010"; -- ONLY FOR TESTING!! REMOVE LATER
+				state <= "001"; -- ONLY FOR TESTING!! REMOVE LATER
+				
+				
+				--duration <= "00000000000000000000000000101010"; -- initial value for debug
+				
 			elsif state = "001" then
 				-- waiting for sensor to go up (rising edge)
 				if (sensor_prev = '0' and sensor = '1') then
 					state <= "010";
-					time_sensor_rise <= timer;
+					time_sensor_rise <= counter;
 				end if;
 			
 			elsif state = "010" then
 				-- waitung for sensor to go down (falling edge)
 				if (sensor_prev = '1' and sensor = '0') then
 					state <= "011";
-					time_sensor_fall <= timer;			
+					time_sensor_fall <= counter;			
 				end if;
 			
 			elsif state = "011" then
-				--  calc duration
-				
-				-- TODO: check for overflow: time_sensor_fall < time_sensor_rise
-				-- ONLY FOR TESTING!! REMOVE LATER
-				duration <= timer; 
-				-- std_logic_vector(unsigned(time_sensor_fall) - unsigned(time_sensor_rise));
+				--  calc duration				
+				duration <=  std_logic_vector(time_sensor_fall - time_sensor_rise) (31 downto 0);
 				state <= "000"; -- wait again
 			
 			end if;
@@ -67,9 +74,11 @@ begin
 			
 			sensor_prev <= sensor;
 			
+			counter <= counter + 1;
 			
 			
-		end if; -- end rising_edge(clk_1MHz)
+			
+		end if; -- end rising_edge(clk)
 		
 	end process;
 	

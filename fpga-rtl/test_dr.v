@@ -28,7 +28,8 @@ reg [31:0] start_sensor;
 
 // C code reads
 assign readdata = 
-	(address == 0) ? test_duration :
+	(address == 0) ? 32'h0000_0005 : 
+	(address == 1) ? test_duration :
 	32'hDEAD_BEEF;
 	
 always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
@@ -69,25 +70,19 @@ reg [31:0] timer;
 wire 			test_sensor_in;
 reg 			test_start;
 wire 			test_ready;
-wire        test_duration;
+reg [31:0]  test_duration;
 
-// 1 MHz clock
-pll pll_1MHz(
-	.refclk(clock),
-	.rst(~reset),
-	.outclk_0(clock_1MHz)
-);
 
 // timer
 Counter counter(
-	.clk(clock_1MHz),
+	.clk(clock),
 	.reset(~reset),
 	.count(timer)
 );
 
 // test lighthouse sensor
 test_lighthouse test_sensor(
-	.clk_1MHz(clock), // clock_1MHz 
+	.clk(clock), // clock_1MHz 
 	.start(test_start), // set this to 1 to start
 	.sensor(sensor_signal_i[1]), // sensor input
 	.timer(timer),  

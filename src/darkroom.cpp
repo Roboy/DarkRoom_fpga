@@ -35,17 +35,30 @@ DarkRoom::~DarkRoom(){
 
 void DarkRoom::getSensorValues(){
 	int i = 0;
+    unsigned int lastDuration = 0;
 	while (i < 100000) {
-		cout << (++i) << " running" << endl;
+		//cout << (++i) << " running" << endl;
+
+
+
+        unsigned int data_read = IORD(h2p_lw_darkroom_addr, 1);
+        if (data_read == lastDuration) continue;
+
+        lastDuration = data_read;
+        cout << "peak duration: " << (data_read / 50) << endl;
+        usleep(100);
+
+        /*
 		for (int i = 0; i < 10; i++) {
 			int32_t data_read = IORD(h2p_lw_darkroom_addr, i);
-			cout << "read: " << data_read << endl;
+			cout << "read addr " << i << ": " << data_read << endl;
 			usleep(100);
 		}
 				
 		IOWR(h2p_lw_darkroom_addr,0,1); // base reg data
 		cout << "written some stuff, waiting" << endl;
 		usleep(100000);
+        */
 	}
 
     ros::Rate rate(120);

@@ -638,7 +638,7 @@ agreement for further details.
 		(text "reset_n" (rect 277 1179 596 2368)(font "Arial" (color 0 0 0)))
 		(text "test_dr_0_conduit_end" (rect 138 1195 402 2403)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "sensor_signal_i" (rect 277 1219 644 2448)(font "Arial" (color 0 0 0)))
-		(text " soc_system " (rect 696 1240 1464 2490)(font "Arial" ))
+		(text " system " (rect 717 1240 1482 2490)(font "Arial" ))
 		(line (pt 272 32)(pt 480 32)(line_width 1))
 		(line (pt 480 32)(pt 480 1240)(line_width 1))
 		(line (pt 272 1240)(pt 480 1240)(line_width 1))
