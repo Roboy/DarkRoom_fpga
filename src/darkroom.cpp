@@ -35,18 +35,30 @@ DarkRoom::~DarkRoom(){
 
 void DarkRoom::getSensorValues(){
 	int i = 0;
-    unsigned int lastDuration = 0;
+    int lastDuration = 0;
+    int skipped = 0;
 	while (i < 100000) {
 		//cout << (++i) << " running" << endl;
 
-
-
-        unsigned int data_read = IORD(h2p_lw_darkroom_addr, 1);
-        if (data_read == lastDuration) continue;
+        int data_read = IORD(h2p_lw_darkroom_addr, 1);
+        if (data_read == lastDuration) {
+            skipped++;
+            continue;
+        }
 
         lastDuration = data_read;
-        cout << "peak duration: " << (data_read / 50) << endl;
-        usleep(100);
+        if (lastDuration > 1000000) {
+            cout << "peak duration: invalid";
+
+        } else {
+            cout << "peak duration: " << (data_read / 50);
+        }
+
+        cout << "\t\t\tskipped: " << skipped << endl;
+        skipped = 0;
+
+
+        usleep(10);
 
         /*
 		for (int i = 0; i < 10; i++) {

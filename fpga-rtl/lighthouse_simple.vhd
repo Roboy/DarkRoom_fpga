@@ -25,9 +25,9 @@ end test_lighthouse;
 architecture baustein42 of test_lighthouse is
 	signal sensor_prev : std_logic;
 	signal state : std_logic_vector(2 downto 0) := (others => '0');
-	signal time_sensor_rise : unsigned(63 downto 0);
-	signal time_sensor_fall : unsigned(63 downto 0);
-	signal counter : unsigned(63 downto 0) := (others => '0');
+	signal time_sensor_rise : signed(31 downto 0);
+	signal time_sensor_fall : signed(31 downto 0);
+	signal counter : signed(31 downto 0) := (others => '0');
 	
 begin
 	
@@ -38,6 +38,11 @@ begin
 		if rising_edge(clk) then
 			if start = '1' then
 			end if;
+						
+			
+			sensor_prev <= sensor;
+			
+			counter <= counter + 1;
 			
 			
 			--duration(0) <= sensor;
@@ -46,7 +51,8 @@ begin
 			if state = "000" then
 				-- wait until start == '1'
 				state <= "001"; -- ONLY FOR TESTING!! REMOVE LATER
-				
+				ready <= '1'; -- writing complete
+				-- counter <= (others => '0');
 				
 				--duration <= "00000000000000000000000000101010"; -- initial value for debug
 				
@@ -61,20 +67,24 @@ begin
 				-- waitung for sensor to go down (falling edge)
 				if (sensor_prev = '1' and sensor = '0') then
 					state <= "011";
-					time_sensor_fall <= counter;			
+					time_sensor_fall <= counter;	
+					
+					ready <= '0'; -- prepare for writing
+					
 				end if;
 			
 			elsif state = "011" then
 				--  calc duration				
-				duration <=  std_logic_vector(time_sensor_fall - time_sensor_rise) (31 downto 0);
+				duration <=  std_logic_vector(time_sensor_fall - time_sensor_rise);
 				state <= "000"; -- wait again
+				
+				if (time_sensor_fall < time_sensor_rise) then					
+					duration <= "00000000000000000000000000000000";
+				
+				end if;
 			
 			end if;
 			
-			
-			sensor_prev <= sensor;
-			
-			counter <= counter + 1;
 			
 			
 			
@@ -83,6 +93,5 @@ begin
 	end process;
 	
 	
-	ready <= '1' when (state = "000") else '0';
 	
 end architecture;

@@ -60,7 +60,7 @@ always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
 end
 
 // if sensor ha no data we have to wait
-assign waitrequest = 0; //! test_ready;
+assign waitrequest = ~test_ready;
 
 
 
@@ -70,7 +70,7 @@ reg [31:0] timer;
 wire 			test_sensor_in;
 reg 			test_start;
 wire 			test_ready;
-reg [31:0]  test_duration;
+wire [31:0]  test_duration;
 
 
 // timer
