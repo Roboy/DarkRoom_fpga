@@ -29,7 +29,8 @@ reg [31:0] start_sensor;
 // C code reads
 assign readdata = 
 	(address == 0) ? 32'h0000_0005 : 
-	(address == 1) ? test_duration :
+	(address == 1) ? test_duration_high :
+	(address == 2) ? test_duration_low :
 	32'hDEAD_BEEF;
 	
 always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
@@ -60,34 +61,25 @@ always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
 end
 
 // if sensor ha no data we have to wait
-assign waitrequest = ~test_ready;
+assign waitrequest =~test_ready;
 
 
-
-wire clock_1MHz;
-reg [31:0] timer;
 
 wire 			test_sensor_in;
 reg 			test_start;
 wire 			test_ready;
-wire [31:0]  test_duration;
+wire [31:0]  test_duration_high;
+wire [31:0]  test_duration_low;
 
 
-// timer
-Counter counter(
-	.clk(clock),
-	.reset(~reset),
-	.count(timer)
-);
 
 // test lighthouse sensor
 test_lighthouse test_sensor(
 	.clk(clock), // clock_1MHz 
-	.start(test_start), // set this to 1 to start
 	.sensor(sensor_signal_i[1]), // sensor input
-	.timer(timer),  
 	.ready(test_ready),
-	.duration(test_duration) // duration of the last peak
+	.duration_high(test_duration_high), // duration of the last peak
+	.duration_low(test_duration_low) // duration of the last peak
 );
 
 

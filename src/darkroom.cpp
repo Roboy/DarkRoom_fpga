@@ -34,43 +34,36 @@ DarkRoom::~DarkRoom(){
 };
 
 void DarkRoom::getSensorValues(){
-	int i = 0;
-    int lastDuration = 0;
-    int skipped = 0;
-	while (i < 100000) {
-		//cout << (++i) << " running" << endl;
+    int lastDurationHigh = 0;
+    int lastDurationLow = 0;
 
-        int data_read = IORD(h2p_lw_darkroom_addr, 1);
-        if (data_read == lastDuration) {
-            skipped++;
-            continue;
-        }
+    int skippedHigh = 0;
+    int skippedLow = 0;
+	while (1) {
 
-        lastDuration = data_read;
-        if (lastDuration > 1000000) {
-            cout << "peak duration: invalid";
+        // high phase
+        int readHigh;
+        do { 
+            readHigh = IORD(h2p_lw_darkroom_addr, 1);
+            skippedHigh++;
+            usleep(10);
+        } while (readHigh == lastDurationHigh);
+        lastDurationHigh = readHigh;
 
-        } else {
-            cout << "peak duration: " << (data_read / 50);
-        }
+        // low phase
+        int readLow;
+        do { 
+            readLow = IORD(h2p_lw_darkroom_addr, 2);
+            skippedLow++;
+            usleep(10);
+        } while (readLow == lastDurationLow);
+        lastDurationLow = readLow;
 
-        cout << "\t\t\tskipped: " << skipped << endl;
-        skipped = 0;
+        // output
+        cout << "high: " << (lastDurationHigh / 50) << " \t\tlow: " << (lastDurationLow / 50) << " \t\tskipped(" <<  skippedHigh << ", " << skippedLow << ")" << endl;
+        skippedLow = 0;
+        skippedHigh = 0;
 
-
-        usleep(10);
-
-        /*
-		for (int i = 0; i < 10; i++) {
-			int32_t data_read = IORD(h2p_lw_darkroom_addr, i);
-			cout << "read addr " << i << ": " << data_read << endl;
-			usleep(100);
-		}
-				
-		IOWR(h2p_lw_darkroom_addr,0,1); // base reg data
-		cout << "written some stuff, waiting" << endl;
-		usleep(100000);
-        */
 	}
 
     ros::Rate rate(120);
