@@ -31,6 +31,8 @@ assign readdata =
 	(address == 0) ? 32'h0000_0005 : 
 	(address == 1) ? test_duration_high :
 	(address == 2) ? test_duration_low :
+	(address == 5) ? test_duration_high :
+	(address == 6) ? test_duration_low :	
 	32'hDEAD_BEEF;
 	
 always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
@@ -65,7 +67,6 @@ assign waitrequest =~test_ready;
 
 
 
-wire 			test_sensor_in;
 reg 			test_start;
 wire 			test_ready;
 wire [31:0]  test_duration_high;
@@ -82,6 +83,32 @@ test_lighthouse test_sensor(
 	.duration_low(test_duration_low) // duration of the last peak
 );
 
+
+
+// REAL SENSOR
+// signals 
+
+wire real_ready;
+
+wire [31:0] real_duration_nskip_to_sweep;
+wire real_axis;
+wire real_lighthouse_id;
+
+wire [31:0] real_combined_data;
+wire [31:0] real_debug_data;
+
+
+// real lighthouse sensor
+lighthouse_sensor awesome_lighthouse (
+	.clk(clock),
+	.sensor(sensor_signal_i[1]),
+	.ready(real_ready),
+	.duration_nskip_to_sweep(real_duration_nskip_to_sweep),
+	.axis(real_axis),
+	.lighthouse_id(real_lighthouse_id),
+	.combined_data(real_combined_data),
+	.debug_data(real_debug_data)
+);
 
 
 

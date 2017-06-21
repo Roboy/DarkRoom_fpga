@@ -64,6 +64,16 @@ void DarkRoom::getSensorValues(){
         skippedLow = 0;
         skippedHigh = 0;
 
+        // READ NEW VALUES
+        int combined = IORD(h2p_lw_darkroom_addr, 5);
+        int debug = IORD(h2p_lw_darkroom_addr, 6);
+        int debug2 = IORD(h2p_lw_darkroom_addr, 7);
+        int debug3 = IORD(h2p_lw_darkroom_addr, 4);
+        cout << "combined: " << (combined & 0xFFF) << endl;
+        cout << "debug: " << debug << endl;
+        cout << "debug2: " << debug2 << endl;
+        cout << "debug3: " << debug3 << endl;
+
 	}
 
     ros::Rate rate(120);

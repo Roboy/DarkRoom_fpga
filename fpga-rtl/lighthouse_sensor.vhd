@@ -15,7 +15,7 @@ entity lighthouse_sensor is
 		axis : out std_logic;				-- sweep x or y axis
 		lighthouse_id : out std_logic;	-- which lighthouse emitted the sweep
 		combined_data : out unsigned(31 downto 0);
-		debug_data : out unsigned(31 downto 0);
+		debug_data : out unsigned(31 downto 0)
 	);
 end lighthouse_sensor;
 
@@ -51,7 +51,7 @@ begin
 	axis <= current_axis;
 	
 	-- combined data: lighthouse_id + current_axis + duration (nskip to sweep)
-	combined_data(31) <= lighthouse_id;
+	combined_data(31) <= current_lighthouse_id;
 	combined_data(30) <= current_axis;
 	combined_data(29 downto 0) <= duration_from_nskip_rise_to_sweep_rise(29 downto 0);
 	
