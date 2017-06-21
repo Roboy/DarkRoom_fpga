@@ -82,6 +82,8 @@ test_lighthouse test_sensor(
 	.duration_low(test_duration_low) // duration of the last peak
 );
 
+// real lighthouse sensor
+//lighthouse_sensor
 
 
 
