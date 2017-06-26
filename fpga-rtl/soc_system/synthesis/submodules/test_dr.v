@@ -23,90 +23,81 @@ module test_dr (
 );
 
 
-reg [31:0] start_sensor;
+// SENSOR RESULTS
+wire [31:0] sensor_combined_data_00;
+wire [31:0] sensor_combined_data_01;
+wire [31:0] sensor_combined_data_02;
+wire [31:0] sensor_combined_data_03;
+wire [31:0] sensor_combined_data_04;
+wire [31:0] sensor_combined_data_05;
+wire [31:0] sensor_combined_data_06;
+wire [31:0] sensor_combined_data_07;
+wire [31:0] sensor_combined_data_08;
 
 
-// C code reads
+// OUTPUT TO THE ARM CORE
 assign readdata = 
-	(address == 0) ? 32'h0000_0005 : 
-	(address == 1) ? test_duration_high :
-	(address == 2) ? test_duration_low :
-	(address == 5) ? real_combined_data :
-	(address == 7) ? real_duration_nskip_to_sweep :
-	32'hDEAD_BEEF;
-	
-always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
-	if (reset == 1) 
-		begin 
-			start_sensor <= 0;
-			test_start <= 0;
-		end 
-	else 
-		begin		
-			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
-			if(write && ~waitrequest) begin
-				case(address)
-					0: start_sensor <= writedata; 
-				endcase 
-			end
-			
-			// start sensor when 1 was written
-			if(start_sensor == 1) begin 
-				start_sensor <= 0;
-				test_start <= 1;				
-			end else begin
-				test_start <= 0;
-			end
-			
-				
-		end 
-end
+	(address == 0) ? sensor_combined_data_00 :
+	(address == 1) ? sensor_combined_data_01 :
+	(address == 2) ? sensor_combined_data_02 :
+	(address == 3) ? sensor_combined_data_03 :
+	(address == 4) ? sensor_combined_data_04 :
+	(address == 5) ? sensor_combined_data_05 :
+	(address == 6) ? sensor_combined_data_06 :
+	(address == 7) ? sensor_combined_data_07 :
+	(address == 8) ? sensor_combined_data_08 :
+						  32'hDEAD_BEEF;
 
-// if sensor ha no data we have to wait
-assign waitrequest = ~test_ready; // UNUSED (waitrequest is always 0)
+assign waitrequest = 0;
 
-
-
-reg 			test_start;
-wire 			test_ready;
-wire [31:0]  test_duration_high;
-wire [31:0]  test_duration_low;
-
-
-
-// test lighthouse sensor
-test_lighthouse test_sensor(
-	.clk(clock), // clock_1MHz 
-	.sensor(sensor_signal_i[1]), // sensor input
-	.ready(test_ready),
-	.duration_high(test_duration_high), // duration of the last peak
-	.duration_low(test_duration_low) // duration of the last peak
+// SENSORS
+lighthouse_sensor awesome_lighthouse00 (
+	.clk(clock),
+	.sensor(sensor_signal_i[0]),
+	.combined_data(sensor_combined_data_00)
 );
 
-
-
-// REAL SENSOR
-// signals 
-
-wire [31:0] real_duration_nskip_to_sweep;
-wire real_lighthouse_id;
-wire real_axis;
-wire real_valid;
-
-wire [31:0] real_combined_data;
-
-
-// real lighthouse sensor
-lighthouse_sensor awesome_lighthouse (
+lighthouse_sensor awesome_lighthouse01 (
 	.clk(clock),
 	.sensor(sensor_signal_i[1]),
-	.duration_nskip_to_sweep(real_duration_nskip_to_sweep),
-	.lighthouse_id(real_lighthouse_id),
-	.axis(real_axis),
-	.valid(real_valid),
-	.combined_data(real_combined_data)
+	.combined_data(sensor_combined_data_01)
+);
+
+lighthouse_sensor awesome_lighthouse02 (
+	.clk(clock),
+	.sensor(sensor_signal_i[2]),
+	.combined_data(sensor_combined_data_02)
 );
 
 
+lighthouse_sensor awesome_lighthouse03 (
+	.clk(clock),
+	.sensor(sensor_signal_i[3]),
+	.combined_data(sensor_combined_data_03)
+);
+
+lighthouse_sensor awesome_lighthouse04 (
+	.clk(clock),
+	.sensor(sensor_signal_i[4]),
+	.combined_data(sensor_combined_data_04)
+);
+
+lighthouse_sensor awesome_lighthouse05 (
+	.clk(clock),
+	.sensor(sensor_signal_i[5]),
+	.combined_data(sensor_combined_data_05)
+);
+
+lighthouse_sensor awesome_lighthouse06 (
+	.clk(clock),
+	.sensor(sensor_signal_i[6]),
+	.combined_data(sensor_combined_data_07)
+);
+
+lighthouse_sensor awesome_lighthouse08 (
+	.clk(clock),
+	.sensor(sensor_signal_i[8]),
+	.combined_data(sensor_combined_data_08)
+);
 
 endmodule
