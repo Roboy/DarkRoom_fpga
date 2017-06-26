@@ -34,34 +34,6 @@ DarkRoom::~DarkRoom(){
 };
 
 
-int lastDurationHigh = 0;
-int lastDurationLow = 0;
-int skippedHigh = 0;
-int skippedLow = 0;
-
-void waitForTestData(void* h2p_lw_darkroom_addr) {
-    // high phase
-        int readHigh;
-        do { 
-            readHigh = IORD(h2p_lw_darkroom_addr, 1);
-            skippedHigh++;
-            usleep(10);
-        } while (readHigh == lastDurationHigh);
-        lastDurationHigh = readHigh;
-
-        // low phase
-        int readLow;
-        do { 
-            readLow = IORD(h2p_lw_darkroom_addr, 2);
-            skippedLow++;
-            usleep(10);
-        } while (readLow == lastDurationLow);
-        lastDurationLow = readLow;
-
-        skippedLow = 0;
-        skippedHigh = 0;
-}
-
 int readUntilValueChanges(int address, int oldVal, void* h2p_lw_darkroom_addr) {
     int data;
     do { 
@@ -75,25 +47,17 @@ int readUntilValueChanges(int address, int oldVal, void* h2p_lw_darkroom_addr) {
 void DarkRoom::getSensorValues(){
 
     /*
+    combined data on address 5
 
-    (address == 0) ? 32'h0000_0005 : 
-    (address == 1) ? test_duration_high :
-    (address == 2) ? test_duration_low :
-    (address == 5) ? real_combined_data :
-    (address == 6) ? real_debug_data :
-    (address == 7) ? real_duration_nskip_to_sweep :
-    32'hDEAD_BEEF;
-
-
-    combined_data(31) <= current_lighthouse_id;
-    combined_data(30) <= current_axis;
-    combined_data(29 downto 0) <= duration_from_nskip_rise_to_sweep_rise(29 downto 0);
-
+    layout:
+        bit  31      lighthouse_id
+        bit  30      axis
+        bit  29      valid
+        bits 28:0    duration (divide by 50 to get microseconds)    
     */
 
 
-    int real_duration_nskip_to_sweep = 0;
-    int real_combined_data = 0;
+    int combined_data = 0;
 
     int duration0x = 0;
     int duration0y = 0;
@@ -102,17 +66,11 @@ void DarkRoom::getSensorValues(){
 
 	while (1) {
         
-        //waitForTestData(h2p_lw_darkroom_addr);
-        //cout << "high: " << (lastDurationHigh / 50) << " \t\tlow: " << (lastDurationLow / 50) << " \t\tskipped(" <<  skippedHigh << ", " << skippedLow << ")" << endl;
-        
-        //real_duration_nskip_to_sweep = readUntilValueChanges(7, real_duration_nskip_to_sweep, h2p_lw_darkroom_addr);
-        //cout << "nskip to sweep: " << (real_duration_nskip_to_sweep/50) << endl;
-
-        real_combined_data = readUntilValueChanges(5, real_combined_data, h2p_lw_darkroom_addr);
-        int nskip_to_sweep  = real_combined_data & 0x1FFFFFFF;        
-        int valid           = (real_combined_data & 0x20000000) >> 29;
-        int current_axis    = (real_combined_data & 0x40000000) >> 30;
-        int lighthouse_id   = (real_combined_data & 0x80000000) >> 31;
+        combined_data = readUntilValueChanges(5, combined_data, h2p_lw_darkroom_addr);
+        int nskip_to_sweep  = combined_data & 0x1FFFFFFF;        
+        int valid           = (combined_data & 0x20000000) >> 29;
+        int current_axis    = (combined_data & 0x40000000) >> 30;
+        int lighthouse_id   = (combined_data & 0x80000000) >> 31;
 
         if (valid) {
             if ( current_axis &&  lighthouse_id) duration0x = nskip_to_sweep;
