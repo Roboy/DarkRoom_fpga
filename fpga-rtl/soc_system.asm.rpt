@@ -1,5 +1,5 @@
 Assembler report for soc_system
-Wed Jun 21 21:34:24 2017
+Mon Jun 26 18:33:20 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jun 21 21:34:24 2017 ;
+; Assembler Status      ; Successful - Mon Jun 26 18:33:20 2017 ;
 ; Revision Name         ; soc_system                            ;
 ; Top-level Entity Name ; ghrd                                  ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ agreement for further details.
 +----------------+-------------------------+
 ; Option         ; Setting                 ;
 +----------------+-------------------------+
-; JTAG usercode  ; 0x020EC943              ;
-; Checksum       ; 0x020EC943              ;
+; JTAG usercode  ; 0x02118F4D              ;
+; Checksum       ; 0x02118F4D              ;
 +----------------+-------------------------+
 
 
@@ -89,14 +89,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 21 21:34:14 2017
+    Info: Processing started: Mon Jun 26 18:33:11 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off soc_system -c soc_system
 Info (115030): Assembler is generating device programming files
 Info (11878): Hard Processor Subsystem configuration has not changed and a Preloader software update is not required
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1058 megabytes
-    Info: Processing ended: Wed Jun 21 21:34:24 2017
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 1057 megabytes
+    Info: Processing ended: Mon Jun 26 18:33:20 2017
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:10
 
 

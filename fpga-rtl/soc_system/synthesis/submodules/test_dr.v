@@ -31,8 +31,9 @@ assign readdata =
 	(address == 0) ? 32'h0000_0005 : 
 	(address == 1) ? test_duration_high :
 	(address == 2) ? test_duration_low :
-	(address == 5) ? test_duration_high :
-	(address == 6) ? test_duration_low :	
+	(address == 5) ? real_combined_data :
+	(address == 6) ? real_debug_data :
+	(address == 7) ? real_duration_nskip_to_sweep :
 	32'hDEAD_BEEF;
 	
 always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC

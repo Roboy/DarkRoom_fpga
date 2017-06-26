@@ -33,15 +33,14 @@ DarkRoom::~DarkRoom(){
     }
 };
 
-void DarkRoom::getSensorValues(){
-    int lastDurationHigh = 0;
-    int lastDurationLow = 0;
 
-    int skippedHigh = 0;
-    int skippedLow = 0;
-	while (1) {
+int lastDurationHigh = 0;
+int lastDurationLow = 0;
+int skippedHigh = 0;
+int skippedLow = 0;
 
-        // high phase
+void waitForTestData(void* h2p_lw_darkroom_addr) {
+    // high phase
         int readHigh;
         do { 
             readHigh = IORD(h2p_lw_darkroom_addr, 1);
@@ -59,21 +58,57 @@ void DarkRoom::getSensorValues(){
         } while (readLow == lastDurationLow);
         lastDurationLow = readLow;
 
-        // output
-        cout << "high: " << (lastDurationHigh / 50) << " \t\tlow: " << (lastDurationLow / 50) << " \t\tskipped(" <<  skippedHigh << ", " << skippedLow << ")" << endl;
         skippedLow = 0;
         skippedHigh = 0;
+}
 
-        // READ NEW VALUES
-        int combined = IORD(h2p_lw_darkroom_addr, 5);
-        int debug = IORD(h2p_lw_darkroom_addr, 6);
-        int debug2 = IORD(h2p_lw_darkroom_addr, 7);
-        int debug3 = IORD(h2p_lw_darkroom_addr, 4);
-        cout << "combined: " << (combined & 0xFFF) << endl;
-        cout << "debug: " << debug << endl;
-        cout << "debug2: " << debug2 << endl;
-        cout << "debug3: " << debug3 << endl;
+int readUntilValueChanges(int address, int oldVal, void* h2p_lw_darkroom_addr) {
+    int data;
+    do { 
+        data = IORD(h2p_lw_darkroom_addr, address);            
+        usleep(10);
+    } while (data == oldVal);
+    return data;
+}
 
+
+void DarkRoom::getSensorValues(){
+
+    /*
+
+    (address == 0) ? 32'h0000_0005 : 
+    (address == 1) ? test_duration_high :
+    (address == 2) ? test_duration_low :
+    (address == 5) ? real_combined_data :
+    (address == 6) ? real_debug_data :
+    (address == 7) ? real_duration_nskip_to_sweep :
+    32'hDEAD_BEEF;
+
+
+    combined_data(31) <= current_lighthouse_id;
+    combined_data(30) <= current_axis;
+    combined_data(29 downto 0) <= duration_from_nskip_rise_to_sweep_rise(29 downto 0);
+
+    */
+
+
+    int real_duration_nskip_to_sweep = 0;
+    int real_combined_data = 0;
+
+	while (1) {
+        
+        //waitForTestData(h2p_lw_darkroom_addr);
+        //cout << "high: " << (lastDurationHigh / 50) << " \t\tlow: " << (lastDurationLow / 50) << " \t\tskipped(" <<  skippedHigh << ", " << skippedLow << ")" << endl;
+        
+        //real_duration_nskip_to_sweep = readUntilValueChanges(7, real_duration_nskip_to_sweep, h2p_lw_darkroom_addr);
+        //cout << "nskip to sweep: " << (real_duration_nskip_to_sweep/50) << endl;
+
+        real_combined_data = readUntilValueChanges(5, real_combined_data, h2p_lw_darkroom_addr);
+        int nskip_to_sweep          = real_combined_data & 0x3FFFFFFF;
+        int current_axis            = (real_combined_data & 0x40000000) >> 30;
+        int current_lighthouse_id   = (real_combined_data & 0x80000000) >> 31;
+
+        cout << "nskip_to_sweep: " << ( nskip_to_sweep/50) << "\t\t\taxis: " << current_axis << "\tid: " << current_lighthouse_id << endl;
 	}
 
     ros::Rate rate(120);
