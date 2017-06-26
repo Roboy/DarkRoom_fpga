@@ -44,11 +44,6 @@ int main(int argc, char *argv[]) {
 
 	DarkRoom darkroom(h2p_lw_darkroom_addr);
 
-	// PREVENT ROS STUFF
-	while (1) {
-		usleep(10000);
-	}
-
     while(ros::ok()){
         usleep(10000);
         ROS_INFO_THROTTLE(5,"retrieving sensor data");
