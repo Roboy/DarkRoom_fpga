@@ -34,8 +34,6 @@ architecture baustein42 of lighthouse_sensor is
 	signal counter_from_last_rise : unsigned(31 downto 0) := (others => '0');
 	-- duration from last NSKIP pulse (start) to the last signal rising edge
 	signal duration_from_nskip_rise_to_last_rise : unsigned(31 downto 0) := (others => '0');
-	-- duration from last NSKIP pulse (start) to the SWEEP rise
-	signal duration_from_nskip_rise_to_sweep_rise : unsigned(31 downto 0) := (others => '0');
 	
 	-- AXIS & LIGHTHOUSE ID
 	signal current_axis : std_logic := '0';
@@ -45,20 +43,11 @@ begin
 	
 
 	-- OUTPUT SIGNALS
-	ready <= '1'; -- TODO : improve this	
-	duration_nskip_to_sweep <= duration_from_nskip_rise_to_sweep_rise;
-	lighthouse_id <= current_lighthouse_id;
-	axis <= current_axis;
-	
-	-- combined data: lighthouse_id + current_axis + duration (nskip to sweep)
-	combined_data(31) <= current_lighthouse_id;
-	combined_data(30) <= current_axis;
-	combined_data(29 downto 0) <= duration_from_nskip_rise_to_sweep_rise(29 downto 0);
+	ready <= '1'; -- TODO : improve this
 	
 	-- for future use
 	debug_data <= "00000000000000000000000000101010";
-	
-	
+		
 	
 	process(clk)
 	begin
@@ -125,15 +114,29 @@ begin
 						-- CHECK PULSE DURATION, we use 50 MHz clock
 						if (counter_from_last_rise < 2500) then 
 						
-							-- last pulse was a SWEEP (max 50 microseconds * 50 clock speed = 2500)							
-							-- duration from NSKIP to last rising edge is the duration to sweep
-							duration_from_nskip_rise_to_sweep_rise <= duration_from_nskip_rise_to_last_rise;
+							-- last pulse was a SWEEP (max 50 microseconds * 50 clock speed = 2500)		
+							-- UPDATE ALL OUTPUTS with previously saved data
+							
+							-- lighthouse_id
+							lighthouse_id <= current_lighthouse_id;
+							combined_data(31) <= current_lighthouse_id;
+							
+							-- axis
+							axis <= current_axis;														
+							combined_data(30) <= current_axis;
+							
+							-- duration from NSKIP to last rising edge is the duration to this SWEEP
+							duration_nskip_to_sweep <= duration_from_nskip_rise_to_last_rise;
+							combined_data(29 downto 0) <= duration_from_nskip_rise_to_last_rise(29 downto 0);
+							
+							
 							
 						elsif (counter_from_last_rise < 4950) then
 						
 							-- last pulse was NOT SKIPPING	
+							-- save data but publish only on next SWEEP
 						
-							-- check if active lighhouse has changed
+							-- check if active lighthouse has changed
 							if (counter_from_nskip_rise < 401650) then
 								-- (8333-300) * 50 = 401650
 								-- first lighthouse became active
@@ -178,7 +181,6 @@ begin
 						
 						end if;
 						
-							
 							
 												
 						

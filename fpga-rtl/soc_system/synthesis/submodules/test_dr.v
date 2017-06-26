@@ -64,7 +64,7 @@ always @(posedge clock, posedge reset) begin: I2C_CONTROL_LOGIC
 end
 
 // if sensor ha no data we have to wait
-assign waitrequest =~test_ready;
+assign waitrequest =~real_ready;
 
 
 
