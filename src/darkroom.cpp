@@ -95,6 +95,11 @@ void DarkRoom::getSensorValues(){
     int real_duration_nskip_to_sweep = 0;
     int real_combined_data = 0;
 
+    int duration0x = 0;
+    int duration0y = 0;
+    int duration1x = 0;
+    int duration1y = 0; 
+
 	while (1) {
         
         //waitForTestData(h2p_lw_darkroom_addr);
@@ -104,11 +109,23 @@ void DarkRoom::getSensorValues(){
         //cout << "nskip to sweep: " << (real_duration_nskip_to_sweep/50) << endl;
 
         real_combined_data = readUntilValueChanges(5, real_combined_data, h2p_lw_darkroom_addr);
-        int nskip_to_sweep          = real_combined_data & 0x3FFFFFFF;
-        int current_axis            = (real_combined_data & 0x40000000) >> 30;
-        int current_lighthouse_id   = (real_combined_data & 0x80000000) >> 31;
+        int nskip_to_sweep  = real_combined_data & 0x1FFFFFFF;        
+        int valid           = (real_combined_data & 0x20000000) >> 29;
+        int current_axis    = (real_combined_data & 0x40000000) >> 30;
+        int lighthouse_id   = (real_combined_data & 0x80000000) >> 31;
 
-        cout << "nskip_to_sweep: " << ( nskip_to_sweep/50) << "\t\t\taxis: " << current_axis << "\tid: " << current_lighthouse_id << endl;
+        if (valid) {
+            if ( current_axis &&  lighthouse_id) duration0x = nskip_to_sweep;
+            if (!current_axis &&  lighthouse_id) duration0y = nskip_to_sweep;
+            if ( current_axis && !lighthouse_id) duration1x = nskip_to_sweep;
+            if (!current_axis && !lighthouse_id) duration1y = nskip_to_sweep;
+
+
+            cout << "0x " << (duration0x/50)   << "\t0y " << (duration0y/50);
+            cout << "\t1x " << (duration1x/50) << "\t1y " << (duration1y/50) << endl;
+
+        }
+
 	}
 
     ros::Rate rate(120);

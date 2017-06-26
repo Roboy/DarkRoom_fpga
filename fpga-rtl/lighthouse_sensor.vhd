@@ -3,19 +3,26 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.std_logic_signed.all;
 
--- This entity mesures the duration between not skipping pulses and sweeps.
+
+-- This entity mesures the duration between not skipping pulses and sweeps
+-- Setup: 2 Vive lighthouses
+-- Author: Nikita Basargin
 
 
 entity lighthouse_sensor is 
 	port (
 		clk : in std_logic;		-- 50 MHz clock
-		sensor : in std_logic;	-- sensor input
-		ready : out std_logic;
-		duration_nskip_to_sweep: out unsigned(31 downto 0);
-		axis : out std_logic;				-- sweep x or y axis
+		sensor : in std_logic;	-- sensor INPUT
+		duration_nskip_to_sweep: out unsigned(31 downto 0); -- duration NSKIP to SWEEP
 		lighthouse_id : out std_logic;	-- which lighthouse emitted the sweep
-		combined_data : out unsigned(31 downto 0);
-		debug_data : out unsigned(31 downto 0)
+		axis : out std_logic;				-- sweep x or y axis
+		valid : out std_logic;				-- is '1' if (300 * 50 < duration < 8000 * 50)
+		combined_data : out unsigned(31 downto 0)
+		-- combined data layout:
+		-- bit 31    	lighthouse_id
+		-- bit 30    	axis
+		-- bit 29    	valid
+		-- bits 28:0	duration (divide by 50 to get microseconds)
 	);
 end lighthouse_sensor;
 
@@ -40,14 +47,6 @@ architecture baustein42 of lighthouse_sensor is
 	signal current_lighthouse_id : std_logic := '0';
 	
 begin
-	
-
-	-- OUTPUT SIGNALS
-	ready <= '1'; -- TODO : improve this
-	
-	-- for future use
-	debug_data <= "00000000000000000000000000101010";
-		
 	
 	process(clk)
 	begin
@@ -125,10 +124,18 @@ begin
 							axis <= current_axis;														
 							combined_data(30) <= current_axis;
 							
+							-- valid when (300 * 50) < duration < (8000 * 50)
+							if (15000 < duration_from_nskip_rise_to_last_rise) and (duration_from_nskip_rise_to_last_rise < 400000) then
+								valid <= '1';
+								combined_data(29) <= '1';
+							else							
+								valid <= '0';
+								combined_data(29) <= '0';
+							end if;
+														
 							-- duration from NSKIP to last rising edge is the duration to this SWEEP
 							duration_nskip_to_sweep <= duration_from_nskip_rise_to_last_rise;
-							combined_data(29 downto 0) <= duration_from_nskip_rise_to_last_rise(29 downto 0);
-							
+							combined_data(28 downto 0) <= duration_from_nskip_rise_to_last_rise(28 downto 0);
 							
 							
 						elsif (counter_from_last_rise < 4950) then
