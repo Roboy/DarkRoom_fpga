@@ -11,7 +11,7 @@ module test_dr (
 	input reset,
 	
 	// this is for the avalon interface
-	input [2:0] address,
+	input [3:0] address,
 	input write,
 	input signed [31:0] writedata,
 	input read,

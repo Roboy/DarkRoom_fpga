@@ -70,10 +70,10 @@ void DarkRoom::getSensorValues() {
             int valid           = (combined_data & 0x20000000) >> 29;
             int current_axis    = (combined_data & 0x40000000) >> 30;
             int lighthouse_id   = (combined_data & 0x80000000) >> 31;
-            if (valid) {
+            //if (valid) {
                 cout << "sensor(" << i << "): id=" << lighthouse_id;
                 cout << "\taxis=" << current_axis << "\tduration=" << nskip_to_sweep << endl;
-            }
+            //}
         }
 
         sensor_pub.publish(msg);
