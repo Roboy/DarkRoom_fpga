@@ -91,6 +91,12 @@ lighthouse_sensor awesome_lighthouse05 (
 lighthouse_sensor awesome_lighthouse06 (
 	.clk(clock),
 	.sensor(sensor_signal_i[6]),
+	.combined_data(sensor_combined_data_06)
+);
+
+lighthouse_sensor awesome_lighthouse07 (
+	.clk(clock),
+	.sensor(sensor_signal_i[7]),
 	.combined_data(sensor_combined_data_07)
 );
 
