@@ -11,7 +11,7 @@ ENDIF()
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR armv7l)
 
-set(compiler_path /home/roboy/Downloads/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux/bin)
+set(compiler_path /usr/bin)
 set(CMAKE_C_COMPILER ${compiler_path}/arm-linux-gnueabihf-gcc)
 set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++)
 
@@ -57,7 +57,7 @@ INCLUDE_DIRECTORIES(
 # Set the executable
 
 ADD_EXECUTABLE(darkroom_fpga ${SOURCE} ${DEMO_ARCH_SOURCES} )
-TARGET_LINK_LIBRARIES(darkroom_fpga ${ros_LIBRARIES})#
+TARGET_LINK_LIBRARIES(darkroom_fpga ${ros_LIBRARIES} -pthread)#
 
 #==============================================================================
 # Installation
