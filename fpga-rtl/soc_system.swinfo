@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SopcSystem>
  <!-- An entire SOPC Builder system -->
- <!-- 2017.06.07.17:15:58 -->
+ <!-- 2017.06.27.14:07:17 -->
  <name>soc_system</name>
  <version>1.0</version>
  <sopcVersion>1.0</sopcVersion>
  <deviceFamily>Cyclone V</deviceFamily>
  <sopcSimulationEnabled>false</sopcSimulationEnabled>
+ <module>
+  <name>DarkRoom_0</name>
+  <version>1.0</version>
+  <className>DarkRoom</className>
+  <clockConnection>
+   <moduleName>DarkRoom_0</moduleName>
+   <localSlaveName>clock_sink</localSlaveName>
+   <systemConnectionName>DarkRoom_0.clock_sink</systemConnectionName>
+   <frequency>0</frequency>
+  </clockConnection>
+  <path>DarkRoom_0</path>
+ </module>
  <module>
   <name>button_pio</name>
   <version>17.0</version>
@@ -582,8 +594,8 @@
     <interruptControllerID>-1</interruptControllerID>
    </connectedDevice>
    <connectedDevice>
-    <moduleName>test_dr_0</moduleName>
-    <slaveDesc>test_dr_0</slaveDesc>
+    <moduleName>DarkRoom_0</moduleName>
+    <slaveDesc>DarkRoom_0</slaveDesc>
     <slave>
      <name>avalon_slave_0</name>
      <version>17.0</version>
@@ -603,12 +615,12 @@
       <name>embeddedsw.configuration.isPrintableDevice</name>
       <value>0</value>
      </assignment>
-     <systemSlaveName>test_dr_0.avalon_slave_0</systemSlaveName>
+     <systemSlaveName>DarkRoom_0.avalon_slave_0</systemSlaveName>
      <addressGroup>0</addressGroup>
     </slave>
     <baseAddress>0</baseAddress>
     <basePhysicalAddress>0</basePhysicalAddress>
-    <span>32</span>
+    <span>256</span>
     <isBigEndian>false</isBigEndian>
     <isInstructionAccessible>false</isInstructionAccessible>
     <isDataAccessible>false</isDataAccessible>
@@ -973,8 +985,8 @@
     <interruptControllerID>-1</interruptControllerID>
    </connectedDevice>
    <connectedDevice>
-    <moduleName>test_dr_0</moduleName>
-    <slaveDesc>test_dr_0</slaveDesc>
+    <moduleName>DarkRoom_0</moduleName>
+    <slaveDesc>DarkRoom_0</slaveDesc>
     <slave>
      <name>avalon_slave_0</name>
      <version>17.0</version>
@@ -994,12 +1006,12 @@
       <name>embeddedsw.configuration.isPrintableDevice</name>
       <value>0</value>
      </assignment>
-     <systemSlaveName>test_dr_0.avalon_slave_0</systemSlaveName>
+     <systemSlaveName>DarkRoom_0.avalon_slave_0</systemSlaveName>
      <addressGroup>0</addressGroup>
     </slave>
     <baseAddress>0</baseAddress>
     <basePhysicalAddress>0</basePhysicalAddress>
-    <span>32</span>
+    <span>256</span>
     <isBigEndian>false</isBigEndian>
     <isInstructionAccessible>false</isInstructionAccessible>
     <isDataAccessible>false</isDataAccessible>
@@ -2425,8 +2437,8 @@
     <interruptControllerID>-1</interruptControllerID>
    </connectedDevice>
    <connectedDevice>
-    <moduleName>test_dr_0</moduleName>
-    <slaveDesc>test_dr_0</slaveDesc>
+    <moduleName>DarkRoom_0</moduleName>
+    <slaveDesc>DarkRoom_0</slaveDesc>
     <slave>
      <name>avalon_slave_0</name>
      <version>17.0</version>
@@ -2446,12 +2458,12 @@
       <name>embeddedsw.configuration.isPrintableDevice</name>
       <value>0</value>
      </assignment>
-     <systemSlaveName>test_dr_0.avalon_slave_0</systemSlaveName>
+     <systemSlaveName>DarkRoom_0.avalon_slave_0</systemSlaveName>
      <addressGroup>0</addressGroup>
     </slave>
     <baseAddress>4280287232</baseAddress>
     <basePhysicalAddress>4280287232</basePhysicalAddress>
-    <span>32</span>
+    <span>256</span>
     <isBigEndian>false</isBigEndian>
     <isInstructionAccessible>false</isInstructionAccessible>
     <isDataAccessible>false</isDataAccessible>
@@ -3844,8 +3856,8 @@
     <interruptControllerID>-1</interruptControllerID>
    </connectedDevice>
    <connectedDevice>
-    <moduleName>test_dr_0</moduleName>
-    <slaveDesc>test_dr_0</slaveDesc>
+    <moduleName>DarkRoom_0</moduleName>
+    <slaveDesc>DarkRoom_0</slaveDesc>
     <slave>
      <name>avalon_slave_0</name>
      <version>17.0</version>
@@ -3865,12 +3877,12 @@
       <name>embeddedsw.configuration.isPrintableDevice</name>
       <value>0</value>
      </assignment>
-     <systemSlaveName>test_dr_0.avalon_slave_0</systemSlaveName>
+     <systemSlaveName>DarkRoom_0.avalon_slave_0</systemSlaveName>
      <addressGroup>0</addressGroup>
     </slave>
     <baseAddress>4280287232</baseAddress>
     <basePhysicalAddress>4280287232</basePhysicalAddress>
-    <span>32</span>
+    <span>256</span>
     <isBigEndian>false</isBigEndian>
     <isInstructionAccessible>false</isInstructionAccessible>
     <isDataAccessible>false</isDataAccessible>
@@ -8159,7 +8171,7 @@
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1496848273</value>
+   <value>1498563413</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8179,7 +8191,7 @@
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1496848273</value>
+   <value>1498563413</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8193,17 +8205,5 @@
    <frequency>0</frequency>
   </clockConnection>
   <path>sysid_qsys</path>
- </module>
- <module>
-  <name>test_dr_0</name>
-  <version>1.0</version>
-  <className>test_dr</className>
-  <clockConnection>
-   <moduleName>test_dr_0</moduleName>
-   <localSlaveName>clock_sink</localSlaveName>
-   <systemConnectionName>test_dr_0.clock_sink</systemConnectionName>
-   <frequency>0</frequency>
-  </clockConnection>
-  <path>test_dr_0</path>
  </module>
 </SopcSystem>

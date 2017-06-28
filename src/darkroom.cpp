@@ -13,7 +13,9 @@ DarkRoom::DarkRoom(void* h2p_lw_darkroom_addr):h2p_lw_darkroom_addr(h2p_lw_darkr
 
     spinner = boost::shared_ptr<ros::AsyncSpinner>(new ros::AsyncSpinner(1));
     spinner->start();
-    
+
+    getData = true;
+
     sensor_thread = boost::shared_ptr<thread>(new thread(&DarkRoom::getSensorValues, this));
     sensor_thread->detach();
 }
@@ -46,7 +48,7 @@ void DarkRoom::getSensorValues() {
 
     ros::Rate rate(240); // two times faster than actually needed
 
-    while(1) {
+    while(ros::ok() && getData) {
 
         roboy_communication_middleware::DarkRoom msg;
 

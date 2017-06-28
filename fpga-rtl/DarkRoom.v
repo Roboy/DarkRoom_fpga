@@ -22,120 +22,87 @@ module DarkRoom (
 	output [6:0] LED
 );
 
-// sensor results
-reg unsigned [31:0] sensor1;
-reg unsigned [31:0] sensor2;
-reg unsigned [31:0] sensor3;
-reg unsigned [31:0] sensor4;
-reg unsigned [31:0] sensor5;
-reg unsigned [31:0] sensor6;
-reg unsigned [31:0] sensor7;
-reg unsigned [31:0] sensor8;
-reg unsigned [31:0] sensor9;
-reg unsigned [31:0] sensor10;
-reg unsigned [31:0] sensor11;
-reg unsigned [31:0] sensor12;
-reg unsigned [31:0] sensor13;
-reg unsigned [31:0] sensor14;
-reg unsigned [31:0] sensor15;
+// SENSOR RESULTS
+wire [31:0] sensor_combined_data_00;
+wire [31:0] sensor_combined_data_01;
+wire [31:0] sensor_combined_data_02;
+wire [31:0] sensor_combined_data_03;
+wire [31:0] sensor_combined_data_04;
+wire [31:0] sensor_combined_data_05;
+wire [31:0] sensor_combined_data_06;
+wire [31:0] sensor_combined_data_07;
+wire [31:0] sensor_combined_data_08;
 
-reg unsigned [15:0] data_available;
 
+// OUTPUT TO THE ARM CORE
 assign readdata = 
-	((address == 0))? data_available:
-	((address == 1))? sensor1 :
-	((address == 2))? sensor2 :
-	((address == 3))? sensor3 :
-	((address == 4))? sensor4 :
-	((address == 5))? sensor5 :
-	((address == 6))? sensor6 :
-	((address == 7))? sensor7 :
-	((address == 8))? sensor8 :
-	((address == 9))? sensor9 :
-	((address == 10))? sensor10 :
-	((address == 11))? sensor11 :
-	((address == 12))? sensor12 :
-	((address == 13))? sensor13 :
-	((address == 14))? sensor14 :
-	32'hDEAD_BEEF;
+	(address == 0) ? sensor_combined_data_00 :
+	(address == 1) ? sensor_combined_data_01 :
+	(address == 2) ? sensor_combined_data_02 :
+	(address == 3) ? sensor_combined_data_03 :
+	(address == 4) ? sensor_combined_data_04 :
+	(address == 5) ? sensor_combined_data_05 :
+	(address == 6) ? sensor_combined_data_06 :
+	(address == 7) ? sensor_combined_data_07 :
+	(address == 8) ? sensor_combined_data_08 :
+						  32'hDEAD_BEEF;
 
-// when spi is done we transfer the results, which would be a bad time to read the values.
 assign waitrequest = 0;
 
-wire clock_1MHz;
-reg [31:0] timer;
-
-assign LED[3:0] = timer[24:21];
-assign LED[4] = data_available[0];
-assign LED[5] = data_available[1];
-assign LED[6] = data_available[2];
-
-pll pll_1MHz(
-	.refclk(clock),
-	.rst(~reset_n),
-	.outclk_0(clock_1MHz)
+// SENSORS
+lighthouse_sensor awesome_lighthouse00 (
+	.clk(clock),
+	.sensor(sensor_signal_i[0]),
+	.combined_data(sensor_combined_data_00)
 );
 
-Counter counter(
-	.clk(clock_1MHz),
-	.reset(~reset_n),
-	.count(timer)
-);
-
-lighthouse #(1) sensor1_decoder(
+lighthouse_sensor awesome_lighthouse01 (
+	.clk(clock),
 	.sensor(sensor_signal_i[1]),
-	.timer(timer),
-	.sensor_value(sensor1),
-	.data_available(data_available[1])
+	.combined_data(sensor_combined_data_01)
 );
 
-lighthouse #(2) sensor2_decoder(
+lighthouse_sensor awesome_lighthouse02 (
+	.clk(clock),
 	.sensor(sensor_signal_i[2]),
-	.timer(timer),
-	.sensor_value(sensor2),
-	.data_available(data_available[2])
+	.combined_data(sensor_combined_data_02)
 );
 
-lighthouse #(3) sensor3_decoder(
+
+lighthouse_sensor awesome_lighthouse03 (
+	.clk(clock),
 	.sensor(sensor_signal_i[3]),
-	.timer(timer),
-	.sensor_value(sensor3),
-	.data_available(data_available[3])
+	.combined_data(sensor_combined_data_03)
 );
 
-lighthouse #(4) sensor4_decoder(
+lighthouse_sensor awesome_lighthouse04 (
+	.clk(clock),
 	.sensor(sensor_signal_i[4]),
-	.timer(timer),
-	.sensor_value(sensor4),
-	.data_available(data_available[4])
+	.combined_data(sensor_combined_data_04)
 );
 
-lighthouse #(5) sensor5_decoder(
+lighthouse_sensor awesome_lighthouse05 (
+	.clk(clock),
 	.sensor(sensor_signal_i[5]),
-	.timer(timer),
-	.sensor_value(sensor5),
-	.data_available(data_available[5])
+	.combined_data(sensor_combined_data_05)
 );
 
-lighthouse #(6) sensor6_decoder(
+lighthouse_sensor awesome_lighthouse06 (
+	.clk(clock),
 	.sensor(sensor_signal_i[6]),
-	.timer(timer),
-	.sensor_value(sensor6),
-	.data_available(data_available[6])
+	.combined_data(sensor_combined_data_06)
 );
 
-lighthouse #(7) sensor7_decoder(
+lighthouse_sensor awesome_lighthouse07 (
+	.clk(clock),
 	.sensor(sensor_signal_i[7]),
-	.timer(timer),
-	.sensor_value(sensor7),
-	.data_available(data_available[7])
+	.combined_data(sensor_combined_data_07)
 );
 
-lighthouse #(8) sensor8_decoder(
+lighthouse_sensor awesome_lighthouse08 (
+	.clk(clock),
 	.sensor(sensor_signal_i[8]),
-	.timer(timer),
-	.sensor_value(sensor8),
-	.data_available(data_available[8])
+	.combined_data(sensor_combined_data_08)
 );
 
 endmodule
