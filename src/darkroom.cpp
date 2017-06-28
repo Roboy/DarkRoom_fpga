@@ -31,19 +31,20 @@ DarkRoom::~DarkRoom(){
 };
 
 
-int readUntilValueChanges(int address, int oldVal, void* h2p_lw_darkroom_addr) {
-    int data;
-    do { 
-        data = IORD(h2p_lw_darkroom_addr, address);            
-        usleep(10);
-    } while (data == oldVal);
-    return data;
-}
 
+/**
+    Poll sensor measurements 240 times per second and send the results via ROS.
 
-void DarkRoom::getSensorValues() {
+    The ROS message will contain an array of 32-bit values. Format:
+        bit  31      lighthouse_id
+        bit  30      axis
+        bit  29      valid
+        bits 28:0    duration (divide by 50 to get microseconds)    
+*/
+void DarkRoom::getSensorValues() { 
 
-  
+    // number of sensors to read
+    int NUM_SENSORS = 9;
 
 
     ros::Rate rate(240); // two times faster than actually needed
@@ -52,10 +53,10 @@ void DarkRoom::getSensorValues() {
 
         roboy_communication_middleware::DarkRoom msg;
 
-        // read all 9 sensors
-        for (int i = 0; i <= 8; i++) {
+        // read all sensors
+        for (int i = 0; i < NUM_SENSORS; i++) {
             /*
-            combined data for each sensor is available on addresses 0 to 8
+            combined data for each sensor is available on addresses 0 to (NUM_SENSORS - 1)
             layout:
                 bit  31      lighthouse_id
                 bit  30      axis
@@ -72,10 +73,10 @@ void DarkRoom::getSensorValues() {
             int valid           = (combined_data & 0x20000000) >> 29;
             int current_axis    = (combined_data & 0x40000000) >> 30;
             int lighthouse_id   = (combined_data & 0x80000000) >> 31;
-            //if (valid) {
+            if (valid) {
                 cout << "sensor(" << i << "): id=" << lighthouse_id;
                 cout << "\taxis=" << current_axis << "\tduration=" << nskip_to_sweep << endl;
-            //}
+            }
         }
 
         sensor_pub.publish(msg);

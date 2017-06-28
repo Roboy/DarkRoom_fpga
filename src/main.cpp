@@ -42,6 +42,7 @@ int main(int argc, char *argv[]) {
 	h2p_lw_led_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + LED_PIO_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
 	h2p_lw_darkroom_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + DARKROOM_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
 
+	// Start reading sensors (separate thread)
 	DarkRoom darkroom(h2p_lw_darkroom_addr);
 
     while(ros::ok()){
