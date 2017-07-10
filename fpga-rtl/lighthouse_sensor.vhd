@@ -3,9 +3,20 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.std_logic_signed.all;
 
-
--- This entity mesures the duration between not skipping pulses and sweeps
--- Setup: 2 Vive lighthouses
+-- This module is a state machine with two main states: HIGH and LOW. 
+-- In general, the states correspond to the value of the input sensor 
+-- signal. To avoid noise, additional filtering is done. The internal 
+-- state will change only when the input signal changes and stays constant 
+-- for some time.
+-- 
+-- The module has several internal counters to measure the duration of 
+-- pulses. Outputs are updated every time a SWEEP was detected. It is 
+-- possible to find out which of the two lighthouses was sweeping the 
+-- room depending on the duration between two NSKIP pulses. If this 
+-- duration is approximately equal to the phase duration (8333 us), 
+-- the active lighthouse didn't change. Otherwise the active lighthouse 
+-- has changed. All SKIP pulses are completely ignored.
+--
 -- Author: Nikita Basargin
 
 
