@@ -1,0 +1,8 @@
+information for future project cleaning
+
+important files that should not be ignored:
+http://www.alterawiki.com/wiki/Version_Control
+
+gitignores:
+https://github.com/thomasrussellmurphy/quartus-DE1_SOC-project/blob/master/.gitignore
+https://github.com/thomasrussellmurphy/quartus-DE0-project/blob/master/.gitignore
