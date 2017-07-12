@@ -6,3 +6,18 @@ http://www.alterawiki.com/wiki/Version_Control
 gitignores:
 https://github.com/thomasrussellmurphy/quartus-DE1_SOC-project/blob/master/.gitignore
 https://github.com/thomasrussellmurphy/quartus-DE0-project/blob/master/.gitignore
+
+CLEANED VERSION IS IN fpga-rtl-min
+
+
+Keep following folders:
+cmake
+fpga-rtl
+include
+lib
+opt
+src
+usr
+CMakeLists.txt
+package.xml
+<git stuff>

@@ -1,0 +1,47 @@
+# ignore Quartus II generated files
+*_generation_script*
+*_inst.vhd
+*.bak
+*.done
+*.eqn
+*.html
+*.jdi
+*.jpg
+*.mif
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.qarlog
+*.qws
+*.rpt
+*.smsg
+*.sof
+*.sopc_builder
+*.summary
+*.txt # Explicitly add any text files used
+*~
+*example*
+*sopc_*
+*.txt
+*.xml
+soc_system.sld
+soc_system/soc_system.bsf
+soc_system.sopcinfo
+
+# ignore Quartus II generated folders
+db/
+hps_isw_handoff/
+soc_system/synthesis/
+incremental_db/
+*/incremental_db/
+*/simulation/
+*/timing/
+*/testbench/
+*/*_sim/
+.qsys_edit/
+
+
+*.tcl
+!DarkRoom_hw.tcl
+!ip/intr_capturer/intr_capturer_hw.tcl
