@@ -15,7 +15,6 @@ set(ros_LIBRARIES
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libboost_regex.so
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libapr-1.so
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libaprutil-1.so
-        ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libexpat.a
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/arm-linux-gnueabihf/libuuid.so.1.3.0
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libicuio.so
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libicudata.so
@@ -24,6 +23,5 @@ set(ros_LIBRARIES
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libicuuc.so
         ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/libicui18n.so
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/arm-linux-gnueabihf/libdl.so.2
-        ${CMAKE_CURRENT_SOURCE_DIR}/usr/lib/arm-linux-gnueabihf/liblz4.a
         )
 message(STATUS "ros_LIBRARIES: ${ros_LIBRARIES}" )

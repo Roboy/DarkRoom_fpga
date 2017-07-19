@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SopcSystem>
  <!-- An entire SOPC Builder system -->
- <!-- 2017.06.27.14:07:17 -->
+ <!-- 2017.07.19.15:49:24 -->
  <name>soc_system</name>
  <version>1.0</version>
  <sopcVersion>1.0</sopcVersion>
@@ -8171,7 +8171,7 @@
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1498563413</value>
+   <value>1498665063</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8191,7 +8191,7 @@
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1498563413</value>
+   <value>1498665063</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
