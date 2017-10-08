@@ -1,68 +1,65 @@
-PROJECT( darkroom_fpga C CXX)
+cmake_minimum_required(VERSION 2.8.3)
+project(darkroom_fpga)
 
-CMAKE_MINIMUM_REQUIRED (VERSION 2.8.7)
+SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
 
-# Set CMake Policy to suppress the warning in CMake version 3.3.x
-IF (POLICY CMP0043)
-    CMAKE_POLICY(SET CMP0043 OLD)
-ENDIF()
+SET(CMAKE_BUILD_TYPE Debug)
+if (NOT EXISTS "ENV{SOCEDS_DEST_ROOT}")
+    message(STATUS "cross compiling for arm")
+    # we are cross compiling for arm (make sure to be in embedded_command_shell.sh)
+    set(CMAKE_SYSTEM_NAME Linux)
+    set(CMAKE_SYSTEM_PROCESSOR armv7l)
 
-# we are cross compiling for arm (make sure to be in embedded_command_shell.sh)
-set(CMAKE_SYSTEM_NAME Linux)
-set(CMAKE_SYSTEM_PROCESSOR armv7l)
+    set(compiler_path /usr/bin)
+    set(CMAKE_C_COMPILER ${compiler_path}/arm-linux-gnueabihf-gcc-5)
+    set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++-5)
+    #==============================================================================
+    # Dependencies
+    #==============================================================================
+    find_package(catkin REQUIRED COMPONENTS roscpp std_msgs roboy_communication_middleware)
+    include(findros)
+    # Eigen
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(EIGEN3 REQUIRED eigen3)
+    include_directories(${EIGEN3_INCLUDE_DIRS})
 
-set(compiler_path /home/roboy/Downloads/gcc-linaro-arm-linux-gnueabihf-4.7-2012.11-20121123_linux/bin)
-set(CMAKE_C_COMPILER ${compiler_path}/arm-linux-gnueabihf-gcc)
-set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++)
+    # yaml-cpp
+    pkg_check_modules(yaml-cpp REQUIRED yaml-cpp)
+    include_directories(${yaml-cpp_INCLUDE_DIRS})
 
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+    catkin_package(CATKIN_DEPENDS message_runtime roboy_communication_middleware)
 
-SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O0 -g")
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
+    SET(ALT_DEVICE_FAMILY soc_cv_av)
+    add_definitions(-D${ALT_DEVICE_FAMILY})
+    MESSAGE(STATUS "fpga include dir: $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/${ALT_DEVICE_FAMILY}")
+    MESSAGE(STATUS "objectdic dir: ${OPLK_BASE_DIR}/apps/common/objdicts/${OBJDICT}")
 
-# ros
-find_package(catkin REQUIRED COMPONENTS roboy_communication_middleware std_msgs)
-include(findros)
-include_directories(${catkin_INCLUDE_DIRS} )
-catkin_package( CATKIN_DEPENDS message_runtime roboy_communication_middleware)
-include_directories(include/darkroom_fpga)
-
-# Set generic sources and include directories for this demo
-SET(SOURCE
-        src/main.cpp
-        src/darkroom.cpp
+    include_directories(
+            include/
+            ${catkin_INCLUDE_DIRS}
+            $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/${ALT_DEVICE_FAMILY}
+            $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
+            $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include/${ALT_DEVICE_FAMILY}
     )
-
-include(findncurses_arm)
-
-SET(ALT_DEVICE_FAMILY soc_cv_av)
-add_definitions(-D${ALT_DEVICE_FAMILY})
-MESSAGE(STATUS "fpga include dir: $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/${ALT_DEVICE_FAMILY}")
-MESSAGE(STATUS "objectdic dir: ${OPLK_BASE_DIR}/apps/common/objdicts/${OBJDICT}")
-INCLUDE_DIRECTORIES(
-    include/
-        usr/include/
-        $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/${ALT_DEVICE_FAMILY}
-        $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
-        $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include/${ALT_DEVICE_FAMILY}
-    )
-
-################################################################################
-
-################################################################################
-# Set the executable
-
-ADD_EXECUTABLE(darkroom_fpga ${SOURCE} ${DEMO_ARCH_SOURCES} )
-TARGET_LINK_LIBRARIES(darkroom_fpga ${ros_LIBRARIES})#
-
+    #==============================================================================
+    # Application
+    #==============================================================================
+    add_executable( darkroom_fpga src/main.cpp src/DarkRoom.cpp)
+    add_dependencies(darkroom_fpga roboy_communication_middleware_gencpp)
+    target_link_libraries( darkroom_fpga  -lpthread -lrt ${ros_LIBRARIES})
+else ()
+    message(STATUS "cannot cross compile, are you in an embedded_command_shell.sh?!")
+endif ()
 #==============================================================================
 # Installation
 #==============================================================================
 install(TARGETS
         darkroom_fpga
-        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        )
+
+install(FILES
+        package.xml
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
         )
