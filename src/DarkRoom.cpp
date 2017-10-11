@@ -1,7 +1,7 @@
 #include "darkroom_fpga/DarkRoom.hpp"
 #include <iostream>
 
-DarkRoom::DarkRoom(void* h2p_lw_darkroom_addr):h2p_lw_darkroom_addr(h2p_lw_darkroom_addr){
+DarkRoom::DarkRoom(void *h2p_lw_darkroom_addr) : h2p_lw_darkroom_addr(h2p_lw_darkroom_addr) {
     if (!ros::isInitialized()) {
         int argc = 0;
         char **argv = NULL;
@@ -20,7 +20,7 @@ DarkRoom::DarkRoom(void* h2p_lw_darkroom_addr):h2p_lw_darkroom_addr(h2p_lw_darkr
     sensor_thread->detach();
 }
 
-DarkRoom::~DarkRoom(){
+DarkRoom::~DarkRoom() {
     getData = false;
     if (sensor_thread != nullptr) {
         if (sensor_thread->joinable()) {
@@ -31,7 +31,6 @@ DarkRoom::~DarkRoom(){
 };
 
 
-
 /**
     Poll sensor measurements 240 times per second and send the results via ROS.
     The ROS message will contain an array of 32-bit values. Format:
@@ -40,15 +39,15 @@ DarkRoom::~DarkRoom(){
         bit  29      valid
         bits 28:0    duration (divide by 50 to get microseconds)    
 */
-void DarkRoom::getSensorValues() { 
+void DarkRoom::getSensorValues() {
 
     // number of sensors to read
-    int NUM_SENSORS = 9;
+    int NUM_SENSORS = 32;
 
 
     ros::Rate rate(240); // two times faster than actually needed
 
-    while(ros::ok() && getData) {
+    while (ros::ok() && getData) {
 
         roboy_communication_middleware::DarkRoom msg;
 
@@ -68,13 +67,13 @@ void DarkRoom::getSensorValues() {
             msg.sensor_value.push_back(combined_data);
 
             // CONSOLE
-            int nskip_to_sweep  =  combined_data & 0x1FFFFFFF;        
-            int valid           = (combined_data & 0x20000000) >> 29;
-            int current_axis    = (combined_data & 0x40000000) >> 30;
-            int lighthouse_id   = (combined_data & 0x80000000) >> 31;
+            int nskip_to_sweep = combined_data & 0x1FFFFFFF;
+            int valid = (combined_data & 0x20000000) >> 29;
+            int current_axis = (combined_data & 0x40000000) >> 30;
+            int lighthouse_id = (combined_data & 0x80000000) >> 31;
             if (valid) {
-                cout << "sensor(" << i << "): id=" << lighthouse_id;
-                cout << "\taxis=" << current_axis << "\tduration=" << nskip_to_sweep << endl;
+                ROS_INFO_STREAM_THROTTLE(1, "sensor(" << i << "): id=" << lighthouse_id << "\taxis=" << current_axis
+                                                      << "\tduration=" << nskip_to_sweep);
             }
         }
 
