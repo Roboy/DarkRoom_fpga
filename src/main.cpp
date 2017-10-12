@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
     DarkRoom darkroom(h2p_lw_darkroom_addr);
 
     while(ros::ok()){
-        ROS_INFO_THROTTLE(20, "i can see the light");
+        ROS_INFO_THROTTLE(20, "nice");
     }
 
     // clean up our memory mapping and exit

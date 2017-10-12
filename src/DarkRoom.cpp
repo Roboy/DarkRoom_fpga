@@ -50,7 +50,7 @@ void DarkRoom::getSensorValues() {
     while (ros::ok() && getData) {
 
         roboy_communication_middleware::DarkRoom msg;
-
+        bool any_valid = true;
         // read all sensors
         for (int i = 0; i < NUM_SENSORS; i++) {
             /*
@@ -74,7 +74,15 @@ void DarkRoom::getSensorValues() {
             if (valid) {
                 ROS_INFO_STREAM_THROTTLE(1, "sensor(" << i << "): id=" << lighthouse_id << "\taxis=" << current_axis
                                                       << "\tduration=" << nskip_to_sweep);
+            }else{
+                any_valid = false;
             }
+        }
+
+        if(any_valid){
+            ROS_INFO_THROTTLE(5, "i can see the light");
+        }else{
+            ROS_INFO_THROTTLE(5, "some sensors are not visible to a lighthouse");
         }
 
         sensor_pub.publish(msg);
